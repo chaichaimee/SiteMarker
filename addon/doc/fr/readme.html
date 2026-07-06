@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Extension SiteMarker pour NVDA</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    text-align: center;
+}
+b {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 30px;
+}
+.nvda-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+}
+.hotkey {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+.tap-explanation {
+    background: #e8f4fc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.feature-item {
+    margin: 15px 0;
+    padding-left: 10px;
+}
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="section">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="Logo NVDA" class="nvda-logo">
+    <h1>SiteMarker</h1>
+
+
+<br>
+
+<p style="text-align: center;">Marquez votre chemin, sautez en toute simplicité</div>
+
+<br>
+
+<div class="section">
+    <p style="text-align: center;"><b>auteur :</b> chai chaimee</p>
+    <p style="text-align: center;"><b>URL :</b> https://github.com/chaichaimee/SiteMarker</p>
+</div>
+
+<br><br>
+
+<h2>Description</h2>
+<p>
+  Chaque jour, vous passez des heures sur les mêmes sites Web – à lire des articles, consulter des tableaux de bord, remplir des formulaires ou naviguer dans de longues listes. Pour passer d’une section importante à une autre, vous appuyez encore et encore sur les touches fléchées, à la recherche de ce paragraphe ou de ce bouton dont vous avez besoin. C’est répétitif, fatigant et cela gaspille votre temps précieux.
+</p>
+<p>
+  <strong>SiteMarker</strong> change cela. Il vous permet de placer des marqueurs permanents sur n’importe quel paragraphe ou élément d’une page Web. Une fois marqué, vous pouvez sauter directement à cet endroit avec une seule frappe – vers l’avant ou vers l’arrière, dans n’importe quel ordre. Fini le défilement interminable ou le marathon des flèches. Il suffit de marquer, sauter et avancer.
+</p>
+<br>
+
+
+<h2>Raccourcis clavier</h2>
+<p>
+  La touche principale pour toutes les actions est <kbd>Windows+F12</kbd>. Il s’agit d’une touche à <strong>appuis multiples</strong> – son comportement change selon le nombre de fois que vous l’appuyez rapidement (en moins de 0,4 seconde).
+</p>
+<ul>
+  <li>
+    <strong>Appui simple (<kbd>Windows+F12</kbd> une fois)</strong> – 
+    Si vous vous trouvez sur une ligne qui <em>possède déjà</em> un marqueur, la boîte de dialogue d’édition de ce marqueur s’ouvre.
+    Si la ligne <em>n’a pas encore</em> de marqueur, la boîte de dialogue <strong>Ajouter un marqueur</strong> apparaît, pré‑remplie avec le texte du paragraphe actuel.
+  </li>
+  <li>
+    <strong>Double appui (<kbd>Windows+F12</kbd> deux fois rapidement)</strong> – 
+    Ouvre le <strong>Gestionnaire de sites</strong> pour le site Web actuel. Si le site existe déjà, vous pouvez modifier ses paramètres ou gérer tous ses marqueurs. Si le site est nouveau, vous êtes invité à l’ajouter.
+  </li>
+</ul>
+<br>
+
+<h2>Premiers pas – Pas à pas</h2>
+
+<h3>1. Ajoutez votre premier site</h3>
+<p>
+  Lorsque vous ouvrez un site Web sur lequel vous souhaitez utiliser des marqueurs, appuyez deux fois sur <kbd>Windows+F12</kbd>. La boîte de dialogue <strong>Ajouter un site</strong> apparaît.
+</p>
+<ul>
+  <li><strong>Nom affiché :</strong> Donnez à votre site un nom convivial (par exemple « Boîte de réception Gmail » ou « Actualités quotidiennes »).</li>
+  <br>
+  <li>
+    <strong>Modèle d’URL :</strong> Saisissez l’adresse Web (ou une partie) qui identifie ce site.
+  </li>
+  <br>
+  <li>
+    <strong>Type de correspondance :</strong> Choisissez comment SiteMarker doit faire correspondre l’URL actuelle à votre modèle.
+    <br><br>
+    <strong>Domaine uniquement</strong> – Correspond uniquement au domaine principal (par exemple, le modèle <code>google.com</code> fonctionne pour <code>www.google.com</code>, <code>mail.google.com</code>, mais pas pour <code>google.co.uk</code>).
+    <br><br>
+    <strong>Inclure les sous‑domaines</strong> – Comme « Domaine uniquement », mais l’URL doit se terminer par votre modèle. Par exemple, le modèle <code>example.com</code> correspond à <code>sub.example.com</code> et <code>news.example.com</code>, mais pas à <code>example.org</code>.
+    <br><br>
+    <strong>Contient la sous‑chaîne</strong> – Correspond si votre modèle apparaît n’importe où dans l’URL complète (y compris le chemin et la requête). Exemple : le modèle <code>/search</code> correspond à <code>https://www.google.com/search?q=test</code>.
+    <br><br>
+    <strong>Correspondance exacte</strong> – L’URL complète doit être exactement égale à votre modèle (insensible à la casse). Utilisez‑le lorsque vous voulez des marqueurs uniquement pour une page spécifique, comme <code>https://example.com/dashboard</code>.
+    <br><br>
+    <strong>Expression régulière</strong> – Pour les utilisateurs avancés. Écrivez un motif regex (par exemple <code>https://.*\.example\.com/.*</code>) pour correspondre à n’importe quelle page sous n’importe quel sous‑domaine de <code>example.com</code>.
+  </li>
+</ul>
+<p>Cliquez sur <strong>Enregistrer le site</strong>. Votre site est désormais enregistré et vous pouvez commencer à placer des marqueurs.</p>
+<br>
+
+<h3>2. Placez votre premier marqueur</h3>
+<p>
+  Naviguez jusqu’au paragraphe, à la ligne ou au bouton exact que vous voulez mémoriser. Ensuite, appuyez <strong>une fois</strong> sur <kbd>Windows+F12</kbd>. La boîte de dialogue <strong>Ajouter un marqueur</strong> s’ouvre.
+</p>
+<ul>
+  <li>
+    <strong>Modèle</strong> – SiteMarker remplit automatiquement ce champ avec le texte actuellement focalisé. Vous pouvez le modifier si nécessaire. Ce texte est ce que SiteMarker recherchera.
+  </li>
+  <br>
+  <li>
+    <strong>Correspondance du modèle</strong> – Choisissez comment le modèle doit être comparé :
+    <br><br>
+    <strong>Contient le texte</strong> – Trouve le modèle n’importe où dans le paragraphe (correspondance partielle).
+    <br><br>
+    <strong>Paragraphe exact</strong> – Le paragraphe doit être exactement égal au modèle (correspondance texte intégral).
+    <br><br>
+    <strong>Correspondance regex</strong> – Utilisez une expression régulière pour une correspondance avancée.
+  </li>
+  <br>
+  <li>
+    <strong>Mode</strong> – Décidez ce que fait ce marqueur :
+    <br><br>
+    <strong>Sauter</strong> – Lorsque vous appuyez sur la touche de saut attribuée, le curseur se déplace vers ce marqueur. Vous pouvez attribuer l’une des quatre touches de saut : <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> ou <kbd>Z</kbd>.
+    <br>
+    Appuyez sur la touche seule pour sauter <strong>vers l’avant</strong> jusqu’au prochain marqueur avec cette touche. Appuyez sur <kbd>Maj</kbd>+touche pour sauter <strong>vers l’arrière</strong>.
+    <br><br>
+    <strong>Clic automatique</strong> – Au lieu de déplacer uniquement le focus, SiteMarker effectue automatiquement un <strong>clic</strong> sur l’élément lorsque vous appuyez sur la touche de clic attribuée. Les touches de clic disponibles sont <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> et <kbd>Alt+Z</kbd>.
+  </li>
+  <br>
+  <li>
+    <strong>Nom affiché</strong> – Donnez à votre marqueur un nom significatif (par exemple « Bouton Envoyer » ou « Section Résumé »).
+  </li>
+  <br>
+  <li>
+    <strong>Décalage</strong> – Cela déplace la position finale du curseur par rapport au marqueur trouvé. Saisissez un nombre entier (positif ou négatif) pour décaler la position d’atterrissage.
+    <br><br>
+    <strong>Nombre positif</strong> (par exemple <code>2</code>) déplace le curseur <em>vers l’avant</em> de ce nombre de paragraphes après le marqueur.
+    <br><br>
+    <strong>Nombre négatif</strong> (par exemple <code>-1</code>) déplace le curseur <em>vers l’arrière</em> de ce nombre de paragraphes avant le marqueur.
+    <br><br>
+    <strong>0</strong> (par défaut) atterrit exactement sur le marqueur lui‑même.
+  </li>
+</ul>
+<p>Cliquez sur <strong>OK</strong> – votre marqueur est enregistré et prêt à être utilisé.</p>
+<br>
+
+<h2>Sauter et cliquer comme un pro</h2>
+<p>
+  Une fois vos marqueurs configurés, vous pouvez naviguer sur votre site sans effort :
+</p>
+<ul>
+  <li>
+    Appuyez sur <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> ou <kbd>Z</kbd> (seul) pour sauter vers l’avant jusqu’au <strong>prochain</strong> marqueur attribué à cette touche.
+  </li>
+  <li>
+    Appuyez sur <kbd>Maj+J</kbd>, <kbd>Maj+F</kbd>, <kbd>Maj+D</kbd> ou <kbd>Maj+Z</kbd> pour sauter <strong>vers l’arrière</strong> jusqu’au marqueur précédent.
+  </li>
+  <li>
+    Pour les marqueurs à clic automatique, appuyez sur <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> ou <kbd>Alt+Z</kbd> – le curseur trouvera le prochain marqueur correspondant et cliquera automatiquement sur l’élément cible.
+  </li>
+</ul>
+<p>
+  Chaque saut lit le paragraphe cible à voix haute et déplace le curseur de revue d’écran à cette position, afin que vous sachiez toujours où vous êtes.
+</p>
+<br>
+
+<h2>Gérer tout</h2>
+<p>
+  Vous pouvez toujours appuyer deux fois sur <kbd>Windows+F12</kbd> pour ouvrir le <strong>Gestionnaire de sites</strong>. À partir de là, vous pouvez :
+</p>
+<ul>
+  <li>Modifier le nom affiché, le modèle d’URL ou le type de correspondance d’un site.</li>
+  <li>Ajouter, modifier ou supprimer des marqueurs pour n’importe quel site.</li>
+  <li>Effacer tous les marqueurs d’un coup.</li>
+  <li>Naviguer entre la liste des sites et la liste des marqueurs.</li>
+</ul>
+<p>
+  Le <strong>Gestionnaire de marqueurs</strong> (accessible depuis le Gestionnaire de sites) vous donne une vue d’ensemble complète de tous les marqueurs du site actuel, avec des options rapides pour modifier ou supprimer chacun d’eux.
+</p>
+<br>
+
+<h2>Partagez vos marqueurs</h2>
+<p>
+  Toutes les configurations de vos sites et marqueurs sont stockées dans un simple <strong>fichier JSON</strong> pour chaque site. Ces fichiers se trouvent dans :
+</p>
+<pre>%APPDATA%\nvda\ChaiChaimee\SiteMarker\site\</pre>
+<p>
+  Vous pouvez copier ces fichiers <code>.json</code> sur un autre ordinateur ou les partager avec des collègues. Placez‑les simplement dans le même dossier sur l’autre machine, et SiteMarker reconnaîtra immédiatement les sites et les marqueurs – aucune configuration supplémentaire n’est nécessaire. Cela facilite le partage de configurations de navigation intelligentes entre équipes ou appareils.
+</p>
+<br>
+
+<h2>Pourquoi SiteMarker ?</h2>
+<ul>
+  <li><strong>Gagnez du temps</strong> – évitez le marathon des flèches et sautez directement là où vous devez aller.</li>
+  <li><strong>Fonctionne partout</strong> – prend en charge Chrome, Edge, Firefox, Brave et les navigateurs basés sur WebKit (y compris Safari sous Windows).</li>
+  <li><strong>Prêt pour les SPA</strong> – détecte automatiquement les changements de contenu dans les applications monopages (React, Angular, etc.) afin que vos marqueurs restent toujours à jour.</li>
+  <li><strong>Mise en cache intelligente</strong> – correspondance rapide même sur de grandes pages.</li>
+  <li><strong>Respectueux des langues</strong> – gère Unicode et la correspondance insensible aux accents pour les utilisateurs internationaux.</li>
+</ul>
+<p>
+  Commencez à marquer vos sites préférés dès aujourd’hui – et transformez chaque site Web en un terrain de jeu de navigation personnel.
+<br><br>
+<h2>Soutenez‑moi</h2>
+    <p>Si cet outil vous a facilité la vie, envisagez de soutenir la prochaine mise à jour par un petit don.</p>
+
+<br>
+
+<p>
+  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Soutenez‑moi">
+  </a>
+</p>
+<br>
+
+
+<p>Votre soutien compte énormément. Construisons ensemble quelque chose de grand.</p>
+
+<br>
+
+  <div class="footer-note">
+<p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GN</p>
+</div>
+
+</div>
+</body>
+</html>

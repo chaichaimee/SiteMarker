@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Galician\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:299
+msgid "&Add Marker"
+msgstr "&Engadir marcador"
+
+#: gui.py:32
+msgid "&Add New Site"
+msgstr "&Engadir novo sitio"
+
+#: gui.py:303
+msgid "&Back to Site Manager"
+msgstr "&Volver ao xestor de sitios"
+
+#: gui.py:301
+msgid "&Delete"
+msgstr "&Eliminar"
+
+#: gui.py:425
+msgid "&Delete Marker	Del"
+msgstr "&Eliminar marcador	Del"
+
+#: gui.py:34
+msgid "&Delete Site"
+msgstr "&Eliminar sitio"
+
+#: gui.py:139
+msgid "&Delete Site	Del"
+msgstr "&Eliminar sitio	Del"
+
+#: gui.py:300
+msgid "&Edit"
+msgstr "&Editar"
+
+#: gui.py:423
+msgid "&Edit Marker	F2"
+msgstr "&Editar marcador	F2"
+
+#: gui.py:33
+msgid "&Edit Site"
+msgstr "&Editar sitio"
+
+#: gui.py:137
+msgid "&Edit Site	F2"
+msgstr "&Editar sitio	F2"
+
+#: gui.py:35
+#: gui.py:142
+msgid "&Manage Markers"
+msgstr "&Xestionar marcadores"
+
+#: gui.py:294
+msgid "&Markers List:"
+msgstr "&Lista de marcadores:"
+
+#: gui.py:27
+msgid "&Registered Sites:"
+msgstr "&Sitios rexistrados:"
+
+#: gui.py:153
+msgid "Add Site Configuration"
+msgstr "Engadir configuración do sitio"
+
+#: gui.py:395
+msgid "All markers have been cleared."
+msgstr "Elimináronse todos os marcadores."
+
+#: gui.py:391
+msgid "Are you sure you want to delete ALL markers?"
+msgstr "Está seguro de que quere eliminar TODOS os marcadores?"
+
+#: gui.py:378
+msgid "Are you sure you want to delete this marker?"
+msgstr "Está seguro de que quere eliminar este marcador?"
+
+#: gui.py:103
+msgid "Are you sure you want to delete this site and all its markers?"
+msgstr "Está seguro de que quere eliminar este sitio e todos os seus marcadores?"
+
+#: gui.py:497
+msgid "Auto Click"
+msgstr "Clic automático"
+
+#: browseModeGestures.py:64
+msgid "Auto click on next marker assigned to Alt+C"
+msgstr "Clic automático no seguinte marcador asignado a Alt+C"
+
+#: browseModeGestures.py:60
+msgid "Auto click on next marker assigned to Alt+J"
+msgstr "Clic automático no seguinte marcador asignado a Alt+J"
+
+#: browseModeGestures.py:68
+msgid "Auto click on next marker assigned to Alt+X"
+msgstr "Clic automático no seguinte marcador asignado a Alt+X"
+
+#: browseModeGestures.py:72
+msgid "Auto click on next marker assigned to Alt+Z"
+msgstr "Clic automático no seguinte marcador asignado a Alt+Z"
+
+#: gui.py:176
+#: gui.py:226
+#: gui.py:533
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: gui.py:302
+msgid "Clear &All"
+msgstr "Limpar &todo"
+
+#: gui.py:428
+msgid "Clear &All Markers"
+msgstr "Limpar &todos os marcadores"
+
+#: gui.py:555
+msgid "Click Key:"
+msgstr "Tecla de clic:"
+
+#: gui.py:36
+#: gui.py:304
+msgid "Close"
+msgstr "Pechar"
+
+#: gui.py:103
+#: gui.py:378
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: gui.py:391
+msgid "Confirm Delete All"
+msgstr "Confirmar eliminación de todo"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Contain Substring"
+msgstr "Conter subcadea"
+
+#: gui.py:490
+msgid "Contains Text (find partial match)"
+msgstr "Contén texto (coincidencia parcial)"
+
+#: gui.py:190
+#: gui.py:240
+msgid "Display Name cannot be empty."
+msgstr "O nome de visualización non pode estar baleiro."
+
+#: gui.py:162
+#: gui.py:213
+#: gui.py:521
+msgid "Display Name:"
+msgstr "Nome de visualización:"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Domain Only"
+msgstr "Só dominio"
+
+#: gui.py:203
+msgid "Edit Site Configuration"
+msgstr "Editar configuración do sitio"
+
+#: gui.py:514
+msgid "Entire Document"
+msgstr "Documento completo"
+
+#: gui.py:108
+#: gui.py:190
+#: gui.py:193
+#: gui.py:240
+#: gui.py:243
+#: gui.py:569
+msgid "Error"
+msgstr "Erro"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Exact Matching"
+msgstr "Coincidencia exacta"
+
+#: gui.py:490
+msgid "Exact Paragraph (match whole paragraph)"
+msgstr "Parágrafo exacto (coincidir parágrafo completo)"
+
+#: gui.py:108
+msgid "Failed to delete site."
+msgstr "Non se puido eliminar o sitio."
+
+#: gui.py:170
+#: gui.py:220
+msgid "Include Subdomains"
+msgstr "Incluir subdominios"
+
+#: gui.py:89
+#: gui.py:101
+#: gui.py:113
+#: gui.py:360
+#: gui.py:376
+#: gui.py:389
+msgid "Information"
+msgstr "Información"
+
+#: gui.py:497
+msgid "Jump"
+msgstr "Saltar"
+
+#: gui.py:552
+msgid "Jump Key:"
+msgstr "Tecla de salto:"
+
+#: browseModeGestures.py:48
+msgid "Jump backward to previous marker D"
+msgstr "Saltar atrás ao marcador anterior D"
+
+#: browseModeGestures.py:40
+msgid "Jump backward to previous marker F"
+msgstr "Saltar atrás ao marcador anterior F"
+
+#: browseModeGestures.py:32
+msgid "Jump backward to previous marker J"
+msgstr "Saltar atrás ao marcador anterior J"
+
+#: browseModeGestures.py:56
+msgid "Jump backward to previous marker Z"
+msgstr "Saltar atrás ao marcador anterior Z"
+
+#: browseModeGestures.py:44
+msgid "Jump forward to next marker D"
+msgstr "Saltar adiante ao seguinte marcador D"
+
+#: browseModeGestures.py:36
+msgid "Jump forward to next marker F"
+msgstr "Saltar adiante ao seguinte marcador F"
+
+#: browseModeGestures.py:28
+msgid "Jump forward to next marker J"
+msgstr "Saltar adiante ao seguinte marcador J"
+
+#: browseModeGestures.py:52
+msgid "Jump forward to next marker Z"
+msgstr "Saltar adiante ao seguinte marcador Z"
+
+#: gui.py:257
+msgid "Marker Manager - "
+msgstr "Xestor de marcadores - "
+
+#: gui.py:438
+msgid "Marker Properties"
+msgstr "Propiedades do marcador"
+
+#: gui.py:289
+msgid "Marker found: {}"
+msgstr "Marcador atopado: {}"
+
+#: gui.py:169
+#: gui.py:219
+msgid "Match Type:"
+msgstr "Tipo de coincidencia:"
+
+#: gui.py:496
+msgid "Mode:"
+msgstr "Modo:"
+
+#: gui.py:389
+msgid "No markers to clear."
+msgstr "Non hai marcadores que limpar."
+
+#: gui.py:532
+msgid "OK"
+msgstr "Aceptar"
+
+#: gui.py:526
+msgid "Offset (lines/paragraphs to move after match):"
+msgstr "Desprazamento (liñas/parágrafos a mover despois da coincidencia):"
+
+#: gui.py:489
+msgid "Pattern Match:"
+msgstr "Coincidencia de patrón:"
+
+#: gui.py:569
+msgid "Pattern cannot be empty."
+msgstr "O patrón non pode estar baleiro."
+
+#: gui.py:484
+msgid "Pattern:"
+msgstr "Patrón:"
+
+#: gui.py:360
+#: gui.py:376
+msgid "Please select a marker first."
+msgstr "Seleccione primeiro un marcador."
+
+#: gui.py:89
+#: gui.py:101
+#: gui.py:113
+msgid "Please select a site first."
+msgstr "Seleccione primeiro un sitio."
+
+#: gui.py:490
+msgid "Regex Match (use regular expression)"
+msgstr "Coincidencia regex (usar expresión regular)"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Regular Expression"
+msgstr "Expresión regular"
+
+#: gui.py:225
+msgid "Save Changes"
+msgstr "Gardar cambios"
+
+#: gui.py:175
+msgid "Save Site"
+msgstr "Gardar sitio"
+
+#: gui.py:513
+msgid "Search Scope:"
+msgstr "Ámbito de busca:"
+
+#: gui.py:15
+msgid "Site Manager"
+msgstr "Xestor de sitios"
+
+#: gui.py:198
+msgid "Site created successfully."
+msgstr "Sitio creado correctamente."
+
+#: gui.py:105
+msgid "Site deleted successfully."
+msgstr "Sitio eliminado correctamente."
+
+#: gui.py:250
+msgid "Site updated successfully."
+msgstr "Sitio actualizado correctamente."
+
+#: gui.py:193
+#: gui.py:243
+msgid "URL Pattern cannot be empty."
+msgstr "O patrón de URL non pode estar baleiro."
+
+#: gui.py:165
+#: gui.py:216
+msgid "URL Pattern:"
+msgstr "Patrón de URL:"
+
+#: gui.py:333
+msgid "Unnamed"
+msgstr "Sen nome"
+
+#: gui.py:514
+msgid "Viewport Only"
+msgstr "Só viewport"

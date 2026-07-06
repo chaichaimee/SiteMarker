@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Tagalog\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:299
+msgid "&Add Marker"
+msgstr "&Magdagdag ng Marker"
+
+#: gui.py:32
+msgid "&Add New Site"
+msgstr "&Magdagdag ng Bagong Site"
+
+#: gui.py:303
+msgid "&Back to Site Manager"
+msgstr "&Bumalik sa Tagapamahala ng Site"
+
+#: gui.py:301
+msgid "&Delete"
+msgstr "&Burahin"
+
+#: gui.py:425
+msgid "&Delete Marker	Del"
+msgstr "&Burahin ang Marker	Del"
+
+#: gui.py:34
+msgid "&Delete Site"
+msgstr "&Burahin ang Site"
+
+#: gui.py:139
+msgid "&Delete Site	Del"
+msgstr "&Burahin ang Site	Del"
+
+#: gui.py:300
+msgid "&Edit"
+msgstr "&I-edit"
+
+#: gui.py:423
+msgid "&Edit Marker	F2"
+msgstr "&I-edit ang Marker	F2"
+
+#: gui.py:33
+msgid "&Edit Site"
+msgstr "&I-edit ang Site"
+
+#: gui.py:137
+msgid "&Edit Site	F2"
+msgstr "&I-edit ang Site	F2"
+
+#: gui.py:35
+#: gui.py:142
+msgid "&Manage Markers"
+msgstr "&Pamahalaan ang mga Marker"
+
+#: gui.py:294
+msgid "&Markers List:"
+msgstr "&Listahan ng mga Marker:"
+
+#: gui.py:27
+msgid "&Registered Sites:"
+msgstr "&Nakarehistrong mga Site:"
+
+#: gui.py:153
+msgid "Add Site Configuration"
+msgstr "Magdagdag ng Configuration ng Site"
+
+#: gui.py:395
+msgid "All markers have been cleared."
+msgstr "Na-clear na ang lahat ng marker."
+
+#: gui.py:391
+msgid "Are you sure you want to delete ALL markers?"
+msgstr "Sigurado ka bang gusto mong burahin ang LAHAT ng marker?"
+
+#: gui.py:378
+msgid "Are you sure you want to delete this marker?"
+msgstr "Sigurado ka bang gusto mong burahin ang marker na ito?"
+
+#: gui.py:103
+msgid "Are you sure you want to delete this site and all its markers?"
+msgstr "Sigurado ka bang gusto mong burahin ang site na ito at lahat ng marker nito?"
+
+#: gui.py:497
+msgid "Auto Click"
+msgstr "Awtomatikong Pag-click"
+
+#: browseModeGestures.py:64
+msgid "Auto click on next marker assigned to Alt+C"
+msgstr "Awtomatikong pag-click sa susunod na marker na itinalaga sa Alt+C"
+
+#: browseModeGestures.py:60
+msgid "Auto click on next marker assigned to Alt+J"
+msgstr "Awtomatikong pag-click sa susunod na marker na itinalaga sa Alt+J"
+
+#: browseModeGestures.py:68
+msgid "Auto click on next marker assigned to Alt+X"
+msgstr "Awtomatikong pag-click sa susunod na marker na itinalaga sa Alt+X"
+
+#: browseModeGestures.py:72
+msgid "Auto click on next marker assigned to Alt+Z"
+msgstr "Awtomatikong pag-click sa susunod na marker na itinalaga sa Alt+Z"
+
+#: gui.py:176
+#: gui.py:226
+#: gui.py:533
+msgid "Cancel"
+msgstr "Kanselahin"
+
+#: gui.py:302
+msgid "Clear &All"
+msgstr "I-clear ang &Lahat"
+
+#: gui.py:428
+msgid "Clear &All Markers"
+msgstr "I-clear ang &Lahat ng Marker"
+
+#: gui.py:555
+msgid "Click Key:"
+msgstr "Key ng Pag-click:"
+
+#: gui.py:36
+#: gui.py:304
+msgid "Close"
+msgstr "Isara"
+
+#: gui.py:103
+#: gui.py:378
+msgid "Confirm"
+msgstr "Kumpirmahin"
+
+#: gui.py:391
+msgid "Confirm Delete All"
+msgstr "Kumpirmahin ang Burahin Lahat"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Contain Substring"
+msgstr "Naglalaman ng Substring"
+
+#: gui.py:490
+msgid "Contains Text (find partial match)"
+msgstr "Naglalaman ng Teksto (bahagyang pagtutugma)"
+
+#: gui.py:190
+#: gui.py:240
+msgid "Display Name cannot be empty."
+msgstr "Hindi maaaring walang laman ang Display Name."
+
+#: gui.py:162
+#: gui.py:213
+#: gui.py:521
+msgid "Display Name:"
+msgstr "Display Name:"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Domain Only"
+msgstr "Domain Lamang"
+
+#: gui.py:203
+msgid "Edit Site Configuration"
+msgstr "I-edit ang Configuration ng Site"
+
+#: gui.py:514
+msgid "Entire Document"
+msgstr "Buong Dokumento"
+
+#: gui.py:108
+#: gui.py:190
+#: gui.py:193
+#: gui.py:240
+#: gui.py:243
+#: gui.py:569
+msgid "Error"
+msgstr "Error"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Exact Matching"
+msgstr "Eksaktong Pagtutugma"
+
+#: gui.py:490
+msgid "Exact Paragraph (match whole paragraph)"
+msgstr "Eksaktong Talata (tugma ang buong talata)"
+
+#: gui.py:108
+msgid "Failed to delete site."
+msgstr "Nabigo ang pagbura ng site."
+
+#: gui.py:170
+#: gui.py:220
+msgid "Include Subdomains"
+msgstr "Isama ang mga Subdomain"
+
+#: gui.py:89
+#: gui.py:101
+#: gui.py:113
+#: gui.py:360
+#: gui.py:376
+#: gui.py:389
+msgid "Information"
+msgstr "Impormasyon"
+
+#: gui.py:497
+msgid "Jump"
+msgstr "Lumaktaw"
+
+#: gui.py:552
+msgid "Jump Key:"
+msgstr "Key ng Pagtalon:"
+
+#: browseModeGestures.py:48
+msgid "Jump backward to previous marker D"
+msgstr "Lumaktaw paatras sa nakaraang marker D"
+
+#: browseModeGestures.py:40
+msgid "Jump backward to previous marker F"
+msgstr "Lumaktaw paatras sa nakaraang marker F"
+
+#: browseModeGestures.py:32
+msgid "Jump backward to previous marker J"
+msgstr "Lumaktaw paatras sa nakaraang marker J"
+
+#: browseModeGestures.py:56
+msgid "Jump backward to previous marker Z"
+msgstr "Lumaktaw paatras sa nakaraang marker Z"
+
+#: browseModeGestures.py:44
+msgid "Jump forward to next marker D"
+msgstr "Lumaktaw pasulong sa susunod na marker D"
+
+#: browseModeGestures.py:36
+msgid "Jump forward to next marker F"
+msgstr "Lumaktaw pasulong sa susunod na marker F"
+
+#: browseModeGestures.py:28
+msgid "Jump forward to next marker J"
+msgstr "Lumaktaw pasulong sa susunod na marker J"
+
+#: browseModeGestures.py:52
+msgid "Jump forward to next marker Z"
+msgstr "Lumaktaw pasulong sa susunod na marker Z"
+
+#: gui.py:257
+msgid "Marker Manager - "
+msgstr "Tagapamahala ng Marker - "
+
+#: gui.py:438
+msgid "Marker Properties"
+msgstr "Mga Katangian ng Marker"
+
+#: gui.py:289
+msgid "Marker found: {}"
+msgstr "Natagpuan ang marker: {}"
+
+#: gui.py:169
+#: gui.py:219
+msgid "Match Type:"
+msgstr "Uri ng Pagtutugma:"
+
+#: gui.py:496
+msgid "Mode:"
+msgstr "Mode:"
+
+#: gui.py:389
+msgid "No markers to clear."
+msgstr "Walang marker na iki-clear."
+
+#: gui.py:532
+msgid "OK"
+msgstr "OK"
+
+#: gui.py:526
+msgid "Offset (lines/paragraphs to move after match):"
+msgstr "Offset (mga linya/talata na ililipat pagkatapos ng pagtutugma):"
+
+#: gui.py:489
+msgid "Pattern Match:"
+msgstr "Pagtutugma ng Pattern:"
+
+#: gui.py:569
+msgid "Pattern cannot be empty."
+msgstr "Hindi maaaring walang laman ang pattern."
+
+#: gui.py:484
+msgid "Pattern:"
+msgstr "Pattern:"
+
+#: gui.py:360
+#: gui.py:376
+msgid "Please select a marker first."
+msgstr "Mangyaring pumili muna ng marker."
+
+#: gui.py:89
+#: gui.py:101
+#: gui.py:113
+msgid "Please select a site first."
+msgstr "Mangyaring pumili muna ng site."
+
+#: gui.py:490
+msgid "Regex Match (use regular expression)"
+msgstr "Pagtutugma ng Regex (gumamit ng regular expression)"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Regular Expression"
+msgstr "Regular Expression"
+
+#: gui.py:225
+msgid "Save Changes"
+msgstr "I-save ang mga Pagbabago"
+
+#: gui.py:175
+msgid "Save Site"
+msgstr "I-save ang Site"
+
+#: gui.py:513
+msgid "Search Scope:"
+msgstr "Saklaw ng Paghahanap:"
+
+#: gui.py:15
+msgid "Site Manager"
+msgstr "Tagapamahala ng Site"
+
+#: gui.py:198
+msgid "Site created successfully."
+msgstr "Matagumpay na nagawa ang site."
+
+#: gui.py:105
+msgid "Site deleted successfully."
+msgstr "Matagumpay na nabura ang site."
+
+#: gui.py:250
+msgid "Site updated successfully."
+msgstr "Matagumpay na na-update ang site."
+
+#: gui.py:193
+#: gui.py:243
+msgid "URL Pattern cannot be empty."
+msgstr "Hindi maaaring walang laman ang URL Pattern."
+
+#: gui.py:165
+#: gui.py:216
+msgid "URL Pattern:"
+msgstr "URL Pattern:"
+
+#: gui.py:333
+msgid "Unnamed"
+msgstr "Walang Pangalan"
+
+#: gui.py:514
+msgid "Viewport Only"
+msgstr "Viewport Lamang"

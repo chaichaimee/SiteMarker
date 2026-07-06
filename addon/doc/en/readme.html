@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SiteMarker NVDA Add-on</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    text-align: center;
+}
+b {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 30px;
+}
+.nvda-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+}
+.hotkey {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+.tap-explanation {
+    background: #e8f4fc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.feature-item {
+    margin: 15px 0;
+    padding-left: 10px;
+}
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="section">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+    <h1>SiteMarker</h1>
+
+
+<br>
+
+<p style="text-align: center;">Mark Your Way, Jump with Ease</div>
+
+<br>
+
+<div class="section">
+    <p style="text-align: center;"><b>author:</b> chai chaimee</p>
+    <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/SiteMarker</p>
+</div>
+
+<br><br>
+
+<h2>Description</h2>
+<p>
+  Every day, you spend hours inside the same websites – reading articles, checking dashboards, filling forms, or navigating through long lists. To move from one important section to another, you press the arrow keys again and again, hunting for that one paragraph or button you need. It is repetitive, tiring, and wastes your precious time.
+</p>
+<p>
+  <strong>SiteMarker</strong> changes that. It lets you place permanent markers on any paragraph or element inside a web page. Once marked, you can jump directly to that spot with a single keystroke – forward or backward, in any order. No more endless scrolling or arrow‑key marathon. Just mark, jump, and get things done.
+</p>
+<br>
+
+
+<h2>Hotkeys</h2>
+<p>
+  The main key for all actions is <kbd>Windows+F12</kbd>. This is a <strong>multi‑tap</strong> key – its behaviour changes depending on how many times you press it quickly (within 0.4 seconds).
+</p>
+<ul>
+  <li>
+    <strong>Single tap (<kbd>Windows+F12</kbd> once)</strong> – 
+    If you are on a line that <em>already has</em> a marker, the edit dialog for that marker opens.
+    If the line <em>has no marker</em> yet, the <strong>Add Marker</strong> dialog appears, pre‑filled with the current paragraph text.
+  </li>
+  <li>
+    <strong>Double tap (<kbd>Windows+F12</kbd> twice quickly)</strong> – 
+    Opens the <strong>Site Manager</strong> for the current website. If the site already exists, you can edit its settings or manage all its markers. If the site is new, you are prompted to add it.
+  </li>
+</ul>
+<br>
+
+<h2>Getting Started – Step by Step</h2>
+
+<h3>1. Add Your First Site</h3>
+<p>
+  When you open a website where you want to use markers, double‑tap <kbd>Windows+F12</kbd>. The <strong>Add Site</strong> dialog appears.
+</p>
+<ul>
+  <li><strong>Display Name:</strong> Give your site a friendly name (e.g., “Gmail Inbox” or “Daily News”).</li>
+  <br>
+  <li>
+    <strong>URL Pattern:</strong> Enter the web address (or part of it) that identifies this site.
+  </li>
+  <br>
+  <li>
+    <strong>Match Type:</strong> Choose how SiteMarker should match the current URL against your pattern.
+    <br><br>
+    <strong>Domain Only</strong> – Matches only the main domain (e.g., pattern <code>google.com</code> works for <code>www.google.com</code>, <code>mail.google.com</code>, but not for <code>google.co.uk</code>).
+    <br><br>
+    <strong>Include Subdomains</strong> – Like Domain Only, but the URL must end with your pattern. For example, pattern <code>example.com</code> matches <code>sub.example.com</code> and <code>news.example.com</code>, but not <code>example.org</code>.
+    <br><br>
+    <strong>Contain Substring</strong> – Matches if your pattern appears anywhere in the full URL (including path and query). Example: pattern <code>/search</code> matches <code>https://www.google.com/search?q=test</code>.
+    <br><br>
+    <strong>Exact Matching</strong> – The entire URL must equal your pattern exactly (case‑insensitive). Use this when you want markers only for one specific page, like <code>https://example.com/dashboard</code>.
+    <br><br>
+    <strong>Regular Expression</strong> – For power users. Write a regex pattern (e.g., <code>https://.*\.example\.com/.*</code>) to match any page under any subdomain of <code>example.com</code>.
+  </li>
+</ul>
+<p>Click <strong>Save Site</strong>. Your site is now registered, and you can start placing markers.</p>
+<br>
+
+<h3>2. Place Your First Marker</h3>
+<p>
+  Navigate to the exact paragraph, line, or button you want to remember. Then <strong>single‑tap</strong> <kbd>Windows+F12</kbd>. The <strong>Add Marker</strong> dialog opens.
+</p>
+<ul>
+  <li>
+    <strong>Pattern</strong> – SiteMarker automatically fills this with the text currently under focus. You can edit it if needed. This text is what SiteMarker searches for.
+  </li>
+  <br>
+  <li>
+    <strong>Pattern Match</strong> – Choose how the pattern should be compared:
+    <br><br>
+    <strong>Contains Text</strong> – Finds the pattern anywhere inside the paragraph (partial match).
+    <br><br>
+    <strong>Exact Paragraph</strong> – The paragraph must equal the pattern exactly (whole text match).
+    <br><br>
+    <strong>Regex Match</strong> – Use a regular expression for advanced matching.
+  </li>
+  <br>
+  <li>
+    <strong>Mode</strong> – Decide what this marker does:
+    <br><br>
+    <strong>Jump</strong> – When you press the assigned jump key, the cursor moves to this marker. You can assign one of four jump keys: <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, or <kbd>Z</kbd>.
+    <br>
+    Press the key alone to jump <strong>forward</strong> to the next marker with that key. Press <kbd>Shift</kbd>+key to jump <strong>backward</strong>.
+    <br><br>
+    <strong>Auto Click</strong> – Instead of just moving focus, SiteMarker will automatically <strong>click</strong> on the element when you press the assigned click key. The available click keys are <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd>, and <kbd>Alt+Z</kbd>.
+  </li>
+  <br>
+  <li>
+    <strong>Display Name</strong> – Give your marker a meaningful name (e.g., “Submit Button” or “Summary Section”).
+  </li>
+  <br>
+  <li>
+    <strong>Offset</strong> – This moves the final cursor position relative to the found marker. Enter a whole number (positive or negative) to shift the landing position.
+    <br><br>
+    <strong>Positive number</strong> (e.g., <code>2</code>) moves the cursor <em>forward</em> that many paragraphs after the marker.
+    <br><br>
+    <strong>Negative number</strong> (e.g., <code>-1</code>) moves the cursor <em>backward</em> that many paragraphs before the marker.
+    <br><br>
+    <strong>0</strong> (default) lands exactly on the marker itself.
+  </li>
+</ul>
+<p>Click <strong>OK</strong> – your marker is saved and ready to use.</p>
+<br>
+
+<h2>Jump & Click Like a Pro</h2>
+<p>
+  Once you have markers set up, you can navigate your site effortlessly:
+</p>
+<ul>
+  <li>
+    Press <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, or <kbd>Z</kbd> (alone) to jump forward to the <strong>next</strong> marker assigned to that key.
+  </li>
+  <li>
+    Press <kbd>Shift+J</kbd>, <kbd>Shift+F</kbd>, <kbd>Shift+D</kbd>, or <kbd>Shift+Z</kbd> to jump <strong>backward</strong> to the previous marker.
+  </li>
+  <li>
+    For auto‑click markers, press <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd>, or <kbd>Alt+Z</kbd> – the cursor will find the next matching marker and click on the target element automatically.
+  </li>
+</ul>
+<p>
+  Every jump speaks the target paragraph aloud and moves the screen review cursor to that position, so you always know where you are.
+</p>
+<br>
+
+<h2>Managing Everything</h2>
+<p>
+  You can always double‑tap <kbd>Windows+F12</kbd> to open the <strong>Site Manager</strong>. From there you can:
+</p>
+<ul>
+  <li>Edit a site’s display name, URL pattern, or match type.</li>
+  <li>Add, edit, or delete markers for any site.</li>
+  <li>Clear all markers at once.</li>
+  <li>Navigate back and forth between the site list and the marker list.</li>
+</ul>
+<p>
+  The <strong>Marker Manager</strong> (accessible from the Site Manager) gives you a complete overview of all markers for the current site, with quick options to edit or delete each one.
+</p>
+<br>
+
+<h2>Share Your Markers</h2>
+<p>
+  All your site and marker configurations are stored in a simple <strong>JSON file</strong> for each site. These files are located in:
+</p>
+<pre>%APPDATA%\nvda\ChaiChaimee\SiteMarker\site\</pre>
+<p>
+  You can copy these <code>.json</code> files to another computer or share them with colleagues. Just place them in the same folder on the other machine, and SiteMarker will instantly recognise the sites and markers – no extra setup needed. This makes it easy to share intelligent navigation setups across teams or devices.
+</p>
+<br>
+
+<h2>Why SiteMarker?</h2>
+<ul>
+  <li><strong>Save time</strong> – skip the arrow‑key marathon and jump directly where you need to go.</li>
+  <li><strong>Works everywhere</strong> – supports Chrome, Edge, Firefox, Brave, and WebKit‑based browsers (including Safari on Windows).</li>
+  <li><strong>SPA‑ready</strong> – automatically detects content changes in single‑page applications (React, Angular, etc.) so your markers always stay up‑to‑date.</li>
+  <li><strong>Smart caching</strong> – fast matching even on huge pages.</li>
+  <li><strong>Language‑friendly</strong> – handles Unicode and accent‑insensitive matching for international users.</li>
+</ul>
+<p>
+  Start marking your favourite sites today – and turn every website into a personal navigation playground.
+<br><br>
+<h2>Support Me</h2>
+    <p>If this tool has made your life easier, consider fueling the next update with a small donation.</p>
+
+<br>
+
+<p>
+  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Support me">
+  </a>
+</p>
+<br>
+
+
+<p>Your support means the world. Let's build something great together</p>
+
+<br>
+
+  <div class="footer-note">
+<p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GN

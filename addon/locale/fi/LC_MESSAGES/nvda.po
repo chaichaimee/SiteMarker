@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"PO-Revision-Date: 2026-07-06 15:00+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Finnish\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:299
+msgid "&Add Marker"
+msgstr "&Lisää merkintä"
+
+#: gui.py:32
+msgid "&Add New Site"
+msgstr "&Lisää uusi sivusto"
+
+#: gui.py:303
+msgid "&Back to Site Manager"
+msgstr "&Takaisin sivustonhallintaan"
+
+#: gui.py:301
+msgid "&Delete"
+msgstr "&Poista"
+
+#: gui.py:425
+msgid "&Delete Marker	Del"
+msgstr "&Poista merkintä	Del"
+
+#: gui.py:34
+msgid "&Delete Site"
+msgstr "&Poista sivusto"
+
+#: gui.py:139
+msgid "&Delete Site	Del"
+msgstr "&Poista sivusto	Del"
+
+#: gui.py:300
+msgid "&Edit"
+msgstr "&Muokkaa"
+
+#: gui.py:423
+msgid "&Edit Marker	F2"
+msgstr "&Muokkaa merkintää	F2"
+
+#: gui.py:33
+msgid "&Edit Site"
+msgstr "&Muokkaa sivustoa"
+
+#: gui.py:137
+msgid "&Edit Site	F2"
+msgstr "&Muokkaa sivustoa	F2"
+
+#: gui.py:35
+#: gui.py:142
+msgid "&Manage Markers"
+msgstr "&Hallitse merkintöjä"
+
+#: gui.py:294
+msgid "&Markers List:"
+msgstr "&Merkintäluettelo:"
+
+#: gui.py:27
+msgid "&Registered Sites:"
+msgstr "&Rekisteröidyt sivustot:"
+
+#: gui.py:153
+msgid "Add Site Configuration"
+msgstr "Lisää sivuston kokoonpano"
+
+#: gui.py:395
+msgid "All markers have been cleared."
+msgstr "Kaikki merkinnät on tyhjennetty."
+
+#: gui.py:391
+msgid "Are you sure you want to delete ALL markers?"
+msgstr "Oletko varma, että haluat poistaa KAIKKI merkinnät?"
+
+#: gui.py:378
+msgid "Are you sure you want to delete this marker?"
+msgstr "Oletko varma, että haluat poistaa tämän merkinnän?"
+
+#: gui.py:103
+msgid "Are you sure you want to delete this site and all its markers?"
+msgstr "Oletko varma, että haluat poistaa tämän sivuston ja kaikki sen merkinnät?"
+
+#: gui.py:497
+msgid "Auto Click"
+msgstr "Automaattinen napsautus"
+
+#: browseModeGestures.py:64
+msgid "Auto click on next marker assigned to Alt+C"
+msgstr "Automaattinen napsautus seuraavaan merkintään, määritetty Alt+C:hen"
+
+#: browseModeGestures.py:60
+msgid "Auto click on next marker assigned to Alt+J"
+msgstr "Automaattinen napsautus seuraavaan merkintään, määritetty Alt+J:hin"
+
+#: browseModeGestures.py:68
+msgid "Auto click on next marker assigned to Alt+X"
+msgstr "Automaattinen napsautus seuraavaan merkintään, määritetty Alt+X:ään"
+
+#: browseModeGestures.py:72
+msgid "Auto click on next marker assigned to Alt+Z"
+msgstr "Automaattinen napsautus seuraavaan merkintään, määritetty Alt+Z:aan"
+
+#: gui.py:176
+#: gui.py:226
+#: gui.py:533
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: gui.py:302
+msgid "Clear &All"
+msgstr "Tyhjennä &kaikki"
+
+#: gui.py:428
+msgid "Clear &All Markers"
+msgstr "Tyhjennä &kaikki merkinnät"
+
+#: gui.py:555
+msgid "Click Key:"
+msgstr "Napsautusnäppäin:"
+
+#: gui.py:36
+#: gui.py:304
+msgid "Close"
+msgstr "Sulje"
+
+#: gui.py:103
+#: gui.py:378
+msgid "Confirm"
+msgstr "Vahvista"
+
+#: gui.py:391
+msgid "Confirm Delete All"
+msgstr "Vahvista kaikkien poisto"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Contain Substring"
+msgstr "Sisältää alimerkkijonon"
+
+#: gui.py:490
+msgid "Contains Text (find partial match)"
+msgstr "Sisältää tekstin (etsi osittainen täsmäys)"
+
+#: gui.py:190
+#: gui.py:240
+msgid "Display Name cannot be empty."
+msgstr "Näyttönimi ei voi olla tyhjä."
+
+#: gui.py:162
+#: gui.py:213
+#: gui.py:521
+msgid "Display Name:"
+msgstr "Näyttönimi:"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Domain Only"
+msgstr "Vain verkkotunnus"
+
+#: gui.py:203
+msgid "Edit Site Configuration"
+msgstr "Muokkaa sivuston kokoonpanoa"
+
+#: gui.py:514
+msgid "Entire Document"
+msgstr "Koko asiakirja"
+
+#: gui.py:108
+#: gui.py:190
+#: gui.py:193
+#: gui.py:240
+#: gui.py:243
+#: gui.py:569
+msgid "Error"
+msgstr "Virhe"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Exact Matching"
+msgstr "Tarkka täsmäys"
+
+#: gui.py:490
+msgid "Exact Paragraph (match whole paragraph)"
+msgstr "Tarkka kappale (täsmää koko kappaleeseen)"
+
+#: gui.py:108
+msgid "Failed to delete site."
+msgstr "Sivuston poistaminen epäonnistui."
+
+#: gui.py:170
+#: gui.py:220
+msgid "Include Subdomains"
+msgstr "Sisällytä aliverkkotunnukset"
+
+#: gui.py:89
+#: gui.py:101
+#: gui.py:113
+#: gui.py:360
+#: gui.py:376
+#: gui.py:389
+msgid "Information"
+msgstr "Tiedot"
+
+#: gui.py:497
+msgid "Jump"
+msgstr "Hyppää"
+
+#: gui.py:552
+msgid "Jump Key:"
+msgstr "Hyppynäppäin:"
+
+#: browseModeGestures.py:48
+msgid "Jump backward to previous marker D"
+msgstr "Hyppää taaksepäin edelliseen merkintään D"
+
+#: browseModeGestures.py:40
+msgid "Jump backward to previous marker F"
+msgstr "Hyppää taaksepäin edelliseen merkintään F"
+
+#: browseModeGestures.py:32
+msgid "Jump backward to previous marker J"
+msgstr "Hyppää taaksepäin edelliseen merkintään J"
+
+#: browseModeGestures.py:56
+msgid "Jump backward to previous marker Z"
+msgstr "Hyppää taaksepäin edelliseen merkintään Z"
+
+#: browseModeGestures.py:44
+msgid "Jump forward to next marker D"
+msgstr "Hyppää eteenpäin seuraavaan merkintään D"
+
+#: browseModeGestures.py:36
+msgid "Jump forward to next marker F"
+msgstr "Hyppää eteenpäin seuraavaan merkintään F"
+
+#: browseModeGestures.py:28
+msgid "Jump forward to next marker J"
+msgstr "Hyppää eteenpäin seuraavaan merkintään J"
+
+#: browseModeGestures.py:52
+msgid "Jump forward to next marker Z"
+msgstr "Hyppää eteenpäin seuraavaan merkintään Z"
+
+#: gui.py:257
+msgid "Marker Manager - "
+msgstr "Merkintöjen hallinta - "
+
+#: gui.py:438
+msgid "Marker Properties"
+msgstr "Merkinnän ominaisuudet"
+
+#: gui.py:289
+msgid "Marker found: {}"
+msgstr "Merkintä löytyi: {}"
+
+#: gui.py:169
+#: gui.py:219
+msgid "Match Type:"
+msgstr "Täsmäystyyppi:"
+
+#: gui.py:496
+msgid "Mode:"
+msgstr "Tila:"
+
+#: gui.py:389
+msgid "No markers to clear."
+msgstr "Ei tyhjennettäviä merkintöjä."
+
+#: gui.py:532
+msgid "OK"
+msgstr "OK"
+
+#: gui.py:526
+msgid "Offset (lines/paragraphs to move after match):"
+msgstr "Siirtymä (rivejä/kappaleita siirryttäväksi täsmäyksen jälkeen):"
+
+#: gui.py:489
+msgid "Pattern Match:"
+msgstr "Kaavan täsmäys:"
+
+#: gui.py:569
+msgid "Pattern cannot be empty."
+msgstr "Kaava ei voi olla tyhjä."
+
+#: gui.py:484
+msgid "Pattern:"
+msgstr "Kaava:"
+
+#: gui.py:360
+#: gui.py:376
+msgid "Please select a marker first."
+msgstr "Valitse ensin merkintä."
+
+#: gui.py:89
+#: gui.py:101
+#: gui.py:113
+msgid "Please select a site first."
+msgstr "Valitse ensin sivusto."
+
+#: gui.py:490
+msgid "Regex Match (use regular expression)"
+msgstr "Regex-täsmäys (käytä säännöllistä lauseketta)"
+
+#: gui.py:170
+#: gui.py:220
+msgid "Regular Expression"
+msgstr "Säännöllinen lauseke"
+
+#: gui.py:225
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: gui.py:175
+msgid "Save Site"
+msgstr "Tallenna sivusto"
+
+#: gui.py:513
+msgid "Search Scope:"
+msgstr "Hakualue:"
+
+#: gui.py:15
+msgid "Site Manager"
+msgstr "Sivustonhallinta"
+
+#: gui.py:198
+msgid "Site created successfully."
+msgstr "Sivusto luotiin onnistuneesti."
+
+#: gui.py:105
+msgid "Site deleted successfully."
+msgstr "Sivusto poistettiin onnistuneesti."
+
+#: gui.py:250
+msgid "Site updated successfully."
+msgstr "Sivusto päivitettiin onnistuneesti."
+
+#: gui.py:193
+#: gui.py:243
+msgid "URL Pattern cannot be empty."
+msgstr "URL-kaava ei voi olla tyhjä."
+
+#: gui.py:165
+#: gui.py:216
+msgid "URL Pattern:"
+msgstr "URL-kaava:"
+
+#: gui.py:333
+msgid "Unnamed"
+msgstr "Nimetön"
+
+#: gui.py:514
+msgid "Viewport Only"
+msgstr "Vain näkymäalue"
