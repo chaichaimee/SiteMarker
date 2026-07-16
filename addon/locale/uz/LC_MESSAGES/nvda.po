@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Uzbek\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&Marker qo'shish"
+msgstr "Belgini &qo'shish"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&Yangi sayt qo'shish"
+msgstr "Yangi sayt &qo'shish"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Sayt menejeriga qaytish"
+msgstr "Sayt boshqaruvchisiga &qaytish"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&O'chirish"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Markerni o'chirish	Del"
+msgstr "Belgini &o'chirish	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&Saytni o'chirish"
+msgstr "Saytni &o'chirish"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Saytni o'chirish	Del"
+msgstr "Saytni &o'chirish	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&Tahrirlash"
+msgstr "Tahrir&lash"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Markerni tahrirlash	F2"
+msgstr "Belgini tahrir&lash	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&Saytni tahrirlash"
+msgstr "Saytni tahrir&lash"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Saytni tahrirlash	F2"
+msgstr "Saytni tahrir&lash	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&Markerlar boshqaruvi"
+msgstr "Belgilarni boshqar&ish"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&Markerlar ro'yxati:"
+msgstr "&Belgilar ro'yxati:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
 msgstr "&Ro'yxatdan o'tgan saytlar:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Sayt konfiguratsiyasini qo'shish"
+msgstr "Sayt sozlamasini qo'shish"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Barcha markerlar tozalandi."
+msgstr "Barcha belgilar tozalandi."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Barcha markerlarni o'chirishni xohlayotganingizga ishonchingiz komilmi?"
+msgstr "BARCHA belgilarni o'chirishga ishonchingiz komilmi?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Ushbu markerni o'chirishni xohlayotganingizga ishonchingiz komilmi?"
+msgstr "Ushbu belgini o'chirishga ishonchingiz komilmi?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Ushbu saytni va uning barcha markerlarini o'chirishni xohlayotganingizga ishonchingiz komilmi?"
+msgstr "Ushbu saytni va uning barcha belgilarini o'chirishga ishonchingiz komilmi?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "Avtomatik bosish"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C ga tayinlangan keyingi markerni avtomatik bosish"
+msgstr "Alt+C ga tayinlangan keyingi belgini avtomatik bosish"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J ga tayinlangan keyingi markerni avtomatik bosish"
+msgstr "Alt+J ga tayinlangan keyingi belgini avtomatik bosish"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X ga tayinlangan keyingi markerni avtomatik bosish"
+msgstr "Alt+X ga tayinlangan keyingi belgini avtomatik bosish"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z ga tayinlangan keyingi markerni avtomatik bosish"
+msgstr "Alt+Z ga tayinlangan keyingi belgini avtomatik bosish"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "Bekor qilish"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "&Hammasini tozalash"
+msgstr "Hammasini tozalar&sh"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "&Barcha markerlarni tozalash"
+msgstr "Barcha belgilarni tozalar&sh"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "Bosish tugmasi:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "Yopish"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "Tasdiqlash"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "Hammasini o'chirishni tasdiqlash"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "Substringni o'z ichiga oladi"
+msgstr "Satr qismini o'z ichiga oladi"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Matnni o'z ichiga oladi (qisman moslik)"
+msgstr "Matnni o'z ichiga oladi (qisman moslikni topish)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "Fokusni o'chirish"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "Ko'rsatish nomi bo'sh bo'lishi mumkin emas."
+msgstr "Ko'rsatiladigan nom bo'sh bo'lishi mumkin emas."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
-msgstr "Ko'rsatish nomi:"
+msgstr "Ko'rsatiladigan nom:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "Faqat domen"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "Sayt konfiguratsiyasini tahrirlash"
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "Shakl rejimiga kirmaslik"
 
-#: gui.py:514
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Sayt sozlamasini tahrirlash"
+
+#: gui.py:540
 msgid "Entire Document"
 msgstr "Butun hujjat"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
-msgstr "Xato"
+msgstr "Xatolik"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "Aniq moslik"
+msgstr "Aniq mos kelish"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Aniq paragraf (butun paragrafni moslashtirish)"
+msgstr "Aniq paragraf (butun paragraf mosligi)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
 msgstr "Saytni o'chirish muvaffaqiyatsiz tugadi."
 
-#: gui.py:170
-#: gui.py:220
-msgid "Include Subdomains"
-msgstr "Subdomenni qo'shish"
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Fokus rejimi:"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:174
+#: gui.py:237
+msgid "Include Subdomains"
+msgstr "Subdomenlarni ichiga olish"
+
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "Ma'lumot"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "Sakrash"
+msgstr "O'tish"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "Sakrash tugmasi:"
+msgstr "O'tish tugmasi:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "Oldingi marker D ga orqaga sakrash"
+msgstr "Oldingi D belgisiga orqaga o'tish"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "Oldingi marker F ga orqaga sakrash"
+msgstr "Oldingi F belgisiga orqaga o'tish"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "Oldingi marker J ga orqaga sakrash"
+msgstr "Oldingi J belgisiga orqaga o'tish"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "Oldingi marker Z ga orqaga sakrash"
+msgstr "Oldingi Z belgisiga orqaga o'tish"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "Keyingi marker D ga oldinga sakrash"
+msgstr "Keyingi D belgisiga oldinga o'tish"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "Keyingi marker F ga oldinga sakrash"
+msgstr "Keyingi F belgisiga oldinga o'tish"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "Keyingi marker J ga oldinga sakrash"
+msgstr "Keyingi J belgisiga oldinga o'tish"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "Keyingi marker Z ga oldinga sakrash"
+msgstr "Keyingi Z belgisiga oldinga o'tish"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "Marker menejeri - "
+msgstr "Belgilar boshqaruvchisi - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "Marker xususiyatlari"
+msgstr "Belgi xususiyatlari"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "Marker topildi: {}"
+msgstr "Belgi topildi: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "Moslik turi:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
-msgstr "Rejim:"
+msgstr "Moslik turi:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "Tozalash uchun markerlar yo'q."
+msgstr "Tozalanadigan belgilar yo'q."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Oddiy"
+
+#: gui.py:555
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Ofset (moslikdan keyin harakatlanish uchun qatorlar/paragraflar):"
+msgstr "Siljish (mos kelishdan keyin o'tiladigan satrlar/paragraflar):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "Naqsh mosligi:"
+msgstr "Shablon mosligi:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Naqsh bo'sh bo'lishi mumkin emas."
+msgstr "Shablon bo'sh bo'lishi mumkin emas."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
-msgstr "Naqsh:"
+msgstr "Shablon:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "Iltimos, avval markerni tanlang."
+msgstr "Iltimos, avval belgini tanlang."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
 msgstr "Iltimos, avval saytni tanlang."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex mosligi (muntazam ifodadan foydalaning)"
+msgstr "Regex mosligi (muntazam ifodadan foydalanish)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "Muntazam ifoda"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "O'zgarishlarni saqlash"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "Saytni saqlash"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "Qidiruv doirasi:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Sayt menejeri"
+msgstr "Sayt boshqaruvchisi"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "Sayt muvaffaqiyatli yaratildi."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Sayt muvaffaqiyatli o'chirildi."
+msgstr "Sayt muvaimaqiyatli o'chirildi."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
 msgstr "Sayt muvaffaqiyatli yangilandi."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL naqshi bo'sh bo'lishi mumkin emas."
+msgstr "URL shabloni bo'sh bo'lishi mumkin emas."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL naqshi:"
+msgstr "URL shabloni:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "Nomsiz"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "Faqat ko'rish maydoni"
+msgstr "Faqat ko'rinish sohasi"

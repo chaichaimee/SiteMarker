@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hebrew\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&הוסף סמן"
+msgstr "ה&וסفت סמן"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&הוסף אתר חדש"
+msgstr "ה&וסفت אתר חדש"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&חזור למנהל האתרים"
+msgstr "&חזרה למנהל האתרים"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "&מחק"
+msgstr "מ&חיקה"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&מחק סמן	Del"
+msgstr "מ&חיקת סמן	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&מחק אתר"
+msgstr "מ&חיקת אתר"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&מחק אתר	Del"
+msgstr "מ&חיקת אתר	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&ערוך"
+msgstr "ע&ריכה"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&ערוך סמן	F2"
+msgstr "ע&ריכת סמן	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&ערוך אתר"
+msgstr "ע&ריכת אתר"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&ערוך אתר	F2"
+msgstr "ע&ריכת אתר	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&נהל סמנים"
+msgstr "ני&הול סมנים"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&רשימת סמנים:"
+msgstr "רשימת ס&מנים:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&אתרים רשומים:"
+msgstr "אתרים ר&שומים:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "הוסף תצורת אתר"
+msgstr "הוספת תצורת אתר"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "כל הסמנים נמחקו."
+msgstr "כל הסมנים נמחקו."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "האם אתה בטוח שברצונך למחוק את כל הסמנים?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
 msgstr "האם אתה בטוח שברצונך למחוק סמן זה?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "האם אתה בטוח שברצונך למחוק אתר זה ואת כל סמניו?"
+msgstr "האם אתה בטוח שברצונך למחוק אתר זה ואת כל הסמנים שלו?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "לחיצה אוטומטית"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "לחיצה אוטומטית על הסמן הבא המוקצה ל-Alt+C"
+msgstr "לחיצה אוטומטית על הסמן הבא המשויך ל-Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "לחיצה אוטומטית על הסמן הבא המוקצה ל-Alt+J"
+msgstr "לחיצה אוטומטית על הסמן הבא המשויך ל-Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "לחיצה אוטומטית על הסמן הבא המוקצה ל-Alt+X"
+msgstr "לחיצה אוטומטית על הסמן הבא המשויך ל-Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "לחיצה אוטומטית על הסמן הבא המוקצה ל-Alt+Z"
+msgstr "לחיצה אוטומטית על הסמן הבא המשויך ל-Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "ביטול"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "נקה &הכל"
+msgstr "ניקוי ה&כל"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "נקה &את כל הסמנים"
+msgstr "ניקוי &כל הסמנים"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "מקש לחיצה:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
-msgstr "סגור"
+msgstr "סגירה"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "אישור"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "אישור מחיקת הכל"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "הכיל תת-מחרוזת"
+msgstr "מכיל מחרוזת חלקית"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
 msgstr "מכיל טקסט (התאמה חלקית)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "נטרול מיקוד"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
 msgstr "שם התצוגה אינו יכול להיות ריק."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "שם תצוגה:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "דומיין בלבד"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "ערוך תצורת אתר"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "מסמך שלם"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
+msgid "Don't enter form mode"
+msgstr "אל תיכנס למצב טפסים"
+
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "עריכת תצורת אתר"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "המסמך כולו"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "שגיאה"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "התאמה מדויקת"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "פסקה מדויקת (התאמת פסקה שלמה)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "נכשל במחיקת האתר."
+msgstr "מחיקת האתר נכשלה."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "מצב מיקוד:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "כלול תתי-דומיינים"
+msgstr "כולל תת-דומיינים"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "מידע"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "קפיצה"
+msgstr "מעבר"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "מקש קפיצה:"
+msgstr "מקש מעבר:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "קפוץ אחורה לסמן הקודם D"
+msgstr "מעבר אחורה לסמן הקודם D"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "קפוץ אחורה לסמן הקודם F"
+msgstr "מעבר אחורה לסמן הקודם F"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "קפוץ אחורה לסמן הקודם J"
+msgstr "מעבר אחורה לסמן הקודם J"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "קפוץ אחורה לסמן הקודם Z"
+msgstr "מעבר אחורה לסמן הקודם Z"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "קפוץ קדימה לסמן הבא D"
+msgstr "מעבר קדימה לסמן הבא D"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "קפוץ קדימה לסמן הבא F"
+msgstr "מעבר קדימה לסמן הבא F"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "קפוץ קדימה לסמן הבא J"
+msgstr "מעבר קדימה לסמן הבא J"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "קפוץ קדימה לסמן הבא Z"
+msgstr "מעבר קדימה לסמן הבא Z"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "מנהל סמנים - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "מאפייני סמן"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "סמן נמצא: {}"
+msgstr "נמצא סמן: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "סוג התאמה:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "מצב:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
 msgstr "אין סמנים לניקוי."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "רגיל"
+
+#: gui.py:555
 msgid "OK"
 msgstr "אישור"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "היסט (שורות/פסקאות להזזה לאחר ההתאמה):"
+msgstr "היסט (שורות/פסקאות למעבר לאחר התאמה):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "התאמת תבנית:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "התבנית אינה יכולה להיות ריקה."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "תבנית:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
 msgstr "אנא בחר סמן תחילה."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
 msgstr "אנא בחר אתר תחילה."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
 msgstr "התאמת Regex (שימוש בביטוי רגולרי)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "ביטוי רגולרי"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
-msgstr "שמור שינויים"
+msgstr "שמירת שינויים"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "שמור אתר"
+msgstr "שמירת אתר"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "היקף חיפוש:"
+msgstr "טווח חיפוש:"
 
 #: gui.py:15
 msgid "Site Manager"
 msgstr "מנהל אתרים"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "האתר נוצר בהצלחה."
+msgstr "האתר נוצר בהצלحة."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "האתר נמחק בהצלחה."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
 msgstr "האתר עודכן בהצלחה."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "תבנית ה-URL אינה יכולה להיות ריקה."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "תבנית URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "ללא שם"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "חלון תצוגה בלבד"
+msgstr "אזור תצוגה בלבד"

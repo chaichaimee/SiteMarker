@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
-"PO-Revision-Date: 2026-07-06 15:00+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "Markierung &hinzufügen"
+msgstr "Lesezeichen &hinzufügen"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Neue Seite &hinzufügen"
+msgstr "Neue Website &hinzufügen"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "Zurück zur Seiten-Verwaltung (&B)"
+msgstr "&Zurück zum Website-Manager"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&Löschen"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "Markierung &löschen	Del"
+msgstr "Lesezeichen &löschen	Entf"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Seite &löschen"
+msgstr "Website &löschen"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Seite &löschen	Del"
+msgstr "Website &löschen	Entf"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
 msgstr "&Bearbeiten"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Markierung &bearbeiten	F2"
+msgstr "Lesezeichen &bearbeiten	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Seite &bearbeiten"
+msgstr "Website &bearbeiten"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Seite &bearbeiten	F2"
+msgstr "Website &bearbeiten	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "Markierungen &verwalten"
+msgstr "Lesezeichen &verwalten"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&Markierungsliste:"
+msgstr "Lesezeichen&liste:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&Registrierte Seiten:"
+msgstr "&Registrierte Websites:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Seitenkonfiguration hinzufügen"
+msgstr "Website-Konfiguration hinzufügen"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Alle Markierungen wurden gelöscht."
+msgstr "Alle Lesezeichen wurden gelöscht."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Sind Sie sicher, dass Sie ALLE Markierungen löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie ALLE Lesezeichen löschen möchten?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Sind Sie sicher, dass Sie diese Markierung löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie dieses Lesezeichen löschen möchten?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Sind Sie sicher, dass Sie diese Seite und alle dazugehörigen Markierungen löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie diese Website und alle ihre Lesezeichen löschen möchten?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "Automatischer Klick"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Automatischer Klick auf nächste Markierung, zugewiesen an Alt+C"
+msgstr "Automatischer Klick auf das nächste Lesezeichen, das Alt+C zugewiesen ist"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Automatischer Klick auf nächste Markierung, zugewiesen an Alt+J"
+msgstr "Automatischer Klick auf das nächste Lesezeichen, das Alt+J zugewiesen ist"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Automatischer Klick auf nächste Markierung, zugewiesen an Alt+X"
+msgstr "Automatischer Klick auf das nächste Lesezeichen, das Alt+X zugewiesen ist"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Automatischer Klick auf nächste Markierung, zugewiesen an Alt+Z"
+msgstr "Automatischer Klick auf das nächste Lesezeichen, das Alt+Z zugewiesen ist"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "Alles &löschen"
+msgstr "&Alle löschen"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Alle Markierungen &löschen"
+msgstr "&Alle Lesezeichen löschen"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "Klick-Taste:"
+msgstr "Klicktaste:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "Schließen"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Alles löschen bestätigen"
+msgstr "Löschen aller bestätigen"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "Teilzeichenfolge enthalten"
+msgstr "Enthält Teilzeichenfolge"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
 msgstr "Enthält Text (Teiltreffer finden)"
 
-#: gui.py:190
-#: gui.py:240
-msgid "Display Name cannot be empty."
-msgstr "Anzeigename darf nicht leer sein."
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "Fokusmodus deaktivieren"
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:201
+#: gui.py:265
+msgid "Display Name cannot be empty."
+msgstr "Der Anzeigename darf nicht leer sein."
+
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "Anzeigename:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "Nur Domain"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "Seitenkonfiguration bearbeiten"
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "Formularmodus nicht aktivieren"
 
-#: gui.py:514
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Website-Konfiguration bearbeiten"
+
+#: gui.py:540
 msgid "Entire Document"
 msgstr "Gesamtes Dokument"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "Fehler"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "Exakte Übereinstimmung"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "Exakter Absatz (ganzen Absatz abgleichen)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "Seite konnte nicht gelöscht werden."
+msgstr "Website konnte nicht gelöscht werden."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Fokusmodus:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "Subdomains einbeziehen"
+msgstr "Subdomains einschließen"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "Information"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "Sprung"
+msgstr "Springen"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "Sprung-Taste:"
+msgstr "Sprungtaste:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "Rückwärtssprung zur vorherigen Markierung D"
+msgstr "Rückwärts zum vorherigen Lesezeichen D springen"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "Rückwärtssprung zur vorherigen Markierung F"
+msgstr "Rückwärts zum vorherigen Lesezeichen F springen"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "Rückwärtssprung zur vorherigen Markierung J"
+msgstr "Rückwärts zum vorherigen Lesezeichen J springen"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "Rückwärtssprung zur vorherigen Markierung Z"
+msgstr "Rückwärts zum vorherigen Lesezeichen Z springen"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "Vorwärtssprung zur nächsten Markierung D"
+msgstr "Vorwärts zum nächsten Lesezeichen D springen"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "Vorwärtssprung zur nächsten Markierung F"
+msgstr "Vorwärts zum nächsten Lesezeichen F springen"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "Vorwärtssprung zur nächsten Markierung J"
+msgstr "Vorwärts zum nächsten Lesezeichen J springen"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "Vorwärtssprung zur nächsten Markierung Z"
+msgstr "Vorwärts zum nächsten Lesezeichen Z springen"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "Markierungs-Verwaltung - "
+msgstr "Lesezeichen-Manager - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "Markierungseigenschaften"
+msgstr "Lesezeichen-Eigenschaften"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "Markierung gefunden: {}"
+msgstr "Lesezeichen gefunden: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "Übereinstimmungstyp:"
+msgstr "Suchtyp:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "Modus:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "Keine Markierungen zum Löschen."
+msgstr "Keine Lesezeichen zum Löschen vorhanden."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Normal"
+
+#: gui.py:555
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Versatz (Zeilen/Absätze zur Bewegung nach Treffer):"
+msgstr "Versatz (Zeilen/Absätze, die nach einem Treffer verschoben werden sollen):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "Musterabgleich:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Muster darf nicht leer sein."
+msgstr "Das Muster darf nicht leer sein."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "Muster:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "Bitte wählen Sie zuerst eine Markierung aus."
+msgstr "Bitte wählen Sie zuerst ein Lesezeichen aus."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "Bitte wählen Sie zuerst eine Seite aus."
+msgstr "Bitte wählen Sie zuerst eine Website aus."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex-Abgleich (regulären Ausdruck verwenden)"
+msgstr "Regulärer Ausdruck (regulären Ausdruck verwenden)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "Regulärer Ausdruck"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "Änderungen speichern"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "Seite speichern"
+msgstr "Website speichern"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "Suchbereich:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Seiten-Verwaltung"
+msgstr "Website-Manager"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "Seite erfolgreich erstellt."
+msgstr "Website erfolgreich erstellt."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Seite erfolgreich gelöscht."
+msgstr "Website erfolgreich gelöscht."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "Seite erfolgreich aktualisiert."
+msgstr "Website erfolgreich aktualisiert."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL-Muster darf nicht leer sein."
+msgstr "Das URL-Muster darf nicht leer sein."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL-Muster:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "Unbenannt"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "Nur Ansichtsfenster"
+msgstr "Nur sichtbarer Bereich"

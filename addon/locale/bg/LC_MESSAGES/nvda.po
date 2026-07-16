@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
-"PO-Revision-Date: 2026-07-06 15:00+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Bulgarian\n"
 "Language: bg\n"
@@ -12,209 +12,224 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "Добавяне на маркер &A"
+msgstr "&Добавяне на маркер"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Добавяне на нов сайт &A"
+msgstr "&Добавяне на нов сайт"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "Назад към мениджъра на сайтове &B"
+msgstr "&Назад към мениджъра на сайтове"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "Изтриване &D"
+msgstr "&Изтриване"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "Изтриване на маркер &D	Del"
+msgstr "&Изтриване на маркер	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Изтриване на сайт &D"
+msgstr "&Изтриване на сайт"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Изтриване на сайт &D	Del"
+msgstr "&Изтриване на сайт	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "Редактиране &E"
+msgstr "&Редактиране"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Редактиране на маркер &E	F2"
+msgstr "&Редактиране на маркер	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Редактиране на сайт &E"
+msgstr "&Редактиране на сайт"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Редактиране на сайт &E	F2"
+msgstr "&Редактиране на сайт	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "Управление на маркери &M"
+msgstr "&Управление на маркери"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "Списък с маркери &M:"
+msgstr "&Списък с маркери:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "Регистрирани сайтове &R:"
+msgstr "&Регистрирани сайтове:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
 msgstr "Добавяне на конфигурация на сайт"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
 msgstr "Всички маркери бяха изчистени."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "Сигурни ли сте, че искате да изтриете ВСИЧКИ маркери?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
 msgstr "Сигурни ли сте, че искате да изтриете този маркер?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Сигурни ли сте, че искате да изтриете този сайт и всичките му маркери?"
+msgstr "Сигурни ли сте, че искате да изтриете този сайт и всички негови маркери?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "Автоматично кликване"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Автоматично кликване върху следващия маркер, зададен на Alt+C"
+msgstr "Автоматично кликване върху следващия маркер, назначен на Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Автоматично кликване върху следващия маркер, зададен на Alt+J"
+msgstr "Автоматично кликване върху следващия маркер, назначен на Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Автоматично кликване върху следващия маркер, зададен на Alt+X"
+msgstr "Автоматично кликване върху следващия маркер, назначен на Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Автоматично кликване върху следващия маркер, зададен на Alt+Z"
+msgstr "Автоматично кликване върху следващия маркер, назначен на Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "Отказ"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "Изчистване на всички &A"
+msgstr "Изчистване на &всички"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Изчистване на всички маркери &A"
+msgstr "Изчистване на &всички маркери"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "Клавиш за кликване:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "Затваряне"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "Потвърждение"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Потвърждение за изтриване на всички"
+msgstr "Потвърждаване на изтриването на всички"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
 msgstr "Съдържа подниз"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Съдържа текст (намиране на частично съвпадение)"
+msgstr "Съдържа текст (частично съвпадение)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "Изключване на фокуса"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "Показваното име не може да бъде празно."
+msgstr "Екранното име не може да бъде празно."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
-msgstr "Показвано име:"
+msgstr "Екранно име:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "Само домейн"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "Редактиране на конфигурацията на сайта"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "Целият документ"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
+msgid "Don't enter form mode"
+msgstr "Без влизане в режим на формуляр"
+
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Редактиране на конфигурация на сайт"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "Целия документ"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "Грешка"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "Точно съвпадение"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Точен параграф (съвпадение на целия параграф)"
+msgstr "Точен абзац (съвпадение на целия абзац)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
 msgstr "Неуспешно изтриване на сайта."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Режим на фокус:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "Включване на поддомейни"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "Информация"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "Прескачане"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
 msgstr "Клавиш за прескачане:"
 
@@ -250,113 +265,118 @@ msgstr "Прескачане напред към следващия маркер
 msgid "Jump forward to next marker Z"
 msgstr "Прескачане напред към следващия маркер Z"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "Мениджър на маркери - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "Свойства на маркера"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
 msgstr "Намерен маркер: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "Тип съвпадение:"
+msgstr "Тип на съвпадението:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "Режим:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
 msgstr "Няма маркери за изчистване."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Нормален"
+
+#: gui.py:555
 msgid "OK"
-msgstr "OK"
+msgstr "Добре"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Отместване (редове/параграфи за преместване след съвпадение):"
+msgstr "Отместване (редове/абзаци за преместване след съвпадението):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "Съвпадение на шаблон:"
+msgstr "Съвпадение по шаблон:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "Шаблонът не може да бъде празен."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "Шаблон:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
 msgstr "Моля, първо изберете маркер."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
 msgstr "Моля, първо изберете сайт."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex съвпадение (използване на регулярни изрази)"
+msgstr "Съвпадение по регулярен израз (използване на регулярен израз)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "Регулярен израз"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "Запазване на промените"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "Запазване на сайта"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "Обхват на търсене:"
+msgstr "Обхват на търсенето:"
 
 #: gui.py:15
 msgid "Site Manager"
 msgstr "Мениджър на сайтове"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "Сайтът е създаден успешно."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "Сайтът е изтрит успешно."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
 msgstr "Сайтът е актуализиран успешно."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "Шаблонът за URL не може да бъде празен."
+msgstr "URL шаблонът не може да бъде празен."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL шаблон:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "Без име"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "Само изглед"
+msgstr "Само видимата област"

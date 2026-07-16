@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
-"PO-Revision-Date: 2026-07-06 15:00+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -12,318 +12,338 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "إضافة علامة &A"
+msgstr "إضافة علامة&"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "إضافة موقع جديد &A"
+msgstr "إضافة موقع جديد&"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "العودة إلى مدير المواقع &B"
+msgstr "العودة إلى مدير المواقع&"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "حذف &D"
+msgstr "حذف&"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "حذف العلامة &D	Del"
+msgstr "حذف علامة&\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "حذف الموقع &D"
+msgstr "حذف موقع&"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "حذف الموقع &D	Del"
+msgstr "حذف موقع&\tDel"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "تعديل &E"
+msgstr "تعديل&"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "تعديل العلامة &E	F2"
+msgstr "تعديل علامة&\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "تعديل الموقع &E"
+msgstr "تعديل موقع&"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "تعديل الموقع &E	F2"
+msgstr "تعديل موقع&\tF2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "إدارة العلامات &M"
+msgstr "إدارة العلامات&"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "قائمة العلامات &M:"
+msgstr "قائمة العلامات:&"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "المواقع المسجلة &R:"
+msgstr "المواقع المسجلة:&"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
 msgstr "إضافة إعدادات الموقع"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
 msgstr "تم مسح جميع العلامات."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "هل أنت متأكد أنك تريد حذف جميع العلامات؟"
+msgstr "هل أنت متأكد من رغبتك في حذف جميع العلامات؟"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "هل أنت متأكد أنك تريد حذف هذه العلامة؟"
+msgstr "هل أنت متأكد من رغبتك في حذف هذه العلامة؟"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "هل أنت متأكد أنك تريد حذف هذا الموقع وجميع علاماته؟"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا الموقع وجميع علاماته؟"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "نقر تلقائي"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "النقر التلقائي على العلامة التالية المعينة إلى Alt+C"
+msgstr "نقر تلقائي على العلامة التالية المعينة للاختصار Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "النقر التلقائي على العلامة التالية المعينة إلى Alt+J"
+msgstr "نقر تلقائي على العلامة التالية المعينة للاختصار Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "النقر التلقائي على العلامة التالية المعينة إلى Alt+X"
+msgstr "نقر تلقائي على العلامة التالية المعينة للاختصار Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "النقر التلقائي على العلامة التالية المعينة إلى Alt+Z"
+msgstr "نقر تلقائي على العلامة التالية المعينة للاختصار Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "مسح الكل &A"
+msgstr "مسح الكل&"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "مسح جميع العلامات &A"
+msgstr "مسح جميع العلامات&"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "مفتاح النقر:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "إغلاق"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "تأكيد"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "تأكيد حذف الكل"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "يحتوي على نص فرعي"
+msgstr "يحتوي على سلسلة نصية فرعية"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "يحتوي على نص (بحث عن تطابق جزئي)"
+msgstr "يحتوي على نص (مطابقة جزئية)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "تعطيل التركيز"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "اسم العرض لا يمكن أن يكون فارغاً."
+msgstr "لا يمكن أن يكون اسم العرض فارغًا."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "اسم العرض:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "النطاق فقط"
 
-#: gui.py:203
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "عدم دخول وضع الاستمارات"
+
+#: gui.py:220
 msgid "Edit Site Configuration"
 msgstr "تعديل إعدادات الموقع"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Entire Document"
-msgstr "المستند بالكامل"
+msgstr "المستند بأكمله"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "خطأ"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "تطابق تام"
+msgstr "مطابقة تامة"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "فقرة مطابقة (تطابق الفقرة بالكامل)"
+msgstr "فقرة كاملة (مطابقة الفقرة بأكملها)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
 msgstr "فشل حذف الموقع."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "وضع التركيز:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "تضمين النطاقات الفرعية"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "معلومات"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "القفز"
+msgstr "انتقال"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "مفتاح القفز:"
+msgstr "مفتاح الانتقال:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "القفز للخلف إلى العلامة السابقة D"
+msgstr "الانتقال للخلف إلى العلامة السابقة D"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "القفز للخلف إلى العلامة السابقة F"
+msgstr "الانتقال للخلف إلى العلامة السابقة F"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "القفز للخلف إلى العلامة السابقة J"
+msgstr "الانتقال للخلف إلى العلامة السابقة J"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "القفز للخلف إلى العلامة السابقة Z"
+msgstr "الانتقال للخلف إلى العلامة السابقة Z"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "القفز للأمام إلى العلامة التالية D"
+msgstr "الانتقال للأمام إلى العلامة التالية D"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "القفز للأمام إلى العلامة التالية F"
+msgstr "الانتقال للأمام إلى العلامة التالية F"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "القفز للأمام إلى العلامة التالية J"
+msgstr "الانتقال للأمام إلى العلامة التالية J"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "القفز للأمام إلى العلامة التالية Z"
+msgstr "الانتقال للأمام إلى العلامة التالية Z"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "مدير العلامات - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "خصائص العلامة"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "تم العثور على العلامة: {}"
+msgstr "تم العثور على علامة: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "نوع المطابقة:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "الوضع:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "لا توجد علامات للمسح."
+msgstr "لا توجد علامات لمسحها."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "عادي"
+
+#: gui.py:555
 msgid "OK"
 msgstr "موافق"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "الإزاحة (عدد الأسطر/الفقرات للتحرك بعد المطابقة):"
+msgstr "الإزاحة (الأسطر/الفقرات للتحرك بعد المطابقة):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "مطابقة النمط:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "النمط لا يمكن أن يكون فارغاً."
+msgstr "لا يمكن أن يكون النمط فارغًا."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "النمط:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "يرجى اختيار علامة أولاً."
+msgstr "يرجى تحديد علامة أولاً."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "يرجى اختيار موقع أولاً."
+msgstr "يرجى تحديد موقع أولاً."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "مطابقة التعبير النمطي (استخدام تعبير عادي)"
+msgstr "مطابقة التعبير النمطي (استخدام التعبيرات النمطية)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "تعبير عادي"
+msgstr "تعبير نمطي"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "حفظ الموقع"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "نطاق البحث:"
 
@@ -331,32 +351,32 @@ msgstr "نطاق البحث:"
 msgid "Site Manager"
 msgstr "مدير المواقع"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "تم إنشاء الموقع بنجاح."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "تم حذف الموقع بنجاح."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
 msgstr "تم تحديث الموقع بنجاح."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "نمط الرابط لا يمكن أن يكون فارغاً."
+msgstr "لا يمكن أن يكون نمط الرابط فارغًا."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "نمط الرابط:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "بدون اسم"
+msgstr "غير مسمى"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "نافذة العرض فقط"
+msgstr "مساحة العرض فقط"

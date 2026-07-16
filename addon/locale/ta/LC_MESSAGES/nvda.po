@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Tamil\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&குறியைச் சேர்"
+msgstr "குறிப்பானைச் &சேர்"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&புதிய தளத்தைச் சேர்"
+msgstr "புதிய தளத்தைச் &சேர்"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&தள மேலாளருக்குத் திரும்பு"
+msgstr "தள மேலாளருக்குத் &திரும்பு"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&நீக்கு"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&குறியை நீக்கு	Del"
+msgstr "குறிப்பானை &நீக்கு	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&தளத்தை நீக்கு"
+msgstr "தளத்தை &நீக்கு"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&தளத்தை நீக்கு	Del"
+msgstr "தளத்தை &நீக்கு	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
 msgstr "&தொகு"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&குறியை தொகு	F2"
+msgstr "குறிப்பானைத் &தொகு	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&தளத்தை தொகு"
+msgstr "தளத்தைத் &தொகு"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&தளத்தை தொகு	F2"
+msgstr "தளத்தைத் &தொகு	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&குறிகளை நிர்வகி"
+msgstr "குறிப்பான்களை மே&லாள்"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&குறிகள் பட்டியல்:"
+msgstr "&குறிப்பான்கள் பட்டியல்:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&பதிவு செய்யப்பட்ட தளங்கள்:"
+msgstr "பதிவுசெய்யப்பட்ட &தளங்கள்:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "தள உள்ளமைவைச் சேர்"
+msgstr "தள அமைப்பைச் சேர்"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "அனைத்து குறிகளும் அகற்றப்பட்டன."
+msgstr "அனைத்து குறிப்பான்களும் அழிக்கப்பட்டன."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "அனைத்து குறிகளையும் நீக்க வேண்டுமா என்பது உறுதியா?"
+msgstr "அனைத்து குறிப்பான்களையும் நீக்க விரும்புகிறீர்களா என்பதில் உறுதியாக உள்ளீர்களா?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "இந்த குறியை நீக்க வேண்டுமா என்பது உறுதியா?"
+msgstr "இந்தக் குறிப்பானை நீக்க விரும்புகிறீர்களா என்பதில் உறுதியாக உள்ளீர்களா?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "இந்த தளத்தையும் அதன் அனைத்து குறிகளையும் நீக்க வேண்டுமா என்பது உறுதியா?"
+msgstr "இந்தத் தளத்தையும் அதன் அனைத்து குறிப்பான்களையும் நீக்க விரும்புகிறீர்களா என்பதில் உறுதியாக உள்ளீர்களா?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
-msgstr "தானியங்கு கிளிக்"
+msgstr "தானியங்கி சொடுக்கல்"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C க்கு ஒதுக்கப்பட்ட அடுத்த குறியில் தானியங்கு கிளிக்"
+msgstr "Alt+C இல் ஒதுக்கப்பட்ட அடுத்த குறிப்பானில் தானியங்கி சொடுக்கல்"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J க்கு ஒதுக்கப்பட்ட அடுத்த குறியில் தானியங்கு கிளிக்"
+msgstr "Alt+J இல் ஒதுக்கப்பட்ட அடுத்த குறிப்பானில் தானியங்கி சொடுக்கல்"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X க்கு ஒதுக்கப்பட்ட அடுத்த குறியில் தானியங்கு கிளிக்"
+msgstr "Alt+X இல் ஒதுக்கப்பட்ட அடுத்த குறிப்பானில் தானியங்கி சொடுக்கல்"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z க்கு ஒதுக்கப்பட்ட அடுத்த குறியில் தானியங்கு கிளிக்"
+msgstr "Alt+Z இல் ஒதுக்கப்பட்ட அடுத்த குறிப்பானில் தானியங்கி சொடுக்கல்"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "அனைத்தையும் &அகற்று"
+msgstr "அனைத்தையும் அ&ழி"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "அனைத்து &குறிகளையும் அகற்று"
+msgstr "அனைத்து குறிப்பான்களையும் அ&ழி"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "கிளிக் விசை:"
+msgstr "சொடுக்கும் விசை:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "மூடு"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "உறுதிப்படுத்து"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "அனைத்தையும் நீக்க உறுதிப்படுத்து"
+msgstr "அனைத்தையும் நீக்குவதை உறுதிப்படுத்து"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "துணைச் சரத்தைக் கொண்டுள்ளது"
+msgstr "துணைச்சரத்தைக் கொண்டிருக்க வேண்டும்"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "உரையைக் கொண்டுள்ளது (பகுதி பொருத்தம்)"
+msgstr "உரையைக் கொண்டுள்ளது (பகுதிப் பொருத்தத்தைக் கண்டுபிடி)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "கவனத்தை முடக்கு"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "காட்சிப் பெயர் காலியாக இருக்க முடியாது."
+msgstr "காட்சிப் பெயர் காலியாக இருக்கக்கூடாது."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "காட்சிப் பெயர்:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "டொமைன் மட்டும்"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "தள உள்ளமைவை தொகு"
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "படிவ பயன்முறையில் நுழைய வேண்டாம்"
 
-#: gui.py:514
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "தள அமைப்பைத் தொகு"
+
+#: gui.py:540
 msgid "Entire Document"
 msgstr "முழு ஆவணம்"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "பிழை"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "சரியான பொருத்தம்"
+msgstr "துல்லியமான பொருத்தம்"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "சரியான பத்தி (முழு பத்தியையும் பொருத்து)"
+msgstr "துல்லியமான பத்தி (முழு பத்தியையும் பொருத்து)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "தளத்தை நீக்க முடியவில்லை."
+msgstr "தளத்தை நீக்கத் தவறிவிட்டது."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "கவனப் பயன்முறை:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "துணை டொமைன்களைச் சேர்"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "தகவல்"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "தாவு"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "தாவு விசை:"
+msgstr "தாவும் விசை:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "முந்தைய குறி D க்கு பின்னோக்கி தாவு"
+msgstr "முந்தைய குறிப்பான் D க்கு பின்னோக்கித் தாவு"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "முந்தைய குறி F க்கு பின்னோக்கி தாவு"
+msgstr "முந்தைய குறிப்பான் F க்கு பின்னோக்கித் தாவு"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "முந்தைய குறி J க்கு பின்னோக்கி தாவு"
+msgstr "முந்தைய குறிப்பான் J க்கு பின்னோக்கித் தாவு"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "முந்தைய குறி Z க்கு பின்னோக்கி தாவு"
+msgstr "முந்தைய குறிப்பான் Z க்கு பின்னோக்கித் தாவு"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "அடுத்த குறி D க்கு முன்னோக்கி தாவு"
+msgstr "அடுத்த குறிப்பான் D க்கு முன்னோக்கித் தாவு"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "அடுத்த குறி F க்கு முன்னோக்கி தாவு"
+msgstr "அடுத்த குறிப்பான் F க்கு முன்னோக்கித் தாவு"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "அடுத்த குறி J க்கு முன்னோக்கி தாவு"
+msgstr "அடுத்த குறிப்பான் J க்கு முன்னோக்கித் தாவு"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "அடுத்த குறி Z க்கு முன்னோக்கி தாவு"
+msgstr "அடுத்த குறிப்பான் Z க்கு முன்னோக்கித் தாவு"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "குறி மேலாளர் - "
+msgstr "குறிப்பான் மேலாளர் - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "குறி பண்புகள்"
+msgstr "குறிப்பான் பண்புகள்"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "குறி கிடைத்தது: {}"
+msgstr "குறிப்பான் கண்டறியப்பட்டது: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "பொருத்த வகை:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
-msgstr "முறை:"
+msgstr "பயன்முறை:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "அகற்ற குறிகள் இல்லை."
+msgstr "அழிப்பதற்கு எந்தக் குறிப்பான்களும் இல்லை."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "இயல்பு"
+
+#: gui.py:555
 msgid "OK"
 msgstr "சரி"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ஆஃப்செட் (பொருத்தத்திற்குப் பின் நகர்த்த வரிகள்/பத்திகள்):"
+msgstr "நகர்வு (பொருந்திய பின் நகர வேண்டிய வரிகள்/பத்திகள்):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "வடிவ பொருத்தம்:"
+msgstr "வடிவப் பொருத்தம்:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "வடிவம் காலியாக இருக்க முடியாது."
+msgstr "வடிவம் காலியாக இருக்கக்கூடாது."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "வடிவம்:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "முதலில் ஒரு குறியைத் தேர்ந்தெடுக்கவும்."
+msgstr "தயவுசெய்து முதலில் ஒரு குறிப்பானைத் தேர்ந்தெடுக்கவும்."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "முதலில் ஒரு தளத்தைத் தேர்ந்தெடுக்கவும்."
+msgstr "தயவுசெய்து முதலில் ஒரு தளத்தைத் தேர்ந்தெடுக்கவும்."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
 msgstr "Regex பொருத்தம் (வழக்கமான வெளிப்பாட்டைப் பயன்படுத்து)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "வழக்கமான வெளிப்பாடு"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "மாற்றங்களைச் சேமி"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "தளத்தைச் சேமி"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "தேடல் எல்லை:"
+msgstr "தேடல் வரம்பு:"
 
 #: gui.py:15
 msgid "Site Manager"
 msgstr "தள மேலாளர்"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "தளம் வெற்றிகரமாக உருவாக்கப்பட்டது."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "தளம் வெற்றிகரமாக நீக்கப்பட்டது."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "தளம் வெற்றிகரமாக புதுப்பிக்கப்பட்டது."
+msgstr "தளம் வெற்றிகரமாகப் புதுப்பிக்கப்பட்டது."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL வடிவம் காலியாக இருக்க முடியாது."
+msgstr "URL வடிவம் காலியாக இருக்கக்கூடாது."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL வடிவம்:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "பெயரிடப்படாதது"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "காட்சிப்பகுதி மட்டும்"
+msgstr "காட்சிப் பகுதி மட்டும்"

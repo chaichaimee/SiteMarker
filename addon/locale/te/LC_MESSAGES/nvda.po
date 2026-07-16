@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Telugu\n"
@@ -12,318 +12,338 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&మార్కర్‌ను జోడించు"
+msgstr "గుర్తును &జతచేయి"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&కొత్త సైట్‌ను జోడించు"
+msgstr "కొత్త సైట్‌ను &జతచేయి"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&సైట్ మేనేజర్‌కు తిరిగి వెళ్ళు"
+msgstr "సైట్ మేనేజర్‌కు &తిరిగి వెళ్ళు"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&తొలగించు"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&మార్కర్‌ను తొలగించు	Del"
+msgstr "గుర్తును &తొలగించు	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&సైట్‌ను తొలగించు"
+msgstr "సైట్‌ను &తొలగించు"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&సైట్‌ను తొలగించు	Del"
+msgstr "సైట్‌ను &తొలగించు	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
 msgstr "&సవరించు"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&మార్కర్‌ను సవరించు	F2"
+msgstr "గుర్తును &సవరించు	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&సైట్‌ను సవరించు"
+msgstr "సైట్‌ను &సవరించు"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&సైట్‌ను సవరించు	F2"
+msgstr "సైట్‌ను &సవరించు	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&మార్కర్‌లను నిర్వహించు"
+msgstr)గుర్తులను &నిర్వహించు"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&మార్కర్‌ల జాబితా:"
+msgstr "&గుర్తుల జాబితా:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&నమోదు చేసిన సైట్‌లు:"
+msgstr "&నమోదిత సైట్‌లు:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "సైట్ కాన్ఫిగరేషన్‌ను జోడించు"
+msgstr "సైట్ కాన్ఫిగరేషన్‌ను జతచేయి"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "అన్ని మార్కర్‌లు తీసివేయబడ్డాయి."
+msgstr "అన్ని గుర్తులు తీసివేయబడ్డాయి."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "మీరు అన్ని మార్కర్‌లను తొలగించాలనుకుంటున్నారా?"
+msgstr "మీరు ఖచ్చితంగా అన్ని గుర్తులను తొలగించాలనుకుంటున్నారా?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "మీరు ఈ మార్కర్‌ను తొలగించాలనుకుంటున్నారా?"
+msgstr "మీరు ఖచ్చితంగా ఈ గుర్తును తొలగించాలనుకుంటున్నారా?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "మీరు ఈ సైట్‌ను మరియు దాని అన్ని మార్కర్‌లను తొలగించాలనుకుంటున్నారా?"
+msgstr "మీరు ఖచ్చితంగా ఈ సైట్‌ను మరియు దాని అన్ని గుర్తులను తొలగించాలనుకుంటున్నారా?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "ఆటో క్లిక్"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C కి కేటాయించిన తదుపరి మార్కర్‌పై ఆటో క్లిక్"
+msgstr "Alt+C కి కేటాయించిన తదుపరి గుర్తుపై ఆటో క్లిక్"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J కి కేటాయించిన తదుపరి మార్కర్‌పై ఆటో క్లిక్"
+msgstr "Alt+J కి కేటాయించిన తదుపరి గుర్తుపై ఆటో క్లిక్"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X కి కేటాయించిన తదుపరి మార్కర్‌పై ఆటో క్లిక్"
+msgstr "Alt+X కి కేటాయించిన తదుపరి గుర్తుపై ఆటో క్లిక్"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z కి కేటాయించిన తదుపరి మార్కర్‌పై ఆటో క్లిక్"
+msgstr "Alt+Z కి కేటాయించిన తదుపరి గుర్తుపై ఆటో క్లిక్"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "రద్దు చేయి"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "&అన్నింటినీ తీసివేయి"
+msgstr "అన్నింటినీ &తీసివేయి"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "&అన్ని మార్కర్‌లను తీసివేయి"
+msgstr "అన్ని గుర్తులను &తీసివేయి"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "క్లిక్ కీ:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "మూసివేయి"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
-msgstr "నిర్ధారించు"
+msgstr "ధృవీకరించు"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "అన్నింటినీ తొలగించు నిర్ధారణ"
+msgstr "అన్నింటినీ తొలగించడాన్ని ధృవీకరించు"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "ఉప స్ట్రింగ్‌ను కలిగి ఉంటుంది"
+msgstr "ఉప-స్ట్రింగ్‌ను కలిగి ఉండు"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "టెక్స్ట్ కలిగి ఉంటుంది (పాక్షిక సరిపోలిక)"
+msgstr "పాఠ్యాన్ని కలిగి ఉంది (పాక్షిక సరిపోలికను కనుగొను)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "ఫోకస్‌ను నిలిపివేయి"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
 msgstr "ప్రదర్శన పేరు ఖాళీగా ఉండకూడదు."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "ప్రదర్శన పేరు:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "డొమైన్ మాత్రమే"
 
-#: gui.py:203
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "ఫారమ్ మోడ్‌లోకి ప్రవేశించవద్దు"
+
+#: gui.py:220
 msgid "Edit Site Configuration"
 msgstr "సైట్ కాన్ఫిగరేషన్‌ను సవరించు"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Entire Document"
-msgstr "మొత్తం డాక్యుమెంట్"
+msgstr "మొత్తం పత్రం"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
-msgstr "లోపం"
+msgstr "దోషం"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "ఖచ్చితమైన సరిపోలిక"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "ఖచ్చితమైన పేరా (మొత్తం పేరాను సరిపోల్చు)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
 msgstr "సైట్‌ను తొలగించడం విఫలమైంది."
 
-#: gui.py:170
-#: gui.py:220
-msgid "Include Subdomains"
-msgstr "ఉప డొమైన్‌లను చేర్చు"
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "ఫోకస్ మోడ్:"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:174
+#: gui.py:237
+msgid "Include Subdomains"
+msgstr "సబ్-డొమైన్‌లను చేర్చు"
+
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "సమాచారం"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "దూకు"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "దూకు కీ:"
+msgstr "జంప్ కీ:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "మునుపటి మార్కర్ D కి వెనుకకు దూకు"
+msgstr "మునుపటి గుర్తు D కి వెనుకకు దూకు"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "మునుపటి మార్కర్ F కి వెనుకకు దూకు"
+msgstr "మునుపటి గుర్తు F కి వెనుకకు దూకు"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "మునుపటి మార్కర్ J కి వెనుకకు దూకు"
+msgstr "మునుపటి గుర్తు J కి వెనుకకు దూకు"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "మునుపటి మార్కర్ Z కి వెనుకకు దూకు"
+msgstr "మునుపటి గుర్తు Z కి వెనుకకు దూకు"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "తదుపరి మార్కర్ D కి ముందుకు దూకు"
+msgstr "తదుపరి గుర్తు D కి ముందుకు దూకు"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "తదుపరి మార్కర్ F కి ముందుకు దూకు"
+msgstr "తదుపరి గుర్తు F కి ముందుకు దూకు"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "తదుపరి మార్కర్ J కి ముందుకు దూకు"
+msgstr "తదుపరి గుర్తు J కి ముందుకు దూకు"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "తదుపరి మార్కర్ Z కి ముందుకు దూకు"
+msgstr "తదుపరి గుర్తు Z కి ముందుకు దూకు"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "మార్కర్ మేనేజర్ - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "మార్కర్ లక్షణాలు"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
 msgstr "మార్కర్ కనుగొనబడింది: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "సరిపోలిక రకం:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "మోడ్:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "తీసివేయడానికి మార్కర్‌లు లేవు."
+msgstr "తీసివేయడానికి గుర్తులు లేవు."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "సాధారణం"
+
+#: gui.py:555
 msgid "OK"
 msgstr "సరే"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ఆఫ్‌సెట్ (సరిపోలిక తర్వాత తరలించడానికి పంక్తులు/పేరాలు):"
+msgstr "ఆఫ్‌సెట్ (సరిపోలిన తర్వాత తరలించాల్సిన లైన్లు/పేరాలు):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "నమూనా సరిపోలిక:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "నమూనా ఖాళీగా ఉండకూడదు."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "నమూనా:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "దయచేసి ముందుగా మార్కర్‌ను ఎంచుకోండి."
+msgstr "దయచేసి మొదట ఒక గుర్తును ఎంచుకోండి."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "దయచేసి ముందుగా సైట్‌ను ఎంచుకోండి."
+msgstr "దయచేసి మొదట ఒక సైట్‌ను ఎంచుకోండి."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "రెగెక్స్ సరిపోలిక (రెగ్యులర్ ఎక్స్ప్రెషన్ ఉపయోగించండి)"
+msgstr "Regex సరిపోలిక (రెగ్యुलर ఎక్స్‌ప్రెషన్‌ను ఉపయోగించు)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "రెగ్యులర్ ఎక్స్ప్రెషన్"
+msgstr "రెగ్యुलर ఎక్స్‌ప్రెషన్"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "మార్పులను సేవ్ చేయి"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "సైట్‌ను సేవ్ చేయి"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "శోధన పరిధి:"
 
@@ -331,32 +351,32 @@ msgstr "శోధన పరిధి:"
 msgid "Site Manager"
 msgstr "సైట్ మేనేజర్"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "సైట్ విజయవంతంగా సృష్టించబడింది."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "సైట్ విజయవంతంగా తొలగించబడింది."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
 msgstr "సైట్ విజయవంతంగా నవీకరించబడింది."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "URL నమూనా ఖాళీగా ఉండకూడదు."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL నమూనా:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "పేరులేని"
+msgstr "పేరు లేనిది"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
 msgstr "వ్యూపోర్ట్ మాత్రమే"

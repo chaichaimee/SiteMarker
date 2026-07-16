@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Malay\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
 msgstr "&Tambah Penanda"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&Tambah Laman Baharu"
+msgstr "&Tambah Tapak Baru"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Kembali ke Pengurus Laman"
+msgstr "&Kembali ke Pengurus Tapak"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&Padam"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
 msgstr "&Padam Penanda	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&Padam Laman"
+msgstr "&Padam Tapak"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Padam Laman	Del"
+msgstr "&Padam Tapak	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&Sunting"
+msgstr "&Edit"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Sunting Penanda	F2"
+msgstr "&Edit Penanda	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&Sunting Laman"
+msgstr "&Edit Tapak"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Sunting Laman	F2"
+msgstr "&Edit Tapak	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
 msgstr "&Urus Penanda"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&Senarai Penanda:"
+msgstr "Senarai &Penanda:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&Laman Berdaftar:"
+msgstr "Tapak Ter&daftar:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Tambah Konfigurasi Laman"
+msgstr "Tambah Konfigurasi Tapak"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
 msgstr "Semua penanda telah dikosongkan."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "Adakah anda pasti mahu memadam SEMUA penanda?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
 msgstr "Adakah anda pasti mahu memadam penanda ini?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Adakah anda pasti mahu memadam laman ini dan semua penandanya?"
+msgstr "Adakah anda pasti mahu memadam tapak ini dan semua penandanya?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
-msgstr "Klik Auto"
+msgstr "Klik Automatik"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Klik auto pada penanda seterusnya yang diberikan kepada Alt+C"
+msgstr "Klik automatik pada penanda seterusnya yang diperuntukkan kepada Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Klik auto pada penanda seterusnya yang diberikan kepada Alt+J"
+msgstr "Klik automatik pada penanda seterusnya yang diperuntukkan kepada Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Klik auto pada penanda seterusnya yang diberikan kepada Alt+X"
+msgstr "Klik automatik pada penanda seterusnya yang diperuntukkan kepada Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Klik auto pada penanda seterusnya yang diberikan kepada Alt+Z"
+msgstr "Klik automatik pada penanda seterusnya yang diperuntukkan kepada Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "Batal"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
 msgstr "Kosongkan &Semua"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
 msgstr "Kosongkan &Semua Penanda"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "Kekunci Klik:"
+msgstr "Kunci Klik:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "Tutup"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "Sahkan"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "Sahkan Padam Semua"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
 msgstr "Mengandungi Subrentetan"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Mengandungi Teks (padanan separa)"
+msgstr "Mengandungi Teks (cari padanan separa)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "Nyahdayakan fokus"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
 msgstr "Nama Paparan tidak boleh kosong."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "Nama Paparan:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "Domain Sahaja"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "Sunting Konfigurasi Laman"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "Seluruh Dokumen"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
+msgid "Don't enter form mode"
+msgstr "Jangan masuk mod borang"
+
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Edit Konfigurasi Tapak"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "Keseluruhan Dokumen"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "Ralat"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "Padanan Tepat"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Perenggan Tepat (padan seluruh perenggan)"
+msgstr "Perenggan Tepat (padan keseluruhan perenggan)"
 
-#: gui.py:108
-msgid "Failed to delete site."
-msgstr "Gagal memadam laman."
+#: gui.py:112
+msgid "Failed to delete site. Generic"
+msgstr "Gagal memadam tapak."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Mod Fokus:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "Sertakan Subdomain"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "Maklumat"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "Lompat"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "Kekunci Lompat:"
+msgstr "Kunci Lompat:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "Lompat ke belakang ke penanda sebelumnya D"
+msgstr "Lompat ke belakang ke penanda D sebelumnya"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "Lompat ke belakang ke penanda sebelumnya F"
+msgstr "Lompat ke belakang ke penanda F sebelumnya"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "Lompat ke belakang ke penanda sebelumnya J"
+msgstr "Lompat ke belakang ke penanda J sebelumnya"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "Lompat ke belakang ke penanda sebelumnya Z"
+msgstr "Lompat ke belakang ke penanda Z sebelumnya"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "Lompat ke hadapan ke penanda seterusnya D"
+msgstr "Lompat ke hadapan ke penanda D seterusnya"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "Lompat ke hadapan ke penanda seterusnya F"
+msgstr "Lompat ke hadapan ke penanda F seterusnya"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "Lompat ke hadapan ke penanda seterusnya J"
+msgstr "Lompat ke hadapan ke penanda J seterusnya"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "Lompat ke hadapan ke penanda seterusnya Z"
+msgstr "Lompat ke hadapan ke penanda Z seterusnya"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "Pengurus Penanda - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "Sifat Penanda"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
 msgstr "Penanda ditemui: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "Jenis Padanan:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "Mod:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
 msgstr "Tiada penanda untuk dikosongkan."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Normal"
+
+#: gui.py:555
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Ofset (baris/perenggan untuk bergerak selepas padanan):"
+msgstr "Ofset (baris/perenggan untuk dialihkan selepas padanan):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "Padanan Corak:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "Corak tidak boleh kosong."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "Corak:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
 msgstr "Sila pilih penanda terlebih dahulu."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "Sila pilih laman terlebih dahulu."
+msgstr "Sila pilih tapak terlebih dahulu."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Padanan Regex (guna ungkapan biasa)"
+msgstr "Padanan Regex (gunakan ungkapan nalar)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "Ungkapan Biasa"
+msgstr "Ungkapan Nalar"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "Simpan Perubahan"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "Simpan Laman"
+msgstr "Simpan Tapak"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "Skop Carian:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Pengurus Laman"
+msgstr "Pengurus Tapak"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "Laman berjaya dicipta."
+msgstr "Tapak berjaya dicipta."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Laman berjaya dipadam."
+msgstr "Tapak berjaya dipadam."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "Laman berjaya dikemas kini."
+msgstr "Tapak berjaya dikemas kini."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "Corak URL tidak boleh kosong."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "Corak URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "Tanpa Nama"
+msgstr "Tanpa nama"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "Halaman Pandang Sahaja"
+msgstr "Paparan Sahaja (Viewport)"

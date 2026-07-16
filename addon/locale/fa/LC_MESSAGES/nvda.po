@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
-"PO-Revision-Date: 2026-07-06 15:00+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -12,84 +12,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "افزودن نشانگر &A"
+msgstr "افزودن نشانگر&"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "افزودن سایت جدید &A"
+msgstr "افزودن سایت جدید&"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "بازگشت به مدیر سایت &B"
+msgstr "بازگشت به مدیریت سایت&"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "حذف &D"
+msgstr "حذف&"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "حذف نشانگر &D	Del"
+msgstr "حذف نشانگر&\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "حذف سایت &D"
+msgstr "حذف سایت&"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "حذف سایت &D	Del"
+msgstr "حذف سایت&\tDel"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "ویرایش &E"
+msgstr "ویرایش&"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "ویرایش نشانگر &E	F2"
+msgstr "ویرایش نشانگر&\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "ویرایش سایت &E"
+msgstr "ویرایش سایت&"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "ویرایش سایت &E	F2"
+msgstr "ویرایش سایت&\tF2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "مدیریت نشانگرها &M"
+msgstr "مدیریت نشانگرها&"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "لیست نشانگرها &M:"
+msgstr "لیست نشانگرها:&"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "سایت‌های ثبت‌شده &R:"
+msgstr "سایت‌های ثبت‌شده:&"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
 msgstr "افزودن پیکربندی سایت"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
 msgstr "تمام نشانگرها پاک شدند."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "آیا مطمئن هستید که می‌خواهید تمام نشانگرها را حذف کنید؟"
+msgstr "آیا مطمئن هستید که می‌خواهید همه نشانگرها را حذف کنید؟"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
 msgstr "آیا مطمئن هستید که می‌خواهید این نشانگر را حذف کنید؟"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "آیا مطمئن هستید که می‌خواهید این سایت و تمام نشانگرهای آن را حذف کنید؟"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "کلیک خودکار"
 
@@ -109,112 +109,127 @@ msgstr "کلیک خودکار روی نشانگر بعدی اختصاص‌یاف
 msgid "Auto click on next marker assigned to Alt+Z"
 msgstr "کلیک خودکار روی نشانگر بعدی اختصاص‌یافته به Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "لغو"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "پاک‌سازی همه &A"
+msgstr "پاک کردن همه&"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "پاک‌سازی همه نشانگرها &A"
+msgstr "پاک کردن همه نشانگرها&"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "کلید کلیک:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "بستن"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "تایید"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "تایید حذف همه"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
 msgstr "شامل زیررشته"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "شامل متن (یافتن مطابقت جزئی)"
+msgstr "شامل متن (یافتن تطابق جزئی)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "غیرفعال کردن تمرکز"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
 msgstr "نام نمایشی نمی‌تواند خالی باشد."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "نام نمایشی:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "فقط دامنه"
 
-#: gui.py:203
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "وارد حالت فرم نشو"
+
+#: gui.py:220
 msgid "Edit Site Configuration"
 msgstr "ویرایش پیکربندی سایت"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Entire Document"
 msgstr "کل سند"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "خطا"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "مطابقت دقیق"
+msgstr "تطابق دقیق"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "پاراگراف دقیق (مطابقت کل پاراگراف)"
+msgstr "پاراگراف دقیق (تطابق کل پاراگراف)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
 msgstr "حذف سایت ناموفق بود."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "حالت تمرکز:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "شامل زیردامنه‌ها"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "اطلاعات"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "پرش"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
 msgstr "کلید پرش:"
 
@@ -250,113 +265,118 @@ msgstr "پرش به جلو به نشانگر بعدی J"
 msgid "Jump forward to next marker Z"
 msgstr "پرش به جلو به نشانگر بعدی Z"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "مدیر نشانگرها - "
+msgstr "مدیریت نشانگرها - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "ویژگی‌های نشانگر"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "نشانگر یافت شد: {}"
+msgstr "نشانگر پیدا شد: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "نوع مطابقت:"
+msgstr "نوع تطابق:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "حالت:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "نشانگری برای پاک‌سازی وجود ندارد."
+msgstr "نشانگری برای پاک کردن وجود ندارد."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "عادی"
+
+#: gui.py:555
 msgid "OK"
 msgstr "تایید"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "افست (تعداد خط/پاراگراف برای حرکت پس از مطابقت):"
+msgstr "افست (خطوط/پاراگراف‌ها برای حرکت پس از تطابق):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "مطابقت الگو:"
+msgstr "تطابق الگو:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "الگو نمی‌تواند خالی باشد."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "الگو:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "لطفاً ابتدا یک نشانگر انتخاب کنید."
+msgstr "لطفا ابتدا یک نشانگر را انتخاب کنید."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "لطفاً ابتدا یک سایت انتخاب کنید."
+msgstr "لطفا ابتدا یک سایت را انتخاب کنید."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "مطابقت Regex (استفاده از عبارت منظم)"
+msgstr "تطابق عبارت منظم (استفاده از عبارت منظم)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "عبارت منظم"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "ذخیره سایت"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "دامنه جستجو:"
+msgstr "محدوده جستجو:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "مدیر سایت"
+msgstr "مدیریت سایت"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "سایت با موفقیت ایجاد شد."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "سایت با موفقیت حذف شد."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "سایت با موفقیت به‌روزرسانی شد."
+msgstr "سایت با موفقیت بروزرسانی شد."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "الگوی URL نمی‌تواند خالی باشد."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "الگوی URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "بدون نام"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "فقط نمای دید"
+msgstr "فقط محدوده نمایشی"

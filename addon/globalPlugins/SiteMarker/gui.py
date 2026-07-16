@@ -11,12 +11,12 @@ import tones
 addonHandler.initTranslation()
 
 class SiteManagerDialog(wx.Dialog):
-	def __init__(self, parent, engine, currentUrl=None):
+	def __init__(self, parent, engine, currentUrl=None, selectedSiteName=None):
 		super().__init__(parent, title=_("Site Manager"), style=wx.DEFAULT_DIALOG_STYLE | wx.RESIZE_BORDER)
 		self.engine = engine
 		self.currentUrl = currentUrl
+		self.selectedSiteName = selectedSiteName
 		self.siteNames = []
-		self.selectedSiteName = None
 		self._initUI()
 		self.loadSiteList()
 		self.CentreOnParent()
@@ -55,13 +55,17 @@ class SiteManagerDialog(wx.Dialog):
 
 	def loadSiteList(self):
 		self.sitesListCtrl.Clear()
-		# Sort site names alphabetically (case‑insensitive) for consistent A‑Z order.
 		self.siteNames = sorted(self.engine.getAllSiteNames(), key=lambda s: s.lower())
-		for siteName in self.siteNames:
+		selectedIndex = -1
+		for idx, siteName in enumerate(self.siteNames):
 			siteConfig = self.engine.getSiteConfig(siteName)
 			displayName = siteConfig.get("displayName", siteName)
 			self.sitesListCtrl.Append(displayName)
-		if self.siteNames:
+			if self.selectedSiteName and siteName == self.selectedSiteName:
+				selectedIndex = idx
+		if selectedIndex >= 0:
+			self.sitesListCtrl.SetSelection(selectedIndex)
+		elif self.siteNames:
 			self.sitesListCtrl.SetSelection(0)
 
 	def getSelectedSiteIndex(self):
@@ -171,6 +175,13 @@ class AddSiteDialog(wx.Dialog):
 		self.cmbMatchType = wx.ComboBox(self, choices=optionsShortList, style=wx.CB_READONLY)
 		self.cmbMatchType.SetSelection(0)
 		mainSizer.Add(self.cmbMatchType, 0, wx.EXPAND | wx.ALL, 5)
+		# --- Add Focus Mode ComboBox ---
+		mainSizer.Add(wx.StaticText(self, label=_("Focus Mode:")), 0, wx.ALL, 5)
+		focusModeChoices = [_("Normal"), _("Don't enter form mode"), _("Disable focus")]
+		self.cmbFocusMode = wx.ComboBox(self, choices=focusModeChoices, style=wx.CB_READONLY)
+		self.cmbFocusMode.SetSelection(0)  # Default Normal
+		mainSizer.Add(self.cmbFocusMode, 0, wx.EXPAND | wx.ALL, 5)
+		# --- End Focus Mode ---
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 		self.btnSave = wx.Button(self, wx.ID_OK, label=_("Save Site"))
 		self.btnCancel = wx.Button(self, id=wx.ID_CANCEL, label=_("Cancel"))
@@ -193,7 +204,13 @@ class AddSiteDialog(wx.Dialog):
 			wx.MessageBox(_("URL Pattern cannot be empty."), _("Error"), wx.OK | wx.ICON_ERROR)
 			return
 		cleanName = re.sub(r'[\\/*?:"<>|]', "_", displayNameValue)
-		siteConfigData = {"displayName": displayNameValue, "pattern": patternValue, "matchType": self.cmbMatchType.GetSelection(), "markers": []}
+		siteConfigData = {
+			"displayName": displayNameValue,
+			"pattern": patternValue,
+			"matchType": self.cmbMatchType.GetSelection(),
+			"focusMode": self.cmbFocusMode.GetSelection(),  # Save focusMode value
+			"markers": []
+		}
 		self.engine.saveSiteConfiguration(cleanName, siteConfigData)
 		ui.message(_("Site created successfully."))
 		self.EndModal(wx.ID_OK)
@@ -221,6 +238,14 @@ class EditSiteDialog(wx.Dialog):
 		self.cmbMatchType = wx.ComboBox(self, choices=optionsShortList, style=wx.CB_READONLY)
 		self.cmbMatchType.SetSelection(self.siteConfig.get("matchType", 0))
 		mainSizer.Add(self.cmbMatchType, 0, wx.EXPAND | wx.ALL, 5)
+		# --- Add Focus Mode ComboBox ---
+		mainSizer.Add(wx.StaticText(self, label=_("Focus Mode:")), 0, wx.ALL, 5)
+		focusModeChoices = [_("Normal"), _("Don't enter form mode"), _("Disable focus")]
+		self.cmbFocusMode = wx.ComboBox(self, choices=focusModeChoices, style=wx.CB_READONLY)
+		currentFocusMode = self.siteConfig.get("focusMode", 0)
+		self.cmbFocusMode.SetSelection(currentFocusMode if 0 <= currentFocusMode <= 2 else 0)
+		mainSizer.Add(self.cmbFocusMode, 0, wx.EXPAND | wx.ALL, 5)
+		# --- End Focus Mode ---
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 		self.btnSave = wx.Button(self, wx.ID_OK, label=_("Save Changes"))
 		self.btnCancel = wx.Button(self, id=wx.ID_CANCEL, label=_("Cancel"))
@@ -243,7 +268,13 @@ class EditSiteDialog(wx.Dialog):
 			wx.MessageBox(_("URL Pattern cannot be empty."), _("Error"), wx.OK | wx.ICON_ERROR)
 			return
 		newSiteName = re.sub(r'[\\/*?:"<>|]', "_", displayNameValue)
-		updatedConfig = {"displayName": displayNameValue, "pattern": patternValue, "matchType": self.cmbMatchType.GetSelection(), "markers": self.siteConfig.get("markers", [])}
+		updatedConfig = {
+			"displayName": displayNameValue,
+			"pattern": patternValue,
+			"matchType": self.cmbMatchType.GetSelection(),
+			"focusMode": self.cmbFocusMode.GetSelection(),  # Save focusMode value
+			"markers": self.siteConfig.get("markers", [])
+		}
 		if newSiteName != self.siteName:
 			self.engine.deleteSiteConfiguration(self.siteName)
 		self.engine.saveSiteConfiguration(newSiteName, updatedConfig)
@@ -480,19 +511,16 @@ class MarkerEditDialog(wx.Dialog):
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		selectedText = self._getSelectedText(initialText)
 
-		# Pattern
 		mainSizer.Add(wx.StaticText(self, label=_("Pattern:")), 0, wx.ALL, 5)
 		self.txtPattern = wx.TextCtrl(self, value=self.markerData.get("pattern", selectedText))
 		mainSizer.Add(self.txtPattern, 0, wx.EXPAND | wx.ALL, 5)
 
-		# Pattern Match
 		mainSizer.Add(wx.StaticText(self, label=_("Pattern Match:")), 0, wx.ALL, 5)
 		modeChoices = [_("Contains Text (find partial match)"), _("Exact Paragraph (match whole paragraph)"), _("Regex Match (use regular expression)")]
 		self.cmbMatchMode = wx.ComboBox(self, choices=modeChoices, style=wx.CB_READONLY)
 		self.cmbMatchMode.SetSelection(self.markerData.get("matchMode", 0))
 		mainSizer.Add(self.cmbMatchMode, 0, wx.EXPAND | wx.ALL, 5)
 
-		# Action Mode
 		mainSizer.Add(wx.StaticText(self, label=_("Mode:")), 0, wx.ALL, 5)
 		actionModes = [_("Jump"), _("Auto Click")]
 		self.cmbActionMode = wx.ComboBox(self, choices=actionModes, style=wx.CB_READONLY)
@@ -501,7 +529,6 @@ class MarkerEditDialog(wx.Dialog):
 		mainSizer.Add(self.cmbActionMode, 0, wx.EXPAND | wx.ALL, 5)
 		self.cmbActionMode.Bind(wx.EVT_COMBOBOX, self.onActionModeChange)
 
-		# Key selection
 		self.keySizer = wx.BoxSizer(wx.VERTICAL)
 		self.lblKey = wx.StaticText(self, label="")
 		self.cmbKey = wx.ComboBox(self, style=wx.CB_READONLY)
@@ -509,7 +536,6 @@ class MarkerEditDialog(wx.Dialog):
 		self.keySizer.Add(self.cmbKey, 0, wx.EXPAND | wx.ALL, 5)
 		mainSizer.Add(self.keySizer, 0, wx.EXPAND | wx.ALL, 5)
 
-		# Scope
 		mainSizer.Add(wx.StaticText(self, label=_("Search Scope:")), 0, wx.ALL, 5)
 		scopeChoices = [_("Entire Document"), _("Viewport Only")]
 		self.cmbScope = wx.ComboBox(self, choices=scopeChoices, style=wx.CB_READONLY)
@@ -517,17 +543,14 @@ class MarkerEditDialog(wx.Dialog):
 		self.cmbScope.SetSelection(0 if currentScope == "document" else 1)
 		mainSizer.Add(self.cmbScope, 0, wx.EXPAND | wx.ALL, 5)
 
-		# Display Name
 		mainSizer.Add(wx.StaticText(self, label=_("Display Name:")), 0, wx.ALL, 5)
 		self.txtDisplayName = wx.TextCtrl(self, value=self.markerData.get("displayName", selectedText))
 		mainSizer.Add(self.txtDisplayName, 0, wx.EXPAND | wx.ALL, 5)
 
-		# Offset
 		mainSizer.Add(wx.StaticText(self, label=_("Offset (lines/paragraphs to move after match):")), 0, wx.ALL, 5)
 		self.spinOffset = wx.SpinCtrl(self, min=-50, max=50, initial=self.markerData.get("offset", 0))
 		mainSizer.Add(self.spinOffset, 0, wx.EXPAND | wx.ALL, 5)
 
-		# Buttons
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 		self.btnSave = wx.Button(self, wx.ID_OK, label=_("OK"))
 		self.btnCancel = wx.Button(self, id=wx.ID_CANCEL, label=_("Cancel"))

@@ -89,6 +89,10 @@ def _jump(treeInterceptor, gesture, baseKey, plugin, isShift=False):
 		gesture.send()
 		return
 
+	if not plugin.isInBrowserContext():
+		gesture.send()
+		return
+
 	direction = -1 if isShift else 1
 	plugin.refreshActiveLayout(force=False)
 
@@ -125,6 +129,10 @@ def _jump(treeInterceptor, gesture, baseKey, plugin, isShift=False):
 		gesture.send()
 
 def _autoClickAction(treeInterceptor, gesture, keystroke, plugin):
+	if not plugin.isInBrowserContext():
+		gesture.send()
+		return
+
 	plugin.refreshActiveLayout(force=False)
 	
 	if not plugin.activeSiteMarkers or keystroke not in plugin.activeSiteMarkers:

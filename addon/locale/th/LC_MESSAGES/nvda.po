@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Thai\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&เพิ่มตัวทำเครื่องหมาย"
+msgstr "เพิ่มมาร์กเกอร์ (&A)"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&เพิ่มไซต์ใหม่"
+msgstr "เพิ่มเว็บไซต์ใหม่ (&A)"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&กลับไปยังตัวจัดการไซต์"
+msgstr "กลับไปยังโปรแกรมจัดการเว็บไซต์ (&B)"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "&ลบ"
+msgstr "ลบ (&D)"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&ลบตัวทำเครื่องหมาย	Del"
+msgstr "ลบมาร์กเกอร์ (&D)	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&ลบไซต์"
+msgstr "ลบเว็บไซต์ (&D)"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&ลบไซต์	Del"
+msgstr "ลบเว็บไซต์ (&D)	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&แก้ไข"
+msgstr "แก้ไข (&E)"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&แก้ไขตัวทำเครื่องหมาย	F2"
+msgstr "แก้ไขมาร์กเกอร์ (&E)	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&แก้ไขไซต์"
+msgstr "แก้ไขเว็บไซต์ (&E)"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&แก้ไขไซต์	F2"
+msgstr "แก้ไขเว็บไซต์ (&E)	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&จัดการตัวทำเครื่องหมาย"
+msgstr "จัดการมาร์กเกอร์ (&M)"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&รายการตัวทำเครื่องหมาย:"
+msgstr "รายการมาร์กเกอร์ (&M):"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&ไซต์ที่ลงทะเบียน:"
+msgstr "เว็บไซต์ที่ลงทะเบียน (&R):"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "เพิ่มการกำหนดค่าไซต์"
+msgstr "เพิ่มการตั้งค่าเว็บไซต์"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "ล้างตัวทำเครื่องหมายทั้งหมดแล้ว"
+msgstr "ล้างมาร์กเกอร์ทั้งหมดแล้ว"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "คุณแน่ใจหรือว่าต้องการลบตัวทำเครื่องหมายทั้งหมด?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบมาร์กเกอร์ทั้งหมด?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "คุณแน่ใจหรือว่าต้องการลบตัวทำเครื่องหมายนี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบมาร์กเกอร์นี้?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "คุณแน่ใจหรือว่าต้องการลบไซต์นี้และตัวทำเครื่องหมายทั้งหมด?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบเว็บไซต์นี้และมาร์กเกอร์ทั้งหมดของเว็บไซต์นี้?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "คลิกอัตโนมัติ"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "คลิกอัตโนมัติที่ตัวทำเครื่องหมายถัดไปซึ่งกำหนดให้ Alt+C"
+msgstr "คลิกอัตโนมัติที่มาร์กเกอร์ถัดไปที่กำหนดไว้กับ Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "คลิกอัตโนมัติที่ตัวทำเครื่องหมายถัดไปซึ่งกำหนดให้ Alt+J"
+msgstr "คลิกอัตโนมัติที่มาร์กเกอร์ถัดไปที่กำหนดไว้กับ Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "คลิกอัตโนมัติที่ตัวทำเครื่องหมายถัดไปซึ่งกำหนดให้ Alt+X"
+msgstr "คลิกอัตโนมัติที่มาร์กเกอร์ถัดไปที่กำหนดไว้กับ Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "คลิกอัตโนมัติที่ตัวทำเครื่องหมายถัดไปซึ่งกำหนดให้ Alt+Z"
+msgstr "คลิกอัตโนมัติที่มาร์กเกอร์ถัดไปที่กำหนดไว้กับ Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "ล้าง&ทั้งหมด"
+msgstr "ล้างทั้งหมด (&A)"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "ล้างตัวทำเครื่องหมาย&ทั้งหมด"
+msgstr "ล้างมาร์กเกอร์ทั้งหมด (&A)"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "ปุ่มคลิก:"
+msgstr "ปุ่มสำหรับคลิก:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "ปิด"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "ยืนยัน"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "ยืนยันการลบทั้งหมด"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "มีข้อความย่อย"
+msgstr "มีข้อความบางส่วน"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "มีข้อความ (ค้นหาแบบบางส่วน)"
+msgstr "มีข้อความ (จับคู่บางส่วน)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "ปิดใช้งานโฟกัส"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "ชื่อที่แสดงต้องไม่เว้นว่าง"
+msgstr "ชื่อที่แสดงต้องไม่ว่างเปล่า"
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "ชื่อที่แสดง:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "เฉพาะโดเมน"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "แก้ไขการกำหนดค่าไซต์"
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "ไม่ต้องเข้าสู่โหมดฟอร์ม"
 
-#: gui.py:514
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "แก้ไขการตั้งค่าเว็บไซต์"
+
+#: gui.py:540
 msgid "Entire Document"
 msgstr "ทั้งเอกสาร"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "ข้อผิดพลาด"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "ตรงกันทุกประการ"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "ย่อหน้าตรงกัน (จับคู่ทั้งย่อหน้า)"
+msgstr "ตรงกันทั้งย่อหน้า (จับคู่ทั้งย่อหน้า)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "ลบไซต์ไม่สำเร็จ"
+msgstr "ไม่สามารถลบเว็บไซต์ได้"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "โหมดโฟกัส:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "รวมโดเมนย่อย"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "ข้อมูล"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "กระโดด"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "ปุ่มกระโดด:"
+msgstr "ปุ่มสำหรับกระโดด:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "กระโดดกลับไปยังตัวทำเครื่องหมายก่อนหน้า D"
+msgstr "กระโดดถอยหลังไปยังมาร์กเกอร์ D ก่อนหน้า"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "กระโดดกลับไปยังตัวทำเครื่องหมายก่อนหน้า F"
+msgstr "กระโดดถอยหลังไปยังมาร์กเกอร์ F ก่อนหน้า"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "กระโดดกลับไปยังตัวทำเครื่องหมายก่อนหน้า J"
+msgstr "กระโดดถอยหลังไปยังมาร์กเกอร์ J ก่อนหน้า"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "กระโดดกลับไปยังตัวทำเครื่องหมายก่อนหน้า Z"
+msgstr "กระโดดถอยหลังไปยังมาร์กเกอร์ Z ก่อนหน้า"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "กระโดดไปข้างหน้าถึงตัวทำเครื่องหมายถัดไป D"
+msgstr "กระโดดไปข้างหน้ายังมาร์กเกอร์ D ถัดไป"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "กระโดดไปข้างหน้าถึงตัวทำเครื่องหมายถัดไป F"
+msgstr "กระโดดไปข้างหน้ายังมาร์กเกอร์ F ถัดไป"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "กระโดดไปข้างหน้าถึงตัวทำเครื่องหมายถัดไป J"
+msgstr "กระโดดไปข้างหน้ายังมาร์กเกอร์ J ถัดไป"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "กระโดดไปข้างหน้าถึงตัวทำเครื่องหมายถัดไป Z"
+msgstr "กระโดดไปข้างหน้ายังมาร์กเกอร์ Z ถัดไป"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "ตัวจัดการตัวทำเครื่องหมาย - "
+msgstr "โปรแกรมจัดการมาร์กเกอร์ - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "คุณสมบัติตัวทำเครื่องหมาย"
+msgstr "คุณสมบัติมาร์กเกอร์"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "พบตัวทำเครื่องหมาย: {}"
+msgstr "พบมาร์กเกอร์: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
 msgstr "ประเภทการจับคู่:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "โหมด:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "ไม่มีตัวทำเครื่องหมายให้ล้าง"
+msgstr "ไม่มีมาร์กเกอร์ให้ล้าง"
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "ปกติ"
+
+#: gui.py:555
 msgid "OK"
 msgstr "ตกลง"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ออฟเซ็ต (บรรทัด/ย่อหน้าที่จะเลื่อนหลังการจับคู่):"
+msgstr "ระยะเยื้อง (จำนวนบรรทัด/ย่อหน้าที่จะย้ายหลังจากจับคู่):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "การจับคู่รูปแบบ:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "รูปแบบต้องไม่เว้นว่าง"
+msgstr "รูปแบบต้องไม่ว่างเปล่า"
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "รูปแบบ:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "กรุณาเลือกตัวทำเครื่องหมายก่อน"
+msgstr "กรุณาเลือกมาร์กเกอร์ก่อน"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "กรุณาเลือกไซต์ก่อน"
+msgstr "กรุณาเลือกเว็บไซต์ก่อน"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
 msgstr "การจับคู่ Regex (ใช้นิพจน์ปกติ)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "นิพจน์ปกติ"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "บันทึกการเปลี่ยนแปลง"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "บันทึกไซต์"
+msgstr "บันทึกเว็บไซต์"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "ขอบเขตการค้นหา:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "ตัวจัดการไซต์"
+msgstr "โปรแกรมจัดการเว็บไซต์"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "สร้างไซต์สำเร็จ"
+msgstr "สร้างเว็บไซต์สำเร็จแล้ว"
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "ลบไซต์สำเร็จ"
+msgstr "ลบเว็บไซต์สำเร็จแล้ว"
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "อัปเดตไซต์สำเร็จ"
+msgstr "อัปเดตเว็บไซต์สำเร็จแล้ว"
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "รูปแบบ URL ต้องไม่เว้นว่าง"
+msgstr "รูปแบบ URL ต้องไม่ว่างเปล่า"
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "รูปแบบ URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "ไม่มีชื่อ"
+msgstr "ไม่ได้ตั้งชื่อ"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "เฉพาะวิวพอร์ต"
+msgstr "เฉพาะพื้นที่การมองเห็น"

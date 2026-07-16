@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Romanian\n"
@@ -12,227 +12,242 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&Adaugă Marcator"
+msgstr "&Adăugare marcator"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&Adaugă Site Nou"
+msgstr "&Adăugare site nou"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Înapoi la Managerul de Site-uri"
+msgstr "&Înapoi la Manager de site-uri"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "&Șterge"
+msgstr "&Ștergere"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Șterge Marcator	Del"
+msgstr "&Ștergere marcator	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&Șterge Site"
+msgstr "&Ștergere site"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Șterge Site	Del"
+msgstr "&Ștergere site	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&Editează"
+msgstr "&Editare"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Editează Marcator	F2"
+msgstr "&Editare marcator	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&Editează Site"
+msgstr "&Editare site"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Editează Site	F2"
+msgstr "&Editare site	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&Gestionează Marcatori"
+msgstr "&Administrare marcatori"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&Lista Marcatori:"
+msgstr"Lista de &marcatori:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&Site-uri Înregistrate:"
+msgstr "Site-uri în&registrate:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Adaugă Configurație Site"
+msgstr "Adăugare configurație site"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
 msgstr "Toți marcatorii au fost șterși."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Sunteți sigur că doriți să ștergeți TOȚI marcatorii?"
+msgstr "Sigur doriți să ștergeți TOȚI marcatorii?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Sunteți sigur că doriți să ștergeți acest marcator?"
+msgstr "Sigur doriți să ștergeți acest marcator?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Sunteți sigur că doriți să ștergeți acest site și toți marcatorii săi?"
+msgstr "Sigur doriți să ștergeți acest site și toți marcatorii săi?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
-msgstr "Click Automat"
+msgstr "Clic automat"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Click automat pe următorul marcator atribuit lui Alt+C"
+msgstr "Clic automat pe următorul marcator alocat pentru Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Click automat pe următorul marcator atribuit lui Alt+J"
+msgstr "Clic automat pe următorul marcator alocat pentru Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Click automat pe următorul marcator atribuit lui Alt+X"
+msgstr "Clic automat pe următorul marcator alocat pentru Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Click automat pe următorul marcator atribuit lui Alt+Z"
+msgstr "Clic automat pe următorul marcator alocat prentru Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
-msgstr "Anulează"
+msgstr "Renunțare"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "Șterge &Tot"
+msgstr "Șterge tot (&A)"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Șterge &Toți Marcatorii"
+msgstr "Șterge toți marcatorii (&A)"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "Tasta de Click:"
+msgstr "Tastă clic:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
-msgstr "Închide"
+msgstr "Închidere"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
-msgstr "Confirmă"
+msgstr "Confirmare"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Confirmă Ștergerea Tuturor"
+msgstr "Confirmare ștergere totală"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "Conține Subșir"
+msgstr "Conține subșir"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Conține Text (potrivire parțială)"
+msgstr "Conține text (potrivire parțială)"
 
-#: gui.py:190
-#: gui.py:240
-msgid "Display Name cannot be empty."
-msgstr "Numele de Afișare nu poate fi gol."
-
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
-msgid "Display Name:"
-msgstr "Nume de Afișare:"
-
-#: gui.py:170
-#: gui.py:220
-msgid "Domain Only"
-msgstr "Doar Domeniu"
-
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "Editează Configurația Site-ului"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "Documentul Întreg"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
+msgid "Disable focus"
+msgstr "Dezactivare mod focalizare"
+
+#: gui.py:201
+#: gui.py:265
+msgid "Display Name cannot be empty."
+msgstr "Numele afișat nu poate fi gol."
+
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
+msgid "Display Name:"
+msgstr "Nume afișat:"
+
+#: gui.py:174
+#: gui.py:237
+msgid "Domain Only"
+msgstr "Doar domeniu"
+
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "Nu intra în modul formular"
+
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Editare configurație site"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "Întregul document"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "Eroare"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "Potrivire Exactă"
+msgstr "Potrivire exactă"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Paragraf Exact (potrivește întregul paragraf)"
+msgstr "Paragraf exact (potrivire paragraf întreg)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "Nu s-a reușit ștergerea site-ului."
+msgstr "Ștergerea site-ului a eșuat."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Mod focalizare:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "Include Subdomenii"
+msgstr "Include subdomenii"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
-msgstr "Informații"
+msgstr "Informație"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "Salt"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "Tasta de Salt:"
+msgstr "Tastă salt:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "Salt înapoi la marcatorul anterior D"
+msgstr "Salt înapoi la marcatorul D anterior"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "Salt înapoi la marcatorul anterior F"
+msgstr "Salt înapoi la marcatorul F anterior"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "Salt înapoi la marcatorul anterior J"
+msgstr "Salt înapoi la marcatorul J anterior"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "Salt înapoi la marcatorul anterior Z"
+msgstr "Salt înapoi la marcatorul Z anterior"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
@@ -250,113 +265,118 @@ msgstr "Salt înainte la următorul marcator J"
 msgid "Jump forward to next marker Z"
 msgstr "Salt înainte la următorul marcator Z"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "Manager Marcatori - "
+msgstr "Manager de marcatori - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "Proprietăți Marcator"
+msgstr "Proprietăți marcator"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
 msgstr "Marcator găsit: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "Tip de Potrivire:"
+msgstr "Tip potrivire:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "Mod:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
 msgstr "Nu există marcatori de șters."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Normal"
+
+#: gui.py:555
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Offset (linii/paragrafe pentru a se deplasa după potrivire):"
+msgstr "Decalaj (linii/paragrafe de mutat după potrivire):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "Potrivire Model:"
+msgstr "Potrivire model:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "Modelul nu poate fi gol."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "Model:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "Selectați mai întâi un marcator."
+msgstr "Vă rugăm să selectați mai întâi un marcator."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "Selectați mai întâi un site."
+msgstr "Vă rugăm să selectați mai întâi un site."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Potrivire Regex (folosește expresie regulată)"
+msgstr "Potrivire Regex (utilizare expresie regulată)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "Expresie Regulată"
+msgstr "Expresie regulată"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
-msgstr "Salvează Modificările"
+msgstr "Salvare modificări"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "Salvează Site"
+msgstr "Salvare site"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "Domeniul de Căutare:"
+msgstr "Domeniu de căutare:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Manager Site-uri"
+msgstr "Manager de site-uri"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "Site creat cu succes."
+msgstr "Site-ul a fost creat cu succes."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Site șters cu succes."
+msgstr "Site-ul a fost șters cu succes."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "Site actualizat cu succes."
+msgstr "Site-ul a fost actualizat cu succes."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "Modelul URL nu poate fi gol."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "Model URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "Fără Nume"
+msgstr "Fără nume"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "Doar Viewport"
+msgstr "Doar zona de vizualizare (Viewport)"

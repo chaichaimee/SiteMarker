@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hindi\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&मार्कर जोड़ें"
+msgstr "मार्कर जोड़ें (&A)"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&नई साइट जोड़ें"
+msgstr "नई साइट जोड़ें (&A)"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&साइट प्रबंधक पर वापस जाएं"
+msgstr "साइट प्रबंधक पर वापस जाएं (&B)"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "&हटाएं"
+msgstr "हटाएं (&D)"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&मार्कर हटाएं	Del"
+msgstr "मार्कर हटाएं (&D)	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&साइट हटाएं"
+msgstr "साइट हटाएं (&D)"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&साइट हटाएं	Del"
+msgstr "साइट हटाएं (&D)	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&संपादित करें"
+msgstr "संपादित करें (&E)"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&मार्कर संपादित करें	F2"
+msgstr "मार्कर संपादित करें (&E)	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&साइट संपादित करें"
+msgstr "साइट संपादित करें (&E)"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&साइट संपादित करें	F2"
+msgstr "साइट संपादित करें (&E)	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&मार्कर प्रबंधित करें"
+msgstr "मार्कर प्रबंधित करें (&M)"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&मार्कर सूची:"
+msgstr "मार्कर सूची (&M):"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&पंजीकृत साइटें:"
+msgstr "पंजीकृत साइटें (&R):"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
 msgstr "साइट कॉन्फ़िगरेशन जोड़ें"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "सभी मार्कर साफ़ कर दिए गए हैं।"
+msgstr "सभी मार्कर हटा दिए गए हैं।"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "क्या आप वाकई सभी मार्कर हटाना चाहते हैं?"
+msgstr "क्या आप वाक़ई सभी मार्कर हटाना चाहते हैं?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "क्या आप वाकई इस मार्कर को हटाना चाहते हैं?"
+msgstr "क्या आप वाक़ई इस मार्कर को हटाना चाहते हैं?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "क्या आप वाकई इस साइट और इसके सभी मार्कर हटाना चाहते हैं?"
+msgstr "क्या आप वाक़ई इस साइट और इसके सभी मार्करों को हटाना चाहते हैं?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
-msgstr "स्वत: क्लिक"
+msgstr "ऑटो क्लिक"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C को सौंपे गए अगले मार्कर पर स्वत: क्लिक"
+msgstr "Alt+C पर निर्दिष्ट अगले मार्कर पर ऑटो क्लिक करें"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J को सौंपे गए अगले मार्कर पर स्वत: क्लिक"
+msgstr "Alt+J पर निर्दिष्ट अगले मार्कर पर ऑटो क्लिक करें"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X को सौंपे गए अगले मार्कर पर स्वत: क्लिक"
+msgstr "Alt+X पर निर्दिष्ट अगले मार्कर पर ऑटो क्लिक करें"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z को सौंपे गए अगले मार्कर पर स्वत: क्लिक"
+msgstr "Alt+Z पर निर्दिष्ट अगले मार्कर पर ऑटो क्लिक करें"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "सभी साफ़ करें"
+msgstr "सभी साफ़ करें (&A)"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "सभी मार्कर साफ़ करें"
+msgstr "सभी मार्कर साफ़ करें (&A)"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "क्लिक कुंजी:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "बंद करें"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "पुष्टि करें"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "सभी हटाने की पुष्टि करें"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "उप-स्ट्रिंग शामिल करें"
+msgstr "सबस्ट्रिंग शामिल है"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "टेक्स्ट शामिल है (आंशिक मिलान)"
+msgstr "टेक्स्ट शामिल है (आंशिक मिलान खोजें)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "फोकस अक्षम करें"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "प्रदर्शन नाम खाली नहीं हो सकता।"
+msgstr "प्रदर्शित नाम खाली नहीं हो सकता।"
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
-msgstr "प्रदर्शन नाम:"
+msgstr "प्रदर्शित नाम:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "केवल डोमेन"
 
-#: gui.py:203
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "फॉर्म मोड में प्रवेश न करें"
+
+#: gui.py:220
 msgid "Edit Site Configuration"
 msgstr "साइट कॉन्फ़िगरेशन संपादित करें"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Entire Document"
 msgstr "संपूर्ण दस्तावेज़"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "त्रुटि"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "सटीक मिलान"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "सटीक पैराग्राफ (पूरे पैराग्राफ से मिलान)"
+msgstr "सटीक पैराग्राफ (पूरे पैराग्राफ का मिलान करें)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
 msgstr "साइट हटाने में विफल।"
 
-#: gui.py:170
-#: gui.py:220
-msgid "Include Subdomains"
-msgstr "सबडोमेन शामिल करें"
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "फोकस मोड:"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:174
+#: gui.py:237
+msgid "Include Subdomains"
+msgstr "उपडोमेन शामिल करें"
+
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "जानकारी"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "कूदें"
+msgstr "जंप करें"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "कूद कुंजी:"
+msgstr "जंप कुंजी:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "पिछले मार्कर D पर पीछे कूदें"
+msgstr "पिछले मार्कर D पर पीछे जंप करें"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "पिछले मार्कर F पर पीछे कूदें"
+msgstr "पिछले मार्कर F पर पीछे जंप करें"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "पिछले मार्कर J पर पीछे कूदें"
+msgstr "पिछले मार्कर J पर पीछे जंप करें"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "पिछले मार्कर Z पर पीछे कूदें"
+msgstr "पिछले मार्कर Z पर पीछे जंप करें"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "अगले मार्कर D पर आगे कूदें"
+msgstr "अगले मार्कर D पर आगे जंप करें"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "अगले मार्कर F पर आगे कूदें"
+msgstr "अगले मार्कर F पर आगे जंप करें"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "अगले मार्कर J पर आगे कूदें"
+msgstr "अगले मार्कर J पर आगे जंप करें"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "अगले मार्कर Z पर आगे कूदें"
+msgstr "अगले मार्कर Z पर आगे जंप करें"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "मार्कर प्रबंधक - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "मार्कर गुण"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
 msgstr "मार्कर मिला: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "मिलान प्रकार:"
+msgstr "मिलान का प्रकार:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "मोड:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "साफ़ करने के लिए कोई मार्कर नहीं।"
+msgstr "साफ़ करने के लिए कोई मार्कर नहीं है।"
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "सामान्य"
+
+#: gui.py:555
 msgid "OK"
 msgstr "ठीक है"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ऑफसेट (मिलान के बाद ले जाने के लिए पंक्तियाँ/पैराग्राफ):"
+msgstr "ऑफसेट (मिलान के बाद स्थानांतरित करने के लिए पंक्तियाँ/पैराग्राफ):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "पैटर्न मिलान:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "पैटर्न खाली नहीं हो सकता।"
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "पैटर्न:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
 msgstr "कृपया पहले एक मार्कर चुनें।"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
 msgstr "कृपया पहले एक साइट चुनें।"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "रेगेक्स मिलान (नियमित अभिव्यक्ति का उपयोग करें)"
+msgstr "रेगुलर एक्सप्रेशन मिलान (रेगुलर एक्सप्रेशन का उपयोग करें)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "नियमित अभिव्यक्ति"
+msgstr "रेगुलर एक्सप्रेशन"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "परिवर्तन सहेजें"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "साइट सहेजें"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "खोज दायरा:"
+msgstr "खोज का दायरा:"
 
 #: gui.py:15
 msgid "Site Manager"
 msgstr "साइट प्रबंधक"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
 msgstr "साइट सफलतापूर्वक बनाई गई।"
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
 msgstr "साइट सफलतापूर्वक हटाई गई।"
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "साइट सफलतापूर्वक अद्यतन की गई।"
+msgstr "साइट सफलतापूर्वक अपडेट की गई।"
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "URL पैटर्न खाली नहीं हो सकता।"
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL पैटर्न:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "अनाम"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
 msgstr "केवल व्यूपोर्ट"

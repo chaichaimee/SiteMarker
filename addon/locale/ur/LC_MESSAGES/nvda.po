@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Urdu\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&مارکر شامل کریں"
+msgstr "نشان کار &شامل کریں"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&نیا سائٹ شامل کریں"
+msgstr "نئی سائٹ &شامل کریں"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&سائٹ مینیجر پر واپس جائیں"
+msgstr "سائٹ مینیجر پر &واپس جائیں"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&حذف کریں"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&مارکر حذف کریں	Del"
+msgstr "نشان کار &حذف کریں	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&سائٹ حذف کریں"
+msgstr "سائٹ &حذف کریں"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&سائٹ حذف کریں	Del"
+msgstr "سائٹ &حذف کریں	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&ترمیم کریں"
+msgstr "تر&میم کریں"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&مارکر ترمیم کریں	F2"
+msgstr "نشان کار تر&میم کریں	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&سائٹ ترمیم کریں"
+msgstr "سائٹ تر&میم کریں"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&سائٹ ترمیم کریں	F2"
+msgstr "سائٹ تر&میم کریں	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&مارکرز کا نظم کریں"
+msgstr "نشان کاروں کا ا&نتظام کریں"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&مارکرز کی فہرست:"
+msgstr "نشان کاروں کی &فہرست:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&رجسٹرڈ سائٹس:"
+msgstr "رجسٹرڈ &سائٹس:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "سائٹ کنفیگریشن شامل کریں"
+msgstr "سائٹ کی ترتیب شامل کریں"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "تمام مارکرز صاف کر دیے گئے ہیں۔"
+msgstr "تمام نشان کار صاف کر دیے گئے ہیں۔"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "کیا آپ واقعی تمام مارکرز حذف کرنا چاہتے ہیں؟"
+msgstr "کیا آپ واقعی تمام نشان کار حذف کرنا چاہتے ہیں؟"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "کیا آپ واقعی اس مارکر کو حذف کرنا چاہتے ہیں؟"
+msgstr "کیا آپ واقعی یہ نشان کار حذف کرنا چاہتے ہیں؟"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "کیا آپ واقعی اس سائٹ اور اس کے تمام مارکرز کو حذف کرنا چاہتے ہیں؟"
+msgstr "کیا آپ واقعی یہ سائٹ اور اس کے تمام نشان کار حذف کرنا چاہتے ہیں؟"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "خودکار کلک"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C کو تفویض کردہ اگلے مارکر پر خودکار کلک"
+msgstr "Alt+C کے لیے مختص کردہ اگلے نشان کار پر خودکار کلک کریں"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J کو تفویض کردہ اگلے مارکر پر خودکار کلک"
+msgstr "Alt+J کے لیے مختص کردہ اگلے نشان کار پر خودکار کلک کریں"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X کو تفویض کردہ اگلے مارکر پر خودکار کلک"
+msgstr "Alt+X کے لیے مختص کردہ اگلے نشان کار پر خودکار کلک کریں"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z کو تفویض کردہ اگلے مارکر پر خودکار کلک"
+msgstr "Alt+Z کے لیے مختص کردہ اگلے نشان کار پر خودکار کلک کریں"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "&تمام صاف کریں"
+msgstr "تمام &صاف کریں"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "&تمام مارکرز صاف کریں"
+msgstr "تمام نشان کار &صاف کریں"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "کلک کلید:"
+msgstr "کلک کی कुंजी:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "بند کریں"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "تصدیق کریں"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "تمام حذف کرنے کی تصدیق کریں"
+msgstr "سب حذف کرنے کی تصدیق کریں"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "ذیلی سٹرنگ پر مشتمل ہے"
+msgstr "ذیلی عبارت شامل ہو"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "متن پر مشتمل ہے (جزوی مماثلت)"
+msgstr "متن شامل ہے (جزوی مطابقت تلاش کریں)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "فوکس غیر فعال کریں"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "ڈسپلے نام خالی نہیں ہو سکتا۔"
+msgstr "ظاہری نام خالی نہیں ہو سکتا۔"
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
-msgstr "ڈسپلے نام:"
+msgstr "ظاہری نام:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "صرف ڈومین"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "سائٹ کنفیگریشن ترمیم کریں"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "پوری دستاویز"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
+msgid "Don't enter form mode"
+msgstr "فارم موڈ میں داخل نہ ہوں"
+
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "سائٹ کی ترتیب میں ترمیم کریں"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "پورا دستاویزی متن"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
-msgstr "خرابی"
+msgstr "غلطی"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "درست مماثلت"
+msgstr "عین مطابقت"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "درست پیراگراف (پورے پیراگراف سے مماثلت)"
+msgstr "عین پیراگراف (پورے پیراگراف کی مطابقت)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "سائٹ حذف کرنے میں ناکام۔"
+msgstr "سائٹ حذف کرنے میں ناکامی۔"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "فوکس موڈ:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
 msgstr "ذیلی ڈومینز شامل کریں"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "معلومات"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
 msgstr "چھلانگ لگائیں"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "چھلانگ کلید:"
+msgstr "چھلانگ لگانے کی कुंजी:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "پچھلے مارکر D پر پیچھے چھلانگ لگائیں"
+msgstr "پچھلے نشان کار D پر واپس چھلانگ لگائیں"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "پچھلے مارکر F پر پیچھے چھلانگ لگائیں"
+msgstr "پچھلے نشان کار F پر واپس چھلانگ لگائیں"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "پچھلے مارکر J پر پیچھے چھلانگ لگائیں"
+msgstr "پچھلے نشان کار J پر واپس چھلانگ لگائیں"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "پچھلے مارکر Z پر پیچھے چھلانگ لگائیں"
+msgstr "پچھلے نشان کار Z پر واپس چھلانگ لگائیں"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "اگلے مارکر D پر آگے چھلانگ لگائیں"
+msgstr "اگلے نشان کار D پر آگے چھلانگ لگائیں"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "اگلے مارکر F پر آگے چھلانگ لگائیں"
+msgstr "اگلے نشان کار F پر آگے چھلانگ لگائیں"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "اگلے مارکر J پر آگے چھلانگ لگائیں"
+msgstr "اگلے نشان کار J پر آگے چھلانگ لگائیں"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "اگلے مارکر Z پر آگے چھلانگ لگائیں"
+msgstr "اگلے نشان کار Z پر آگے چھلانگ لگائیں"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "مارکر مینیجر - "
+msgstr "نشان کار مینیجر - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "مارکر کی خصوصیات"
+msgstr "نشان کار کی خصوصیات"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "مارکر ملا: {}"
+msgstr "نشان کار مل گیا: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "مماثلت کی قسم:"
+msgstr "مطابقت کی قسم:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "موڈ:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "صاف کرنے کے لیے کوئی مارکر نہیں۔"
+msgstr "صاف کرنے کے لیے کوئی نشان کار نہیں ہے۔"
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "عام"
+
+#: gui.py:555
 msgid "OK"
 msgstr "ٹھیک ہے"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "آفسیٹ (مماثلت کے بعد منتقل کرنے کے لیے لائنیں/پیراگراف):"
+msgstr "آفسیٹ (مطابقت کے بعد آگے بڑھنے کے لیے لائنیں/پیراگراف):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "پیٹرن مماثلت:"
+msgstr "پیٹرن مطابقت:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "پیٹرن خالی نہیں ہو سکتا۔"
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "پیٹرن:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "براہ کرم پہلے ایک مارکر منتخب کریں۔"
+msgstr "براہ کرم پہلے ایک نشان کار منتخب کریں۔"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
 msgstr "براہ کرم پہلے ایک سائٹ منتخب کریں۔"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "ریجیکس مماثلت (ریگولر ایکسپریشن استعمال کریں)"
+msgstr "Regex مطابقت (ریگولر ایکسپریشن استعمال کریں)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "ریگولر ایکسپریشن"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "تبدیلیاں محفوظ کریں"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
 msgstr "سائٹ محفوظ کریں"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "تلاش کا دائرہ:"
+msgstr "تلاش کا دائرہ کار:"
 
 #: gui.py:15
 msgid "Site Manager"
 msgstr "سائٹ مینیجر"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "سائٹ کامیابی سے بن گئی۔"
+msgstr "سائٹ کامیابی سے بنا دی گئی۔"
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "سائٹ کامیابی سے حذف ہو گئی۔"
+msgstr "سائٹ کامیابی سے حذف کر دی گئی۔"
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "سائٹ کامیابی سے اپ ڈیٹ ہو گئی۔"
+msgstr "سائٹ کامیابی سے اپ ڈیٹ کر دی گئی۔"
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "URL پیٹرن خالی نہیں ہو سکتا۔"
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL پیٹرن:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "نامعلوم"
+msgstr "بغیر نام کا"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "صرف ویوپورٹ"
+msgstr "صرف ویو پورٹ"

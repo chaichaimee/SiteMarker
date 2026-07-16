@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Lao\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&ຕື່ມເຄື່ອງໝາຍ"
+msgstr "&ເພີ່ມເຄື່ອງໝາຍ"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&ຕື່ມເວັບໄຊທ໌ໃໝ່"
+msgstr "&ເພີ່ມເວັບໄຊໃໝ່"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&ກັບຄືນສູ່ຕົວຈັດການເວັບໄຊທ໌"
+msgstr "&ກັບຄືນໄປຫາຕົວຈັດການເວັບໄຊ"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&ລຶບ"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
 msgstr "&ລຶບເຄື່ອງໝາຍ	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&ລຶບເວັບໄຊທ໌"
+msgstr "&ລຶບເວັບໄຊ"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&ລຶບເວັບໄຊທ໌	Del"
+msgstr "&ລຶບເວັບໄຊ	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&ແກ້ໄຂ"
+msgstr "&ແກ́ໄຂ"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
 msgstr "&ແກ້ໄຂເຄື່ອງໝາຍ	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&ແກ້ໄຂເວັບໄຊທ໌"
+msgstr "&ແກ້ໄຂເວັບໄຊ"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&ແກ້ໄຂເວັບໄຊທ໌	F2"
+msgstr "&ແກ້ໄຂເວັບໄຊ	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
 msgstr "&ຈັດການເຄື່ອງໝາຍ"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&ລາຍຊື່ເຄື່ອງໝາຍ:"
+msgstr "&ລາຍການເຄື່ອງໝາຍ:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&ເວັບໄຊທ໌ທີ່ລົງທະບຽນ:"
+msgstr "&ເວັບໄຊທີ່ລົງທະບຽນ:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "ຕື່ມການຕັ້ງຄ່າເວັບໄຊທ໌"
+msgstr "ເພີ່ມການຕັ້ງຄ່າເວັບໄຊ"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "ເຄື່ອງໝາຍທັງໝົດຖືກລຶບອອກແລ້ວ."
+msgstr "ເຄື່ອງໝາຍທັງໝົດຖືກລຶບລ້າງແລ້ວ."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບເຄື່ອງໝາຍທັງໝົດ?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບເຄື່ອງໝາຍທັງໝົດ?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບເຄື່ອງໝາຍນີ້?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າต้องการລຶບເຄື່ອງໝາຍນີ້?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບເວັບໄຊທ໌ນີ້ ແລະ ເຄື່ອງໝາຍທັງໝົດຂອງມັນ?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບເວັບໄຊນີ້ແລະເຄື່ອງໝາຍທັງໝົດຂອງມັນ?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "ຄລິກອັດຕະໂນມັດ"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຕໍ່ໄປທີ່ກຳນົດໃຫ້ Alt+C"
+msgstr "ຄລິກอັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຖັດໄປທີ່ກຳນົດໃຫ້ Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຕໍ່ໄປທີ່ກຳນົດໃຫ້ Alt+J"
+msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຖັດໄປທີ່ກຳນົດໃຫ້ Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຕໍ່ໄປທີ່ກຳນົດໃຫ້ Alt+X"
+msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຖັດໄປທີ່ກຳນົດໃຫ້ Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຕໍ່ໄປທີ່ກຳນົດໃຫ້ Alt+Z"
+msgstr "ຄລິກອັດຕະໂນມັດໃສ່ເຄື່ອງໝາຍຖັດໄປທີ່ກຳນົດໃຫ້ Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "ລຶບທັງໝົດ"
+msgstr "ລຶບລ້າງທັງໝົດ (&A)"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "ລຶບເຄື່ອງໝາຍທັງໝົດ"
+msgstr "ລຶບລ້າງເຄື່ອງໝາຍທັງໝົດ (&A)"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
 msgstr "ປຸ່ມຄລິກ:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "ປິດ"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "ຢືນຢັນ"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "ຢືນຢັນການລຶບທັງໝົດ"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "ມີຂໍ້ຄວາມຍ່ອຍ"
+msgstr "ມີຂໍ้ຄວາມຍ່ອຍ"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "ມີຂໍ້ຄວາມ (ກົງກັນບາງສ່ວນ)"
+msgstr "ມີຂໍ້ຄວາມ (ຊອກຫາແບບຕົມບາງສ່ວນ)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "ປິດການໃຊ້ງານໂຟກັດ"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "ຊື່ທີ່ສະແດງບໍ່ສາມາດຫວ່າງໄດ້."
+msgstr "ຊື່ສະແດງບໍ່ສາມາດຫວ່າງເປົ່າໄດ້."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
-msgstr "ຊື່ທີ່ສະແດງ:"
+msgstr "ຊື່ສະແດງ:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
-msgstr "ພຽງໂດເມນ"
+msgstr "ສະເພາະໂດເມນ"
 
-#: gui.py:203
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "ບໍ່ຕ້ອງເຂົ້າສູ່ໂໝດຟອມ"
+
+#: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "ແກ້ໄຂການຕັ້ງຄ່າເວັບໄຊທ໌"
+msgstr "ແກ້ໄຂການຕັ້ງຄ່າເວັບໄຊ"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Entire Document"
 msgstr "ເອກະສານທັງໝົດ"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "ຂໍ້ຜິດພາດ"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "ກົງກັນທຸກປະການ"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "ວັກກົງກັນ (ກົງກັນທັງວັກ)"
+msgstr "ຫຍໍ້ໜ້າທີ່ກົງກັນທຸກປະການ (ກົງກັນທັງຫຍໍ້ໜ້າ)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "ລຶບເວັບໄຊທ໌ບໍ່ສຳເລັດ."
+msgstr "ລຶບເວັບໄຊບໍ່ສຳເລັດ."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "ໂໝດໂຟກັດ:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "ລວມໂດເມນຍ່ອຍ"
+msgstr "ລວມທັງໂດເມນຍ່ອຍ"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "ຂໍ້ມູນ"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "ໂດດ"
+msgstr "ໂດດໄປ"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
 msgstr "ປຸ່ມໂດດ:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍກ່ອນໜ້າ D"
+msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍ D ກ່ອນໜ້າ"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍກ່ອນໜ້າ F"
+msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍ F ກ່ອນໜ້າ"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍກ່ອນໜ້າ J"
+msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍ J ກ່ອນໜ້າ"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍກ່ອນໜ້າ Z"
+msgstr "ໂດດຖອຍຫຼັງໄປຫາເຄື່ອງໝາຍ Z ກ່ອນໜ້າ"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "ໂດດໄປໜ້າຫາເຄື່ອງໝາຍຕໍ່ໄປ D"
+msgstr "ໂດດໄປຂ້າງໜ້າຫາເຄື່ອງໝາຍ D ຖັດໄປ"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "ໂດດໄປໜ້າຫາເຄື່ອງໝາຍຕໍ່ໄປ F"
+msgstr "ໂດດໄປຂ້າງໜ້າຫາເຄື່ອງໝາຍ F ຖັດໄປ"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "ໂດດໄປໜ້າຫາເຄື່ອງໝາຍຕໍ່ໄປ J"
+msgstr "ໂດດໄປຂ້າງໜ້າຫາເຄື່ອງໝາຍ J ຖັດໄປ"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "ໂດດໄປໜ້າຫາເຄື່ອງໝາຍຕໍ່ໄປ Z"
+msgstr "ໂດດໄປຂ້າງໜ້າຫາເຄື່ອງໝາຍ Z ຖັດໄປ"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
 msgstr "ຕົວຈັດການເຄື່ອງໝາຍ - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "ຄຸນສົມບັດເຄື່ອງໝາຍ"
+msgstr "ຄຸນສົມບັດຂອງເຄື່ອງໝາຍ"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
 msgstr "ພົບເຄື່ອງໝາຍ: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "ປະເພດການກົງກັນ:"
+msgstr "ຮູບແບບການຈັບຄູ່:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "ໂໝດ:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "ບໍ່ມີເຄື່ອງໝາຍໃຫ້ລຶບ."
+msgstr "ບໍ່ມີເຄື່ອງໝາຍໃຫ້ລຶບລ້າງ."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "ປົກກະຕິ"
+
+#: gui.py:555
 msgid "OK"
 msgstr "ຕົກລົງ"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ການເລື່ອນ (ຈຳນວນແຖວ/ວັກທີ່ຈະເລື່ອນຫຼັງການກົງກັນ):"
+msgstr "ໄລຍະຫ່າງ (ຈຳນວນແຖວ/ຫຍໍ້ໜ້າທີ່ຈະຍ້າຍຫຼັງຈາກຈັບຄູ່):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "ການກົງກັນຮູບແບບ:"
+msgstr "ການຈັບຄູ່ຮູບແບບ:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "ຮູບແບບບໍ່ສາມາດຫວ່າງໄດ້."
+msgstr "ຮູບແບບບໍ່ສາມາດຫວ່າງເປົ່າໄດ້."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "ຮູບແບບ:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
 msgstr "ກະລຸນາເລືອກເຄື່ອງໝາຍກ່ອນ."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "ກະລຸນາເລືອກເວັບໄຊທ໌ກ່ອນ."
+msgstr "ກະລຸນາເລືອກເວັບໄຊກ່ອນ."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "ການກົງກັນ Regex (ໃຊ້ສຳນວນປົກກະຕິ)"
+msgstr "ການຈັບຄູ່ Regex (ໃຊ້ regular expression)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "ສຳນວນປົກກະຕິ"
+msgstr "Regular Expression"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
 msgstr "ບັນທຶກການປ່ຽນແປງ"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "ບັນທຶກເວັບໄຊທ໌"
+msgstr "ບັນທຶກເວັບໄຊ"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "ຂອບເຂດການຊອກຫາ:"
+msgstr "ຂອບເຂດການຄົ້ນຫາ:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "ຕົວຈັດການເວັບໄຊທ໌"
+msgstr "ຕົວຈັດການເວັບໄຊ"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "ສ້າງເວັບໄຊທ໌ສຳເລັດ."
+msgstr "ສ້າງເວັບໄຊສຳເລັດແລ້ວ."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "ລຶບເວັບໄຊທ໌ສຳເລັດ."
+msgstr "ລຶບເວັບໄຊສຳເລັດແລ້ວ."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "ອັບເດດເວັບໄຊທ໌ສຳເລັດ."
+msgstr "ອັບເດດເວັບໄຊສຳເລັດແລ້ວ."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "ຮູບແບບ URL ບໍ່ສາມາດຫວ່າງໄດ້."
+msgstr "ຮູບແບບ URL ບໍ່ສາມາດຫວ່າງເປົ່າໄດ້."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "ຮູບແບບ URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "ບໍ່ມີຊື່"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "ສະເພາະພື້ນທີ່ສະແດງຜົນ"
+msgstr "ສະເພາະພື້ນທີ່ສະແດງຜົນ (Viewport)"

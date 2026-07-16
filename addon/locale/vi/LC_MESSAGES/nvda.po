@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Vietnamese\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&Thêm điểm đánh dấu"
+msgstr "Thê&m dấu mốc"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&Thêm trang web mới"
+msgstr "Thêm trang &mới"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Quay lại Trình quản lý trang web"
+msgstr "Quay &lại trình quản lý trang"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "&Xóa"
+msgstr "Xố&a"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Xóa điểm đánh dấu	Del"
+msgstr "Xóa &dấu mốc	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&Xóa trang web"
+msgstr "Xóa &trang"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Xóa trang web	Del"
+msgstr "Xóa &trang	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&Chỉnh sửa"
+msgstr "Sử&a"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Chỉnh sửa điểm đánh dấu	F2"
+msgstr "Sửa dấ&u mốc	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&Chỉnh sửa trang web"
+msgstr "Sửa &trang"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Chỉnh sửa trang web	F2"
+msgstr "Sửa &trang	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&Quản lý điểm đánh dấu"
+msgstr "Quản &lý dấu mốc"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&Danh sách điểm đánh dấu:"
+msgstr "Danh sác&h dấu mốc:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&Trang web đã đăng ký:"
+msgstr "Các trang đã đăn&g ký:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Thêm cấu hình trang web"
+msgstr "Thêm cấu hình trang"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Tất cả điểm đánh dấu đã được xóa."
+msgstr "Đã xóa tất cả các dấu mốc."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Bạn có chắc chắn muốn xóa TẤT CẢ điểm đánh dấu không?"
+msgstr "Bạn có chắc chắn muốn xóa TẤT CẢ các dấu mốc không?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Bạn có chắc chắn muốn xóa điểm đánh dấu này không?"
+msgstr "Bạn có chắc chắn muốn xóa dấu mốc này không?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Bạn có chắc chắn muốn xóa trang web này và tất cả điểm đánh dấu của nó không?"
+msgstr "Bạn có chắc chắn muốn xóa trang này cùng tất cả dấu mốc của nó không?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
-msgstr "Nhấp tự động"
+msgstr "Tự động nhấp"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Tự động nhấp vào điểm đánh dấu tiếp theo được gán cho Alt+C"
+msgstr "Tự động nhấp vào dấu mốc tiếp theo được gán cho Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Tự động nhấp vào điểm đánh dấu tiếp theo được gán cho Alt+J"
+msgstr "Tự động nhấp vào dấu mốc tiếp theo được gán cho Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Tự động nhấp vào điểm đánh dấu tiếp theo được gán cho Alt+X"
+msgstr "Tự động nhấp vào dấu mốc tiếp theo được gán cho Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Tự động nhấp vào điểm đánh dấu tiếp theo được gán cho Alt+Z"
+msgstr "Tự động nhấp vào dấu mốc tiếp theo được gán cho Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
-msgstr "Hủy bỏ"
+msgstr "Hủy"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "Xóa &tất cả"
+msgstr "Xóa tất &cả"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Xóa &tất cả điểm đánh dấu"
+msgstr "Xóa tất &cả dấu mốc"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "Phím nhấp:"
+msgstr "Phím nhấp chuột:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "Đóng"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "Xác nhận"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
 msgstr "Xác nhận xóa tất cả"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
 msgstr "Chứa chuỗi con"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Chứa văn bản (khớp một phần)"
+msgstr "Chứa văn bản (tìm khớp một phần)"
 
-#: gui.py:190
-#: gui.py:240
+#: gui.py:180
+#: gui.py:243
+msgid "Disable focus"
+msgstr "Tắt tiêu điểm"
+
+#: gui.py:201
+#: gui.py:265
 msgid "Display Name cannot be empty."
 msgstr "Tên hiển thị không được để trống."
 
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
 msgid "Display Name:"
 msgstr "Tên hiển thị:"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Domain Only"
 msgstr "Chỉ tên miền"
 
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "Chỉnh sửa cấu hình trang web"
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "Không vào chế độ biểu mẫu"
 
-#: gui.py:514
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Sửa cấu hình trang"
+
+#: gui.py:540
 msgid "Entire Document"
 msgstr "Toàn bộ tài liệu"
 
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
-#: gui.py:243
-#: gui.py:569
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
 msgstr "Lỗi"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "Khớp chính xác"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Đoạn văn chính xác (khớp toàn bộ đoạn văn)"
+msgstr "Chính xác đoạn văn (khớp toàn bộ đoạn văn)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "Không thể xóa trang web."
+msgstr "Xóa trang thất bại."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Chế độ tiêu điểm:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "Bao gồm tên miền phụ"
+msgstr "Bao gồm cả tên miền phụ"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "Thông tin"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "Nhảy đến"
+msgstr "Nhảy"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
 msgstr "Phím nhảy:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "Nhảy lùi đến điểm đánh dấu trước đó D"
+msgstr "Nhảy lùi về dấu mốc D trước đó"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "Nhảy lùi đến điểm đánh dấu trước đó F"
+msgstr "Nhảy lùi về dấu mốc F trước đó"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "Nhảy lùi đến điểm đánh dấu trước đó J"
+msgstr "Nhảy lùi về dấu mốc J trước đó"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "Nhảy lùi đến điểm đánh dấu trước đó Z"
+msgstr "Nhảy lùi về dấu mốc Z trước đó"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "Nhảy tới điểm đánh dấu tiếp theo D"
+msgstr "Nhảy tới dấu mốc D tiếp theo"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "Nhảy tới điểm đánh dấu tiếp theo F"
+msgstr "Nhảy tới dấu mốc F tiếp theo"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "Nhảy tới điểm đánh dấu tiếp theo J"
+msgstr "Nhảy tới dấu mốc J tiếp theo"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "Nhảy tới điểm đánh dấu tiếp theo Z"
+msgstr "Nhảy tới dấu mốc Z tiếp theo"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "Trình quản lý điểm đánh dấu - "
+msgstr "Trình quản lý dấu mốc - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "Thuộc tính điểm đánh dấu"
+msgstr "Thuộc tính dấu mốc"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "Đã tìm thấy điểm đánh dấu: {}"
+msgstr "Tìm thấy dấu mốc: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "Loại khớp:"
+msgstr "Kiểu khớp:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "Chế độ:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "Không có điểm đánh dấu để xóa."
+msgstr "Không có dấu mốc nào để xóa."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Bình thường"
+
+#: gui.py:555
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Độ lệch (số dòng/đoạn văn để di chuyển sau khi khớp):"
+msgstr "Độ lệch (số dòng/đoạn cần di chuyển sau khi khớp):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
 msgstr "Khớp mẫu:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
 msgstr "Mẫu không được để trống."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "Mẫu:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "Vui lòng chọn một điểm đánh dấu trước."
+msgstr "Vui lòng chọn một dấu mốc trước."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "Vui lòng chọn một trang web trước."
+msgstr "Vui lòng chọn một trang trước."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
 msgstr "Khớp Regex (sử dụng biểu thức chính quy)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
 msgstr "Biểu thức chính quy"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
-msgstr "Lưu thay đổi"
+msgstr "Lưu các thay đổi"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "Lưu trang web"
+msgstr "Lưu trang"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
 msgstr "Phạm vi tìm kiếm:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Trình quản lý trang web"
+msgstr "Trình quản lý trang"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "Trang web được tạo thành công."
+msgstr "Tạo trang thành công."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Trang web được xóa thành công."
+msgstr "Xóa trang thành công."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "Trang web được cập nhật thành công."
+msgstr "Cập nhật trang thành công."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
 msgstr "Mẫu URL không được để trống."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "Mẫu URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
 msgstr "Chưa đặt tên"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "Chỉ khung nhìn"
+msgstr "Chỉ vùng hiển thị"

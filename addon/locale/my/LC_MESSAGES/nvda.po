@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Burmese\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "အမှတ်အသား &ထည့်ရန်"
+msgstr "အမှတ်အသား&ထည့်ရန်"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "ဆိုက်သစ် &ထည့်ရန်"
+msgstr "ဝဘ်ဆိုက်အသစ်&ထည့်ရန်"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "ဆိုက်မန်နေဂျာသို့ &ပြန်ရန်"
+msgstr "ဝဘ်ဆိုက်မန်နေဂျာသို့ &ပြန်သွားရန်"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
 msgstr "&ဖျက်ရန်"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "အမှတ်အသားကို &ဖျက်ရန်	Del"
+msgstr "အမှတ်အသား&ဖျက်ရန်	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "ဆိုက်ကို &ဖျက်ရန်"
+msgstr "ဝဘ်ဆိုက်&ဖျက်ရန်"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "ဆိုက်ကို &ဖျက်ရန်	Del"
+msgstr "ဝဘ်ဆိုက်&ဖျက်ရန်	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
 msgstr "&ပြင်ဆင်ရန်"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "အမှတ်အသားကို &ပြင်ဆင်ရန်	F2"
+msgstr "အမှတ်အသား&ပြင်ရန်	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "ဆိုက်ကို &ပြင်ဆင်ရန်"
+msgstr "ဝဘ်ဆိုက်&ပြင်ရန်"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "ဆိုက်ကို &ပြင်ဆင်ရန်	F2"
+msgstr "ဝဘ်ဆိုက်&ပြင်ရန်	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
 msgstr "အမှတ်အသားများကို &စီမံရန်"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "အမှတ်အသား &စာရင်း:"
+msgstr "အမှတ်အသားများ &စာရင်း:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&မှတ်ပုံတင်ထားသော ဆိုက်များ:"
+msgstr "မှတ်ပုံတင်ထားသော &ဝဘ်ဆိုက်များ:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "ဆိုက်ဖွဲ့စည်းပုံ ထည့်ရန်"
+msgstr "ဝဘ်ဆိုက်ဆက်တင် ထည့်ရန်"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
 msgstr "အမှတ်အသားအားလုံးကို ရှင်းလင်းပြီးပါပြီ။"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "အမှတ်အသား အားလုံးကို ဖျက်ရန် သေချာပါသလား?"
+msgstr "အမှတ်အသားအားလုံးကို ဖျက်ရန် သေချာပါသလား။"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "ဤအမှတ်အသားကို ဖျက်ရန် သေချာပါသလား?"
+msgstr "ဤအမှတ်အသားကို ဖျက်ရန် သေချာပါသလား။"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "ဤဆိုက်နှင့် ၎င်း၏ အမှတ်အသားအားလုံးကို ဖျက်ရန် သေချာပါသလား?"
+msgstr "ဤဝဘ်ဆိုက်နှင့် ၎င်း၏ အမှတ်အသားအားလုံးကို ဖျက်ရန် သေချာပါသလား။"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
 msgstr "အလိုအလျောက် နှိပ်ရန်"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C သတ်မှတ်ထားသော နောက်အမှတ်အသားပေါ် အလိုအလျောက် နှိပ်ရန်"
+msgstr "Alt+C သို့ သတ်မှတ်ထားသော နောက်အမှတ်အသားကို အလိုအလျောက် နှိပ်ရန်"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J သတ်မှတ်ထားသော နောက်အမှတ်အသားပေါ် အလိုအလျောက် နှိပ်ရန်"
+msgstr "Alt+J သို့ သတ်မှတ်ထားသော နောက်အမှတ်အသားကို အလိုအလျောက် နှိပ်ရန်"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X သတ်မှတ်ထားသော နောက်အမှတ်အသားပေါ် အလိုအလျောက် နှိပ်ရန်"
+msgstr "Alt+X သို့ သတ်မှတ်ထားသော နောက်အမှတ်အသားကို အလိုအလျောက် နှိပ်ရန်"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z သတ်မှတ်ထားသော နောက်အမှတ်အသားပေါ် အလိုအလျောက် နှိပ်ရန်"
+msgstr "Alt+Z သို့ သတ်မှတ်ထားသော နောက်အမှတ်အသားကို အလိုအလျောက် နှိပ်ရန်"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
-msgstr "မလုပ်တော့"
+msgstr "ပယ်ဖျက်ရန်"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "အားလုံး ရှင်းလင်းရန်"
+msgstr "အားလုံး&ရှင်းလင်းရန်"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "အမှတ်အသားအားလုံး ရှင်းလင်းရန်"
+msgstr "အမှတ်အသားအားလုံးကို &ရှင်းလင်းရန်"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "နှိပ်ရန် ခလုတ်:"
+msgstr "နှိပ်ရမည့်ခလုတ်:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
 msgstr "ပိတ်ရန်"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
 msgstr "အတည်ပြုရန်"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "အားလုံးဖျက်ရန် အတည်ပြုရန်"
+msgstr "အားလုံးဖျက်ရန် အတည်ပြုပါ"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "စာကြောင်းခွဲ ပါဝင်သည်"
+msgstr "စာသားအစိတ်အပိုင်း ပါဝင်မှု"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "စာသား ပါဝင်သည် (တစ်စိတ်တစ်ပိုင်း ကိုက်ညီမှု)"
+msgstr "စာသားပါဝင်မှု (တစ်စိတ်တစ်ပိုင်း ကိုက်ညီမှု ရှာရန်)"
 
-#: gui.py:190
-#: gui.py:240
-msgid "Display Name cannot be empty."
-msgstr "ပြသသည့်အမည် မပါဝင်နိုင်ပါ။"
-
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
-msgid "Display Name:"
-msgstr "ပြသသည့်အမည်:"
-
-#: gui.py:170
-#: gui.py:220
-msgid "Domain Only"
-msgstr "ဒိုမိန်းသာ"
-
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "ဆိုက်ဖွဲ့စည်းပုံ ပြင်ဆင်ရန်"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "စာရွက်စာတမ်း တစ်ခုလုံး"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
-msgid "Error"
-msgstr "အမှား"
+msgid "Disable focus"
+msgstr "ဖိုးကပ်စ် ပိတ်ရန်"
 
-#: gui.py:170
+#: gui.py:201
+#: gui.py:265
+msgid "Display Name cannot be empty."
+msgstr "ပြသရန်အမည် အလွတ်မဖြစ်ရပါ။"
+
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
+msgid "Display Name:"
+msgstr "ပြသရန်အမည်:"
+
+#: gui.py:174
+#: gui.py:237
+msgid "Domain Only"
+msgstr "ဒိုမိန်း သီးသန့်"
+
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "ဖောင်မုဒ်ထဲသို့ မဝင်ပါနှင့်"
+
 #: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "ဝဘ်ဆိုက်ဆက်တင်ကို ပြင်ဆင်ရန်"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "စာရွက်စာတမ်းတစ်ခုလုံး"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
+msgid "Error"
+msgstr "အမှားအယွင်း"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
 msgstr "အတိအကျ ကိုက်ညီမှု"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "အတိအကျ စာပိုဒ် (စာပိုဒ်တစ်ခုလုံး ကိုက်ညီမှု)"
+msgstr "စာပိုဒ်အတိအကျ (စာပိုဒ်တစ်ခုလုံး ကိုက်ညီမှု)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "ဆိုက်ကို ဖျက်ရန် မအောင်မြင်ပါ။"
+msgstr "ဝဘ်ဆိုက်ဖျက်ရန် မအောင်မြင်ပါ။"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "ဖိုးကပ်စ်မုဒ်:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "ဆပ်ဒိုမိန်းများ ထည့်သွင်းရန်"
+msgstr "ဒိုမိန်းခွဲများ ပါဝင်ရန်"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
 msgstr "အချက်အလက်"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "ခုန်ရန်"
+msgstr "ခုန်ကူးရန်"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "ခုန်ရန် ခလုတ်:"
+msgstr "ခုန်ကူးရန်ခလုတ်:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "ယခင် အမှတ်အသား D သို့ နောက်သို့ ခုန်ရန်"
+msgstr "ယခင်အမှတ်အသား D သို့ နောက်ပြန်ခုန်ရန်"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "ယခင် အမှတ်အသား F သို့ နောက်သို့ ခုန်ရန်"
+msgstr "ယခင်အမှတ်အသား F သို့ နောက်ပြန်ခုန်ရန်"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "ယခင် အမှတ်အသား J သို့ နောက်သို့ ခုန်ရန်"
+msgstr "ယခင်အမှတ်အသား J သို့ နောက်ပြန်ခုန်ရန်"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "ယခင် အမှတ်အသား Z သို့ နောက်သို့ ခုန်ရန်"
+msgstr "ယခင်အမှတ်အသား Z သို့ နောက်ပြန်ခုန်ရန်"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "နောက် အမှတ်အသား D သို့ ရှေ့သို့ ခုန်ရန်"
+msgstr "နောက်အမှတ်အသား D သို့ ရှေ့သို့ခုန်ရန်"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "နောက် အမှတ်အသား F သို့ ရှေ့သို့ ခုန်ရန်"
+msgstr "နောက်အမှတ်အသား F သို့ ရှေ့သို့ခုန်ရန်"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "နောက် အမှတ်အသား J သို့ ရှေ့သို့ ခုန်ရန်"
+msgstr "နောက်အမှတ်အသား J သို့ ရှေ့သို့ခုန်ရန်"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "နောက် အမှတ်အသား Z သို့ ရှေ့သို့ ခုန်ရန်"
+msgstr "နောက်အမှတ်အသား Z သို့ ရှေ့သို့ခုန်ရန်"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "အမှတ်အသား မန်နေဂျာ - "
+msgstr "အမှတ်အသားမန်နေဂျာ - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
 msgstr "အမှတ်အသား ဂုဏ်သတ္တိများ"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "အမှတ်အသား တွေ့ရှိခဲ့သည်: {}"
+msgstr "အမှတ်အသားကို တွေ့ရှိသည်: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "ကိုက်ညီမှု အမျိုးအစား:"
+msgstr "ကိုက်ညီမှုအမျိုးအစား:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
 msgstr "မုဒ်:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "ရှင်းလင်းရန် အမှတ်အသား မရှိပါ။"
+msgstr "ရှင်းလင်းရန် အမှတ်အသားမရှိပါ။"
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "ပုံမှန်"
+
+#: gui.py:555
 msgid "OK"
 msgstr "အိုကေ"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ရွှေ့ပြောင်းမှု (ကိုက်ညီပြီးနောက် ရွှေ့ရန် မျဉ်းများ/စာပိုဒ်များ):"
+msgstr "အော့ဖ်ဆက် (ကိုက်ညီပြီးနောက် ရွှေ့ရမည့် စာကြောင်း/စာပိုဒ် အရေအတွက်):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "ပုံစံ ကိုက်ညီမှု:"
+msgstr "ပုံစံကိုက်ညီမှု:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "ပုံစံ မပါဝင်နိုင်ပါ။"
+msgstr "ပုံစံသည် အလွတ်မဖြစ်ရပါ။"
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
 msgstr "ပုံစံ:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "ကျေးဇူးပြု၍ အမှတ်အသားကို ဦးစွာ ရွေးချယ်ပါ။"
+msgstr "ကျေးဇူးပြု၍ အမှတ်အသားတစ်ခုကို အရင်ရွေးချယ်ပါ။"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "ကျေးဇူးပြု၍ ဆိုက်ကို ဦးစွာ ရွေးချယ်ပါ။"
+msgstr "ကျေးဇူးပြု၍ ဝဘ်ဆိုက်တစ်ခုကို အရင်ရွေးချယ်ပါ။"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex ကိုက်ညီမှု (ပုံမှန်ဖော်ပြချက်ကို သုံးရန်)"
+msgstr "Regex ကိုက်ညီမှု (ပုံမှန်အသုံးအနှုန်းကို သုံးရန်)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "ပုံမှန်ဖော်ပြချက်"
+msgstr "Regular Expression"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
-msgstr "ပြောင်းလဲမှုများ သိမ်းရန်"
+msgstr "အပြောင်းအလဲများကို သိမ်းဆည်းရန်"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "ဆိုက်ကို သိမ်းရန်"
+msgstr "ဝဘ်ဆိုက်ကို သိမ်းဆည်းရန်"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "ရှာဖွေမှု နယ်ပယ်:"
+msgstr "ရှာဖွေမှုနယ်ပယ်:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "ဆိုက်မန်နေဂျာ"
+msgstr "ဝဘ်ဆိုက်မန်နေဂျာ"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "ဆိုက်ကို အောင်မြင်စွာ ဖန်တီးခဲ့သည်။"
+msgstr "ဝဘ်ဆိုက်ကို အောင်မြင်စွာ ဖန်တီးပြီးပါပြီ။"
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "ဆိုက်ကို အောင်မြင်စွာ ဖျက်ခဲ့သည်။"
+msgstr "ဝဘ်ဆိုက်ကို အောင်မြင်စွာ ဖျက်ဆီးပြီးပါပြီ။"
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "ဆိုက်ကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ခဲ့သည်။"
+msgstr "ဝဘ်ဆိုက်ကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ပြီးပါပြီ။"
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL ပုံစံ မပါဝင်နိုင်ပါ။"
+msgstr "URL ပုံစံသည် အလွတ်မဖြစ်ရပါ။"
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
 msgstr "URL ပုံစံ:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "အမည်မဲ့"
+msgstr "အမည်မရှိ"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "မြင်ကွင်းဧရိယာသာ"
+msgstr "မြင်ကွင်းဧရိယာ သီးသန့် (Viewport)"

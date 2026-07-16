@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.0\n"
+"Project-Id-Version: SiteMarker 2026.7.7\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-06 14:53+0700\n"
+"POT-Creation-Date: 2026-07-16 08:54+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Slovak\n"
@@ -12,351 +12,371 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:299
+#: gui.py:330
 msgid "&Add Marker"
-msgstr "&සලකුණ එක් කරන්න"
+msgstr "&Pridať značku"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&නව වෙබ් අඩවිය එක් කරන්න"
+msgstr "&Pridať novú stránku"
 
-#: gui.py:303
+#: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&වෙබ් අඩවි කළමනාකරු වෙත ආපසු"
+msgstr "&Späť do správcu stránok"
 
-#: gui.py:301
+#: gui.py:332
 msgid "&Delete"
-msgstr "&මකන්න"
+msgstr "&Zmazať"
 
-#: gui.py:425
+#: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&සලකුණ මකන්න	Del"
+msgstr "&Zmazať značku	Del"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&වෙබ් අඩවිය මකන්න"
+msgstr "&Zmazať stránku"
 
-#: gui.py:139
+#: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&වෙබ් අඩවිය මකන්න	Del"
+msgstr "&Zmazať stránku	Del"
 
-#: gui.py:300
+#: gui.py:331
 msgid "&Edit"
-msgstr "&සංස්කරණය කරන්න"
+msgstr "&Upraviť"
 
-#: gui.py:423
+#: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&සලකුණ සංස්කරණය කරන්න	F2"
+msgstr "&Upraviť značku	F2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&වෙබ් අඩවිය සංස්කරණය කරන්න"
+msgstr "&Upraviť stránku"
 
-#: gui.py:137
+#: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&වෙබ් අඩවිය සංස්කරණය කරන්න	F2"
+msgstr "&Upraviť stránku	F2"
 
 #: gui.py:35
-#: gui.py:142
+#: gui.py:146
 msgid "&Manage Markers"
-msgstr "&සලකුණු කළමනාකරණය කරන්න"
+msgstr "&Spravovať značky"
 
-#: gui.py:294
+#: gui.py:325
 msgid "&Markers List:"
-msgstr "&සලකුණු ලැයිස්තුව:"
+msgstr "Zoznam &značiek:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&ලියාපදිංචි වෙබ් අඩවි:"
+msgstr "Re&gistrované stránky:"
 
-#: gui.py:153
+#: gui.py:157
 msgid "Add Site Configuration"
-msgstr "වෙබ් අඩවි වින්යාසය එක් කරන්න"
+msgstr "Pridať konfiguráciu stránky"
 
-#: gui.py:395
+#: gui.py:426
 msgid "All markers have been cleared."
-msgstr "සියලුම සලකුණු ඉවත් කර ඇත."
+msgstr "Všetky značky boli vymazané."
 
-#: gui.py:391
+#: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "ඔබට සියලුම සලකුණු මැකීමට අවශ්ය බව විශ්වාසද?"
+msgstr "Naozaj chcete vymazať VŠETKY značky?"
 
-#: gui.py:378
+#: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "ඔබට මෙම සලකුණ මැකීමට අවශ්ය බව විශ්වාසද?"
+msgstr "Naozaj chcete zmazať túto značku?"
 
-#: gui.py:103
+#: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "ඔබට මෙම වෙබ් අඩවිය සහ එහි සියලුම සලකුණු මැකීමට අවශ්ය බව විශ්වාසද?"
+msgstr "Naozaj chcete zmazať túto stránku a všetky jej značky?"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Auto Click"
-msgstr "ස්වයං ක්ලික් කිරීම"
+msgstr "Automatické kliknutie"
 
 #: browseModeGestures.py:64
 msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C වෙත පවරා ඇති ඊළඟ සලකුණ මත ස්වයං ක්ලික් කිරීම"
+msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+C"
 
 #: browseModeGestures.py:60
 msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J වෙත පවරා ඇති ඊළඟ සලකුණ මත ස්වයං ක්ලික් කිරීම"
+msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+J"
 
 #: browseModeGestures.py:68
 msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X වෙත පවරා ඇති ඊළඟ සලකුණ මත ස්වයං ක්ලික් කිරීම"
+msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+X"
 
 #: browseModeGestures.py:72
 msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z වෙත පවරා ඇති ඊළඟ සලකුණ මත ස්වයං ක්ලික් කිරීම"
+msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+Z"
 
-#: gui.py:176
-#: gui.py:226
-#: gui.py:533
+#: gui.py:187
+#: gui.py:251
+#: gui.py:556
 msgid "Cancel"
-msgstr "අවලංගු කරන්න"
+msgstr "Zrušiť"
 
-#: gui.py:302
+#: gui.py:333
 msgid "Clear &All"
-msgstr "&සියල්ල ඉවත් කරන්න"
+msgstr "Vymazať &všetko"
 
-#: gui.py:428
+#: gui.py:459
 msgid "Clear &All Markers"
-msgstr "&සියලුම සලකුණු ඉවත් කරන්න"
+msgstr "Vymazať &všetky značky"
 
-#: gui.py:555
+#: gui.py:578
 msgid "Click Key:"
-msgstr "ක්ලික් යතුර:"
+msgstr "Kláves na kliknutie:"
 
 #: gui.py:36
-#: gui.py:304
+#: gui.py:335
 msgid "Close"
-msgstr "වසන්න"
+msgstr "Zatvoriť"
 
-#: gui.py:103
-#: gui.py:378
+#: gui.py:107
+#: gui.py:409
 msgid "Confirm"
-msgstr "තහවුරු කරන්න"
+msgstr "Potvrdiť"
 
-#: gui.py:391
+#: gui.py:422
 msgid "Confirm Delete All"
-msgstr "සියල්ල මැකීම තහවුරු කරන්න"
+msgstr "Potvrdiť vymazanie všetkého"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Contain Substring"
-msgstr "උප වාක්ය ඛණ්ඩය අඩංගු වේ"
+msgstr "Obsahuje podreťazec"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "පෙළ අඩංගු වේ (අර්ධ ගැලපීම)"
+msgstr "Obsahuje text (hľadať čiastočnú zhodu)"
 
-#: gui.py:190
-#: gui.py:240
-msgid "Display Name cannot be empty."
-msgstr "ප්රදර්ශන නාමය හිස් විය නොහැක."
-
-#: gui.py:162
-#: gui.py:213
-#: gui.py:521
-msgid "Display Name:"
-msgstr "ප්රදර්ශන නාමය:"
-
-#: gui.py:170
-#: gui.py:220
-msgid "Domain Only"
-msgstr "වසම පමණි"
-
-#: gui.py:203
-msgid "Edit Site Configuration"
-msgstr "වෙබ් අඩවි වින්යාසය සංස්කරණය කරන්න"
-
-#: gui.py:514
-msgid "Entire Document"
-msgstr "සම්පූර්ණ ලේඛනය"
-
-#: gui.py:108
-#: gui.py:190
-#: gui.py:193
-#: gui.py:240
+#: gui.py:180
 #: gui.py:243
-#: gui.py:569
+msgid "Disable focus"
+msgstr "Zakázať režim zamerania"
+
+#: gui.py:201
+#: gui.py:265
+msgid "Display Name cannot be empty."
+msgstr "Zobrazovaný názov nemôže byť prázdny."
+
+#: gui.py:166
+#: gui.py:230
+#: gui.py:546
+msgid "Display Name:"
+msgstr "Zobrazovaný názov:"
+
+#: gui.py:174
+#: gui.py:237
+msgid "Domain Only"
+msgstr "Iba doména"
+
+#: gui.py:180
+#: gui.py:243
+msgid "Don't enter form mode"
+msgstr "Nevstupovať do režimu formulára"
+
+#: gui.py:220
+msgid "Edit Site Configuration"
+msgstr "Upraviť konfiguráciu stránky"
+
+#: gui.py:540
+msgid "Entire Document"
+msgstr "Celý dokument"
+
+#: gui.py:112
+#: gui.py:201
+#: gui.py:204
+#: gui.py:265
+#: gui.py:268
+#: gui.py:592
 msgid "Error"
-msgstr "දෝෂය"
+msgstr "Chyba"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Exact Matching"
-msgstr "නිවැරදි ගැලපීම"
+msgstr "Presná zhoda"
 
-#: gui.py:490
+#: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "නිවැරදි ඡේදය (සම්පූර්ණ ඡේදය ගැලපේ)"
+msgstr "Presný odsek (zhoda celého odseku)"
 
-#: gui.py:108
+#: gui.py:112
 msgid "Failed to delete site."
-msgstr "වෙබ් අඩවිය මැකීමට අසමත් විය."
+msgstr "Nepodarilo sa zmazať stránku."
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:179
+#: gui.py:242
+msgid "Focus Mode:"
+msgstr "Režim zamerania:"
+
+#: gui.py:174
+#: gui.py:237
 msgid "Include Subdomains"
-msgstr "උප වසම් ඇතුළත් කරන්න"
+msgstr "Vrátane subdomén"
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
-#: gui.py:360
-#: gui.py:376
-#: gui.py:389
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
+#: gui.py:391
+#: gui.py:407
+#: gui.py:420
 msgid "Information"
-msgstr "තොරතුරු"
+msgstr "Informácia"
 
-#: gui.py:497
+#: gui.py:525
 msgid "Jump"
-msgstr "පනින්න"
+msgstr "Skočiť"
 
-#: gui.py:552
+#: gui.py:575
 msgid "Jump Key:"
-msgstr "පැනීමේ යතුර:"
+msgstr "Kláves na skok:"
 
 #: browseModeGestures.py:48
 msgid "Jump backward to previous marker D"
-msgstr "පෙර සලකුණ D වෙත පසුපසට පනින්න"
+msgstr "Skočiť dozadu na predchádzajúcu značku D"
 
 #: browseModeGestures.py:40
 msgid "Jump backward to previous marker F"
-msgstr "පෙර සලකුණ F වෙත පසුපසට පනින්න"
+msgstr "Skočiť dozadu na predchádzajúcu značku F"
 
 #: browseModeGestures.py:32
 msgid "Jump backward to previous marker J"
-msgstr "පෙර සලකුණ J වෙත පසුපසට පනින්න"
+msgstr "Skočiť dozadu na predchádzajúcu značku J"
 
 #: browseModeGestures.py:56
 msgid "Jump backward to previous marker Z"
-msgstr "පෙර සලකුණ Z වෙත පසුපසට පනින්න"
+msgstr "Skočiť dozadu na predchádzajúcu značku Z"
 
 #: browseModeGestures.py:44
 msgid "Jump forward to next marker D"
-msgstr "ඊළඟ සලකුණ D වෙත ඉදිරියට පනින්න"
+msgstr "Skočiť dopredu na nasledujúcu značku D"
 
 #: browseModeGestures.py:36
 msgid "Jump forward to next marker F"
-msgstr "ඊළඟ සලකුණ F වෙත ඉදිරියට පනින්න"
+msgstr "Skočiť dopredu na nasledujúcu značku F"
 
 #: browseModeGestures.py:28
 msgid "Jump forward to next marker J"
-msgstr "ඊළඟ සලකුණ J වෙත ඉදිරියට පනින්න"
+msgstr "Skočiť dopredu na nasledujúcu značku J"
 
 #: browseModeGestures.py:52
 msgid "Jump forward to next marker Z"
-msgstr "ඊළඟ සලකුණ Z වෙත ඉදිරියට පනින්න"
+msgstr "Skočiť dopredu na nasledujúcu značku Z"
 
-#: gui.py:257
+#: gui.py:288
 msgid "Marker Manager - "
-msgstr "සලකුණු කළමනාකරු - "
+msgstr "Správca značiek - "
 
-#: gui.py:438
+#: gui.py:469
 msgid "Marker Properties"
-msgstr "සලකුණු ගුණාංග"
+msgstr "Vlastnosti značky"
 
-#: gui.py:289
+#: gui.py:320
 msgid "Marker found: {}"
-msgstr "සලකුණ හමු විය: {}"
+msgstr "Nájdená značka: {}"
 
-#: gui.py:169
-#: gui.py:219
+#: gui.py:173
+#: gui.py:236
 msgid "Match Type:"
-msgstr "ගැලපුම් වර්ගය:"
+msgstr "Typ zhody:"
 
-#: gui.py:496
+#: gui.py:524
 msgid "Mode:"
-msgstr "මාදිලිය:"
+msgstr "Režim:"
 
-#: gui.py:389
+#: gui.py:420
 msgid "No markers to clear."
-msgstr "ඉවත් කිරීමට සලකුණු නොමැත."
+msgstr "Žiadne značky na vymazanie."
 
-#: gui.py:532
+#: gui.py:180
+#: gui.py:243
+msgid "Normal"
+msgstr "Normálny"
+
+#: gui.py:555
 msgid "OK"
-msgstr "හරි"
+msgstr "OK"
 
-#: gui.py:526
+#: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ඕෆ්සෙට් (ගැලපීමෙන් පසු ගෙන යාමට පේළි/ඡේද):"
+msgstr "Odsadenie (počet riadkov/odsekov na presun po zhode):"
 
-#: gui.py:489
+#: gui.py:518
 msgid "Pattern Match:"
-msgstr "රටා ගැලපීම:"
+msgstr "Zhoda vzoru:"
 
-#: gui.py:569
+#: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "රටාව හිස් විය නොහැක."
+msgstr "Vzor nemôže byť prázdny."
 
-#: gui.py:484
+#: gui.py:514
 msgid "Pattern:"
-msgstr "රටාව:"
+msgstr "Vzor:"
 
-#: gui.py:360
-#: gui.py:376
+#: gui.py:391
+#: gui.py:407
 msgid "Please select a marker first."
-msgstr "කරුණාකර පළමුව සලකුණක් තෝරන්න."
+msgstr "Najprv vyberte značku."
 
-#: gui.py:89
-#: gui.py:101
-#: gui.py:113
+#: gui.py:93
+#: gui.py:105
+#: gui.py:117
 msgid "Please select a site first."
-msgstr "කරුණාකර පළමුව වෙබ් අඩවියක් තෝරන්න."
+msgstr "Najprv vyberte stránku."
 
-#: gui.py:490
+#: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex ගැලපීම (සාමාන්ය ප්රකාශනය භාවිතා කරන්න)"
+msgstr "Regulárny výraz (použiť regulárny výraz)"
 
-#: gui.py:170
-#: gui.py:220
+#: gui.py:174
+#: gui.py:237
 msgid "Regular Expression"
-msgstr "සාමාන්ය ප්රකාශනය"
+msgstr "Regulárny výraz"
 
-#: gui.py:225
+#: gui.py:250
 msgid "Save Changes"
-msgstr "වෙනස්කම් සුරකින්න"
+msgstr "Uložiť zmeny"
 
-#: gui.py:175
+#: gui.py:186
 msgid "Save Site"
-msgstr "වෙබ් අඩවිය සුරකින්න"
+msgstr "Uložiť stránku"
 
-#: gui.py:513
+#: gui.py:539
 msgid "Search Scope:"
-msgstr "සෙවුම් විෂය පථය:"
+msgstr "Rozsah vyhľadávania:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "වෙබ් අඩවි කළමනාකරු"
+msgstr "Správca stránok"
 
-#: gui.py:198
+#: gui.py:215
 msgid "Site created successfully."
-msgstr "වෙබ් අඩවිය සාර්ථකව සාදන ලදී."
+msgstr "Stránka bola úspešne vytvorená."
 
-#: gui.py:105
+#: gui.py:109
 msgid "Site deleted successfully."
-msgstr "වෙබ් අඩවිය සාර්ථකව මකන ලදී."
+msgstr "Stránka bola úspešne zmazaná."
 
-#: gui.py:250
+#: gui.py:281
 msgid "Site updated successfully."
-msgstr "වෙබ් අඩවිය සාර්ථකව යාවත්කාලීන කරන ලදී."
+msgstr "Stránka bola úspešne aktualizovaná."
 
-#: gui.py:193
-#: gui.py:243
+#: gui.py:204
+#: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL රටාව හිස් විය නොහැක."
+msgstr "Vzor URL nemôže byť prázdny."
 
-#: gui.py:165
-#: gui.py:216
+#: gui.py:169
+#: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL රටාව:"
+msgstr "Vzor URL:"
 
-#: gui.py:333
+#: gui.py:364
 msgid "Unnamed"
-msgstr "නම් රහිත"
+msgstr "Bez názvu"
 
-#: gui.py:514
+#: gui.py:540
 msgid "Viewport Only"
-msgstr "දර්ශන පෙදෙස පමණි"
+msgstr "Iba zobrazená oblasť (Viewport)"
