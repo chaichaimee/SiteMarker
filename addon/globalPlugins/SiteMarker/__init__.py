@@ -1,4 +1,4 @@
-# __init__.py
+﻿# __init__.py
 # Copyright (C) 2026 Chai Chaimee
 # Licensed under GNU General Public License. See COPYING.txt for details.
 
@@ -136,7 +136,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._primeTextInfo = None
 		self._primeToken = None
 
-		self._multiTapTimer = None  # Used to cancel the original callLater when a new one is pressed
+		self._multiTapTimer = None
 
 		browseModeGestures.registerGestures(self)
 		global _activePluginInstance
@@ -860,25 +860,41 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def getRealWebFocusObject(self):
 		focusObj = api.getFocusObject()
-		if not focusObj: return None
-		if hasattr(focusObj, "treeInterceptor") and focusObj.treeInterceptor is not None:
+		if not focusObj: 
+			return None
+			
+		if getattr(focusObj, "treeInterceptor", None) is not None:
 			return focusObj
-		for child in focusObj.children:
-			if hasattr(child, "treeInterceptor") and child.treeInterceptor is not None:
-				return child
+			
+		if focusObj.role not in (controlTypes.Role.DOCUMENT, controlTypes.Role.PANE, controlTypes.Role.APPLICATION, controlTypes.Role.WINDOW):
+			return focusObj
+
+		try:
+			for i, child in enumerate(focusObj.children):
+				if i >= 5:
+					break
+				if getattr(child, "treeInterceptor", None) is not None:
+					return child
+		except Exception:
+			pass
+			
 		return focusObj
 
 	def getBrowserUrl(self):
-		focusObj = self.getRealWebFocusObject()
+		focusObj = api.getFocusObject()
 		treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
+		
 		if not treeInt:
-			currentObj = api.getFocusObject()
-			treeInt = getattr(currentObj, "treeInterceptor", None)
+			realObj = self.getRealWebFocusObject()
+			treeInt = getattr(realObj, "treeInterceptor", None) if realObj else None
+			
 		if treeInt and hasattr(treeInt, "documentConstantIdentifier"):
 			urlStr = treeInt.documentConstantIdentifier
 			if urlStr and (urlStr.startswith("http") or urlStr.startswith("https") or urlStr.startswith("file")):
 				return urlStr
-		if self.lastProcessedUrl: return self.lastProcessedUrl
+				
+		if self.lastProcessedUrl: 
+			return self.lastProcessedUrl
 		return None
 
 	def getCurrentSiteConfig(self):
@@ -908,7 +924,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._sortMarkersByDocumentOrder(treeInt)
 
 	def event_gainFocus(self, obj, nextHandler):
-		self.refreshActiveLayout(force=False)
+		treeInt = getattr(obj, "treeInterceptor", None)
+		if treeInt is not None and isinstance(treeInt, browseMode.BrowseModeTreeInterceptor):
+			self.refreshActiveLayout(force=False)
 		nextHandler()
 
 	def event_treeInterceptor_gainFocus(self, treeInterceptor, nextHandler):
@@ -999,13 +1017,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.tapCount += 1
 		self.lastTapTime = currentTime
 
-		# Cancels the original callLater as soon as a new one is pressed
 		if self._multiTapTimer is not None:
 			self._multiTapTimer.Stop()
 			self._multiTapTimer = None
 
 		def dispatchAction():
-			# Store the counting value before resetting
 			myTapCount = self.tapCount
 			self.tapCount = 0
 
@@ -1089,7 +1105,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						self.refreshActiveLayout(force=True)
 				wx.CallAfter(openSiteDialog)
 
-			elif myTapCount >= 3:   # >= 3 to support over pressing
+			elif myTapCount >= 3:
 				if not currentUrl:
 					ui.message(_translate("Cannot capture browser URL."))
 					return
@@ -1115,7 +1131,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						self.refreshActiveLayout(force=True)
 				wx.CallAfter(openMarkerManagerTriple)
 
-		# Restart the timer
 		self._multiTapTimer = core.callLater(int(TAP_THRESHOLD * 1000), dispatchAction)
 
 	script_handleSiteMarkerAction.__doc__ = _translate(
@@ -1173,9 +1188,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._domTimerRunning = False
 
 	def _doDomCheck(self):
-		if not self._domTimerRunning: return
+		if not self._domTimerRunning: 
+			return
 		try:
-			self.refreshActiveLayout(force=False)
+			focusObj = api.getFocusObject()
+			treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
+			if treeInt and isinstance(treeInt, browseMode.BrowseModeTreeInterceptor):
+				self.refreshActiveLayout(force=False)
 		except Exception as e:
 			logHandler.log.debug(f"DOM check refresh failed: {e}")
 		core.callLater(self._domCheckInterval, self._doDomCheck)
