@@ -1,0 +1,269 @@
+﻿<div class="container">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    text-align: center;
+}
+b {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 30px;
+}
+.nvda-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+}
+.hotkey {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+.tap-explanation {
+    background: #e8f4fc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.feature-item {
+    margin: 15px 0;
+    padding-left: 10px;
+}
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+</style>
+
+<div class="section">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA-Logo" class="nvda-logo">
+    <h1>SiteMarker</h1>
+    <p style="text-align: center;">Markieren Sie Ihren Weg, springen Sie mit Leichtigkeit</p>
+</div>
+
+<div class="section">
+    <p style="text-align: center;"><b>Autor:</b> chai chaimee</p>
+    <p style="text-align: center;"><b>URL:</b> https://github.com/chaichaimee/SiteMarker</p>
+</div>
+
+<hr>
+<br>
+
+<h2>Einleitung</h2>
+<p>
+    SiteMarker ist ein NVDA‑Add‑on, mit dem Sie häufig genutzte Abschnitte beliebiger Webseiten schnell speichern und aufrufen können.
+    Mit nur wenigen Tastendrücken markieren Sie wichtige Absätze, Schaltflächen oder Bedienelemente und springen sofort dorthin zurück –
+    kein endloses Scrollen oder Suchen mehr.
+</p>
+<br>
+
+<h2>Funktionen</h2>
+<ul>
+    <li>Setzen Sie dauerhafte Markierungen auf jedes Element einer Webseite.</li>
+    <li>Springen Sie vorwärts oder rückwärts zu Markierungen mit den Tasten <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, <kbd>Z</kbd>.</li>
+    <li>Automatisches Klicken – Markierungen können Schaltflächen, Links oder Formularelemente automatisch aktivieren.</li>
+    <li>Verwalten Sie Seiten und Markierungen über den Site‑Manager und Marker‑Manager.</li>
+    <li>Teilen Sie Ihre Markierungskonfigurationen über portable JSON‑Dateien zwischen Geräten.</li>
+    <li>Funktioniert mit Chrome, Edge, Firefox, Brave und WebKit‑basierten Browsern.</li>
+    <li>Unterstützt Single‑Page‑Anwendungen (SPA) mit automatischer Erkennung von Inhaltsänderungen.</li>
+    <li>Flexible Übereinstimmungsmethoden: Text, exakt oder reguläre Ausdrücke.</li>
+</ul>
+<br>
+
+<h2>Vorteile</h2>
+<ul>
+    <li><strong>Zeit sparen</strong> – überflüssiges Scrollen und Pfeiltasten‑Navigation entfällt.</li>
+    <li><strong>Weniger Tastenanschläge</strong> – schnelle Sprünge mit einer Taste schonen die Hände.</li>
+    <li><strong>Produktivität steigern</strong> – persönliche Abkürzungen für Ihre häufigsten Aufgaben.</li>
+    <li><strong>Orientierung behalten</strong> – Sprachausgabe bei jedem Sprung gibt Rückmeldung über Ihre Position.</li>
+</ul>
+<br>
+
+<h2>Warum SiteMarker?</h2>
+<p>
+    Jeden Tag besuchen Sie dieselben Webseiten – lesen, formulare ausfüllen, Dashboards prüfen.
+    Das Navigieren zwischen wichtigen Bereichen kann mühsam und ermüdend sein.
+    SiteMarker löst dieses Problem, indem Sie Markierungen genau an den Stellen setzen, die Sie brauchen.
+    Kein Suchen mehr; einfach markieren, springen und sich auf das Wesentliche konzentrieren.
+</p>
+<br>
+<hr>
+<br>
+
+<h2>Erste Schritte – Schritt für Schritt</h2>
+<br>
+
+<h3>1. Ihre erste Seite hinzufügen</h3>
+<p>
+    Wenn Sie eine Webseite öffnen, auf der Sie Markierungen verwenden möchten, doppeltippen Sie <kbd>Windows+F12</kbd>.
+    Der Dialog <strong>Seite hinzufügen</strong> wird angezeigt.
+</p>
+<ul>
+    <li><strong>Anzeigename:</strong> Geben Sie einen aussagekräftigen Namen ein (z.B. „Gmail‑Posteingang“ oder „Tägliche Nachrichten“).</li>
+    <br>
+    <li><strong>URL‑Muster:</strong> Geben Sie die Webadresse (oder einen Teil davon) ein, die diese Seite identifiziert.</li>
+    <br>
+    <li>
+        <strong>Übereinstimmungstyp:</strong> Wählen Sie, wie SiteMarker die aktuelle URL mit Ihrem Muster abgleichen soll.
+        <br><br>
+        <strong>Nur Domain</strong> – Gleicht nur die Hauptdomain ab (z.B. <code>google.com</code> funktioniert für <code>www.google.com</code> und <code>mail.google.com</code>, aber nicht für <code>google.co.uk</code>).
+        <br><br>
+        <strong>Subdomains einschließen</strong> – Die URL muss mit Ihrem Muster enden. Beispiel: <code>example.com</code> trifft auf <code>sub.example.com</code> und <code>news.example.com</code> zu, aber nicht auf <code>example.org</code>.
+        <br><br>
+        <strong>Teilstring enthalten</strong> – Trifft zu, wenn Ihr Muster irgendwo in der vollständigen URL (inkl. Pfad und Query) vorkommt. Beispiel: <code>/search</code> trifft auf <code>https://www.google.com/search?q=test</code>.
+        <br><br>
+        <strong>Exakte Übereinstimmung</strong> – Die gesamte URL muss exakt Ihrem Muster entsprechen (Groß‑/Kleinschreibung wird ignoriert). Verwenden Sie dies, wenn Sie Markierungen nur für eine bestimmte Seite wie <code>https://example.com/dashboard</code> wünschen.
+        <br><br>
+        <strong>Regulärer Ausdruck</strong> – Für Fortgeschrittene. Schreiben Sie ein Regex‑Muster (z.B. <code>https://.*\.example\.com/.*</code>), um alle Seiten unter beliebigen Subdomains von <code>example.com</code> abzudecken.
+    </li>
+</ul>
+<p>Klicken Sie auf <strong>Seite speichern</strong>. Ihre Seite ist nun registriert, und Sie können mit dem Setzen von Markierungen beginnen.</p>
+<br>
+
+<h3>2. Ihre erste Markierung setzen</h3>
+<p>
+    Navigieren Sie zu dem genauen Absatz, der Zeile oder Schaltfläche, die Sie sich merken möchten. Tippen Sie dann <strong>einmal</strong> auf <kbd>Windows+F12</kbd>. Der Dialog <strong>Markierung hinzufügen</strong> öffnet sich.
+</p>
+<ul>
+    <li>
+        <strong>Muster:</strong> SiteMarker füllt dies automatisch mit dem aktuell fokussierten Text. Sie können es bei Bedarf bearbeiten. Dieser Text wird von SiteMarker durchsucht.
+    </li>
+    <br>
+    <li>
+        <strong>Mustervergleich:</strong> Wählen Sie die Vergleichsmethode:
+        <br><br>
+        <strong>Enthält Text</strong> – Findet das Muster an beliebiger Stelle im Absatz (Teilübereinstimmung).
+        <br><br>
+        <strong>Exakter Absatz</strong> – Der Absatz muss exakt dem Muster entsprechen (ganzer Text).
+        <br><br>
+        <strong>Regex‑Abgleich</strong> – Verwenden Sie einen regulären Ausdruck für erweiterte Suche.
+    </li>
+    <br>
+    <li>
+        <strong>Modus:</strong> Legen Sie fest, was diese Markierung tut:
+        <br><br>
+        <strong>Springen</strong> – Wenn Sie die zugewiesene Sprungtaste drücken, bewegt sich der Cursor zu dieser Markierung. Sie können eine von vier Sprungtasten zuweisen: <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> oder <kbd>Z</kbd>.
+        Drücken Sie die Taste allein, um <strong>vorwärts</strong> zur nächsten Markierung mit dieser Taste zu springen. Drücken Sie <kbd>Umschalt</kbd>+Taste, um <strong>rückwärts</strong> zu springen.
+        <br><br>
+        <strong>Auto‑Klick</strong> – Anstatt nur den Fokus zu setzen, führt SiteMarker automatisch einen <strong>Klick</strong> auf dem Element aus, wenn Sie die zugewiesene Klicktaste drücken. Verfügbare Klicktasten sind <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> und <kbd>Alt+Z</kbd>.
+    </li>
+    <br>
+    <li>
+        <strong>Anzeigename:</strong> Geben Sie Ihrer Markierung einen aussagekräftigen Namen (z.B. „Senden‑Schaltfläche“ oder „Zusammenfassungsbereich“).
+    </li>
+    <br>
+    <li>
+        <strong>Versatz (Offset):</strong> Dies verschiebt die endgültige Cursorposition relativ zur gefundenen Markierung. Geben Sie eine ganze Zahl (positiv oder negativ) ein, um die Zielposition zu verschieben.
+        <br><br>
+        <strong>Positive Zahl</strong> (z.B. <code>2</code>) bewegt den Cursor <em>vorwärts</em> um so viele Absätze nach der Markierung.
+        <br><br>
+        <strong>Negative Zahl</strong> (z.B. <code>-1</code>) bewegt den Cursor <em>rückwärts</em> um so viele Absätze vor der Markierung.
+        <br><br>
+        <strong>0</strong> (Standard) landet exakt auf der Markierung selbst.
+    </li>
+</ul>
+<p>Klicken Sie auf <strong>OK</strong> – Ihre Markierung wird gespeichert und ist sofort einsatzbereit.</p>
+<br>
+<hr>
+<br>
+
+<h2>Wie ein Profi springen und klicken</h2>
+<p>
+    Sobald Sie Markierungen eingerichtet haben, können Sie mühelos durch Ihre Seite navigieren:
+</p>
+<ul>
+    <li>Drücken Sie <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> oder <kbd>Z</kbd> (allein), um <strong>vorwärts</strong> zur nächsten Markierung mit dieser Taste zu springen.</li>
+    <li>Drücken Sie <kbd>Umschalt+J</kbd>, <kbd>Umschalt+F</kbd>, <kbd>Umschalt+D</kbd> oder <kbd>Umschalt+Z</kbd>, um <strong>rückwärts</strong> zur vorherigen Markierung zu springen.</li>
+    <li>Für Auto‑Klick‑Markierungen drücken Sie <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> oder <kbd>Alt+Z</kbd> – der Cursor sucht die nächste passende Markierung und klickt automatisch auf das Zielelement.</li>
+</ul>
+<p>
+    Jeder Sprung spricht den Zielabsatz vor und bewegt den Bildschirmprüfcursor an diese Position, sodass Sie immer wissen, wo Sie sind.
+</p>
+<br>
+
+<h2>Alles verwalten</h2>
+<p>
+    Sie können jederzeit durch Doppeltippen von <kbd>Windows+F12</kbd> den <strong>Site‑Manager</strong> öffnen. Dort können Sie:
+</p>
+<ul>
+    <li>Den Anzeigenamen, das URL‑Muster oder den Übereinstimmungstyp einer Seite bearbeiten.</li>
+    <li>Markierungen für jede Seite hinzufügen, bearbeiten oder löschen.</li>
+    <li>Alle Markierungen auf einmal löschen.</li>
+    <li>Zwischen der Seitenliste und der Markierungsliste hin‑ und hernavigieren.</li>
+</ul>
+<p>
+    Der <strong>Marker‑Manager</strong> (über den Site‑Manager erreichbar) bietet Ihnen eine vollständige Übersicht aller Markierungen für die aktuelle Seite mit schnellen Optionen zum Bearbeiten oder Löschen.
+</p>
+<br>
+
+<h2>Markierungen teilen</h2>
+<p>
+    Alle Ihre Seiten‑ und Markierungskonfigurationen werden in einfachen <strong>JSON‑Dateien</strong> pro Seite gespeichert. Diese Dateien befinden sich unter:
+</p>
+<pre>%APPDATA%\nvda\ChaiChaimee\SiteMarker\site\</pre>
+<p>
+    Sie können diese <code>.json</code>‑Dateien auf einen anderen Computer kopieren oder mit Kollegen teilen. Legen Sie sie einfach in denselben Ordner auf dem anderen Rechner, und SiteMarker erkennt die Seiten und Markierungen sofort – keine zusätzliche Einrichtung erforderlich. So können Sie intelligente Navigationskonfigurationen problemlos zwischen Teams oder Geräten austauschen.
+</p>
+<br>
+<hr>
+<br>
+
+<h2>Bildschirmfotos</h2>
+<p>
+    SiteMarker ist vollständig für die Nutzung mit Bildschirmlesegeräten optimiert. Die folgenden Screenshots sind für sehende Lehrer, Trainer oder Kollegen gedacht, die einen Eindruck von der Oberfläche bekommen möchten.
+</p>
+<div>
+    <img src="placeholder1.png" alt="SiteMarker Site‑Manager‑Dialog mit einer Liste registrierter Seiten und Schaltflächen zum Hinzufügen, Bearbeiten oder Löschen von Seiten." style="max-width:100%; margin-bottom:10px;">
+    <br>
+    <img src="placeholder2.png" alt="Marker‑Manager‑Dialog mit einer Liste der Markierungen für die aktuelle Seite und Optionen zum Hinzufügen, Bearbeiten oder Löschen jeder Markierung." style="max-width:100%; margin-bottom:10px;">
+    <br>
+    <img src="placeholder3.png" alt="Marker‑Eigenschaften‑Dialog, in dem Muster, Abgleichmodus, Aktion (Springen oder Auto‑Klick), Tastenkombination, Anzeigename und Versatz festgelegt werden können." style="max-width:100%;">
+</div>
+<br>
+<hr>
+<br>
+
+<h2>Loslegen</h2>
+<p>
+    SiteMarker verwandelt jede Webseite in einen persönlichen Navigationsspielplatz.
+    Laden Sie es jetzt herunter und erleben Sie die Freiheit des sofortigen Zugriffs auf die Teile des Internets, die für Sie am wichtigsten sind.
+</p>
+<br>
+
+<h2>Unterstützen Sie mich</h2>
+<p>Wenn dieses Tool Ihnen den Alltag erleichtert hat, können Sie mit einer kleinen Spende die nächste Aktualisierung unterstützen.</p>
+<br>
+<p>
+    <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+        <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Spenden">
+    </a>
+</p>
+<br>
+<p>Ihre Unterstützung bedeutet mir viel. Lassen Sie uns gemeinsam etwas Großartiges schaffen.</p>
+<br>
+<div class="footer-note">
+    <p>&copy; 2026 Chai Chaimee NVDA‑Add‑on, veröffentlicht unter der GNU General Public License.</p>
+</div>
+
+</div>
