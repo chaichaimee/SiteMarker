@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-18 17:39+0700\n"
+"POT-Creation-Date: 2026-07-29 14:47+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: English\n"
@@ -92,22 +92,6 @@ msgstr "Are you sure you want to delete this site and all its markers?"
 #: gui.py:525
 msgid "Auto Click"
 msgstr "Auto Click"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Auto click on next marker assigned to Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Auto click on next marker assigned to Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Auto click on next marker assigned to Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Auto click on next marker assigned to Alt+Z"
 
 #: gui.py:187
 #: gui.py:251
@@ -232,38 +216,6 @@ msgstr "Jump"
 #: gui.py:575
 msgid "Jump Key:"
 msgstr "Jump Key:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Jump backward to previous marker D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Jump backward to previous marker F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Jump backward to previous marker J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Jump backward to previous marker Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Jump forward to next marker D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Jump forward to next marker F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Jump forward to next marker J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Jump forward to next marker Z"
 
 #: gui.py:288
 msgid "Marker Manager - "

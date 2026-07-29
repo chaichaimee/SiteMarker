@@ -1,28 +1,41 @@
-![NVDA Logo](https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico)
+﻿![NVDA Logo](https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico)
 
 # SiteMarker
 
+**Mark Your Way, Jump with Ease**
 
-<p align="center">Mark Your Way, Jump with Ease</p>
+**author:** chai chaimee  
+**url:** https://github.com/chaichaimee/SiteMarker
 
+---
 
-<p align="center"><b>author:</b> chai chaimee</p>
-<p align="center"><b>url:</b> https://github.com/chaichaimee/SiteMarker</p>
+## Introduction
 
+SiteMarker is an NVDA add-on that lets you quickly save and access frequently used sections of any website. With just a few keystrokes, you can mark important paragraphs, buttons, or controls and jump back to them instantly – no more endless scrolling or hunting for that one spot.
 
-## Description
+## Features
 
-Every day, you spend hours inside the same websites – reading articles, checking dashboards, filling forms, or navigating through long lists. To move from one important section to another, you press the arrow keys again and again, hunting for that one paragraph or button you need. It is repetitive, tiring, and wastes your precious time.
+- Place permanent markers on any element inside a web page.
+- Jump forward or backward to markers using dedicated keys (<kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, <kbd>Z</kbd>).
+- Auto‑click markers to automatically activate buttons, links, or form controls.
+- Manage sites and markers through a simple Site Manager and Marker Manager.
+- Share your marker configurations across devices via portable JSON files.
+- Works with Chrome, Edge, Firefox, Brave, and WebKit‑based browsers.
+- Supports Single‑Page Applications (SPA) with automatic content detection.
+- Flexible matching with text, exact, or regular expression patterns.
 
-**SiteMarker** changes that. It lets you place permanent markers on any paragraph or element inside a web page. Once marked, you can jump directly to that spot with a single keystroke – forward or backward, in any order. No more endless scrolling or arrow‑key marathon. Just mark, jump, and get things done.
+## Benefits
 
+- **Save time** – eliminate repetitive scrolling and arrow‑key navigation.
+- **Reduce keystroke fatigue** – quick, single‑key jumps keep your hands comfortable.
+- **Boost productivity** – create personalised shortcuts for your most frequent tasks.
+- **Stay oriented** – spoken feedback on every jump keeps you aware of your location.
 
-## Hotkeys
+## Why use it
 
-The main key for all actions is <kbd>Windows+F12</kbd>. This is a **multi‑tap** key – its behaviour changes depending on how many times you press it quickly (within 0.4 seconds).
+Every day, you visit the same websites – reading, filling forms, checking dashboards. Moving between key sections can be tedious and tiring. SiteMarker solves this by letting you place markers on exactly the spots you need. No more hunting; just mark, jump, and focus on what matters.
 
-- **Single tap (<kbd>Windows+F12</kbd> once)** – If you are on a line that *already has* a marker, the edit dialog for that marker opens. If the line *has no marker* yet, the **Add Marker** dialog appears, pre‑filled with the current paragraph text.
-- **Double tap (<kbd>Windows+F12</kbd> twice quickly)** – Opens the **Site Manager** for the current website. If the site already exists, you can edit its settings or manage all its markers. If the site is new, you are prompted to add it.
+---
 
 ## Getting Started – Step by Step
 
@@ -36,15 +49,15 @@ When you open a website where you want to use markers, double‑tap <kbd>Windows
 
 - **Match Type:** Choose how SiteMarker should match the current URL against your pattern.
 
-  **Domain Only** – Matches only the main domain (e.g., pattern `google.com` works for `www.google.com`, `mail.google.com`, but not for `google.co.uk`).
+    - **Domain Only** – Matches only the main domain (e.g., pattern `google.com` works for `www.google.com` and `mail.google.com`, but not for `google.co.uk`).
 
-  **Include Subdomains** – Like Domain Only, but the URL must end with your pattern. For example, pattern `example.com` matches `sub.example.com` and `news.example.com`, but not `example.org`.
+    - **Include Subdomains** – The URL must end with your pattern. For example, pattern `example.com` matches `sub.example.com` and `news.example.com`, but not `example.org`.
 
-  **Contain Substring** – Matches if your pattern appears anywhere in the full URL (including path and query). Example: pattern `/search` matches `https://www.google.com/search?q=test`.
+    - **Contain Substring** – Matches if your pattern appears anywhere in the full URL (including path and query). Example: pattern `/search` matches `https://www.google.com/search?q=test`.
 
-  **Exact Matching** – The entire URL must equal your pattern exactly (case‑insensitive). Use this when you want markers only for one specific page, like `https://example.com/dashboard`.
+    - **Exact Matching** – The entire URL must equal your pattern exactly (case‑insensitive). Use this when you want markers only for one specific page, like `https://example.com/dashboard`.
 
-  **Regular Expression** – For power users. Write a regex pattern (e.g., `https://.*\.example\.com/.*`) to match any page under any subdomain of `example.com`.
+    - **Regular Expression** – For power users. Write a regex pattern (e.g., `https://.*\.example\.com/.*`) to match any page under any subdomain of `example.com`.
 
 Click **Save Site**. Your site is now registered, and you can start placing markers.
 
@@ -56,30 +69,31 @@ Navigate to the exact paragraph, line, or button you want to remember. Then **si
 
 - **Pattern Match** – Choose how the pattern should be compared:
 
-  **Contains Text** – Finds the pattern anywhere inside the paragraph (partial match).
+    - **Contains Text** – Finds the pattern anywhere inside the paragraph (partial match).
 
-  **Exact Paragraph** – The paragraph must equal the pattern exactly (whole text match).
+    - **Exact Paragraph** – The paragraph must equal the pattern exactly (whole text match).
 
-  **Regex Match** – Use a regular expression for advanced matching.
+    - **Regex Match** – Use a regular expression for advanced matching.
 
 - **Mode** – Decide what this marker does:
 
-  **Jump** – When you press the assigned jump key, the cursor moves to this marker. You can assign one of four jump keys: <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, or <kbd>Z</kbd>.
-  Press the key alone to jump **forward** to the next marker with that key. Press <kbd>Shift</kbd>+key to jump **backward**.
+    - **Jump** – When you press the assigned jump key, the cursor moves to this marker. You can assign one of four jump keys: <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, or <kbd>Z</kbd>. Press the key alone to jump **forward** to the next marker with that key. Press <kbd>Shift</kbd>+key to jump **backward**.
 
-  **Auto Click** – Instead of just moving focus, SiteMarker will automatically **click** on the element when you press the assigned click key. The available click keys are <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd>, and <kbd>Alt+Z</kbd>.
+    - **Auto Click** – Instead of just moving focus, SiteMarker will automatically **click** on the element when you press the assigned click key. The available click keys are <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd>, and <kbd>Alt+Z</kbd>.
 
 - **Display Name** – Give your marker a meaningful name (e.g., “Submit Button” or “Summary Section”).
 
 - **Offset** – This moves the final cursor position relative to the found marker. Enter a whole number (positive or negative) to shift the landing position.
 
-  **Positive number** (e.g., `2`) moves the cursor *forward* that many paragraphs after the marker.
+    - **Positive number** (e.g., `2`) moves the cursor *forward* that many paragraphs after the marker.
 
-  **Negative number** (e.g., `-1`) moves the cursor *backward* that many paragraphs before the marker.
+    - **Negative number** (e.g., `-1`) moves the cursor *backward* that many paragraphs before the marker.
 
-  **0** (default) lands exactly on the marker itself.
+    - **0** (default) lands exactly on the marker itself.
 
 Click **OK** – your marker is saved and ready to use.
+
+---
 
 ## Jump & Click Like a Pro
 

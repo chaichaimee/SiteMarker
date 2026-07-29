@@ -1,4 +1,4 @@
-﻿# __init__.py
+# __init__.py
 # Copyright (C) 2026 Chai Chaimee
 # Licensed under GNU General Public License. See COPYING.txt for details.
 
@@ -20,6 +20,7 @@ import logHandler
 import controlTypes
 import textInfos
 import browseMode
+import keyboardHandler
 from comtypes import COMError
 from .markerEngine import MarkerEngine
 from .gui import MarkerEditDialog, SiteManagerDialog, MarkerManagerDialog, AddSiteDialog
@@ -35,11 +36,15 @@ AUTO_CLICK_RETRY_DELAY = 500
 MAX_CLICK_RETRIES = 2
 
 MAX_LOAD_MORE_ATTEMPTS = 100
-MAX_NO_GROWTH_ATTEMPTS = 25
+MAX_NO_GROWTH_ATTEMPTS = 5
 LOAD_MORE_TIMEOUT_MS = 800
 SCAN_PARAGRAPHS_PER_CHUNK = 50
 MAX_SCAN_PARAGRAPHS_TOTAL = 8000
 PAGE_DOWN_BATCH_SIZE = 3
+SORT_PARAGRAPHS_PER_CHUNK = 200
+MAX_SORT_ITERATIONS = 2000
+MAX_COMBOBOX_RESUME_ATTEMPTS = 20
+FOCUS_RECOVERY_WINDOW_SEC = 20
 
 # ------------------------- Focus Mode Enum -------------------------
 class FocusMode(Enum):
@@ -118,15 +123,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.lastProcessedUrl = None
 		self._lastVirtualBufferUpdate = 0
 		self.lastJumpInfo = {}
+		self._jumpComboboxResumeCount = {}
+		self._autoClickComboboxResumeCount = {}
+		self._recentScanActivity = {}
 		self._autoClickRetryState = None
 		self._refreshPending = False
 
 		self._autoClickScanToken = {}
 		self._jumpScanToken = {}
-		self._pendingRevealCallback = None
-		self._pendingRevealTreeInt = None
-		self._pendingJumpRevealCallback = None
-		self._pendingJumpRevealTreeInt = None
+		self._sortScanToken = None
+		self._pendingReveals = {}
 
 		self._domTimerRunning = False
 		self._domCheckInterval = 2000
@@ -154,13 +160,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.activeSiteMarkers.clear()
 		self.lastProcessedUrl = None
 		self.lastJumpInfo.clear()
+		self._jumpComboboxResumeCount.clear()
+		self._autoClickComboboxResumeCount.clear()
+		self._recentScanActivity.clear()
 		self._autoClickRetryState = None
 		self._autoClickScanToken.clear()
 		self._jumpScanToken.clear()
-		self._pendingRevealCallback = None
-		self._pendingRevealTreeInt = None
-		self._pendingJumpRevealCallback = None
-		self._pendingJumpRevealTreeInt = None
+		self._sortScanToken = None
+		self._pendingReveals.clear()
 		self._primedTreeInterceptors.clear()
 		self._primeTextInfo = None
 		self._primeToken = None
@@ -255,7 +262,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			checkInfo.expand(textInfos.UNIT_PARAGRAPH)
 			fields = checkInfo.getTextWithFields()
 		except COMError:
-			return True
+			# A transient COMError here does not mean the target is a combobox; it
+			# usually means the node is part of a virtualized/recycled list (e.g. a
+			# chat message list) and briefly went stale. Trust the already-computed
+			# object based check (_isRealObjectComboboxLike) instead of assuming the
+			# worst, otherwise a single flaky read causes the jump to loop forever
+			# re-resuming on the same paragraph without ever landing.
+			return False
 		except Exception:
 			return False
 		comboRoles = [controlTypes.Role.EDITABLETEXT, controlTypes.Role.COMBOBOX]
@@ -289,9 +302,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		try:
 			fields = textInfo.getTextWithFields()
 		except COMError:
-			return True
+			return not self._isMatchTargetSafe(textInfo)
 		except Exception:
-			return True
+			return not self._isMatchTargetSafe(textInfo)
 		for field in fields:
 			if not isinstance(field, textInfos.FieldCommand):
 				continue
@@ -326,27 +339,64 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			depth += 1
 		return True
 
+	def _isTreeInterceptorStillFocused(self, treeInt):
+		# Deferred (core.callLater) continuations must never act on a treeInterceptor
+		# that is no longer the one the user is actually looking at. Chrome/UIA will
+		# raise a background tab to the foreground if we set selection or activate a
+		# position on it, which is exactly the "jump switched to another tab" bug.
+		try:
+			focusObj = api.getFocusObject()
+		except Exception:
+			return False
+		currentTreeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
+		if currentTreeInt is None:
+			realObj = self.getRealWebFocusObject()
+			currentTreeInt = getattr(realObj, "treeInterceptor", None) if realObj else None
+		return currentTreeInt is treeInt
+
 	def _verifyThenDispatchJump(self, infoToSelect, dirVal, skipOff, treeInt, baseKey,
 							   markersForThisKey, oldSelection, vpStart, vpEnd, useViewport):
-		try:
-			infoToSelect.updateCaret()
-			speech.speakTextInfo(infoToSelect, reason=controlTypes.OutputReason.CARET)
-		except Exception as e:
-			logHandler.log.error(f"Failed to update caret or speak: {e}")
+		if not self._isTreeInterceptorStillFocused(treeInt):
+			logHandler.log.debug(f"SiteMarker: aborting jump dispatch for key '{baseKey}', tab/document changed.")
 			return
+		self._recentScanActivity[id(treeInt)] = time.time()
+		# IMPORTANT: check combobox-likeness BEFORE calling updateCaret()/speak/select.
+		# updateCaret() moves the real browse-mode caret to this position; if the
+		# position overlaps a real focusable Chrome element (e.g. the "Search
+		# Facebook" combobox), Chrome pulls actual keyboard focus into that field
+		# as a side effect of the virtual cursor landing on it. Once real focus is
+		# inside that field, any COM property access made afterwards (such as the
+		# combobox check itself) can hang indefinitely instead of raising, which is
+		# what produced the silent freeze stuck in the search box.
 		isCombobox = self._isLikelyComboboxTarget(infoToSelect)
 		logHandler.log.debug(f"SiteMarker: comboboxCheck result={isCombobox} for baseKey='{baseKey}'")
 		if isCombobox:
-			try:
-				speech.cancelSpeech()
-			except Exception:
-				pass
+			resumeCount = self._jumpComboboxResumeCount.get(baseKey, 0) + 1
+			self._jumpComboboxResumeCount[baseKey] = resumeCount
+			if resumeCount > MAX_COMBOBOX_RESUME_ATTEMPTS:
+				logHandler.log.debug(
+					f"SiteMarker: giving up on key '{baseKey}' after {resumeCount} consecutive "
+					f"combobox-like matches; stopping instead of resuming silently."
+				)
+				self._jumpComboboxResumeCount[baseKey] = 0
+				self._finishJumpNotFound(dirVal, treeInt)
+				return
+			logHandler.log.debug(
+				f"SiteMarker: resuming scan past combobox-like match for baseKey='{baseKey}' (attempt {resumeCount})"
+			)
 			resumeInfo = infoToSelect.copy()
 			newScanToken = object()
 			self._jumpScanToken[baseKey] = newScanToken
 			self._processJumpChunk(treeInt, markersForThisKey, baseKey, dirVal,
 								   resumeInfo, oldSelection, skipOff, vpStart, vpEnd, useViewport,
 								   newScanToken, 0, 0)
+			return
+		self._jumpComboboxResumeCount[baseKey] = 0
+		try:
+			infoToSelect.updateCaret()
+			speech.speakTextInfo(infoToSelect, reason=controlTypes.OutputReason.CARET)
+		except Exception as e:
+			logHandler.log.error(f"Failed to update caret or speak: {e}")
 			return
 		try:
 			infoToSelect.collapse()
@@ -377,34 +427,67 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _sortMarkersByDocumentOrder(self, treeInterceptor):
 		if not treeInterceptor:
 			return
-		for key in self.activeSiteMarkers:
-			markers = self.activeSiteMarkers[key]
-			if len(markers) <= 1:
-				continue
-			scanInfo = treeInterceptor.makeTextInfo(textInfos.POSITION_FIRST)
-			orderedIndices = []
-			iteration = 0
-			while iteration < 2000:
-				iteration += 1
+		keysToSort = [key for key, markers in self.activeSiteMarkers.items() if len(markers) > 1]
+		if not keysToSort:
+			return
+		sortToken = object()
+		self._sortScanToken = sortToken
+		self._continueSortMarkersChunk(treeInterceptor, keysToSort, 0, None, [], sortToken, 0)
+
+	def _continueSortMarkersChunk(self, treeInterceptor, keysToSort, keyIndex, scanInfo,
+								  orderedIndices, sortToken, iteration):
+		if self._sortScanToken is not sortToken:
+			return
+		if not self._isTreeInterceptorStillFocused(treeInterceptor):
+			return
+		if keyIndex >= len(keysToSort):
+			return
+		key = keysToSort[keyIndex]
+		markers = self.activeSiteMarkers.get(key)
+		if not markers or len(markers) <= 1:
+			core.callLater(0, self._continueSortMarkersChunk,
+						   treeInterceptor, keysToSort, keyIndex + 1, None, [], sortToken, 0)
+			return
+		if scanInfo is None:
+			try:
+				scanInfo = treeInterceptor.makeTextInfo(textInfos.POSITION_FIRST)
+			except Exception as e:
+				logHandler.log.debug(f"Marker sort scan init failed: {e}")
+				core.callLater(0, self._continueSortMarkersChunk,
+							   treeInterceptor, keysToSort, keyIndex + 1, None, [], sortToken, 0)
+				return
+		processed = 0
+		reachedEnd = False
+		while processed < SORT_PARAGRAPHS_PER_CHUNK and iteration < MAX_SORT_ITERATIONS:
+			processed += 1
+			iteration += 1
+			try:
 				foundMarker, _ = self.engine.matchParagraph(scanInfo, markers)
 				if foundMarker is not None:
 					try:
 						foundIdx = markers.index(foundMarker)
 					except ValueError:
-						pass
-					else:
-						if foundIdx not in orderedIndices:
-							orderedIndices.append(foundIdx)
-				try:
-					if scanInfo.move(textInfos.UNIT_PARAGRAPH, 1) == 0:
-						break
-				except (RuntimeError, OSError, Exception):
+						foundIdx = None
+					if foundIdx is not None and foundIdx not in orderedIndices:
+						orderedIndices.append(foundIdx)
+				if scanInfo.move(textInfos.UNIT_PARAGRAPH, 1) == 0:
+					reachedEnd = True
 					break
 				scanInfo.expand(textInfos.UNIT_PARAGRAPH)
-			if orderedIndices:
-				remaining = [i for i in range(len(markers)) if i not in orderedIndices]
-				orderedIndices.extend(remaining)
-				self.activeSiteMarkers[key] = [markers[i] for i in orderedIndices]
+			except (COMError, RuntimeError, OSError) as e:
+				logHandler.log.debug(f"Marker sort scan paragraph error: {e}")
+				reachedEnd = True
+				break
+		if not reachedEnd and iteration < MAX_SORT_ITERATIONS:
+			core.callLater(5, self._continueSortMarkersChunk,
+						   treeInterceptor, keysToSort, keyIndex, scanInfo, orderedIndices, sortToken, iteration)
+			return
+		if orderedIndices:
+			remaining = [i for i in range(len(markers)) if i not in orderedIndices]
+			orderedIndices.extend(remaining)
+			self.activeSiteMarkers[key] = [markers[i] for i in orderedIndices]
+		core.callLater(0, self._continueSortMarkersChunk,
+					   treeInterceptor, keysToSort, keyIndex + 1, None, [], sortToken, 0)
 
 	def _getViewportRange(self, treeInt):
 		try:
@@ -429,7 +512,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			realObj = textInfo.NVDAObjectAtStart
 		except Exception:
 			return
-		if not realObj or self._objectLooksEditableOrCombobox(realObj):
+		if not realObj:
+			return
+		try:
+			looksEditable = self._objectLooksEditableOrCombobox(realObj)
+		except Exception:
+			return
+		if looksEditable:
+			return
+		# _objectLooksEditableOrCombobox already swallows role/state read errors and
+		# reports "not editable" in that case, which is the wrong default here: a
+		# role query that fails (COMError etc.) usually means the object is mid
+		# focus-transition, and calling scrollIntoView() on it can drag real Chrome
+		# keyboard focus into it (this is what was landing the caret inside the
+		# "Search Facebook" combobox during scanning, before any marker match was
+		# even confirmed). Do one more direct role probe; if it's not cleanly
+		# readable, skip scrolling rather than risk it.
+		try:
+			_ = realObj.role
+		except Exception as e:
+			logHandler.log.debug(f"Skipping scrollIntoView, role unreadable: {e}")
 			return
 		try:
 			realObj.scrollIntoView()
@@ -468,6 +570,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _startAutoClickSearch(self, treeInt, clickMarkers, gesture, keystroke):
 		scanToken = object()
 		self._autoClickScanToken[keystroke] = scanToken
+		self._autoClickComboboxResumeCount[keystroke] = 0
 		try:
 			textInfo = treeInt.makeTextInfo(textInfos.POSITION_FIRST)
 			textInfo.collapse()
@@ -481,6 +584,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 							   textInfo, scanToken, loadMoreAttempts, noGrowthCount):
 		if self._autoClickScanToken.get(keystroke) is not scanToken:
 			return
+		if not self._isTreeInterceptorStillFocused(treeInt):
+			logHandler.log.debug(f"SiteMarker: aborting auto click scan for key '{keystroke}', tab/document changed.")
+			return
+		self._recentScanActivity[id(treeInt)] = time.time()
 		processed = 0
 		reachedEnd = False
 		comErrorStreak = 0
@@ -518,24 +625,38 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						comErrorStreak = 0
 						continue
 					def attemptAutoClick(markerVal, infoVal):
-						try:
-							infoVal.updateCaret()
-							speech.speakTextInfo(infoVal, reason=controlTypes.OutputReason.CARET)
-						except Exception as e:
-							logHandler.log.error(f"Failed to prepare auto click target: {e}")
+						if not self._isTreeInterceptorStillFocused(treeInt):
+							logHandler.log.debug(f"SiteMarker: aborting auto click dispatch for key '{keystroke}', tab/document changed.")
 							return
+						# IMPORTANT: check combobox-likeness BEFORE calling updateCaret() at all.
+						# updateCaret() moves the real browse-mode caret to this position; if it
+						# overlaps a real focusable Chrome element (e.g. a search combobox),
+						# Chrome pulls actual keyboard focus into that field as a side effect,
+						# and any COM property access made afterwards can hang indefinitely
+						# instead of raising. See the matching note in _verifyThenDispatchJump.
 						if self._isLikelyComboboxTarget(infoVal):
-							try:
-								speech.cancelSpeech()
-							except Exception:
-								pass
+							resumeCount = self._autoClickComboboxResumeCount.get(keystroke, 0) + 1
+							self._autoClickComboboxResumeCount[keystroke] = resumeCount
+							if resumeCount > MAX_COMBOBOX_RESUME_ATTEMPTS:
+								logHandler.log.debug(
+									f"SiteMarker: giving up on auto click key '{keystroke}' after {resumeCount} "
+									f"consecutive combobox-like matches; stopping instead of resuming silently."
+								)
+								self._autoClickComboboxResumeCount[keystroke] = 0
+								ui.message(_translate("No auto click target found."))
+								return
+							logHandler.log.debug(
+								f"SiteMarker: resuming auto click scan past combobox-like match for "
+								f"keystroke='{keystroke}' (attempt {resumeCount})"
+							)
 							resumeInfo = infoVal.copy()
 							newScanToken = object()
 							self._autoClickScanToken[keystroke] = newScanToken
 							self._processAutoClickChunk(treeInt, clickMarkers, gesture, keystroke,
 														resumeInfo, newScanToken, 0, 0)
 							return
-						self._executeAutoClick(markerVal, infoVal, treeInt, gesture, keystroke, skipSpeak=True)
+						self._autoClickComboboxResumeCount[keystroke] = 0
+						self._executeAutoClick(markerVal, infoVal, treeInt, gesture, keystroke, skipSpeak=False)
 					core.callLater(20, attemptAutoClick, marker, finalInfo.copy())
 					return
 				if textInfo.move(textInfos.UNIT_PARAGRAPH, 1) == 0:
@@ -573,22 +694,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		def afterScroll():
 			self._processAutoClickChunk(treeInt, clickMarkers, gesture, keystroke,
 										resumePoint, scanToken, loadMoreAttempts + 1, noGrowthCount + 1)
-		self._scrollAndWaitForUpdate(treeInt, afterScroll)
+		self._scrollAndWaitForUpdate(treeInt, afterScroll, scanToken)
 
-	def _scrollAndWaitForUpdate(self, treeInt, callback):
+	def _scrollAndWaitForUpdate(self, treeInt, callback, scanToken):
 		self._sendPageDownKeystroke(PAGE_DOWN_BATCH_SIZE)
-		self._pendingRevealCallback = callback
-		self._pendingRevealTreeInt = treeInt
-		core.callLater(LOAD_MORE_TIMEOUT_MS, self._revealTimeout, treeInt)
+		self._pendingReveals[scanToken] = (callback, treeInt)
+		core.callLater(LOAD_MORE_TIMEOUT_MS, self._revealTimeout, scanToken)
 
-	def _revealTimeout(self, treeInt):
-		if self._pendingRevealCallback and self._pendingRevealTreeInt == treeInt:
-			cb = self._pendingRevealCallback
-			self._pendingRevealCallback = None
-			self._pendingRevealTreeInt = None
-			cb()
+	def _revealTimeout(self, scanToken):
+		entry = self._pendingReveals.pop(scanToken, None)
+		if entry:
+			callback, treeInt = entry
+			callback()
 
 	def _executeAutoClick(self, marker, targetInfo, treeInt, gesture, keystroke, retryCount=0, skipSpeak=False):
+		if not self._isTreeInterceptorStillFocused(treeInt):
+			logHandler.log.debug(f"SiteMarker: aborting auto click execution for key '{keystroke}', tab/document changed.")
+			return
 		try:
 			targetInfo.updateCaret()
 			if hasattr(treeInt, "selection"):
@@ -597,10 +719,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				except AttributeError:
 					pass
 				treeInt.selection = targetInfo
-			try:
-				treeInt.activatePosition(targetInfo)
-			except Exception as e:
-				logHandler.log.debug(f"Native activation failed: {e}")
+			if hasattr(treeInt, "activatePosition"):
+				try:
+					treeInt.activatePosition(targetInfo)
+				except Exception as e:
+					logHandler.log.debug(f"Native activation failed: {e}")
+					focusable = targetInfo.focusableNVDAObjectAtStart
+					if focusable:
+						focusable.doAction()
+			else:
 				focusable = targetInfo.focusableNVDAObjectAtStart
 				if focusable:
 					focusable.doAction()
@@ -675,6 +802,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self.getBrowserUrl():
 			if gesture: gesture.send()
 			return
+		self._recentScanActivity[id(treeInterceptor)] = time.time()
 		self.refreshActiveLayout(force=False)
 		if not self.activeSiteMarkers or baseKey not in self.activeSiteMarkers:
 			if direction == 1:
@@ -702,6 +830,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			skipPos = lastInfo.get('skipOffset')
 		scanToken = object()
 		self._jumpScanToken[baseKey] = scanToken
+		self._jumpComboboxResumeCount[baseKey] = 0
 		try:
 			textInfo = treeInt.makeTextInfo(textInfos.POSITION_CARET)
 			textInfo.collapse()
@@ -721,6 +850,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						  scanToken, loadMoreAttempts, noGrowthCount):
 		if self._jumpScanToken.get(baseKey) is not scanToken:
 			return
+		if not self._isTreeInterceptorStillFocused(treeInt):
+			logHandler.log.debug(f"SiteMarker: aborting jump scan for key '{baseKey}', tab/document changed.")
+			return
+		self._recentScanActivity[id(treeInt)] = time.time()
 		processed = 0
 		reachedEnd = False
 		comErrorStreak = 0
@@ -737,6 +870,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				comErrorStreak = 0
 				if self._isParagraphEditable(textInfo):
 					continue
+				if processed % 15 == 0:
+					self._scrollRealObjectIntoView(textInfo)
 				if useViewport and vpStart and vpEnd:
 					if direction > 0 and textInfo.compareEndPoints(vpEnd, "startToStart") > 0:
 						reachedEnd = True
@@ -796,8 +931,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except Exception as e:
 				logHandler.log.debug(f"Jump scan error: {e}")
 				return
-			if processed % 15 == 0:
-				self._scrollRealObjectIntoView(textInfo)
 		if not reachedEnd:
 			core.callLater(5, self._processJumpChunk,
 						   treeInt, markersForThisKey, baseKey, direction,
@@ -805,9 +938,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						   scanToken, loadMoreAttempts, noGrowthCount)
 			return
 		if loadMoreAttempts >= MAX_LOAD_MORE_ATTEMPTS or noGrowthCount >= MAX_NO_GROWTH_ATTEMPTS:
+			logHandler.log.debug(
+				f"SiteMarker: no next marker for key '{baseKey}' after {loadMoreAttempts} load-more "
+				f"attempts ({noGrowthCount} without growth); giving up."
+			)
 			self._finishJumpNotFound(direction, treeInt)
 			return
 		if not useViewport:
+			logHandler.log.debug(
+				f"SiteMarker: reached end of loaded content for key '{baseKey}', "
+				f"requesting more (attempt {loadMoreAttempts + 1})."
+			)
 			resumePoint = textInfo.copy()
 			def afterScroll():
 				self._processJumpChunk(
@@ -815,7 +956,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					resumePoint, oldSelection, skipPos, vpStart, vpEnd, useViewport,
 					scanToken, loadMoreAttempts + 1, noGrowthCount + 1
 				)
-			self._scrollAndWaitForUpdate(treeInt, afterScroll)
+			self._scrollAndWaitForUpdate(treeInt, afterScroll, scanToken)
 		else:
 			self._finishJumpNotFound(direction, treeInt)
 
@@ -928,12 +1069,75 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if treeInt is not None and isinstance(treeInt, browseMode.BrowseModeTreeInterceptor):
 			self.refreshActiveLayout(force=False)
 		nextHandler()
+		self._recoverFromUnexpectedEditableFocus(obj, treeInt)
+
+	def _recoverFromUnexpectedEditableFocus(self, obj, treeInt):
+		# Our jump/auto click matching logic always skips editable and combobox
+		# targets (see _isParagraphEditable / _isLikelyComboboxTarget), so it never
+		# intentionally lands real focus on one. If real focus lands on an
+		# editable/combobox object anyway while we were actively scanning its
+		# document (or just finished, within FOCUS_RECOVERY_WINDOW_SEC), that is a
+		# side effect of Chrome's own accessibility handling for that node, not
+		# something the user asked for (e.g. the "Search Facebook" combobox that
+		# was silently stealing focus during scanning). Automatically back out so
+		# the user is not left stuck typing into a field they never chose to enter.
+		if treeInt is None:
+			return
+		lastActivity = self._recentScanActivity.get(id(treeInt))
+		if lastActivity is None or (time.time() - lastActivity) > FOCUS_RECOVERY_WINDOW_SEC:
+			return
+		try:
+			looksEditable = self._objectLooksEditableOrCombobox(obj)
+		except Exception:
+			return
+		if not looksEditable:
+			return
+		logHandler.log.debug(
+			"SiteMarker: real focus landed on an editable/combobox object during a scan; "
+			"sending escape to recover browse mode automatically."
+		)
+		# Refresh (do not clear) the activity timestamp: Facebook can steal focus
+		# back into this same field repeatedly in quick succession, and each
+		# occurrence needs its own recovery, not just the first one.
+		self._recentScanActivity[id(treeInt)] = time.time()
+		core.callLater(0, lambda: self._sendRecoveryEscape(treeInt, obj, 0))
+
+	def _sendRecoveryEscape(self, treeInt, obj, attempt):
+		try:
+			keyboardHandler.KeyboardInputGesture.fromName("escape").send()
+		except Exception as e:
+			logHandler.log.debug(f"SiteMarker: recovery escape failed: {e}")
+			return
+		core.callLater(150, self._verifyRecoveryEscape, treeInt, obj, attempt)
+
+	def _verifyRecoveryEscape(self, treeInt, obj, attempt):
+		try:
+			currentFocus = api.getFocusObject()
+		except Exception:
+			return
+		stillStuck = currentFocus is not None and (
+			currentFocus is obj or getattr(currentFocus, "treeInterceptor", None) is None
+		)
+		if not stillStuck:
+			return
+		try:
+			stillStuck = self._objectLooksEditableOrCombobox(currentFocus)
+		except Exception:
+			return
+		if not stillStuck:
+			return
+		if attempt >= 2:
+			logHandler.log.debug(
+				"SiteMarker: escape did not clear editable focus after multiple attempts; giving up."
+			)
+			return
+		logHandler.log.debug(
+			f"SiteMarker: still focused on editable/combobox after escape, retrying (attempt {attempt + 1})."
+		)
+		self._sendRecoveryEscape(treeInt, currentFocus, attempt + 1)
 
 	def event_treeInterceptor_gainFocus(self, treeInterceptor, nextHandler):
-		self._pendingRevealCallback = None
-		self._pendingRevealTreeInt = None
-		self._pendingJumpRevealCallback = None
-		self._pendingJumpRevealTreeInt = None
+		self._pendingReveals.clear()
 		self.refreshActiveLayout(force=False)
 		treeIntId = id(treeInterceptor)
 		if treeIntId not in self._primedTreeInterceptors:
@@ -994,16 +1198,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if now - self._lastVirtualBufferUpdate > 0.3:
 			self.refreshActiveLayout(force=True)
 			self._lastVirtualBufferUpdate = now
-		if self._pendingRevealCallback and treeInterceptor == self._pendingRevealTreeInt:
-			cb = self._pendingRevealCallback
-			self._pendingRevealCallback = None
-			self._pendingRevealTreeInt = None
-			core.callLater(0, cb)
-		if self._pendingJumpRevealCallback and treeInterceptor == self._pendingJumpRevealTreeInt:
-			cb = self._pendingJumpRevealCallback
-			self._pendingJumpRevealCallback = None
-			self._pendingJumpRevealTreeInt = None
-			core.callLater(0, cb)
+		readyTokens = [
+			token for token, (cb, treeInt) in self._pendingReveals.items()
+			if treeInt == treeInterceptor
+		]
+		for token in readyTokens:
+			entry = self._pendingReveals.pop(token, None)
+			if entry:
+				cb, _ = entry
+				core.callLater(0, cb)
 		nextHandler()
 
 	def script_handleSiteMarkerAction(self, gesture):
@@ -1198,3 +1401,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception as e:
 			logHandler.log.debug(f"DOM check refresh failed: {e}")
 		core.callLater(self._domCheckInterval, self._doDomCheck)
+
