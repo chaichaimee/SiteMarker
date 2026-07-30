@@ -608,12 +608,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					offsetVal = marker.get("offset", 0)
 					if offsetVal != 0:
 						offsetInfo = textInfo.copy()
-						offsetInfo.collapse()
 						offsetDir = 1 if offsetVal > 0 else -1
 						for _ in range(abs(offsetVal)):
-							if offsetInfo.move(textInfos.UNIT_PARAGRAPH, offsetDir) == 0:
+							moveResult = offsetInfo.move(textInfos.UNIT_PARAGRAPH, offsetDir)
+							offsetInfo.expand(textInfos.UNIT_PARAGRAPH)
+							if moveResult == 0:
 								break
-						offsetInfo.expand(textInfos.UNIT_PARAGRAPH)
 						finalInfo = offsetInfo
 					else:
 						finalInfo = textInfo.copy()
@@ -895,12 +895,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				offsetVal = marker.get("offset", 0)
 				if offsetVal != 0:
 					offsetInfo = textInfo.copy()
-					offsetInfo.collapse()
 					offsetDir = 1 if offsetVal > 0 else -1
 					for _ in range(abs(offsetVal)):
-						if offsetInfo.move(textInfos.UNIT_PARAGRAPH, offsetDir) == 0:
+						moveResult = offsetInfo.move(textInfos.UNIT_PARAGRAPH, offsetDir)
+						offsetInfo.expand(textInfos.UNIT_PARAGRAPH)
+						if moveResult == 0:
 							break
-					offsetInfo.expand(textInfos.UNIT_PARAGRAPH)
 					finalInfo = offsetInfo
 				else:
 					finalInfo = textInfo.copy()
@@ -1094,7 +1094,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		logHandler.log.debug(
 			"SiteMarker: real focus landed on an editable/combobox object during a scan; "
-			"sending escape to recover browse mode automatically."
+			"restoring focus to the document automatically."
 		)
 		# Refresh (do not clear) the activity timestamp: Facebook can steal focus
 		# back into this same field repeatedly in quick succession, and each
@@ -1103,6 +1103,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		core.callLater(0, lambda: self._sendRecoveryEscape(treeInt, obj, 0))
 
 	def _sendRecoveryEscape(self, treeInt, obj, attempt):
+		# Prefer moving real focus directly to the treeInterceptor's own root
+		# object over simulating an Escape keypress. Escape's effect is decided
+		# entirely by the web page's own key handler, and for a combobox living
+		# inside a floating panel (e.g. the Messenger chat popup) it closed the
+		# whole panel instead of just leaving the field. setFocus() bypasses the
+		# page's keyboard handling and moves focus deterministically.
+		try:
+			rootObj = getattr(treeInt, "rootNVDAObject", None)
+			if rootObj is not None:
+				rootObj.setFocus()
+				core.callLater(150, self._verifyRecoveryEscape, treeInt, obj, attempt)
+				return
+		except Exception as e:
+			logHandler.log.debug(f"SiteMarker: setFocus recovery failed, falling back to escape: {e}")
 		try:
 			keyboardHandler.KeyboardInputGesture.fromName("escape").send()
 		except Exception as e:
