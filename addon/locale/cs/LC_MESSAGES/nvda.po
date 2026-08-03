@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
@@ -14,56 +14,56 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "Přid&at značku"
+msgstr "&Přidat značku"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Přid&at nový web"
+msgstr "&Přidat nový web"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "Z&pět do správce webů"
+msgstr "&Zpět do správce webů"
 
 #: gui.py:332
 msgid "&Delete"
-msgstr "S&mazat"
+msgstr "&Smazat"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "S&mazat značku	Del"
+msgstr "&Smazat značku\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "S&mazat web"
+msgstr "&Smazat web"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "S&mazat web	Del"
+msgstr "&Smazat web\tDel"
 
 #: gui.py:331
 msgid "&Edit"
-msgstr "Up&ravit"
+msgstr "&Upravit"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Up&ravit značku	F2"
+msgstr "&Upravit značku\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Up&ravit web"
+msgstr "&Upravit web"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Up&ravit web	F2"
+msgstr "&Upravit web\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "Sp&ráva značek"
+msgstr "&Spravovat značky"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "Sezn&am značek:"
+msgstr "&Seznam značek:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
@@ -93,27 +93,11 @@ msgstr "Opravdu chcete smazat tento web a všechny jeho značky?"
 msgid "Auto Click"
 msgstr "Automatické kliknutí"
 
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Automatické kliknutí na další značku přiřazenou k Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Automatické kliknutí na další značku přiřazenou k Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Automatické kliknutí na další značku přiřazenou k Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Automatické kliknutí na další značku přiřazenou k Alt+Z"
-
 #: gui.py:187
 #: gui.py:251
 #: gui.py:556
 msgid "Cancel"
-msgstr "Storno"
+msgstr "Zrušit"
 
 #: gui.py:333
 msgid "Clear &All"
@@ -139,7 +123,7 @@ msgstr "Potvrdit"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Potvrdit smazání všech"
+msgstr "Potvrdit smazání všeho"
 
 #: gui.py:174
 #: gui.py:237
@@ -153,7 +137,7 @@ msgstr "Obsahuje text (částečná shoda)"
 #: gui.py:180
 #: gui.py:243
 msgid "Disable focus"
-msgstr "Vypnout režim zaměření"
+msgstr "Vypnout fokus"
 
 #: gui.py:201
 #: gui.py:265
@@ -209,12 +193,12 @@ msgstr "Nepodařilo se smazat web."
 #: gui.py:179
 #: gui.py:242
 msgid "Focus Mode:"
-msgstr "Režim zaměření:"
+msgstr "Režim fokusu:"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Include Subdomains"
-msgstr "Včetně subdomén"
+msgstr "Zahrnout subdomény"
 
 #: gui.py:93
 #: gui.py:105
@@ -227,43 +211,11 @@ msgstr "Informace"
 
 #: gui.py:525
 msgid "Jump"
-msgstr "Přejít"
+msgstr "Přeskočit"
 
 #: gui.py:575
 msgid "Jump Key:"
-msgstr "Klávesa pro přechod:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Přejít zpět na předchozí značku D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Přejít zpět na předchozí značku F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Přejít zpět na předchozí značku J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Přejít zpět na předchozí značku Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Přejít vpřed na další značku D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Přejít vpřed na další značku F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Přejít vpřed na další značku J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Přejít vpřed na další značku Z"
+msgstr "Klávesa pro přeskočení:"
 
 #: gui.py:288
 msgid "Marker Manager - "
@@ -301,7 +253,7 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Odsazení (počet řádků/odstavců k posunu po shodě):"
+msgstr "Odsazení (řádky/odstavce pro posun po shodě):"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -328,7 +280,7 @@ msgstr "Nejprve vyberte web."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regulární výraz (použít regulární výraz)"
+msgstr "Regulární výraz (použijte regulární výraz)"
 
 #: gui.py:174
 #: gui.py:237
@@ -379,4 +331,4 @@ msgstr "Bez názvu"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Pouze zobrazená oblast"
+msgstr "Pouze výřez"

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -14,15 +14,15 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "İşaretçi &Ekle"
+msgstr "&İşaret Ekle"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Yeni Site &Ekle"
+msgstr "&Yeni Site Ekle"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "Site Yöneticisine &Geri Dön"
+msgstr "&Site Yöneticisine Dön"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,44 +30,44 @@ msgstr "&Sil"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "İşaretçiyi &Sil	Del"
+msgstr "&İşareti Sil\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Siteyi &Sil"
+msgstr "&Siteyi Sil"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Siteyi &Sil	Del"
+msgstr "&Siteyi Sil\tDel"
 
 #: gui.py:331
 msgid "&Edit"
-msgstr "Düz&enle"
+msgstr "&Düzenle"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "İşaretçiyi Düz&enle	F2"
+msgstr "&İşareti Düzenle\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Siteyi Düz&enle"
+msgstr "&Siteyi Düzenle"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Siteyi Düz&enle	F2"
+msgstr "&Siteyi Düzenle\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "İşaretçileri &Yönet"
+msgstr "&İşaretleri Yönet"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "İşaretçi &Listesi:"
+msgstr "&İşaret Listesi:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "Kayıtlı &Siteler:"
+msgstr "&Kayıtlı Siteler:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
@@ -75,39 +75,23 @@ msgstr "Site Yapılandırması Ekle"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Tüm işaretçiler temizlendi."
+msgstr "Tüm işaretler temizlendi."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "TÜM işaretçileri silmek istediğinizden emin misiniz?"
+msgstr "Tüm işaretleri silmek istediğinizden emin misiniz?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Bu işaretçiyi silmek istediğinizden emin misiniz?"
+msgstr "Bu işareti silmek istediğinizden emin misiniz?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Bu siteyi ve tüm işaretçilerini silmek istediğinizden emin misiniz?"
+msgstr "Bu siteyi ve tüm işaretlerini silmek istediğinizden emin misiniz?"
 
 #: gui.py:525
 msgid "Auto Click"
 msgstr "Otomatik Tıklama"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C tuşuna atanmış sonraki işaretçiye otomatik tıkla"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J tuşuna atanmış sonraki işaretçiye otomatik tıkla"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X tuşuna atanmış sonraki işaretçiye otomatik tıkla"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z tuşuna atanmış sonraki işaretçiye otomatik tıkla"
 
 #: gui.py:187
 #: gui.py:251
@@ -117,11 +101,11 @@ msgstr "İptal"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "Tümünü &Temizle"
+msgstr "&Tümünü Temizle"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Tüm İşaretçileri &Temizle"
+msgstr "&Tüm İşaretleri Temizle"
 
 #: gui.py:578
 msgid "Click Key:"
@@ -153,18 +137,18 @@ msgstr "Metin İçerir (kısmi eşleşme bul)"
 #: gui.py:180
 #: gui.py:243
 msgid "Disable focus"
-msgstr "Odaklanmayı devre dışı bırak"
+msgstr "Odağı devre dışı bırak"
 
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "Görünen ad boş olamaz."
+msgstr "Görüntü Adı boş olamaz."
 
 #: gui.py:166
 #: gui.py:230
 #: gui.py:546
 msgid "Display Name:"
-msgstr "Görünen Ad:"
+msgstr "Görüntü Adı:"
 
 #: gui.py:174
 #: gui.py:237
@@ -182,7 +166,7 @@ msgstr "Site Yapılandırmasını Düzenle"
 
 #: gui.py:540
 msgid "Entire Document"
-msgstr "Tüm Belge"
+msgstr "Belgenin Tamamı"
 
 #: gui.py:112
 #: gui.py:201
@@ -233,49 +217,17 @@ msgstr "Atla"
 msgid "Jump Key:"
 msgstr "Atlama Tuşu:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Önceki D işaretçisine geri atla"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Önceki F işaretçisine geri atla"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Önceki J işaretçisine geri atla"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Önceki Z işaretçisine geri atla"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Sonraki D işaretçisine ileri atla"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Sonraki F işaretçisine ileri atla"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Sonraki J işaretçisine ileri atla"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Sonraki Z işaretçisine ileri atla"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "İşaretçi Yöneticisi - "
+msgstr "İşaret Yöneticisi - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "İşaretçi Özellikleri"
+msgstr "İşaret Özellikleri"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "İşaretçi bulundu: {}"
+msgstr "İşaret bulundu: {}"
 
 #: gui.py:173
 #: gui.py:236
@@ -288,7 +240,7 @@ msgstr "Mod:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Temizlenecek işaretçi yok."
+msgstr "Temizlenecek işaret yok."
 
 #: gui.py:180
 #: gui.py:243
@@ -301,24 +253,24 @@ msgstr "Tamam"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Uzaklık (eşleşmeden sonra taşınacak satır/paragraf sayısı):"
+msgstr "Ofset (eşleşmeden sonra hareket ettirilecek satır/paragraf):"
 
 #: gui.py:518
 msgid "Pattern Match:"
-msgstr "Kalıp Eşleşmesi:"
+msgstr "Desen Eşleşmesi:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Kalıp boş olamaz."
+msgstr "Desen boş olamaz."
 
 #: gui.py:514
 msgid "Pattern:"
-msgstr "Kalıp:"
+msgstr "Desen:"
 
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "Lütfen önce bir işaretçi seçin."
+msgstr "Lütfen önce bir işaret seçin."
 
 #: gui.py:93
 #: gui.py:105
@@ -366,17 +318,17 @@ msgstr "Site başarıyla güncellendi."
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL Kalıbı boş olamaz."
+msgstr "URL Deseni boş olamaz."
 
 #: gui.py:169
 #: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL Kalıbı:"
+msgstr "URL Deseni:"
 
 #: gui.py:364
 msgid "Unnamed"
-msgstr "Adsız"
+msgstr "İsimsiz"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Yalnızca Görünüm Alanı"
+msgstr "Yalnızca Görünüm"

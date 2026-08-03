@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hungarian\n"
 "Language: hu\n"
@@ -14,15 +14,15 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "Marker &hozzáadása"
+msgstr "&Jelölő hozzáadása"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Új &oldal hozzáadása"
+msgstr "&Új webhely hozzáadása"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Vissza az Oldalkezelőhöz"
+msgstr "&Vissza a webhelykezelőhöz"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,15 +30,15 @@ msgstr "&Törlés"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "Marker &törlése	Del"
+msgstr "&Jelölő törlése\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Oldal &törlése"
+msgstr "&Webhely törlése"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Oldal &törlése	Del"
+msgstr "&Webhely törlése\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,68 +46,52 @@ msgstr "&Szerkesztés"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Marker &szerkesztése	F2"
+msgstr "&Jelölő szerkesztése\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Oldal &szerkesztése"
+msgstr "&Webhely szerkesztése"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Oldal &szerkesztése	F2"
+msgstr "&Webhely szerkesztése\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "Markerek &kezelése"
+msgstr "&Jelölők kezelése"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "&Markerek listája:"
+msgstr "&Jelölők listája:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&Regisztrált oldalak:"
+msgstr "&Regisztrált webhelyek:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Oldalkonfiguráció hozzáadása"
+msgstr "Webhelykonfiguráció hozzáadása"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Minden marker törölve lett."
+msgstr "Az összes jelölő törölve lett."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Biztosan törölni szeretné az ÖSSZES markert?"
+msgstr "Biztosan törölni szeretné az ÖSSZES jelölőt?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Biztosan törölni szeretné ezt a markert?"
+msgstr "Biztosan törölni szeretné ezt a jelölőt?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Biztosan törölni szeretné ezt az oldalt és az összes hozzá tartozó markert?"
+msgstr "Biztosan törölni szeretné ezt a webhelyet és az összes jelölőjét?"
 
 #: gui.py:525
 msgid "Auto Click"
 msgstr "Automatikus kattintás"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Automatikus kattintás az Alt+C billentyűhöz rendelt következő markerre"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Automatikus kattintás az Alt+J billentyűhöz rendelt következő markerre"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Automatikus kattintás az Alt+X billentyűhöz rendelt következő markerre"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Automatikus kattintás az Alt+Z billentyűhöz rendelt következő markerre"
 
 #: gui.py:187
 #: gui.py:251
@@ -121,11 +105,11 @@ msgstr "&Összes törlése"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Össze&s marker törlése"
+msgstr "&Összes jelölő törlése"
 
 #: gui.py:578
 msgid "Click Key:"
-msgstr "Kattintás billentyűje:"
+msgstr "Kattintás billentyű:"
 
 #: gui.py:36
 #: gui.py:335
@@ -139,16 +123,16 @@ msgstr "Megerősítés"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Összes törlésének megerősítése"
+msgstr "Az összes törlésének megerősítése"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Contain Substring"
-msgstr "Részkarakterlánc tartalmazása"
+msgstr "Alrészsorozatot tartalmaz"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Szöveget tartalmaz (részleges egyezés keresése)"
+msgstr "Szöveget tartalmaz (részleges egyezés)"
 
 #: gui.py:180
 #: gui.py:243
@@ -158,18 +142,18 @@ msgstr "Fókusz letiltása"
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "A megjelenítendő név nem lehet üres."
+msgstr "A megjelenített név nem lehet üres."
 
 #: gui.py:166
 #: gui.py:230
 #: gui.py:546
 msgid "Display Name:"
-msgstr "Megjelenítendő név:"
+msgstr "Megjelenített név:"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Domain Only"
-msgstr "Csak domain"
+msgstr "Csak tartomány"
 
 #: gui.py:180
 #: gui.py:243
@@ -178,7 +162,7 @@ msgstr "Ne lépjen be űrlap módba"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "Oldalkonfiguráció szerkesztése"
+msgstr "Webhelykonfiguráció szerkesztése"
 
 #: gui.py:540
 msgid "Entire Document"
@@ -204,7 +188,7 @@ msgstr "Pontos bekezdés (teljes bekezdés egyezése)"
 
 #: gui.py:112
 msgid "Failed to delete site."
-msgstr "Nem sikerült törölni az oldalt."
+msgstr "A webhely törlése nem sikerült."
 
 #: gui.py:179
 #: gui.py:242
@@ -231,51 +215,19 @@ msgstr "Ugrás"
 
 #: gui.py:575
 msgid "Jump Key:"
-msgstr "Ugrás billentyűje:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Ugrás vissza az előző D markerre"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Ugrás vissza az előző F markerre"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Ugrás vissza az előző J markerre"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Ugrás vissza az előző Z markerre"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Ugrás előre a következő D markerre"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Ugrás előre a következő F markerre"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Ugrás előre a következő J markerre"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Ugrás előre a következő Z markerre"
+msgstr "Ugrás billentyű:"
 
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "Markerkezelő - "
+msgstr "Jelölőkezelő - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "Marker tulajdonságai"
+msgstr "Jelölő tulajdonságai"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "Marker megtalálva: {}"
+msgstr "Jelölő található: {}"
 
 #: gui.py:173
 #: gui.py:236
@@ -288,7 +240,7 @@ msgstr "Mód:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Nincsenek törölhető markerek."
+msgstr "Nincs törlendő jelölő."
 
 #: gui.py:180
 #: gui.py:243
@@ -301,11 +253,11 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Eltolás (egyezés után ennyi sorral/bekezdéssel lépjen tovább):"
+msgstr "Eltolás (sorok/bekezdések mozgatása egyezés után):"
 
 #: gui.py:518
 msgid "Pattern Match:"
-msgstr "Mintaegyezés:"
+msgstr "Minta egyezés:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
@@ -318,17 +270,17 @@ msgstr "Minta:"
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "Kérjük, előbb válasszon ki egy markert."
+msgstr "Először válasszon ki egy jelölőt."
 
 #: gui.py:93
 #: gui.py:105
 #: gui.py:117
 msgid "Please select a site first."
-msgstr "Kérjük, előbb válasszon ki egy oldalt."
+msgstr "Először válasszon ki egy webhelyet."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex egyezés (reguláris kifejezés használata)"
+msgstr "Reguláris kifejezés (használjon reguláris kifejezést)"
 
 #: gui.py:174
 #: gui.py:237
@@ -341,7 +293,7 @@ msgstr "Módosítások mentése"
 
 #: gui.py:186
 msgid "Save Site"
-msgstr "Oldal mentése"
+msgstr "Webhely mentése"
 
 #: gui.py:539
 msgid "Search Scope:"
@@ -349,19 +301,19 @@ msgstr "Keresési hatókör:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Oldalkezelő"
+msgstr "Webhelykezelő"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "Az oldal sikeresen létrehozva."
+msgstr "A webhely sikeresen létrehozva."
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Az oldal sikeresen törölve."
+msgstr "A webhely sikeresen törölve."
 
 #: gui.py:281
 msgid "Site updated successfully."
-msgstr "Az oldal sikeresen frissítve."
+msgstr "A webhely sikeresen frissítve."
 
 #: gui.py:204
 #: gui.py:268
@@ -379,4 +331,4 @@ msgstr "Névtelen"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Csak a látható ablakrész"
+msgstr "Csak nézetablak"

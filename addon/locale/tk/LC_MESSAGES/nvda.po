@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Turkmen\n"
 "Language: tk\n"
@@ -14,56 +14,56 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "Belgileýjini &goş"
+msgstr "&Bellik goş"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Täze saýt &goş"
+msgstr "&Täze saýt goş"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "Saýt dolandyryjysyna &dolan"
+msgstr "&Saýt dolandyryjysyna gaýt"
 
 #: gui.py:332
 msgid "&Delete"
-msgstr "&Poz"
+msgstr "&Öçür"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "Belgileýjini &poz	Del"
+msgstr "&Belligi öçür\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Saýty &poz"
+msgstr "&Saýty öçür"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Saýty &poz	Del"
+msgstr "&Saýty öçür\tDel"
 
 #: gui.py:331
 msgid "&Edit"
-msgstr "&Üýtget"
+msgstr "&Düzet"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Belgileýjini &üýtget	F2"
+msgstr "&Belligi düzet\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Saýty &üýtget"
+msgstr "&Saýty düzet"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Saýty &üýtget	F2"
+msgstr "&Saýty düzet\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "Belgileýjileri &dolandyr"
+msgstr "&Bellikleri dolandy"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "&Belgileýjileriň sanawy:"
+msgstr "&Bellikler sanawy:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
@@ -71,61 +71,45 @@ msgstr "&Hasaba alnan saýtlar:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Saýt sazlamasyny goş"
+msgstr "Saýt konfigurasiýasyny goş"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Ähli belgileýjiler arassalandy."
+msgstr "Ähli bellikler arassalandy."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Ähli belgileýjileri pozmak isleýändigiňize ynanýarsyňyzmy?"
+msgstr "Ähli bellikleri öçürmek isleýäňizmi?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Bu belgileýjini pozmak isleýändigiňize ynanýarsyňyzmy?"
+msgstr "Bu belligi öçürmek isleýäňizmi?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Bu saýty we onuň ähli belgileýjilerini pozmak isleýändigiňize ynanýarsyňyzmy?"
+msgstr "Bu saýty we onuň ähli belliklerini öçürmek isleýäňizmi?"
 
 #: gui.py:525
 msgid "Auto Click"
-msgstr "Awto-klik"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C-ge bellenen indiki belgileýjini awtomatik bas"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J-ge bellenen indiki belgileýjini awtomatik bas"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X-ge bellenen indiki belgileýjini awtomatik bas"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z-ge bellenen indiki belgileýjini awtomatik bas"
+msgstr "Awto basgyç"
 
 #: gui.py:187
 #: gui.py:251
 #: gui.py:556
 msgid "Cancel"
-msgstr "Ýatyr"
+msgstr "Ýatyryp"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "Ählisini &arassala"
+msgstr "&Hemmesini arassala"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Ähli belgileýjileri &arassala"
+msgstr "&Ähli bellikleri arassala"
 
 #: gui.py:578
 msgid "Click Key:"
-msgstr "Klik düwmesi:"
+msgstr "Basgyç düwmesi:"
 
 #: gui.py:36
 #: gui.py:335
@@ -139,7 +123,7 @@ msgstr "Tassykla"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Ählisini pozmagy tassykla"
+msgstr "Hemmesini öçürmegi tassykla"
 
 #: gui.py:174
 #: gui.py:237
@@ -148,23 +132,23 @@ msgstr "Kiçi setiri öz içine alýar"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Teksti öz içine alýar (bölekleýin gabat gelme)"
+msgstr "Teksti öz içine alýar (bölekleýin gabat gelşini tap)"
 
 #: gui.py:180
 #: gui.py:243
 msgid "Disable focus"
-msgstr "Fokusy ýap"
+msgstr "Fokusy öçür"
 
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "Görkezilýän at boş bolup bilmez."
+msgstr "Görkezme ady boş bolup bilmez."
 
 #: gui.py:166
 #: gui.py:230
 #: gui.py:546
 msgid "Display Name:"
-msgstr "Görkezilýän at:"
+msgstr "Görkezme ady:"
 
 #: gui.py:174
 #: gui.py:237
@@ -174,11 +158,11 @@ msgstr "Diňe domen"
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "Forma reژimine girme"
+msgstr "Forma režimine girme"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "Saýt sazlamasyny üýtget"
+msgstr "Saýt konfigurasiýasyny düzet"
 
 #: gui.py:540
 msgid "Entire Document"
@@ -200,16 +184,16 @@ msgstr "Takyk gabat gelme"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Takyk abzas (ähli abzas gabat gelýär)"
+msgstr "Takyk abzas (tutusan abzasy bilen gabat gel)"
 
 #: gui.py:112
 msgid "Failed to delete site."
-msgstr "Saýty pozmak başartmady."
+msgstr "Saýty öçürip bolmady."
 
 #: gui.py:179
 #: gui.py:242
 msgid "Focus Mode:"
-msgstr "Fokus reژimi:"
+msgstr "Fokus režimi:"
 
 #: gui.py:174
 #: gui.py:237
@@ -233,54 +217,22 @@ msgstr "Bök"
 msgid "Jump Key:"
 msgstr "Böküş düwmesi:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Öňki D belgileýjä yza bök"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Öňki F belgileýjä yza bök"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Öňki J belgileýjä yza bök"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Öňki Z belgileýjä yza bök"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Indiki D belgileýjä öňe bök"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Indiki F belgileýjä öňe bök"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Indiki J belgileýjä öňe bök"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Indiki Z belgileýjä öňe bök"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "Belgileýji dolandyryjysy - "
+msgstr "Bellik dolandyryjysy - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "Belgileýji aýratynlyklary"
+msgstr "Bellik aýratynlyklary"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "Belgileýji tapyldy: {}"
+msgstr "Bellik tapyldy: {}"
 
 #: gui.py:173
 #: gui.py:236
 msgid "Match Type:"
-msgstr "Gabat gelme görnüşi:"
+msgstr "Gabat geliş görnüşi:"
 
 #: gui.py:524
 msgid "Mode:"
@@ -288,7 +240,7 @@ msgstr "Režim:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Arassalar ýaly belgileýji ýok."
+msgstr "Arassalamak üçin bellik ýok."
 
 #: gui.py:180
 #: gui.py:243
@@ -297,47 +249,47 @@ msgstr "Adaty"
 
 #: gui.py:555
 msgid "OK"
-msgstr "OK"
+msgstr "Bolýar"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Süýşme (gabat gelenden soň geçilmeli setirler/abzaslar):"
+msgstr "Ofset (gabat gelenden soň hereket etmek üçin setirler/abzaslar):"
 
 #: gui.py:518
 msgid "Pattern Match:"
-msgstr "Şablon gabat gelmesi:"
+msgstr "Nusga gabat gelşi:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Şablon boş bolup bilmez."
+msgstr "Nusga boş bolup bilmez."
 
 #: gui.py:514
 msgid "Pattern:"
-msgstr "Şablon:"
+msgstr "Nusga:"
 
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "Haýyş, ilki belgileýjini saýlaň."
+msgstr "Ilki bilen bellik saýlaň."
 
 #: gui.py:93
 #: gui.py:105
 #: gui.py:117
 msgid "Please select a site first."
-msgstr "Haýyş, ilki saýty saýlaň."
+msgstr "Ilki bilen saýt saýlaň."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex gabat gelmesi (ykjam aňlatma ulan)"
+msgstr "Reges gabat gelme (yzygiderli aňlatmany ulanyň)"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Regular Expression"
-msgstr "Ykjam aňlatma"
+msgstr "Yzygiderli aňlatma"
 
 #: gui.py:250
 msgid "Save Changes"
-msgstr "Üýtgeşmeleri ýazdyr"
+msgstr "Üýtgetmeleri ýazdyr"
 
 #: gui.py:186
 msgid "Save Site"
@@ -345,7 +297,7 @@ msgstr "Saýty ýazdyr"
 
 #: gui.py:539
 msgid "Search Scope:"
-msgstr "Gözleg gerimi:"
+msgstr "Gözleg çäkleri:"
 
 #: gui.py:15
 msgid "Site Manager"
@@ -357,7 +309,7 @@ msgstr "Saýt üstünlikli döredildi."
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Saýt üstünlikli pozuldy."
+msgstr "Saýt üstünlikli öçürildi."
 
 #: gui.py:281
 msgid "Site updated successfully."
@@ -366,17 +318,17 @@ msgstr "Saýt üstünlikli täzelendi."
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL şablony boş bolup bilmez."
+msgstr "URL nusgasy boş bolup bilmez."
 
 #: gui.py:169
 #: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL şablony:"
+msgstr "URL nusgasy:"
 
 #: gui.py:364
 msgid "Unnamed"
-msgstr "Atsyz"
+msgstr "Adsyz"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Diňe görünýän meýdan"
+msgstr "Diňe görüş meýdany"

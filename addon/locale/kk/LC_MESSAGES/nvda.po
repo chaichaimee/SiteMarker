@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -14,15 +14,15 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "Маркерді &қосу"
+msgstr "&Белгіні қосу"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Жаңа сайтты &қосу"
+msgstr "&Жаңа сайт қосу"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "Сайт менеджеріне &оралу"
+msgstr "&Сайт менеджеріне оралу"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,15 +30,15 @@ msgstr "&Жою"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "Маркерді &жою	Del"
+msgstr "&Белгіні жою\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Сайтты &жою"
+msgstr "&Сайтты жою"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Сайтты &жою	Del"
+msgstr "&Сайтты жою\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,24 +46,24 @@ msgstr "&Өңдеу"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Маркерді &өңдеу	F2"
+msgstr "&Белгіні өңдеу\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Сайтты &өңдеу"
+msgstr "&Сайтты өңдеу"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Сайтты &өңдеу	F2"
+msgstr "&Сайтты өңдеу\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "Маркерлерді &басқару"
+msgstr "&Белгілерді басқару"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "&Маркерлер тізімі:"
+msgstr "&Белгілер тізімі:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
@@ -75,57 +75,41 @@ msgstr "Сайт конфигурациясын қосу"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Барлық маркерлер тазартылды."
+msgstr "Барлық белгілер тазартылды."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Барлық маркерлерді жоюға сенімдісіз бе?"
+msgstr "Барлық белгілерді жойғыңыз келетініне сенімдісіз бе?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Бұл маркерді жоюға сенімдісіз бе?"
+msgstr "Осы белгіні жойғыңыз келетініне сенімдісіз бе?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Бұл сайтты және оның барлық маркерлерін жоюға сенімдісіз бе?"
+msgstr "Осы сайтты және оның барлық белгілерін жойғыңыз келетініне сенімдісіз бе?"
 
 #: gui.py:525
 msgid "Auto Click"
-msgstr "Автоматты шерту"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C пернесіне тағайындалған келесі маркерді автоматты шерту"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J пернесіне тағайындалған келесі маркерді автоматты шерту"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X пернесіне тағайындалған келесі маркерді автоматты шерту"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z пернесіне тағайындалған келесі маркерді автоматты шерту"
+msgstr "Автоматты басу"
 
 #: gui.py:187
 #: gui.py:251
 #: gui.py:556
 msgid "Cancel"
-msgstr "Бас тарту"
+msgstr "Болдырмау"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "Барлығын &тазарту"
+msgstr "&Барлығын тазарту"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Барлық маркерлерді &тазарту"
+msgstr "&Барлық белгілерді тазарту"
 
 #: gui.py:578
 msgid "Click Key:"
-msgstr "Шерту пернесі:"
+msgstr "Басу пернесі:"
 
 #: gui.py:36
 #: gui.py:335
@@ -148,7 +132,7 @@ msgstr "Ішкі жолды қамтиды"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Мәтінді қамтиды (ішінара сәйкестікті табу)"
+msgstr "Мәтінді қамтиды (ішінара сәйкестік)"
 
 #: gui.py:180
 #: gui.py:243
@@ -174,7 +158,7 @@ msgstr "Тек домен"
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "Форма режиміне кірмеу"
+msgstr "Пішім режиміне кірмеу"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
@@ -182,7 +166,7 @@ msgstr "Сайт конфигурациясын өңдеу"
 
 #: gui.py:540
 msgid "Entire Document"
-msgstr "Бүкіл құжат"
+msgstr "Толық құжат"
 
 #: gui.py:112
 #: gui.py:201
@@ -196,11 +180,11 @@ msgstr "Қате"
 #: gui.py:174
 #: gui.py:237
 msgid "Exact Matching"
-msgstr "Дәл сәйкестік"
+msgstr "Нақты сәйкестік"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Дәл абзац (бүкіл абзацтың сәйкестігі)"
+msgstr "Нақты абзац (толық абзацпен сәйкестендіру)"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -227,55 +211,23 @@ msgstr "Ақпарат"
 
 #: gui.py:525
 msgid "Jump"
-msgstr "Өту"
+msgstr "Секіру"
 
 #: gui.py:575
 msgid "Jump Key:"
-msgstr "Өту пернесі:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Алдыңғы D маркеріне артқа өту"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Алдыңғы F маркеріне артқа өту"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Алдыңғы J маркеріне артқа өту"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Алдыңғы Z маркеріне артқа өту"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Келесі D маркеріне алға өту"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Келесі F маркеріне алға өту"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Келесі J маркеріне алға өту"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Келесі Z маркеріне алға өту"
+msgstr "Секіру пернесі:"
 
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "Маркер менеджері - "
+msgstr "Белгі менеджері - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "Маркер қасиеттері"
+msgstr "Белгі қасиеттері"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "Маркер табылды: {}"
+msgstr "Белгі табылды: {}"
 
 #: gui.py:173
 #: gui.py:236
@@ -288,7 +240,7 @@ msgstr "Режим:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Тазартатын маркерлер жоқ."
+msgstr "Тазартатын белгілер жоқ."
 
 #: gui.py:180
 #: gui.py:243
@@ -301,24 +253,24 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Ығысу (сәйкестіктен кейін жылжитын жолдар/абзацтар):"
+msgstr "Ығысу (сәйкестендіруден кейін жылжыту үшін жолдар/абзацтар):"
 
 #: gui.py:518
 msgid "Pattern Match:"
-msgstr "Шаблон бойынша сәйкестік:"
+msgstr "Үлгі сәйкестігі:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Шаблон бос болмауы керек."
+msgstr "Үлгі бос болмауы керек."
 
 #: gui.py:514
 msgid "Pattern:"
-msgstr "Шаблон:"
+msgstr "Үлгі:"
 
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "Алдымен маркерді таңдаңыз."
+msgstr "Алдымен белгіні таңдаңыз."
 
 #: gui.py:93
 #: gui.py:105
@@ -328,12 +280,12 @@ msgstr "Алдымен сайтты таңдаңыз."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Тұрақты өрнек сәйкестігі (тұрақты өрнекті қолдану)"
+msgstr "Регекс сәйкестігі (регулярлы өрнекті қолданыңыз)"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Regular Expression"
-msgstr "Тұрақты өрнек"
+msgstr "Регулярлы өрнек"
 
 #: gui.py:250
 msgid "Save Changes"
@@ -353,7 +305,7 @@ msgstr "Сайт менеджері"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "Сайт сәтті жасалды."
+msgstr "Сайт сәтті құрылды."
 
 #: gui.py:109
 msgid "Site deleted successfully."
@@ -366,12 +318,12 @@ msgstr "Сайт сәтті жаңартылды."
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL шаблоны бос болмауы керек."
+msgstr "URL үлгісі бос болмауы керек."
 
 #: gui.py:169
 #: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL шаблоны:"
+msgstr "URL үлгісі:"
 
 #: gui.py:364
 msgid "Unnamed"

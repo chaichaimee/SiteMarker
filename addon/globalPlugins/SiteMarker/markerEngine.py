@@ -155,13 +155,19 @@ class MarkerEngine:
 		if m:
 			for key, val in m.groupdict().items():
 				if val is not None and key.startswith("q"):
-					return int(key[1:])
-		return -1
+					return int(key[1:]), m.start(), m.end()
+		return -1, 0, 0
 
 	def matchParagraph(self, textInfo, markerDataList):
-		raw_text = textInfo.text.strip()
+		original_text = textInfo.text
+		raw_text = original_text.strip()
 		if not raw_text:
 			return None, None
+		# .strip() can remove leading whitespace/blank lines; track how much so
+		# any character offset we compute against raw_text can be translated
+		# back to a position that is correct against the original, unstripped
+		# text (which is what the caller's textInfo actually represents).
+		leadingTrim = len(original_text) - len(original_text.lstrip())
 
 		normal_text = self._normalize(raw_text)
 		normal_markers = []
@@ -178,18 +184,19 @@ class MarkerEngine:
 
 		if normal_markers:
 			markers_tuple = tuple((p, m) for p, m, _ in normal_markers)
-			match_idx = self._cached_match(normal_text, markers_tuple)
+			match_idx, matchStart, matchEnd = self._cached_match(normal_text, markers_tuple)
 			if match_idx >= 0:
 				original_idx = normal_markers[match_idx][2]
-				return markerDataList[original_idx], None
+				return markerDataList[original_idx], (leadingTrim + matchStart, leadingTrim + matchEnd)
 
 		for idx, marker in regex_markers:
 			pattern = marker.get("pattern", "")
 			if not pattern:
 				continue
 			try:
-				if re.search(pattern, raw_text, re.IGNORECASE | re.UNICODE):
-					return marker, None
+				m = re.search(pattern, raw_text, re.IGNORECASE | re.UNICODE)
+				if m:
+					return marker, (leadingTrim + m.start(), leadingTrim + m.end())
 			except Exception:
 				continue
 
@@ -198,4 +205,3 @@ class MarkerEngine:
 	def cleanUp(self):
 		self.siteCache.clear()
 		self._build_composite_regex.cache_clear()
-		self._cached_match.cache_clear()

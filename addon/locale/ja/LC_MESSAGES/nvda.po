@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "マーカーの追加(&A)"
+msgstr "マーカーを追加(&A)"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "新しいサイトの追加(&A)"
+msgstr "新規サイトを追加(&A)"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
@@ -30,15 +30,15 @@ msgstr "削除(&D)"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "マーカーの削除(&D)	Del"
+msgstr "マーカーを削除(&D)\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "サイトの削除(&D)"
+msgstr "サイトを削除(&D)"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "サイトの削除(&D)	Del"
+msgstr "サイトを削除(&D)\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,20 +46,20 @@ msgstr "編集(&E)"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "マーカーの編集(&E)	F2"
+msgstr "マーカーを編集(&E)\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "サイトの編集(&E)"
+msgstr "サイトを編集(&E)"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "サイトの編集(&E)	F2"
+msgstr "サイトを編集(&E)\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "マーカーの管理(&M)"
+msgstr "マーカーを管理(&M)"
 
 #: gui.py:325
 msgid "&Markers List:"
@@ -67,47 +67,31 @@ msgstr "マーカー一覧(&M):"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "登録サイト一覧(&R):"
+msgstr "登録サイト(&R):"
 
 #: gui.py:157
 msgid "Add Site Configuration"
-msgstr "サイト設定の追加"
+msgstr "サイト設定を追加"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "すべてのマーカーが消去されました。"
+msgstr "すべてのマーカーがクリアされました。"
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "本当にすべてのマーカーを削除しますか？"
+msgstr "すべてのマーカーを削除してもよろしいですか？"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "本当にこのマーカーを削除しますか？"
+msgstr "このマーカーを削除してもよろしいですか？"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "本当にこのサイトとすべてのマーカーを削除しますか？"
+msgstr "このサイトとそのすべてのマーカーを削除してもよろしいですか？"
 
 #: gui.py:525
 msgid "Auto Click"
 msgstr "自動クリック"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+Cに割り当てられた次のマーカーを自動クリック"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+Jに割り当てられた次のマーカーを自動クリック"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+Xに割り当てられた次のマーカーを自動クリック"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Zに割り当てられた次のマーカーを自動クリック"
 
 #: gui.py:187
 #: gui.py:251
@@ -117,11 +101,11 @@ msgstr "キャンセル"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "すべて消去(&A)"
+msgstr "すべてクリア(&A)"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "すべてのマーカーを消去(&A)"
+msgstr "すべてのマーカーをクリア(&A)"
 
 #: gui.py:578
 msgid "Click Key:"
@@ -178,11 +162,11 @@ msgstr "フォームモードに入らない"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "サイト設定の編集"
+msgstr "サイト設定を編集"
 
 #: gui.py:540
 msgid "Entire Document"
-msgstr "ドキュメント全体"
+msgstr "文書全体"
 
 #: gui.py:112
 #: gui.py:201
@@ -200,7 +184,7 @@ msgstr "完全一致"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "正確な段落（段落全体の一致）"
+msgstr "段落全体（段落全体を一致）"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -214,7 +198,7 @@ msgstr "フォーカスモード:"
 #: gui.py:174
 #: gui.py:237
 msgid "Include Subdomains"
-msgstr "サブドメインを含める"
+msgstr "サブドメインを含む"
 
 #: gui.py:93
 #: gui.py:105
@@ -227,43 +211,11 @@ msgstr "情報"
 
 #: gui.py:525
 msgid "Jump"
-msgstr "移動"
+msgstr "ジャンプ"
 
 #: gui.py:575
 msgid "Jump Key:"
-msgstr "移動キー:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "前のマーカー D に戻る"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "前のマーカー F に戻る"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "前のマーカー J に戻る"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "前のマーカー Z に戻る"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "次のマーカー D に進む"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "次のマーカー F に進む"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "次のマーカー J に進む"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "次のマーカー Z に進む"
+msgstr "ジャンプキー:"
 
 #: gui.py:288
 msgid "Marker Manager - "
@@ -271,7 +223,7 @@ msgstr "マーカーマネージャー - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "マーカーのプロパティ"
+msgstr "マーカープロパティ"
 
 #: gui.py:320
 msgid "Marker found: {}"
@@ -280,7 +232,7 @@ msgstr "マーカーが見つかりました: {}"
 #: gui.py:173
 #: gui.py:236
 msgid "Match Type:"
-msgstr "一致の種類:"
+msgstr "一致タイプ:"
 
 #: gui.py:524
 msgid "Mode:"
@@ -288,7 +240,7 @@ msgstr "モード:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "消去するマーカーがありません。"
+msgstr "クリアするマーカーがありません。"
 
 #: gui.py:180
 #: gui.py:243
@@ -301,7 +253,7 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "オフセット（一致した後に移動する行数/段落数）:"
+msgstr "オフセット（一致後に移動する行/段落）:"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -328,7 +280,7 @@ msgstr "最初にサイトを選択してください。"
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "正規表現一致（正規表現を使用）"
+msgstr "正規表現（正規表現を使用）"
 
 #: gui.py:174
 #: gui.py:237
@@ -353,15 +305,15 @@ msgstr "サイトマネージャー"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "サイトが正常に作成されました。"
+msgstr "サイトが作成されました。"
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "サイトが正常に削除されました。"
+msgstr "サイトが削除されました。"
 
 #: gui.py:281
 msgid "Site updated successfully."
-msgstr "サイトが正常に更新されました。"
+msgstr "サイトが更新されました。"
 
 #: gui.py:204
 #: gui.py:268
@@ -375,7 +327,7 @@ msgstr "URLパターン:"
 
 #: gui.py:364
 msgid "Unnamed"
-msgstr "名前なし"
+msgstr "無名"
 
 #: gui.py:540
 msgid "Viewport Only"

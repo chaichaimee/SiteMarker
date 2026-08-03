@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Slovak\n"
 "Language: sk\n"
@@ -26,19 +26,19 @@ msgstr "&Späť do správcu stránok"
 
 #: gui.py:332
 msgid "&Delete"
-msgstr "&Zmazať"
+msgstr "&Vymazať"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Zmazať značku	Del"
+msgstr "&Vymazať značku\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&Zmazať stránku"
+msgstr "&Vymazať stránku"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Zmazať stránku	Del"
+msgstr "&Vymazať stránku\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,7 +46,7 @@ msgstr "&Upraviť"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Upraviť značku	F2"
+msgstr "&Upraviť značku\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
@@ -54,7 +54,7 @@ msgstr "&Upraviť stránku"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Upraviť stránku	F2"
+msgstr "&Upraviť stránku\tF2"
 
 #: gui.py:35
 #: gui.py:146
@@ -63,11 +63,11 @@ msgstr "&Spravovať značky"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "Zoznam &značiek:"
+msgstr "&Zoznam značiek:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "Re&gistrované stránky:"
+msgstr "&Registrované stránky:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
@@ -83,31 +83,15 @@ msgstr "Naozaj chcete vymazať VŠETKY značky?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Naozaj chcete zmazať túto značku?"
+msgstr "Naozaj chcete vymazať túto značku?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Naozaj chcete zmazať túto stránku a všetky jej značky?"
+msgstr "Naozaj chcete vymazať túto stránku a všetky jej značky?"
 
 #: gui.py:525
 msgid "Auto Click"
 msgstr "Automatické kliknutie"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Automaticky kliknúť na nasledujúcu značku priradenú k Alt+Z"
 
 #: gui.py:187
 #: gui.py:251
@@ -130,7 +114,7 @@ msgstr "Kláves na kliknutie:"
 #: gui.py:36
 #: gui.py:335
 msgid "Close"
-msgstr "Zatvoriť"
+msgstr "Zavrieť"
 
 #: gui.py:107
 #: gui.py:409
@@ -148,12 +132,12 @@ msgstr "Obsahuje podreťazec"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Obsahuje text (hľadať čiastočnú zhodu)"
+msgstr "Obsahuje text (čiastočná zhoda)"
 
 #: gui.py:180
 #: gui.py:243
 msgid "Disable focus"
-msgstr "Zakázať režim zamerania"
+msgstr "Vypnúť zaostrenie"
 
 #: gui.py:201
 #: gui.py:265
@@ -204,17 +188,17 @@ msgstr "Presný odsek (zhoda celého odseku)"
 
 #: gui.py:112
 msgid "Failed to delete site."
-msgstr "Nepodarilo sa zmazať stránku."
+msgstr "Nepodarilo sa vymazať stránku."
 
 #: gui.py:179
 #: gui.py:242
 msgid "Focus Mode:"
-msgstr "Režim zamerania:"
+msgstr "Režim zaostrenia:"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Include Subdomains"
-msgstr "Vrátane subdomén"
+msgstr "Zahrnúť subdomény"
 
 #: gui.py:93
 #: gui.py:105
@@ -223,47 +207,15 @@ msgstr "Vrátane subdomén"
 #: gui.py:407
 #: gui.py:420
 msgid "Information"
-msgstr "Informácia"
+msgstr "Informácie"
 
 #: gui.py:525
 msgid "Jump"
-msgstr "Skočiť"
+msgstr "Preskočiť"
 
 #: gui.py:575
 msgid "Jump Key:"
-msgstr "Kláves na skok:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Skočiť dozadu na predchádzajúcu značku D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Skočiť dozadu na predchádzajúcu značku F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Skočiť dozadu na predchádzajúcu značku J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Skočiť dozadu na predchádzajúcu značku Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Skočiť dopredu na nasledujúcu značku D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Skočiť dopredu na nasledujúcu značku F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Skočiť dopredu na nasledujúcu značku J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Skočiť dopredu na nasledujúcu značku Z"
+msgstr "Kláves na preskočenie:"
 
 #: gui.py:288
 msgid "Marker Manager - "
@@ -275,7 +227,7 @@ msgstr "Vlastnosti značky"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "Nájdená značka: {}"
+msgstr "Značka nájdená: {}"
 
 #: gui.py:173
 #: gui.py:236
@@ -301,7 +253,7 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Odsadenie (počet riadkov/odsekov na presun po zhode):"
+msgstr "Odsadenie (riadky/odseky na presun po zhode):"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -328,7 +280,7 @@ msgstr "Najprv vyberte stránku."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regulárny výraz (použiť regulárny výraz)"
+msgstr "Regulárny výraz (použite regulárny výraz)"
 
 #: gui.py:174
 #: gui.py:237
@@ -357,7 +309,7 @@ msgstr "Stránka bola úspešne vytvorená."
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Stránka bola úspešne zmazaná."
+msgstr "Stránka bola úspešne vymazaná."
 
 #: gui.py:281
 msgid "Site updated successfully."
@@ -375,8 +327,8 @@ msgstr "Vzor URL:"
 
 #: gui.py:364
 msgid "Unnamed"
-msgstr "Bez názvu"
+msgstr "Nepomenované"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Iba zobrazená oblasť (Viewport)"
+msgstr "Iba výrez"

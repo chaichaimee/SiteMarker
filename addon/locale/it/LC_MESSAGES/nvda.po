@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -22,7 +22,7 @@ msgstr "&Aggiungi nuovo sito"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Torna a Gestione siti"
+msgstr "&Torna al gestore dei siti"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,7 +30,7 @@ msgstr "&Elimina"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Elimina marcatore	Canc"
+msgstr "&Elimina marcatore\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
@@ -38,7 +38,7 @@ msgstr "&Elimina sito"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Elimina sito	Canc"
+msgstr "&Elimina sito\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,7 +46,7 @@ msgstr "&Modifica"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Modifica marcatore	F2"
+msgstr "&Modifica marcatore\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
@@ -54,7 +54,7 @@ msgstr "&Modifica sito"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Modifica sito	F2"
+msgstr "&Modifica sito\tF2"
 
 #: gui.py:35
 #: gui.py:146
@@ -63,11 +63,11 @@ msgstr "&Gestisci marcatori"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr Elenco &marcatori:"
+msgstr "&Elenco marcatori:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr Siti &registrati:"
+msgstr "&Siti registrati:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
@@ -93,22 +93,6 @@ msgstr "Sei sicuro di voler eliminare questo sito e tutti i suoi marcatori?"
 msgid "Auto Click"
 msgstr "Clic automatico"
 
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Clic automatico sul marcatore successivo assegnato a Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Clic automatico sul marcatore successivo assegnato a Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Clic automatico sul marcatore successivo assegnato a Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Clic automatico sul marcatore successivo assegnato a Alt+Z"
-
 #: gui.py:187
 #: gui.py:251
 #: gui.py:556
@@ -125,7 +109,7 @@ msgstr "Cancella &tutti i marcatori"
 
 #: gui.py:578
 msgid "Click Key:"
-msgstr "Tasto di clic:"
+msgstr "Tasto clic:"
 
 #: gui.py:36
 #: gui.py:335
@@ -139,7 +123,7 @@ msgstr "Conferma"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Conferma elimina tutto"
+msgstr "Conferma eliminazione tutto"
 
 #: gui.py:174
 #: gui.py:237
@@ -153,7 +137,7 @@ msgstr "Contiene testo (corrispondenza parziale)"
 #: gui.py:180
 #: gui.py:243
 msgid "Disable focus"
-msgstr "Disattiva focus"
+msgstr "Disabilita focus"
 
 #: gui.py:201
 #: gui.py:265
@@ -174,7 +158,7 @@ msgstr "Solo dominio"
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "Non attivare la modalità modulo"
+msgstr "Non entrare in modalità modulo"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
@@ -182,7 +166,7 @@ msgstr "Modifica configurazione sito"
 
 #: gui.py:540
 msgid "Entire Document"
-msgstr "Intero documento"
+msgstr "Documento intero"
 
 #: gui.py:112
 #: gui.py:201
@@ -200,7 +184,7 @@ msgstr "Corrispondenza esatta"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Paragrafo esatto (corrispondenza intero paragrafo)"
+msgstr "Paragrafo esatto (corrispondenza dell'intero paragrafo)"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -231,39 +215,7 @@ msgstr "Salta"
 
 #: gui.py:575
 msgid "Jump Key:"
-msgstr "Tasto di salto:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Salta indietro al marcatore precedente D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Salta indietro al marcatore precedente F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Salta indietro al marcatore precedente J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Salta indietro al marcatore precedente Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Salta in avanti al marcatore successivo D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Salta in avanti al marcatore successivo F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Salta in avanti al marcatore successivo J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Salta in avanti al marcatore successivo Z"
+msgstr "Tasto salto:"
 
 #: gui.py:288
 msgid "Marker Manager - "
@@ -328,7 +280,7 @@ msgstr "Seleziona prima un sito."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Corrispondenza Regex (usa espressione regolare)"
+msgstr "Espressione regolare (usa espressione regolare)"
 
 #: gui.py:174
 #: gui.py:237
@@ -349,7 +301,7 @@ msgstr "Ambito di ricerca:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Gestione siti"
+msgstr "Gestore siti"
 
 #: gui.py:215
 msgid "Site created successfully."
@@ -379,4 +331,4 @@ msgstr "Senza nome"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Solo area visibile"
+msgstr "Solo viewport"

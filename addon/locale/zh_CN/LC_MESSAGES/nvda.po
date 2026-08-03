@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Simplified)\n"
 "Language: zh_CN\n"
@@ -18,11 +18,11 @@ msgstr "添加标记(&A)"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "添加新网站(&A)"
+msgstr "添加新站点(&A)"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "返回网站管理器(&B)"
+msgstr "返回站点管理器(&B)"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,15 +30,15 @@ msgstr "删除(&D)"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "删除标记(&D)	Del"
+msgstr "删除标记(&D)\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "删除网站(&D)"
+msgstr "删除站点(&D)"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "删除网站(&D)	Del"
+msgstr "删除站点(&D)\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,15 +46,15 @@ msgstr "编辑(&E)"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "编辑标记(&E)	F2"
+msgstr "编辑标记(&E)\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "编辑网站(&E)"
+msgstr "编辑站点(&E)"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "编辑网站(&E)	F2"
+msgstr "编辑站点(&E)\tF2"
 
 #: gui.py:35
 #: gui.py:146
@@ -67,11 +67,11 @@ msgstr "标记列表(&M):"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "已注册网站(&R):"
+msgstr "已注册站点(&R):"
 
 #: gui.py:157
 msgid "Add Site Configuration"
-msgstr "添加网站配置"
+msgstr "添加站点配置"
 
 #: gui.py:426
 msgid "All markers have been cleared."
@@ -87,27 +87,11 @@ msgstr "您确定要删除此标记吗？"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "您确定要删除此网站及其所有标记吗？"
+msgstr "您确定要删除此站点及其所有标记吗？"
 
 #: gui.py:525
 msgid "Auto Click"
 msgstr "自动点击"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "自动点击分配给 Alt+C 的下一个标记"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "自动点击分配给 Alt+J 的下一个标记"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "自动点击分配给 Alt+X 的下一个标记"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "自动点击分配给 Alt+Z 的下一个标记"
 
 #: gui.py:187
 #: gui.py:251
@@ -139,16 +123,16 @@ msgstr "确认"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "确认删除全部"
+msgstr "确认全部删除"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Contain Substring"
-msgstr "包含子字符串"
+msgstr "包含子串"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "包含文本 (部分匹配)"
+msgstr "包含文本（查找部分匹配）"
 
 #: gui.py:180
 #: gui.py:243
@@ -169,7 +153,7 @@ msgstr "显示名称:"
 #: gui.py:174
 #: gui.py:237
 msgid "Domain Only"
-msgstr "仅限域名"
+msgstr "仅域名"
 
 #: gui.py:180
 #: gui.py:243
@@ -178,7 +162,7 @@ msgstr "不进入表单模式"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "编辑网站配置"
+msgstr "编辑站点配置"
 
 #: gui.py:540
 msgid "Entire Document"
@@ -196,15 +180,15 @@ msgstr "错误"
 #: gui.py:174
 #: gui.py:237
 msgid "Exact Matching"
-msgstr "完全匹配"
+msgstr "精确匹配"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "精确段落 (匹配整个段落)"
+msgstr "精确段落（匹配整个段落）"
 
 #: gui.py:112
 msgid "Failed to delete site."
-msgstr "删除网站失败。"
+msgstr "删除站点失败。"
 
 #: gui.py:179
 #: gui.py:242
@@ -214,7 +198,7 @@ msgstr "焦点模式:"
 #: gui.py:174
 #: gui.py:237
 msgid "Include Subdomains"
-msgstr "包含子域名"
+msgstr "包括子域"
 
 #: gui.py:93
 #: gui.py:105
@@ -232,38 +216,6 @@ msgstr "跳转"
 #: gui.py:575
 msgid "Jump Key:"
 msgstr "跳转键:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "向后跳转到上一个标记 D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "向后跳转到上一个标记 F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "向后跳转到上一个标记 J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "向后跳转到上一个标记 Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "向前跳转到下一个标记 D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "向前跳转到下一个标记 F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "向前跳转到下一个标记 J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "向前跳转到下一个标记 Z"
 
 #: gui.py:288
 msgid "Marker Manager - "
@@ -288,7 +240,7 @@ msgstr "模式:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "没有可清除的标记。"
+msgstr "没有要清除的标记。"
 
 #: gui.py:180
 #: gui.py:243
@@ -301,7 +253,7 @@ msgstr "确定"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "偏移量 (匹配后移动的行数/段落数):"
+msgstr "偏移量（匹配后移动的行数/段落数）:"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -324,11 +276,11 @@ msgstr "请先选择一个标记。"
 #: gui.py:105
 #: gui.py:117
 msgid "Please select a site first."
-msgstr "请先选择一个网站。"
+msgstr "请先选择一个站点。"
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "正则匹配 (使用正则表达式)"
+msgstr "正则表达式匹配（使用正则表达式）"
 
 #: gui.py:174
 #: gui.py:237
@@ -337,11 +289,11 @@ msgstr "正则表达式"
 
 #: gui.py:250
 msgid "Save Changes"
-msgstr "保存修改"
+msgstr "保存更改"
 
 #: gui.py:186
 msgid "Save Site"
-msgstr "保存网站"
+msgstr "保存站点"
 
 #: gui.py:539
 msgid "Search Scope:"
@@ -349,19 +301,19 @@ msgstr "搜索范围:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "网站管理器"
+msgstr "站点管理器"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "网站创建成功。"
+msgstr "站点创建成功。"
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "网站删除成功。"
+msgstr "站点删除成功。"
 
 #: gui.py:281
 msgid "Site updated successfully."
-msgstr "网站更新成功。"
+msgstr "站点更新成功。"
 
 #: gui.py:204
 #: gui.py:268
@@ -379,4 +331,4 @@ msgstr "未命名"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "仅视口范围"
+msgstr "仅视口"

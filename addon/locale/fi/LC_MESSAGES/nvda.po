@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Finnish\n"
 "Language: fi\n"
@@ -30,7 +30,7 @@ msgstr "&Poista"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Poista merkki	Del"
+msgstr "&Poista merkki\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
@@ -38,7 +38,7 @@ msgstr "&Poista sivusto"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Poista sivusto	Del"
+msgstr "&Poista sivusto\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,7 +46,7 @@ msgstr "&Muokkaa"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Muokkaa merkkiä	F2"
+msgstr "&Muokkaa merkkiä\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
@@ -54,7 +54,7 @@ msgstr "&Muokkaa sivustoa"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Muokkaa sivustoa	F2"
+msgstr "&Muokkaa sivustoa\tF2"
 
 #: gui.py:35
 #: gui.py:146
@@ -63,7 +63,7 @@ msgstr "&Hallitse merkkejä"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "&Merkkilista:"
+msgstr "&Merkkiluettelo:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
@@ -92,22 +92,6 @@ msgstr "Haluatko varmasti poistaa tämän sivuston ja kaikki sen merkit?"
 #: gui.py:525
 msgid "Auto Click"
 msgstr "Automaattinen napsautus"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Napsauta automaattisesti seuraavaa merkkiä, jolle on määritetty Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Napsauta automaattisesti seuraavaa merkkiä, jolle on määritetty Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Napsauta automaattisesti seuraavaa merkkiä, jolle on määritetty Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Napsauta automaattisesti seuraavaa merkkiä, jolle on määritetty Alt+Z"
 
 #: gui.py:187
 #: gui.py:251
@@ -139,12 +123,12 @@ msgstr "Vahvista"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Vahvista kaikkien poisto"
+msgstr "Vahvista kaikkien poistaminen"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Contain Substring"
-msgstr "Sisältää osamerkkijonon"
+msgstr "Sisältää alimerkkijonon"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
@@ -178,7 +162,7 @@ msgstr "Älä siirry lomaketilaan"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "Muokkaa sivuston asetukset"
+msgstr "Muokkaa sivuston asetuksia"
 
 #: gui.py:540
 msgid "Entire Document"
@@ -196,11 +180,11 @@ msgstr "Virhe"
 #: gui.py:174
 #: gui.py:237
 msgid "Exact Matching"
-msgstr "Tarkka haku"
+msgstr "Tarkka osuma"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Tarkka kappale (togu koko kappale)"
+msgstr "Tarkka kappale (koko kappaleen osuma)"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -223,7 +207,7 @@ msgstr "Sisällytä aliverkkotunnukset"
 #: gui.py:407
 #: gui.py:420
 msgid "Information"
-msgstr "Tietoja"
+msgstr "Tiedot"
 
 #: gui.py:525
 msgid "Jump"
@@ -233,41 +217,9 @@ msgstr "Hyppää"
 msgid "Jump Key:"
 msgstr "Hyppynäppäin:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Hyppää taaksepäin edelliseen merkkiin D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Hyppää taaksepäin edelliseen merkkiin F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Hyppää taaksepäin edelliseen merkkiin J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Hyppää taaksepäin edelliseen merkkiin Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Hyppää eteenpäin seuraavaan merkkiin D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Hyppää eteenpäin seuraavaan merkkiin F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Hyppää eteenpäin seuraavaan merkkiin J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Hyppää eteenpäin seuraavaan merkkiin Z"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "Merkkien hallinta - "
+msgstr "Merkin hallinta - "
 
 #: gui.py:469
 msgid "Marker Properties"
@@ -280,7 +232,7 @@ msgstr "Merkki löytyi: {}"
 #: gui.py:173
 #: gui.py:236
 msgid "Match Type:"
-msgstr "Hakutyyppi:"
+msgstr "Osumatyyppi:"
 
 #: gui.py:524
 msgid "Mode:"
@@ -301,19 +253,19 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Siirtymä (siirrettävät rivit/kappaleet osuman jälkeen):"
+msgstr "Siirtymä (rivit/kappaleet siirrettäväksi osuman jälkeen):"
 
 #: gui.py:518
 msgid "Pattern Match:"
-msgstr "Haku lausekkeella:"
+msgstr "Mallin osuma:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Hakuehto ei voi olla tyhjä."
+msgstr "Malli ei voi olla tyhjä."
 
 #: gui.py:514
 msgid "Pattern:"
-msgstr "Hakuehto:"
+msgstr "Malli:"
 
 #: gui.py:391
 #: gui.py:407
@@ -345,7 +297,7 @@ msgstr "Tallenna sivusto"
 
 #: gui.py:539
 msgid "Search Scope:"
-msgstr "Hakualue:"
+msgstr "Haun laajuus:"
 
 #: gui.py:15
 msgid "Site Manager"
@@ -353,25 +305,25 @@ msgstr "Sivustojen hallinta"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "Sivusto luotiin onnistuneesti."
+msgstr "Sivusto luotu onnistuneesti."
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Sivusto poistettiin onnistuneesti."
+msgstr "Sivusto poistettu onnistuneesti."
 
 #: gui.py:281
 msgid "Site updated successfully."
-msgstr "Sivusto päivitettiin onnistuneesti."
+msgstr "Sivusto päivitetty onnistuneesti."
 
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL-hakuehto ei voi olla tyhjä."
+msgstr "URL-malli ei voi olla tyhjä."
 
 #: gui.py:169
 #: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL-hakuehto:"
+msgstr "URL-malli:"
 
 #: gui.py:364
 msgid "Unnamed"
@@ -379,4 +331,4 @@ msgstr "Nimetön"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Vain näkymäalue"
+msgstr "Vain näkymä"

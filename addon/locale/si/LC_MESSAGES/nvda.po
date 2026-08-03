@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Sinhala\n"
 "Language: si\n"
@@ -14,100 +14,84 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "ලකුණුකරයක් එක් කරන්න (&A)"
+msgstr "&සලකුණ එක් කරන්න"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "අලුත් වෙබ් අඩවියක් එක් කරන්න (&A)"
+msgstr "&නව වෙබ් අඩවිය එක් කරන්න"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "වෙබ් අඩවි කළමනාකරු වෙත නැවත යන්න (&B)"
+msgstr "&වෙබ් අඩවි කළමනාකරු වෙත ආපසු"
 
 #: gui.py:332
 msgid "&Delete"
-msgstr "මකන්න (&D)"
+msgstr "&මකන්න"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "ලකුණුකරය මකන්න (&D)	Del"
+msgstr "&සලකුණ මකන්න\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "වෙබ් අඩවිය මකන්න (&D)"
+msgstr "&වෙබ් අඩවිය මකන්න"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "වෙබ් අඩවිය මකන්න (&D)	Del"
+msgstr "&වෙබ් අඩවිය මකන්න\tDel"
 
 #: gui.py:331
 msgid "&Edit"
-msgstr "සංස්කරණය කරන්න (&E)"
+msgstr "&සංස්කරණය කරන්න"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "ලකුණුකරය සංස්කරණය කරන්න (&E)	F2"
+msgstr "&සලකුණ සංස්කරණය කරන්න\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "වෙබ් අඩවිය සංස්කරණය කරන්න (&E)"
+msgstr "&වෙබ් අඩවිය සංස්කරණය කරන්න"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "වෙබ් අඩවිය සංස්කරණය කරන්න (&E)	F2"
+msgstr "&වෙබ් අඩවිය සංස්කරණය කරන්න\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "ලකුණුකර කළමනාකරණය (&M)"
+msgstr "&සලකුණු කළමනාකරණය කරන්න"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "ලකුණුකර ලැයිස්තුව (&M):"
+msgstr "&සලකුණු ලැයිස්තුව:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "ලියාපදිංචි වෙබ් අඩවි (&R):"
+msgstr "&ලියාපදිංචි වෙබ් අඩවි:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
-msgstr "веබ් අඩවි සැකසුම එක් කරන්න"
+msgstr "වෙබ් අඩවි වින්යාසය එක් කරන්න"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "සියලුම ලකුණුකර ඉවත් කරන ලදී."
+msgstr "සියලු සලකුණු ඉවත් කරන ලදී."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "ඔබට විශ්වාසද සියලුම ලකුණුකර මැකීමට අවශ්‍ය බව?"
+msgstr "ඔබට සියලු සලකුණු මැකීමට අවශ්ය බව විශ්වාසද?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "ඔබට විශ්වාසද මෙම ලකුණුකරය මැකීමට අවශ්‍ය බව?"
+msgstr "ඔබට මෙම සලකුණ මැකීමට අවශ්ය බව විශ්වාසද?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "ඔබට විශ්වාසද මෙම වෙබ් අඩවිය සහ එහි සියලුම ලකුණුකර මැකීමට අවශ්‍ය බව?"
+msgstr "ඔබට මෙම වෙබ් අඩවිය සහ එහි සියලු සලකුණු මැකීමට අවශ්ය බව විශ්වාසද?"
 
 #: gui.py:525
 msgid "Auto Click"
-msgstr "ස්වයංක්‍රීය ක්ලික් කිරීම"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Alt+C සඳහා පවරා ඇති ඊළඟ ලකුණුකරය ස්වයංක්‍රීයව ක්ලික් කරන්න"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Alt+J සඳහා පවරා ඇති ඊළඟ ලකුණුකරය ස්වයංක්‍රීයව ක්ලික් කරන්න"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Alt+X සඳහා පවරා ඇති ඊළඟ ලකුණුකරය ස්වයංක්‍රීයව ක්ලික් කරන්න"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Alt+Z සඳහා පවරා ඇති ඊළඟ ලකුණුකරය ස්වයංක්‍රීයව ක්ලික් කරන්න"
+msgstr "ස්වයංක්රීය ක්ලික්"
 
 #: gui.py:187
 #: gui.py:251
@@ -117,15 +101,15 @@ msgstr "අවලංගු කරන්න"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "සියල්ල ඉවත් කරන්න (&A)"
+msgstr "&සියල්ල ඉවත් කරන්න"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "සියලුම ලකුණුකර ඉවත් කරන්න (&A)"
+msgstr "&සියලු සලකුණු ඉවත් කරන්න"
 
 #: gui.py:578
 msgid "Click Key:"
-msgstr "ක්ලික් කිරීමේ යතුර:"
+msgstr "ක්ලික් යතුර:"
 
 #: gui.py:36
 #: gui.py:335
@@ -144,45 +128,45 @@ msgstr "සියල්ල මැකීම තහවුරු කරන්න"
 #: gui.py:174
 #: gui.py:237
 msgid "Contain Substring"
-msgstr "උප-පෙළ අඩංගු වේ"
+msgstr "උපවාක්යය අඩංගු වේ"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "පෙළ අඩංගු වේ (කොටසක් ගැලපීම සොයන්න)"
+msgstr "පෙළ අඩංගු වේ (අර්ධ ගැලපීම සොයන්න)"
 
 #: gui.py:180
 #: gui.py:243
 msgid "Disable focus"
-msgstr "ෆෝකස් අක්‍රීය කරන්න"
+msgstr "අවධානය අක්රීය කරන්න"
 
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "ප්‍රදර්ශන නාමය හිස් විය නොහැක."
+msgstr "පෙන්වන නම හිස් විය නොහැක."
 
 #: gui.py:166
 #: gui.py:230
 #: gui.py:546
 msgid "Display Name:"
-msgstr "ප්‍රදර්ශන නාමය:"
+msgstr "පෙන්වන නම:"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Domain Only"
-msgstr "ඩොමේන් පමණි"
+msgstr "වසම පමණි"
 
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "ෆෝම් ප්‍රකාරයට ඇතුළු නොවන්න"
+msgstr "පෝරම ප්රකාරයට ඇතුළු නොවන්න"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "වෙබ් අඩවි සැකසුම සංස්කරණය කරන්න"
+msgstr "වෙබ් අඩවි වින්යාසය සංස්කරණය කරන්න"
 
 #: gui.py:540
 msgid "Entire Document"
-msgstr "මුළු ලේඛනයම"
+msgstr "සම්පූර්ණ ලේඛනය"
 
 #: gui.py:112
 #: gui.py:201
@@ -191,16 +175,16 @@ msgstr "මුළු ලේඛනයම"
 #: gui.py:268
 #: gui.py:592
 msgid "Error"
-msgstr "දෝෂයකි"
+msgstr "දෝෂය"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Exact Matching"
-msgstr "හරියටම ගැලපීම"
+msgstr "නිශ්චිත ගැලපීම"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "හරියටම ඡේදය (මුළු ඡේදයම ගැලපීම)"
+msgstr "නිශ්චිත ඡේදය (සම්පූර්ණ ඡේදය ගැලපෙන)"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -209,12 +193,12 @@ msgstr "වෙබ් අඩවිය මැකීමට අසමත් වි�
 #: gui.py:179
 #: gui.py:242
 msgid "Focus Mode:"
-msgstr "ෆෝකස් ප්‍රකාරය:"
+msgstr "අවධානය ප්රකාරය:"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Include Subdomains"
-msgstr "උප-ඩොමේන් ඇතුළත් කරන්න"
+msgstr "උපවසම් ඇතුළත් කරන්න"
 
 #: gui.py:93
 #: gui.py:105
@@ -233,49 +217,17 @@ msgstr "පනින්න"
 msgid "Jump Key:"
 msgstr "පැනීමේ යතුර:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "පෙර D ලකුණුකරය වෙත ආපසු පනින්න"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "පෙර F ලකුණුකරය වෙත ආපසු පනින්න"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "පෙර J ලකුණුකරය වෙත ආපසු පනින්න"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "පෙර Z ලකුණුකරය වෙත ආපසු පනින්න"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "ඊළඟ D ලකුණුකරය වෙත ඉදිරියට පනින්න"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "ඊළඟ F ලකුණුකරය වෙත ඉදිරියට පනින්න"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "ඊළඟ J ලකුණුකරය වෙත ඉදිරියට පනින්න"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "ඊළඟ Z ලකුණුකරය වෙත ඉදිරියට පනින්න"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "ලකුණුකර කළමනාකරු - "
+msgstr "සලකුණු කළමනාකරු - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "ලකුණුකර ගුණාංග"
+msgstr "සලකුණු ගුණාංග"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "ලකුණුකරයක් හමු විය: {}"
+msgstr "සලකුණ හමු විය: {}"
 
 #: gui.py:173
 #: gui.py:236
@@ -284,16 +236,16 @@ msgstr "ගැලපුම් වර්ගය:"
 
 #: gui.py:524
 msgid "Mode:"
-msgstr "ප්‍රකාරය:"
+msgstr "ප්රකාරය:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "ඉවත් කිරීමට ලකුණුකර නැත."
+msgstr "ඉවත් කිරීමට සලකුණු නැත."
 
 #: gui.py:180
 #: gui.py:243
 msgid "Normal"
-msgstr "සාමාන්‍ය"
+msgstr "සාමාන්ය"
 
 #: gui.py:555
 msgid "OK"
@@ -301,7 +253,7 @@ msgstr "හරි"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "ඕෆ්සෙට් (ගැලපීමෙන් පසු චලනය විය යුතු පේළි/ඡේද ගණන):"
+msgstr "ඕෆ්සෙට් (ගැලපීමෙන් පසු ගෙනයාමට පේළි/ඡේද):"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -318,7 +270,7 @@ msgstr "රටාව:"
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "කරුණාකර පළමුව ලකුණුකරයක් තෝරන්න."
+msgstr "කරුණාකර පළමුව සලකුණක් තෝරන්න."
 
 #: gui.py:93
 #: gui.py:105
@@ -328,12 +280,12 @@ msgstr "කරුණාකර පළමුව වෙබ් අඩවියක්
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Regex ගැලපීම (regular expression භාවිතා කරන්න)"
+msgstr "රෙගෙක්ස් ගැලපීම (සාමාන්ය ප්රකාශනය භාවිතා කරන්න)"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Regular Expression"
-msgstr "Regular Expression"
+msgstr "සාමාන්ය ප්රකාශනය"
 
 #: gui.py:250
 msgid "Save Changes"
@@ -345,7 +297,7 @@ msgstr "වෙබ් අඩවිය සුරකින්න"
 
 #: gui.py:539
 msgid "Search Scope:"
-msgstr "සෙවුම් පරාසය:"
+msgstr "සෙවුම් විෂය පථය:"
 
 #: gui.py:15
 msgid "Site Manager"
@@ -375,8 +327,8 @@ msgstr "URL රටාව:"
 
 #: gui.py:364
 msgid "Unnamed"
-msgstr "නමක් නොමැති"
+msgstr "නම් රහිත"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "දර්ශන පථය පමණි (Viewport)"
+msgstr "දර්ශන කවුළුව පමණි"

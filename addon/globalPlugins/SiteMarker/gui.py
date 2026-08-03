@@ -612,3 +612,5 @@ class MarkerEditDialog(wx.Dialog):
 			"offset": self.spinOffset.GetValue(),
 			"scope": scope
 		}
+
+

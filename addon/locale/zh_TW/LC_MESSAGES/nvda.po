@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Traditional)\n"
 "Language: zh_TW\n"
@@ -22,7 +22,7 @@ msgstr "新增網站(&A)"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "返回網站管理器(&B)"
+msgstr "返回網站管理員(&B)"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,7 +30,7 @@ msgstr "刪除(&D)"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "刪除標記(&D)	Del"
+msgstr "刪除標記(&D)\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
@@ -38,7 +38,7 @@ msgstr "刪除網站(&D)"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "刪除網站(&D)	Del"
+msgstr "刪除網站(&D)\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,7 +46,7 @@ msgstr "編輯(&E)"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "編輯標記(&E)	F2"
+msgstr "編輯標記(&E)\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
@@ -54,7 +54,7 @@ msgstr "編輯網站(&E)"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "編輯網站(&E)	F2"
+msgstr "編輯網站(&E)\tF2"
 
 #: gui.py:35
 #: gui.py:146
@@ -63,7 +63,7 @@ msgstr "管理標記(&M)"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "標記列表(&M):"
+msgstr "標記清單(&M):"
 
 #: gui.py:27
 msgid "&Registered Sites:"
@@ -92,22 +92,6 @@ msgstr "您確定要刪除此網站及其所有標記嗎？"
 #: gui.py:525
 msgid "Auto Click"
 msgstr "自動點擊"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "自動點擊分配給 Alt+C 的下一個標記"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "自動點擊分配給 Alt+J 的下一個標記"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "自動點擊分配給 Alt+X 的下一個標記"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "自動點擊分配給 Alt+Z 的下一個標記"
 
 #: gui.py:187
 #: gui.py:251
@@ -139,7 +123,7 @@ msgstr "確認"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "確認刪除全部"
+msgstr "確認全部刪除"
 
 #: gui.py:174
 #: gui.py:237
@@ -148,7 +132,7 @@ msgstr "包含子字串"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "包含文字 (部分比對)"
+msgstr "包含文字（尋找部分相符）"
 
 #: gui.py:180
 #: gui.py:243
@@ -158,7 +142,7 @@ msgstr "停用焦點"
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "顯示名稱不能為空。"
+msgstr "顯示名稱不能為空白。"
 
 #: gui.py:166
 #: gui.py:230
@@ -169,7 +153,7 @@ msgstr "顯示名稱:"
 #: gui.py:174
 #: gui.py:237
 msgid "Domain Only"
-msgstr "僅限網域"
+msgstr "僅網域"
 
 #: gui.py:180
 #: gui.py:243
@@ -182,7 +166,7 @@ msgstr "編輯網站設定"
 
 #: gui.py:540
 msgid "Entire Document"
-msgstr "整個文件"
+msgstr "整份文件"
 
 #: gui.py:112
 #: gui.py:201
@@ -196,11 +180,11 @@ msgstr "錯誤"
 #: gui.py:174
 #: gui.py:237
 msgid "Exact Matching"
-msgstr "完全比對"
+msgstr "完全相符"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "精確段落 (比對整個段落)"
+msgstr "精確段落（比對整個段落）"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -233,41 +217,9 @@ msgstr "跳轉"
 msgid "Jump Key:"
 msgstr "跳轉鍵:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "向後跳轉到上一個標記 D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "向後跳轉到上一個標記 F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "向後跳轉到上一個標記 J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "向後跳轉到上一個標記 Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "向前跳轉到下一個標記 D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "向前跳轉到下一個標記 F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "向前跳轉到下一個標記 J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "向前跳轉到下一個標記 Z"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "標記管理器 - "
+msgstr "標記管理員 - "
 
 #: gui.py:469
 msgid "Marker Properties"
@@ -288,12 +240,12 @@ msgstr "模式:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "沒有可清除的標記。"
+msgstr "沒有要清除的標記。"
 
 #: gui.py:180
 #: gui.py:243
 msgid "Normal"
-msgstr "正常"
+msgstr "一般"
 
 #: gui.py:555
 msgid "OK"
@@ -301,7 +253,7 @@ msgstr "確定"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "偏移量 (比對後移動的行數/段落數):"
+msgstr "偏移量（比對後移動的行數/段落數）:"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -309,7 +261,7 @@ msgstr "模式比對:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "模式不能為空。"
+msgstr "模式不能為空白。"
 
 #: gui.py:514
 msgid "Pattern:"
@@ -328,16 +280,16 @@ msgstr "請先選擇一個網站。"
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "正規比對 (使用正規表達式)"
+msgstr "規則運算式比對（使用規則運算式）"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Regular Expression"
-msgstr "正規表達式"
+msgstr "規則運算式"
 
 #: gui.py:250
 msgid "Save Changes"
-msgstr "儲存修改"
+msgstr "儲存變更"
 
 #: gui.py:186
 msgid "Save Site"
@@ -349,7 +301,7 @@ msgstr "搜尋範圍:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "網站管理器"
+msgstr "網站管理員"
 
 #: gui.py:215
 msgid "Site created successfully."
@@ -366,7 +318,7 @@ msgstr "網站更新成功。"
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL 模式不能為空。"
+msgstr "URL 模式不能為空白。"
 
 #: gui.py:169
 #: gui.py:233
@@ -379,4 +331,4 @@ msgstr "未命名"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "僅視角範圍"
+msgstr "僅檢視區"

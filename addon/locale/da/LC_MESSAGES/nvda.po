@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Danish\n"
 "Language: da\n"
@@ -22,7 +22,7 @@ msgstr "&Tilføj nyt websted"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Tilbage til webstedsadministration"
+msgstr "&Tilbage til webstedsstyring"
 
 #: gui.py:332
 msgid "&Delete"
@@ -30,7 +30,7 @@ msgstr "&Slet"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Slet markør	Del"
+msgstr "&Slet markør\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
@@ -38,7 +38,7 @@ msgstr "&Slet websted"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Slet websted	Del"
+msgstr "&Slet websted\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,7 +46,7 @@ msgstr "&Rediger"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Rediger markør	F2"
+msgstr "&Rediger markør\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
@@ -54,7 +54,7 @@ msgstr "&Rediger websted"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Rediger websted	F2"
+msgstr "&Rediger websted\tF2"
 
 #: gui.py:35
 #: gui.py:146
@@ -75,7 +75,7 @@ msgstr "Tilføj webstedskonfiguration"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Alle markører er blevet slettet."
+msgstr "Alle markører er ryddet."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
@@ -93,22 +93,6 @@ msgstr "Er du sikker på, at du vil slette dette websted og alle dets markører?
 msgid "Auto Click"
 msgstr "Automatisk klik"
 
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Klik automatisk på næste markør tildelt Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Klik automatisk på næste markør tildelt Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Klik automatisk på næste markør tildelt Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Klik automatisk på næste markør tildelt Alt+Z"
-
 #: gui.py:187
 #: gui.py:251
 #: gui.py:556
@@ -117,11 +101,11 @@ msgstr "Annuller"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "Slet &alle"
+msgstr "Ryd &alle"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Slet &alle markører"
+msgstr "Ryd &alle markører"
 
 #: gui.py:578
 msgid "Click Key:"
@@ -139,7 +123,7 @@ msgstr "Bekræft"
 
 #: gui.py:422
 msgid "Confirm Delete All"
-msgstr "Bekræft slet alle"
+msgstr "Bekræft sletning af alle"
 
 #: gui.py:174
 #: gui.py:237
@@ -148,7 +132,7 @@ msgstr "Indeholder understreng"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Indeholder tekst (find delvist match)"
+msgstr "Indeholder tekst (delvis match)"
 
 #: gui.py:180
 #: gui.py:243
@@ -158,7 +142,7 @@ msgstr "Deaktiver fokus"
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "Visningsnavn må ikke være tomt."
+msgstr "Visningsnavn kan ikke være tomt."
 
 #: gui.py:166
 #: gui.py:230
@@ -174,7 +158,7 @@ msgstr "Kun domæne"
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "Gå ikke i formulartilstand"
+msgstr "Gå ikke ind i formular-tilstand"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
@@ -196,11 +180,11 @@ msgstr "Fejl"
 #: gui.py:174
 #: gui.py:237
 msgid "Exact Matching"
-msgstr "Præcist match"
+msgstr "Nøjagtig match"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Præcist afsnit (match hele afsnittet)"
+msgstr "Nøjagtigt afsnit (match hele afsnittet)"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -233,41 +217,9 @@ msgstr "Hop"
 msgid "Jump Key:"
 msgstr "Hop-tast:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Hop bagud til forrige markør D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Hop bagud til forrige markør F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Hop bagud til forrige markør J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Hop bagud til forrige markør Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Hop fremad til næste markør D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Hop fremad til næste markør F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Hop fremad til næste markør J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Hop fremad til næste markør Z"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "Markøradministration - "
+msgstr "Markørstyring - "
 
 #: gui.py:469
 msgid "Marker Properties"
@@ -288,7 +240,7 @@ msgstr "Tilstand:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Ingen markører at slette."
+msgstr "Ingen markører at rydde."
 
 #: gui.py:180
 #: gui.py:243
@@ -301,7 +253,7 @@ msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Forskydning (linjer/afsnit der flyttes efter match):"
+msgstr "Forskydning (linjer/afsnit at flytte efter match):"
 
 #: gui.py:518
 msgid "Pattern Match:"
@@ -309,7 +261,7 @@ msgstr "Mønstermatch:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
-msgstr "Mønster må ikke være tomt."
+msgstr "Mønster kan ikke være tomt."
 
 #: gui.py:514
 msgid "Pattern:"
@@ -345,28 +297,28 @@ msgstr "Gem websted"
 
 #: gui.py:539
 msgid "Search Scope:"
-msgstr "Søgeomfang:"
+msgstr "Søgeområde:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Webstedsadministration"
+msgstr "Webstedsstyring"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "Webstedet blev oprettet."
+msgstr "Websted oprettet med succes."
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Webstedet blev slettet."
+msgstr "Websted slettet med succes."
 
 #: gui.py:281
 msgid "Site updated successfully."
-msgstr "Webstedet blev opdateret."
+msgstr "Websted opdateret med succes."
 
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL-mønster må ikke være tomt."
+msgstr "URL-mønster kan ikke være tomt."
 
 #: gui.py:169
 #: gui.py:233
@@ -375,8 +327,8 @@ msgstr "URL-mønster:"
 
 #: gui.py:364
 msgid "Unnamed"
-msgstr "Uden navn"
+msgstr "Unavngivet"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Kun visningsområde"
+msgstr "Kun visningsport"

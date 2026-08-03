@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Croatian\n"
 "Language: hr\n"
@@ -14,31 +14,31 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "&Dodaj marker"
+msgstr "&Dodaj oznaku"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "&Dodaj novu stranicu"
+msgstr "&Dodaj novo web mjesto"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
-msgstr "&Natrag na upravljanje stranicama"
+msgstr "&Natrag na upravitelj web mjesta"
 
 #: gui.py:332
 msgid "&Delete"
-msgstr "&Obriši"
+msgstr "&Izbriši"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "&Obriši marker	Del"
+msgstr "&Izbriši oznaku\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "&Obriši stranicu"
+msgstr "&Izbriši web mjesto"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "&Obriši stranicu	Del"
+msgstr "&Izbriši web mjesto\tDel"
 
 #: gui.py:331
 msgid "&Edit"
@@ -46,68 +46,52 @@ msgstr "&Uredi"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "&Uredi marker	F2"
+msgstr "&Uredi oznaku\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "&Uredi stranicu"
+msgstr "&Uredi web mjesto"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "&Uredi stranicu	F2"
+msgstr "&Uredi web mjesto\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "&Upravljanje markerima"
+msgstr "&Upravljaj oznakama"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr Popis &markera:"
+msgstr "&Popis oznaka:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "&Registrirane stranice:"
+msgstr "&Registrirana web mjesta:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
-msgstr "Dodaj konfiguraciju stranice"
+msgstr "Dodaj konfiguraciju web mjesta"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Svi markeri su obrisani."
+msgstr "Sve oznake su očišćene."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
-msgstr "Jeste li sigurni da želite obrisati SVE markere?"
+msgstr "Jeste li sigurni da želite izbrisati SVE oznake?"
 
 #: gui.py:409
 msgid "Are you sure you want to delete this marker?"
-msgstr "Jeste li sigurni da želite obrisati ovaj marker?"
+msgstr "Jeste li sigurni da želite izbrisati ovu oznaku?"
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Jeste li sigurni da želite obrisati ovu stranicu i sve njezine markere?"
+msgstr "Jeste li sigurni da želite izbrisati ovo web mjesto i sve njegove oznake?"
 
 #: gui.py:525
 msgid "Auto Click"
 msgstr "Automatski klik"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Automatski klikni na sljedeći marker dodijeljen za Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Automatski klikni na sljedeći marker dodijeljen za Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Automatski klikni na sljedeći marker dodijeljen za Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Automatski klikni na sljedeći marker dodijeljen za Alt+Z"
 
 #: gui.py:187
 #: gui.py:251
@@ -117,11 +101,11 @@ msgstr "Odustani"
 
 #: gui.py:333
 msgid "Clear &All"
-msgstr "Obriši &sve"
+msgstr "Očisti &sve"
 
 #: gui.py:459
 msgid "Clear &All Markers"
-msgstr "Obriši &sve markere"
+msgstr "Očisti &sve oznake"
 
 #: gui.py:578
 msgid "Click Key:"
@@ -148,7 +132,7 @@ msgstr "Sadrži podniz"
 
 #: gui.py:519
 msgid "Contains Text (find partial match)"
-msgstr "Sadrži tekst (pronađi djelomično podudaranje)"
+msgstr "Sadrži tekst (djelomično podudaranje)"
 
 #: gui.py:180
 #: gui.py:243
@@ -158,13 +142,13 @@ msgstr "Onemogući fokus"
 #: gui.py:201
 #: gui.py:265
 msgid "Display Name cannot be empty."
-msgstr "Prikazano ime ne može biti prazno."
+msgstr "Naziv za prikaz ne može biti prazan."
 
 #: gui.py:166
 #: gui.py:230
 #: gui.py:546
 msgid "Display Name:"
-msgstr "Prikazano ime:"
+msgstr "Naziv za prikaz:"
 
 #: gui.py:174
 #: gui.py:237
@@ -174,11 +158,11 @@ msgstr "Samo domena"
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "Nemoj ulaziti u način rada za obrasce"
+msgstr "Ne ulazi u način rada obrasca"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
-msgstr "Uredi konfiguraciju stranice"
+msgstr "Uredi konfiguraciju web mjesta"
 
 #: gui.py:540
 msgid "Entire Document"
@@ -204,12 +188,12 @@ msgstr "Točan odlomak (podudaranje cijelog odlomka)"
 
 #: gui.py:112
 msgid "Failed to delete site."
-msgstr "Neuspjelo brisanje stranice."
+msgstr "Brisanje web mjesta nije uspjelo."
 
 #: gui.py:179
 #: gui.py:242
 msgid "Focus Mode:"
-msgstr "Način rada fokusa:"
+msgstr "Način fokusa:"
 
 #: gui.py:174
 #: gui.py:237
@@ -223,7 +207,7 @@ msgstr "Uključi poddomene"
 #: gui.py:407
 #: gui.py:420
 msgid "Information"
-msgstr "Informacija"
+msgstr "Informacije"
 
 #: gui.py:525
 msgid "Jump"
@@ -233,49 +217,17 @@ msgstr "Skoči"
 msgid "Jump Key:"
 msgstr "Tipka za skok:"
 
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Skoči unatrag na prethodni marker D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Skoči unatrag na prethodni marker F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Skoči unatrag na prethodni marker J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Skoči unatrag na prethodni marker Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Skoči unaprijed na sljedeći marker D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Skoči unaprijed na sljedeći marker F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Skoči unaprijed na sljedeći marker J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Skoči unaprijed na sljedeći marker Z"
-
 #: gui.py:288
 msgid "Marker Manager - "
-msgstr "Upravljanje markerima - "
+msgstr "Upravitelj oznaka - "
 
 #: gui.py:469
 msgid "Marker Properties"
-msgstr "Svojstva markera"
+msgstr "Svojstva oznake"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "Marker pronađen: {}"
+msgstr "Oznaka pronađena: {}"
 
 #: gui.py:173
 #: gui.py:236
@@ -288,7 +240,7 @@ msgstr "Način rada:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Nema markera za brisanje."
+msgstr "Nema oznaka za čišćenje."
 
 #: gui.py:180
 #: gui.py:243
@@ -318,17 +270,17 @@ msgstr "Uzorak:"
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "Prvo odaberite marker."
+msgstr "Najprije odaberite oznaku."
 
 #: gui.py:93
 #: gui.py:105
 #: gui.py:117
 msgid "Please select a site first."
-msgstr "Prvo odaberite stranicu."
+msgstr "Najprije odaberite web mjesto."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Podudaranje regularnim izrazom (koristi regularni izraz)"
+msgstr "Regularni izraz (koristite regularni izraz)"
 
 #: gui.py:174
 #: gui.py:237
@@ -341,7 +293,7 @@ msgstr "Spremi promjene"
 
 #: gui.py:186
 msgid "Save Site"
-msgstr "Spremi stranicu"
+msgstr "Spremi web mjesto"
 
 #: gui.py:539
 msgid "Search Scope:"
@@ -349,29 +301,29 @@ msgstr "Opseg pretraživanja:"
 
 #: gui.py:15
 msgid "Site Manager"
-msgstr "Upravljanje stranicama"
+msgstr "Upravitelj web mjesta"
 
 #: gui.py:215
 msgid "Site created successfully."
-msgstr "Stranica je uspješno kreirana."
+msgstr "Web mjesto je uspješno stvoreno."
 
 #: gui.py:109
 msgid "Site deleted successfully."
-msgstr "Stranica je uspješno obrisana."
+msgstr "Web mjesto je uspješno izbrisano."
 
 #: gui.py:281
 msgid "Site updated successfully."
-msgstr "Stranica je uspješno ažurirana."
+msgstr "Web mjesto je uspješno ažurirano."
 
 #: gui.py:204
 #: gui.py:268
 msgid "URL Pattern cannot be empty."
-msgstr "URL uzorak ne može biti prazan."
+msgstr "Uzorak URL-a ne može biti prazan."
 
 #: gui.py:169
 #: gui.py:233
 msgid "URL Pattern:"
-msgstr "URL uzorak:"
+msgstr "Uzorak URL-a:"
 
 #: gui.py:364
 msgid "Unnamed"
@@ -379,4 +331,4 @@ msgstr "Neimenovano"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Samo vidljivi dio"
+msgstr "Samo prozor"

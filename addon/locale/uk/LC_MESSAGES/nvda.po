@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.7.8\n"
+"Project-Id-Version: SiteMarker 2026.8.5\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-07-16 08:54+0700\n"
-"PO-Revision-Date: \n"
+"POT-Creation-Date: 2026-08-03 08:27+0700\n"
+"PO-Revision-Date: 2026-08-03\n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 #: gui.py:330
 msgid "&Add Marker"
-msgstr "Дод&ати маркер"
+msgstr "&Додати маркер"
 
 #: gui.py:32
 msgid "&Add New Site"
-msgstr "Додати &новий сайт"
+msgstr "&Додати новий сайт"
 
 #: gui.py:334
 msgid "&Back to Site Manager"
@@ -26,48 +26,48 @@ msgstr "&Назад до менеджера сайтів"
 
 #: gui.py:332
 msgid "&Delete"
-msgstr "Вид&алити"
+msgstr "&Видалити"
 
 #: gui.py:456
 msgid "&Delete Marker	Del"
-msgstr "Вид&алити маркер	Del"
+msgstr "&Видалити маркер\tDel"
 
 #: gui.py:34
 msgid "&Delete Site"
-msgstr "Видалити &сайт"
+msgstr "&Видалити сайт"
 
 #: gui.py:143
 msgid "&Delete Site	Del"
-msgstr "Видалити &сайт	Del"
+msgstr "&Видалити сайт\tDel"
 
 #: gui.py:331
 msgid "&Edit"
-msgstr "Р&едагувати"
+msgstr "&Редагувати"
 
 #: gui.py:454
 msgid "&Edit Marker	F2"
-msgstr "Р&едагувати маркер	F2"
+msgstr "&Редагувати маркер\tF2"
 
 #: gui.py:33
 msgid "&Edit Site"
-msgstr "Редагувати &сайт"
+msgstr "&Редагувати сайт"
 
 #: gui.py:141
 msgid "&Edit Site	F2"
-msgstr "Редагувати &сайт	F2"
+msgstr "&Редагувати сайт\tF2"
 
 #: gui.py:35
 #: gui.py:146
 msgid "&Manage Markers"
-msgstr "Керу&вати маркерами"
+msgstr "&Керувати маркерами"
 
 #: gui.py:325
 msgid "&Markers List:"
-msgstr "Списо&к маркерів:"
+msgstr "&Список маркерів:"
 
 #: gui.py:27
 msgid "&Registered Sites:"
-msgstr "Зареєстровані &сайти:"
+msgstr "&Зареєстровані сайти:"
 
 #: gui.py:157
 msgid "Add Site Configuration"
@@ -75,7 +75,7 @@ msgstr "Додати конфігурацію сайту"
 
 #: gui.py:426
 msgid "All markers have been cleared."
-msgstr "Усі маркери видалено."
+msgstr "Усі маркери очищено."
 
 #: gui.py:422
 msgid "Are you sure you want to delete ALL markers?"
@@ -87,27 +87,11 @@ msgstr "Ви впевнені, що хочете видалити цей мар�
 
 #: gui.py:107
 msgid "Are you sure you want to delete this site and all its markers?"
-msgstr "Ви впевнені, що хочете видалити цей сайт та всі його маркери?"
+msgstr "Ви впевнені, що хочете видалити цей сайт і всі його маркери?"
 
 #: gui.py:525
 msgid "Auto Click"
-msgstr "Автоклік"
-
-#: browseModeGestures.py:64
-msgid "Auto click on next marker assigned to Alt+C"
-msgstr "Автоматично клікати на наступному маркері, призначеному для Alt+C"
-
-#: browseModeGestures.py:60
-msgid "Auto click on next marker assigned to Alt+J"
-msgstr "Автоматично клікати на наступному маркері, призначеному для Alt+J"
-
-#: browseModeGestures.py:68
-msgid "Auto click on next marker assigned to Alt+X"
-msgstr "Автоматично клікати на наступному маркері, призначеному для Alt+X"
-
-#: browseModeGestures.py:72
-msgid "Auto click on next marker assigned to Alt+Z"
-msgstr "Автоматично клікати на наступному маркері, призначеному для Alt+Z"
+msgstr "Авто клік"
 
 #: gui.py:187
 #: gui.py:251
@@ -169,12 +153,12 @@ msgstr "Відображуване ім'я:"
 #: gui.py:174
 #: gui.py:237
 msgid "Domain Only"
-msgstr "Тільки домен"
+msgstr "Лише домен"
 
 #: gui.py:180
 #: gui.py:243
 msgid "Don't enter form mode"
-msgstr "Не переходити у режим форми"
+msgstr "Не входити в режим форми"
 
 #: gui.py:220
 msgid "Edit Site Configuration"
@@ -200,7 +184,7 @@ msgstr "Точний збіг"
 
 #: gui.py:519
 msgid "Exact Paragraph (match whole paragraph)"
-msgstr "Точний абзац (відповідність усьому абзацу)"
+msgstr "Точний абзац (збіг цілого абзацу)"
 
 #: gui.py:112
 msgid "Failed to delete site."
@@ -209,12 +193,12 @@ msgstr "Не вдалося видалити сайт."
 #: gui.py:179
 #: gui.py:242
 msgid "Focus Mode:"
-msgstr "Режим фокусу:"
+msgstr "Режим фокуса:"
 
 #: gui.py:174
 #: gui.py:237
 msgid "Include Subdomains"
-msgstr "Включаючи піддомени"
+msgstr "Включно з піддоменами"
 
 #: gui.py:93
 #: gui.py:105
@@ -227,43 +211,11 @@ msgstr "Інформація"
 
 #: gui.py:525
 msgid "Jump"
-msgstr "Перейти"
+msgstr "Перехід"
 
 #: gui.py:575
 msgid "Jump Key:"
 msgstr "Клавіша переходу:"
-
-#: browseModeGestures.py:48
-msgid "Jump backward to previous marker D"
-msgstr "Перейти назад до попереднього маркера D"
-
-#: browseModeGestures.py:40
-msgid "Jump backward to previous marker F"
-msgstr "Перейти назад до попереднього маркера F"
-
-#: browseModeGestures.py:32
-msgid "Jump backward to previous marker J"
-msgstr "Перейти назад до попереднього маркера J"
-
-#: browseModeGestures.py:56
-msgid "Jump backward to previous marker Z"
-msgstr "Перейти назад до попереднього маркера Z"
-
-#: browseModeGestures.py:44
-msgid "Jump forward to next marker D"
-msgstr "Перейти вперед до наступного маркера D"
-
-#: browseModeGestures.py:36
-msgid "Jump forward to next marker F"
-msgstr "Перейти вперед до наступного маркера F"
-
-#: browseModeGestures.py:28
-msgid "Jump forward to next marker J"
-msgstr "Перейти вперед до наступного маркера J"
-
-#: browseModeGestures.py:52
-msgid "Jump forward to next marker Z"
-msgstr "Перейти вперед до наступного маркера Z"
 
 #: gui.py:288
 msgid "Marker Manager - "
@@ -275,12 +227,12 @@ msgstr "Властивості маркера"
 
 #: gui.py:320
 msgid "Marker found: {}"
-msgstr "Знайдено маркер: {}"
+msgstr "Маркер знайдено: {}"
 
 #: gui.py:173
 #: gui.py:236
 msgid "Match Type:"
-msgstr "Тип відповідності:"
+msgstr "Тип збігу:"
 
 #: gui.py:524
 msgid "Mode:"
@@ -288,7 +240,7 @@ msgstr "Режим:"
 
 #: gui.py:420
 msgid "No markers to clear."
-msgstr "Немає маркерів для видалення."
+msgstr "Немає маркерів для очищення."
 
 #: gui.py:180
 #: gui.py:243
@@ -297,15 +249,15 @@ msgstr "Звичайний"
 
 #: gui.py:555
 msgid "OK"
-msgstr "Гаразд"
+msgstr "OK"
 
 #: gui.py:550
 msgid "Offset (lines/paragraphs to move after match):"
-msgstr "Зсув (рядків/абзаців для переміщення після збігу):"
+msgstr "Зміщення (рядків/абзаців для переміщення після збігу):"
 
 #: gui.py:518
 msgid "Pattern Match:"
-msgstr "Збіг за шаблоном:"
+msgstr "Збіг шаблону:"
 
 #: gui.py:592
 msgid "Pattern cannot be empty."
@@ -318,17 +270,17 @@ msgstr "Шаблон:"
 #: gui.py:391
 #: gui.py:407
 msgid "Please select a marker first."
-msgstr "Будь ласка, спочатку виберіть маркер."
+msgstr "Спочатку виберіть маркер."
 
 #: gui.py:93
 #: gui.py:105
 #: gui.py:117
 msgid "Please select a site first."
-msgstr "Будь ласка, спочатку виберіть сайт."
+msgstr "Спочатку виберіть сайт."
 
 #: gui.py:519
 msgid "Regex Match (use regular expression)"
-msgstr "Збіг Regex (використовувати регулярний вираз)"
+msgstr "Регулярний вираз (використовуйте регулярний вираз)"
 
 #: gui.py:174
 #: gui.py:237
@@ -379,4 +331,4 @@ msgstr "Без назви"
 
 #: gui.py:540
 msgid "Viewport Only"
-msgstr "Тільки в межах екрана"
+msgstr "Лише область перегляду"
