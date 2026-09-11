@@ -1,5 +1,8 @@
-<div class="container">
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Complemento SiteMarker para NVDA</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -55,233 +58,284 @@ b {
     border-radius: 0 4px 4px 0;
 }
 </style>
+</head>
+<body>
 
-<!-- Header / Logo -->
+<div class="container">
+
 <div class="section">
-    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="Logo de NVDA" class="nvda-logo">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
     <h1>SiteMarker</h1>
-    <p style="text-align: center;">Marque su camino, salte con facilidad</p>
+    <br>
+    <p style="text-align: center;">Marca cualquier punto en cualquier sitio web y vuelve directamente a él con una sola pulsación de tecla.</p>
 </div>
-
+<br>
 <div class="section">
     <p style="text-align: center;"><b>autor:</b> chai chaimee</p>
     <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/SiteMarker</p>
 </div>
-
-<hr>
 <br>
 
-<!-- 1. Introducción -->
+<div class="note">
+<b>Nota:</b> El eslogan anterior y la URL de GitHub no están presentes en el código fuente y deben revisarse/confirmarse antes de la publicación.
+</div>
+
+<div class="section">
 <h2>Introducción</h2>
 <p>
-    SiteMarker es un complemento de NVDA que le permite guardar y acceder rápidamente a secciones utilizadas con frecuencia de cualquier sitio web.
-    Con solo unas pocas pulsaciones de teclas, puede marcar párrafos, botones o controles importantes y volver a ellos al instante –
-    no más desplazamientos interminables ni búsquedas de ese lugar específico.
+SiteMarker te permite colocar "marcadores" invisibles en fragmentos de texto específicos en cualquier página web, para luego saltar directamente a ellos
+o hacer que NVDA haga clic en ellos automáticamente. En lugar de usar flechas o la tecla Tabulador en una página larga cada vez que la visitas,
+pulsas una tecla rápida y aterrizas exactamente donde necesitas estar &mdash; un cuadro de chat, un botón "Cargar más", un titular específico,
+un botón "Omitir anuncio" o cualquier otra cosa que se repita o sea difícil de encontrar.
 </p>
 <br>
+<p>
+Los marcadores se organizan por sitio web. Cada sitio web que configures tiene su propio conjunto de marcadores, su propia regla de coincidencia de URL
+y su propio comportamiento de "modo foco". Todo se guarda automáticamente, por lo que una vez configurado un sitio, saltar y hacer clic funciona
+cada vez que regresas a esa página.
+</p>
+</div>
 
-<!-- 2. Características -->
+<div class="section">
+<h2>Teclas Rápidas</h2>
+
+<div class="hotkey">
+<b>NVDA+Windows+F12</b><br>
+Una pulsación : Añadir/editar marcador en la línea actual (abre el editor de marcadores si aún no coincide ningún marcador aquí, o el Administrador de marcadores con un nuevo marcador listo para ser añadido si este sitio no tiene ninguna configuración)<br>
+Doble pulsación : Abrir el Administrador de sitios (o el diálogo Añadir sitio si el sitio actual aún no ha sido configurado)<br>
+Triple pulsación (o más) : Abrir el Administrador de marcadores para el sitio actual
+</div>
+
+<div class="tap-explanation">
+Las pulsaciones se cuentan dentro de una ventana de 0.4 segundos entre sí. Pulsar la tecla rápida una vez y esperar brevemente activa la acción de una sola pulsación;
+pulsarla de nuevo rápidamente dentro de esa ventana avanza a la acción de doble pulsación, y así sucesivamente.
+</div>
+
+<div class="hotkey">
+<b>J</b> / <b>Shift+J</b><br>
+Saltar al siguiente / anterior marcador asignado a la tecla J
+</div>
+
+<div class="hotkey">
+<b>F</b> / <b>Shift+F</b><br>
+Saltar al siguiente / anterior marcador asignado a la tecla F
+</div>
+
+<div class="hotkey">
+<b>D</b> / <b>Shift+D</b><br>
+Saltar al siguiente / anterior marcador asignado a la tecla D
+</div>
+
+<div class="hotkey">
+<b>Z</b> / <b>Shift+Z</b><br>
+Saltar al siguiente / anterior marcador asignado a la tecla Z
+</div>
+
+<div class="hotkey">
+<b>Alt+J</b><br>
+Una pulsación : Hacer clic automáticamente en el elemento que coincide con el marcador asignado a Alt+J
+</div>
+
+<div class="hotkey">
+<b>Alt+C</b><br>
+Una pulsación : Hacer clic automáticamente en el elemento que coincide con el marcador asignado a Alt+C
+</div>
+
+<div class="hotkey">
+<b>Alt+X</b><br>
+Una pulsación : Hacer clic automáticamente en el elemento que coincide con el marcador asignado a Alt+X
+</div>
+
+<div class="hotkey">
+<b>Alt+Z</b><br>
+Una pulsación : Hacer clic automáticamente en el elemento que coincide con el marcador asignado a Alt+Z
+</div>
+
+<div class="note">
+Las teclas de salto (J, F, D, Z) y las teclas de auto-clic (Alt+J, Alt+C, Alt+X, Alt+Z) solo están activas mientras estás en modo exploración
+en un navegador compatible (Chrome, Edge, Firefox, Brave, Opera, Vivaldi o Thorium). En cualquier otra ventana, o cuando un sitio no tiene
+ningún marcador asignado a esa tecla, la tecla se pasa directamente para que escriba o se comporte normalmente.
+</div>
+</div>
+
+<div class="section">
 <h2>Características</h2>
-<ul>
-    <li>Coloque marcadores permanentes en cualquier elemento dentro de una página web.</li>
-    <li>Salte hacia adelante o hacia atrás a marcadores usando teclas dedicadas (<kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, <kbd>Z</kbd>).</li>
-    <li>Los marcadores de clic automático activan botones, enlaces o controles de formulario automáticamente.</li>
-    <li>Administre sitios y marcadores a través de un Administrador de Sitios y un Administrador de Marcadores simples.</li>
-    <li>Comparta sus configuraciones de marcadores entre dispositivos a través de archivos JSON portátiles.</li>
-    <li>Funciona con Chrome, Edge, Firefox, Brave y navegadores basados en WebKit.</li>
-    <li>Admite aplicaciones de una sola página (SPA) con detección automática de contenido.</li>
-    <li>Coincidencia flexible con patrones de texto, exactos o de expresión regular.</li>
-</ul>
-<br>
 
-<!-- 3. Beneficios -->
-<h2>Beneficios</h2>
-<ul>
-    <li><strong>Ahorre tiempo</strong> – elimine el desplazamiento repetitivo y la navegación con teclas de flecha.</li>
-    <li><strong>Reduzca la fatiga de las teclas</strong> – los saltos rápidos con una sola tecla mantienen sus manos cómodas.</li>
-    <li><strong>Aumente la productividad</strong> – cree accesos directos personalizados para sus tareas más frecuentes.</li>
-    <li><strong>Manténgase orientado</strong> – la retroalimentación hablada en cada salto le mantiene al tanto de su ubicación.</li>
-</ul>
-<br>
-
-<!-- 4. Por qué usarlo -->
-<h2>Por qué usarlo</h2>
+<div class="feature-item">
+<h3>Administrador de sitios</h3>
 <p>
-    Cada día, visita los mismos sitios web – leyendo, completando formularios, revisando paneles.
-    Moverse entre secciones clave puede ser tedioso y agotador.
-    SiteMarker resuelve esto permitiéndole colocar marcadores exactamente en los lugares que necesita.
-    No más búsquedas; simplemente marque, salte y concéntrese en lo que importa.
+Cada sitio web en el que quieras marcadores debe agregarse primero como un "sitio". Un sitio se define por:
 </p>
 <br>
-
-<!-- 5. Marketing / Cierre -->
-<h2>Comience hoy</h2>
 <p>
-    SiteMarker convierte cualquier sitio web en un patio de juegos de navegación personalizado.
-    Descárguelo ahora y experimente la libertad de acceso instantáneo a las partes de la web que más le importan.
-</p>
-
-<br>
-<hr>
-<br>
-
-<!-- 6. Primeros pasos – Paso a paso -->
-<h2>Primeros pasos – Paso a paso</h2>
-<br>
-
-<h3>1. Agregue su primer sitio</h3>
-<p>
-    Cuando abra un sitio web donde desee usar marcadores, pulse dos veces <kbd>Windows+F12</kbd>.
-    Aparecerá el diálogo <strong>Agregar Sitio</strong>.
-</p>
-<ul>
-    <li>
-        <strong>Nombre para mostrar:</strong> Asigne un nombre amigable a su sitio (ej. "Bandeja de entrada de Gmail" o "Noticias diarias").
-    </li>
-    <br>
-    <li>
-        <strong>Patrón de URL:</strong> Ingrese la dirección web (o parte de ella) que identifica este sitio.
-    </li>
-    <br>
-    <li>
-        <strong>Tipo de coincidencia:</strong> Elija cómo SiteMarker debe comparar la URL actual con su patrón.
-        <br><br>
-        <strong>Solo dominio</strong> – Coincide solo con el dominio principal (ej. patrón <code>google.com</code> funciona para <code>www.google.com</code> y <code>mail.google.com</code>, pero no para <code>google.co.uk</code>).
-        <br><br>
-        <strong>Incluir subdominios</strong> – La URL debe terminar con su patrón. Por ejemplo, el patrón <code>example.com</code> coincide con <code>sub.example.com</code> y <code>news.example.com</code>, pero no con <code>example.org</code>.
-        <br><br>
-        <strong>Contener subcadena</strong> – Coincide si su patrón aparece en cualquier parte de la URL completa (incluyendo ruta y consulta). Ejemplo: patrón <code>/search</code> coincide con <code>https://www.google.com/search?q=test</code>.
-        <br><br>
-        <strong>Coincidencia exacta</strong> – La URL completa debe ser exactamente igual a su patrón (sin distinción de mayúsculas/minúsculas). Use esto cuando desee marcadores solo para una página específica, como <code>https://example.com/dashboard</code>.
-        <br><br>
-        <strong>Expresión regular</strong> – Para usuarios avanzados. Escriba un patrón regex (ej. <code>https://.*\.example\.com/.*</code>) para coincidir con cualquier página bajo cualquier subdominio de <code>example.com</code>.
-    </li>
-</ul>
-<p>Haga clic en <strong>Guardar Sitio</strong>. Su sitio ahora está registrado y puede comenzar a colocar marcadores.</p>
-<br>
-
-<h3>2. Coloque su primer marcador</h3>
-<p>
-    Navegue hasta el párrafo, línea o botón exacto que desea recordar. Luego, <strong>pulse una vez</strong> <kbd>Windows+F12</kbd>. Se abrirá el diálogo <strong>Agregar Marcador</strong>.
-</p>
-<ul>
-    <li>
-        <strong>Patrón</strong> – SiteMarker completa automáticamente este campo con el texto que está actualmente en foco. Puede editarlo si es necesario. Este texto es lo que SiteMarker busca.
-    </li>
-    <br>
-    <li>
-        <strong>Coincidencia de patrón</strong> – Elija cómo se debe comparar el patrón:
-        <br><br>
-        <strong>Contiene texto</strong> – Encuentra el patrón en cualquier lugar dentro del párrafo (coincidencia parcial).
-        <br><br>
-        <strong>Párrafo exacto</strong> – El párrafo debe ser exactamente igual al patrón (coincidencia de texto completo).
-        <br><br>
-        <strong>Coincidencia regex</strong> – Use una expresión regular para coincidencias avanzadas.
-    </li>
-    <br>
-    <li>
-        <strong>Modo</strong> – Decida lo que hace este marcador:
-        <br><br>
-        <strong>Saltar</strong> – Cuando presiona la tecla de salto asignada, el cursor se mueve a este marcador. Puede asignar una de cuatro teclas de salto: <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> o <kbd>Z</kbd>.
-        Presione la tecla sola para saltar <strong>hacia adelante</strong> al siguiente marcador con esa tecla. Presione <kbd>Mayús</kbd>+tecla para saltar <strong>hacia atrás</strong>.
-        <br><br>
-        <strong>Clic automático</strong> – En lugar de solo mover el foco, SiteMarker hará automáticamente <strong>clic</strong> en el elemento cuando presione la tecla de clic asignada. Las teclas de clic disponibles son <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> y <kbd>Alt+Z</kbd>.
-    </li>
-    <br>
-    <li>
-        <strong>Nombre para mostrar</strong> – Asigne un nombre significativo a su marcador (ej. "Botón Enviar" o "Sección de Resumen").
-    </li>
-    <br>
-    <li>
-        <strong>Desplazamiento</strong> – Esto mueve la posición final del cursor en relación con el marcador encontrado. Ingrese un número entero (positivo o negativo) para desplazar la posición de llegada.
-        <br><br>
-        <strong>Número positivo</strong> (ej. <code>2</code>) mueve el cursor <em>hacia adelante</em> esa cantidad de párrafos después del marcador.
-        <br><br>
-        <strong>Número negativo</strong> (ej. <code>-1</code>) mueve el cursor <em>hacia atrás</em> esa cantidad de párrafos antes del marcador.
-        <br><br>
-        <strong>0</strong> (predeterminado) aterriza exactamente en el marcador mismo.
-    </li>
-</ul>
-<p>Haga clic en <strong>Aceptar</strong> – su marcador se guarda y está listo para usar.</p>
-<br>
-<hr>
-<br>
-
-<!-- 7. Salte y haga clic como un profesional -->
-<h2>Salte y haga clic como un profesional</h2>
-<p>
-    Una vez que tenga marcadores configurados, puede navegar por su sitio sin esfuerzo:
-</p>
-<ul>
-    <li>Presione <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> o <kbd>Z</kbd> (solos) para saltar <strong>hacia adelante</strong> al siguiente marcador asignado a esa tecla.</li>
-    <li>Presione <kbd>Mayús+J</kbd>, <kbd>Mayús+F</kbd>, <kbd>Mayús+D</kbd> o <kbd>Mayús+Z</kbd> para saltar <strong>hacia atrás</strong> al marcador anterior.</li>
-    <li>Para marcadores de clic automático, presione <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> o <kbd>Alt+Z</kbd> – el cursor encontrará el siguiente marcador coincidente y hará clic en el elemento objetivo automáticamente.</li>
-</ul>
-<p>
-    Cada salto lee el párrafo objetivo en voz alta y mueve el cursor de revisión de pantalla a esa posición, para que siempre sepa dónde está.
+<b>Nombre para mostrar</b> &mdash; un nombre amigable que se muestra en la lista del Administrador de sitios.<br>
+<b>Patrón de URL</b> &mdash; la dirección o texto de dominio que se compara con la página en la que te encuentras actualmente.<br>
+<b>Tipo de coincidencia</b> &mdash; cómo se compara el patrón con la URL real de la página:
 </p>
 <br>
-
-<!-- 8. Gestionando todo -->
-<h2>Gestionando todo</h2>
-<p>
-    Siempre puede pulsar dos veces <kbd>Windows+F12</kbd> para abrir el <strong>Administrador de Sitios</strong>. Desde allí puede:
-</p>
-<ul>
-    <li>Editar el nombre para mostrar, el patrón de URL o el tipo de coincidencia de un sitio.</li>
-    <li>Agregar, editar o eliminar marcadores para cualquier sitio.</li>
-    <li>Eliminar todos los marcadores de una vez.</li>
-    <li>Navegar de un lado a otro entre la lista de sitios y la lista de marcadores.</li>
-</ul>
-<p>
-    El <strong>Administrador de Marcadores</strong> (accesible desde el Administrador de Sitios) le ofrece una visión completa de todos los marcadores para el sitio actual, con opciones rápidas para editar o eliminar cada uno.
+<p style="padding-left:20px;">
+&bull; Solo dominio &mdash; el dominio de la página debe ser exactamente igual al patrón.<br>
+&bull; Incluir subdominios &mdash; el dominio debe ser igual al patrón o terminar con él (por lo que un patrón de "example.com" también coincide con "mail.example.com").<br>
+&bull; Contener subcadena &mdash; el patrón solo necesita aparecer en cualquier parte de la URL.<br>
+&bull; Coincidencia exacta &mdash; toda la URL debe coincidir exactamente con el patrón.<br>
+&bull; Expresión regular &mdash; el patrón se trata como una expresión regular y se busca en la URL.
 </p>
 <br>
-
-<!-- 9. Comparta sus marcadores -->
-<h2>Comparta sus marcadores</h2>
 <p>
-    Todas sus configuraciones de sitios y marcadores se almacenan en un simple <strong>archivo JSON</strong> para cada sitio. Estos archivos se encuentran en:
-</p>
-<pre>%APPDATA%\nvda\ChaiChaimee\SiteMarker\site\</pre>
-<p>
-    Puede copiar estos archivos <code>.json</code> a otra computadora o compartirlos con colegas. Simplemente colóquelos en la misma carpeta en la otra máquina, y SiteMarker reconocerá instantáneamente los sitios y marcadores – sin necesidad de configuración adicional. Esto facilita compartir configuraciones de navegación inteligentes entre equipos o dispositivos.
+<b>Modo Foco</b> &mdash; controla cómo se modifica el comportamiento normal del modo exploración/formularios de NVDA en este sitio:
 </p>
 <br>
-<hr>
-<br>
-
-<!-- 10. Capturas de pantalla -->
-<h2>Capturas de pantalla</h2>
-<p>
-    Aunque SiteMarker está completamente optimizado para el uso con lectores de pantalla, las siguientes capturas de pantalla se proporcionan
-    para maestros, entrenadores o colegas videntes que deseen ver la interfaz.
+<p style="padding-left:20px;">
+&bull; Normal &mdash; NVDA se comporta como de costumbre.<br>
+&bull; No entrar en modo formulario &mdash; cuando un control en este sitio recibe el foco real de Windows, se impide que NVDA cambie automáticamente al modo formulario para ese evento de foco (el modo exploración permanece activo).<br>
+&bull; Deshabilitar foco &mdash; el cambio entre modo exploración y foco impulsado por cambios reales de foco se suprime por completo en este sitio.
 </p>
-<div>
-    <img src="placeholder1.png" alt="Diálogo del Administrador de Sitios de SiteMarker que muestra una lista de sitios registrados y botones para agregar, editar o eliminar sitios." style="max-width:100%; margin-bottom:10px;">
-    <br>
-    <img src="placeholder2.png" alt="Diálogo del Administrador de Marcadores que muestra una lista de marcadores para el sitio actual, con opciones para agregar, editar o eliminar cada marcador." style="max-width:100%; margin-bottom:10px;">
-    <br>
-    <img src="placeholder3.png" alt="Diálogo de Propiedades del Marcador donde los usuarios pueden establecer el patrón, modo de coincidencia, acción (Saltar o Clic automático), tecla, nombre para mostrar y desplazamiento." style="max-width:100%;">
+<br>
+<p>
+Desde el Administrador de sitios puedes añadir, editar o eliminar un sitio, y saltar directamente al Administrador de marcadores de ese sitio. Pulsar
+Suprimir en un sitio seleccionado (o F2 para editar) funciona directamente desde la lista, y un menú contextual de clic derecho ofrece las mismas acciones.
+</p>
 </div>
-<br>
-<hr>
-<br>
 
-<!-- Donation & Footer -->
-<h2>Apóyeme</h2>
-<p>Si esta herramienta ha hecho su vida más fácil, considere financiar la próxima actualización con una pequeña donación.</p>
-<br>
+<div class="feature-item">
+<h3>Administrador de marcadores y Propiedades del marcador</h3>
 <p>
-    <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
-        <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Apóyeme">
-    </a>
+Cada sitio mantiene su propia lista de marcadores. Un marcador es una regla que le dice a SiteMarker "cuando el texto de esta página coincide
+con este patrón, esto es un hito". Cada marcador tiene:
 </p>
 <br>
-<p>Su apoyo significa mucho. Construyamos algo grandioso juntos.</p>
+<p>
+<b>Patrón</b> &mdash; el texto (o expresión regular) a buscar. Cuando abres el editor de marcadores desde la propia página
+(mediante la pulsación única de NVDA+Windows+F12), este campo se rellena previamente con tu selección actual, el párrafo actual bajo el cursor
+o el nombre/valor del control enfocado, lo que esté disponible primero.<br>
+<b>Coincidencia de patrón</b> &mdash; cómo se compara el patrón con cada párrafo de la página:
+</p>
 <br>
-<div class="footer-note">
-    <p>&copy; 2026 Chai Chaimee Complemento de NVDA Publicado bajo la Licencia Pública General de GNU.</p>
+<p style="padding-left:20px;">
+&bull; Contiene texto &mdash; coincide si el patrón aparece en cualquier lugar dentro del párrafo.<br>
+&bull; Párrafo exacto &mdash; coincide solo si todo el párrafo es exactamente igual al patrón.<br>
+&bull; Coincidencia de Regex &mdash; el patrón se trata como una expresión regular y se busca dentro del párrafo.
+</p>
+<br>
+<p>
+<b>Modo</b> &mdash; si este marcador es un marcador de <b>Salto</b> (mueve tu cursor/posición allí) o un marcador de <b>Auto-clic</b>
+(activa el elemento automáticamente).<br>
+<b>Tecla</b> &mdash; qué tecla rápida activa este marcador: J, F, D o Z para marcadores de salto; Alt+J, Alt+C, Alt+X o Alt+Z para marcadores de auto-clic.<br>
+<b>Alcance de búsqueda</b> &mdash; Documento completo busca en toda la página (cargando más contenido más abajo si es necesario);
+Solo área visible restringe la búsqueda aproximadamente al área actualmente visible de la página (unos 50 párrafos por encima y por debajo de tu cursor).<br>
+<b>Nombre para mostrar</b> &mdash; una etiqueta amigable que se muestra en la lista del Administrador de marcadores.<br>
+<b>Desplazamiento (Offset)</b> &mdash; cuántas líneas (equivalente a lo que movería una sola pulsación de flecha Arriba/Abajo) desviarse del párrafo
+coincidente antes de aterrizar, de -50 a +50. Esto es útil cuando el texto que puedes emparejar de manera fiable no es exactamente la línea en la que quieres terminar
+(por ejemplo, coincidir con el nombre del autor de una publicación pero querer aterrizar dos líneas más abajo, en el botón de respuesta de la publicación).
+</p>
+<br>
+<p>
+La lista del Administrador de marcadores te permite añadir, editar o eliminar un solo marcador, o borrar todos los marcadores del sitio a la vez. Suprimir
+y F2 para editar también funcionan directamente en el elemento de la lista seleccionado, y un menú contextual de clic derecho duplica estas acciones.
+Si abres la tecla rápida de múltiples pulsaciones en un párrafo que ya coincide con uno de los marcadores existentes del sitio, SiteMarker
+abre ese marcador directamente para su edición en lugar de ofrecer añadir uno nuevo.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Saltar a marcadores (J / F / D / Z)</h3>
+<p>
+Pulsar una tecla de salto escanea párrafo por párrafo, hacia adelante o hacia atrás desde tu posición actual, buscando cualquier marcador
+asignado a esa tecla. Tan pronto como se encuentra una coincidencia:
+</p>
+<br>
+<p style="padding-left:20px;">
+1. Si el marcador tiene un desplazamiento, SiteMarker se desplaza ese número de líneas desde el párrafo coincidente (o, si se establece un patrón de desplazamiento,
+sigue escaneando las líneas cercanas en busca de una que coincida con ese patrón en lugar de un recuento de líneas fijo) antes de aterrizar.<br>
+2. Si el desplazamiento te hiciera aterrizar en un párrafo vacío, SiteMarker sigue avanzando hasta llegar a texto que no esté vacío.<br>
+3. Tu cursor se mueve allí y NVDA anuncia el texto de destino.
+</p>
+<br>
+<p>
+Si la parte visible de la página se agota antes de encontrar una coincidencia (por ejemplo, una página de estilo "feed" interminable), SiteMarker
+envía automáticamente AvPág para cargar más contenido y continúa buscando, hasta 100 intentos de carga. Si no se encuentra nada
+después de todo eso, o después de 5 intentos seguidos que no agregaron contenido nuevo, oirás "No hay marcador siguiente" o "No hay marcador anterior".
+</p>
+<br>
+<p>
+SiteMarker evita volver a anunciar exactamente el mismo punto dos veces seguidas (algunas páginas repiten texto idéntico en varios lugares del árbol de accesibilidad subyacente)
+y omite las coincidencias que caen dentro de un campo editable o cuadro combinado, reintentando pasarlas.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Auto-clic (Alt+J / Alt+C / Alt+X / Alt+Z)</h3>
+<p>
+Pulsar una tecla de auto-clic escanea la página desde el principio en busca de un marcador asignado a esa tecla, aplica su desplazamiento de la misma manera
+que los marcadores de salto, y luego hace clic en el elemento correspondiente utilizando un mecanismo de respaldo de tres pasos para que incluso los botones tercos
+(como el botón "Omitir anuncio" de un sitio de video) seactiven de manera confiable:
+</p>
+<br>
+<p style="padding-left:20px;">
+1. Probar el propio comando de accesibilidad "realizar acción" del elemento.<br>
+2. Si no está disponible, intentar invocarlo mediante su patrón Invoke de UI Automation.<br>
+3. Si ambos fallan, mover el cursor del ratón sobre el elemento y simular un clic izquierdo físico.
+</p>
+<br>
+<p>
+Después de un clic exitoso, NVDA pronuncia el texto en el que se hizo clic y anuncia "Clic". En YouTube específicamente, si la URL de la página
+y el texto bajo el cursor no han cambiado poco después de hacer clic (una señal de que el clic no se registró, lo que puede ocurrir con un botón de omitir
+aún no totalmente interactivo), SiteMarker reintenta automáticamente el clic hasta 2 veces más. En otros sitios, este re-clic automático se omite, ya que un control
+de tipo conmutador puede tener éxito en el primer clic manteniendo un aspecto sin cambios, y volver a hacer clic simplemente lo desactivaría de nuevo.
+</p>
+<br>
+<p>
+Si no se encuentra ningún objetivo coincidente y enlazable al final de la página, SiteMarker reintenta automáticamente toda la búsqueda hasta 5 veces con una breve
+y creciente demora entre intentos (para capturar elementos, como el botón de omisión de un anuncio, que solo aparecen uno o dos segundos después de que se carga la página),
+antes de anunciar finalmente "No se encontró un objetivo para auto-clic".
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Recuperación automática de robo de foco</h3>
+<p>
+En algunas páginas, el desplazamiento automático de "cargar más" que realiza SiteMarker durante un análisis puede aterrizar accidentalmente el foco real del teclado
+en un campo editable o cuadro de búsqueda no relacionado en lugar de simplemente desplazar la página. Cuando esto ocurre durante un análisis activo, SiteMarker
+restaura automáticamente el foco de vuelta al documento para que tu búsqueda no se interrumpa. Si la misma página sigue robando el foco de vuelta al mismo campo
+sin importar cuántas veces se corrija, SiteMarker deja de intentar desplazarse más para ese análisis y simplemente termina la búsqueda con el contenido que ya se haya cargado.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Detección de cambios de página en segundo plano</h3>
+<p>
+SiteMarker vuelve a comprobar automáticamente los marcadores activos cada vez que cambias el foco, cada vez que el contenido de la página se actualiza
+y en un temporizador periódico (aproximadamente cada 2 segundos) mientras estás en una página de navegador. Esto mantiene tus marcadores actualizados en aplicaciones
+de una sola página y sitios de actualización dinámica sin que tengas que hacer nada manualmente.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Almacenamiento de datos por sitio</h3>
+<p>
+Todos tus sitios y sus marcadores se guardan automáticamente en tu carpeta de configuración de usuario de NVDA (bajo una carpeta SiteMarker) como un archivo por sitio,
+por lo que tu configuración se conserva entre sesiones de NVDA y no requiere ninguna conexión a Internet para funcionar.
+</p>
 </div>
 
 </div>
+
+<br><br>
+<h2>Apóyame</h2>
+    <p>Si esta herramienta te ha hecho la vida más fácil, considera impulsar la próxima actualización con una pequeña donación.</p>
+<br>
+<p>
+  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Apóyame">
+  </a>
+</p>
+<br>
+<p>Tu apoyo lo es todo. Construyamos algo genial juntos</p>
+<br>
+  <div class="footer-note">
+<p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GNU GPL</p>
+</div>
+
+</div> <!-- End container -->
+</body>
+</html>

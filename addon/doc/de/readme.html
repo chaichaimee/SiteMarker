@@ -1,5 +1,8 @@
-<div class="container">
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SiteMarker NVDA-Erweiterung</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -55,233 +58,284 @@ b {
     border-radius: 0 4px 4px 0;
 }
 </style>
+</head>
+<body>
 
-<!-- Header / Logo -->
+<div class="container">
+
 <div class="section">
     <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
     <h1>SiteMarker</h1>
-    <p style="text-align: center;">Markieren Sie Ihren Weg, springen Sie mit Leichtigkeit</p>
+    <br>
+    <p style="text-align: center;">Setzen Sie Lesezeichen an beliebige Stellen auf Webseiten und springen Sie mit einem einzigen Tastendruck dorthin zurück.</p>
 </div>
-
+<br>
 <div class="section">
     <p style="text-align: center;"><b>Autor:</b> chai chaimee</p>
     <p style="text-align: center;"><b>URL:</b> https://github.com/chaichaimee/SiteMarker</p>
 </div>
-
-<hr>
 <br>
 
-<!-- 1. Einleitung -->
-<h2>Einleitung</h2>
+<div class="note">
+<b>Hinweis:</b> Der obige Slogan und die GitHub-URL sind nicht im Quellcode enthalten und sollten vor der Veröffentlichung überprüft/bestätigt werden.
+</div>
+
+<div class="section">
+<h2>Einführung</h2>
 <p>
-    SiteMarker ist ein NVDA-Add-on, mit dem Sie häufig verwendete Abschnitte beliebiger Websites schnell speichern und aufrufen können.
-    Mit nur wenigen Tastendrücken können Sie wichtige Absätze, Schaltflächen oder Steuerelemente markieren und sofort zu ihnen zurückspringen –
-    kein endloses Scrollen oder Suchen nach einer bestimmten Stelle mehr.
+Mit SiteMarker können Sie unsichtbare „Markierungen“ auf bestimmten Textstellen jeder Webseite platzieren und später direkt dorthin springen,
+oder sie automatisch von NVDA anklicken lassen. Anstatt bei jedem Besuch einer langen Seite mit den Pfeiltasten oder der Tab-Taste durchzunavigieren,
+drücken Sie eine Tastenkombination und landen genau dort, wo Sie sein müssen &mdash; in einem Chat-Fenster, auf einer „Mehr laden“-Schaltfläche, einer bestimmten Überschrift,
+einer „Werbung überspringen“-Schaltfläche oder allem anderen, das sich wiederholt oder schwer zu finden ist.
 </p>
 <br>
+<p>
+Markierungen werden pro Website organisiert. Jede von Ihnen konfigurierte Website erhält ihren eigenen Satz von Markierungen, ihre eigene URL-Abgleichregel und
+ihr eigenes „Fokus-Modus“-Verhalten. Alles wird automatisch gespeichert, sodass nach der Einrichtung einer Website das Springen und Klicken bei jedem erneuten Besuch dieser Seite sofort funktioniert.
+</p>
+</div>
 
-<!-- 2. Funktionen -->
+<div class="section">
+<h2>Tastenkombinationen</h2>
+
+<div class="hotkey">
+<b>NVDA+Windows+F12</b><br>
+Einfachtippen : Markierung in der aktuellen Zeile hinzufügen/bearbeiten (öffnet den Markierungseditor, wenn hier noch keine Markierung übereinstimmt, oder den Markierungsmanager mit einer neuen Markierung, die hinzugefügt werden kann, wenn diese Website noch überhaupt keine Konfiguration hat)<br>
+Doppeltippen : Website-Manager öffnen (oder Dialogfeld „Website hinzufügen“, falls die aktuelle Website noch nicht konfiguriert wurde)<br>
+Dreifachtippen (oder mehr) : Markierungsmanager für die aktuelle Website öffnen
+</div>
+
+<div class="tap-explanation">
+Tipps werden innerhalb eines Fensters von 0,4 Sekunden gezielt gezählt. Wenn Sie die Tastenkombination einmal drücken und kurz warten, wird die
+Einfachtipp-Aktion ausgelöst; wenn Sie sie in diesem Zeitfenster schnell erneut drücken, wird zur Doppeltipp-Aktion gewechselt usw.
+</div>
+
+<div class="hotkey">
+<b>J</b> / <b>Shift+J</b><br>
+Zum nächsten / vorherigen der J-Taste zugewiesenen Marker springen
+</div>
+
+<div class="hotkey">
+<b>F</b> / <b>Shift+F</b><br>
+Zum nächsten / vorherigen der F-Taste zugewiesenen Marker springen
+</div>
+
+<div class="hotkey">
+<b>D</b> / <b>Shift+D</b><br>
+Zum nächsten / vorherigen der D-Taste zugewiesenen Marker springen
+</div>
+
+<div class="hotkey">
+<b>Z</b> / <b>Shift+Z</b><br>
+Zum nächsten / vorherigen der Z-Taste zugewiesenen Marker springen
+</div>
+
+<div class="hotkey">
+<b>Alt+J</b><br>
+Einfachtippen : Automatisches Anklicken des Elements, das der Alt+J zugewiesenen Markierung entspricht
+</div>
+
+<div class="hotkey">
+<b>Alt+C</b><br>
+Einfachtippen : Automatisches Anklicken des Elements, das der Alt+C zugewiesenen Markierung entspricht
+</div>
+
+<div class="hotkey">
+<b>Alt+X</b><br>
+Einfachtippen : Automatisches Anklicken des Elements, das der Alt+X zugewiesenen Markierung entspricht
+</div>
+
+<div class="hotkey">
+<b>Alt+Z</b><br>
+Einfachtippen : Automatisches Anklicken des Elements, das der Alt+Z zugewiesenen Markierung entspricht
+</div>
+
+<div class="note">
+Die Sprungtasten (J, F, D, Z) und Auto-Klick-Tasten (Alt+J, Alt+C, Alt+X, Alt+Z) sind nur aktiv, während Sie sich im Stöber-Modus
+eines unterstützten Browsers (Chrome, Edge, Firefox, Brave, Opera, Vivaldi oder Thorium) befinden. In jedem anderen Fenster oder wenn eine Website
+keine Markierung für diese Taste zugewiesen hat, wird die Taste direkt durchgereicht, sodass sie normal tippt oder sich wie gewohnt verhält.
+</div>
+</div>
+
+<div class="section">
 <h2>Funktionen</h2>
-<ul>
-    <li>Platzieren Sie permanente Markierungen auf jedem Element innerhalb einer Webseite.</li>
-    <li>Springen Sie mit dedizierten Tasten vorwärts oder rückwärts zu Markierungen (<kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd>, <kbd>Z</kbd>).</li>
-    <li>Auto‑Klick-Markierungen aktivieren automatisch Schaltflächen, Links oder Formularelemente.</li>
-    <li>Verwalten Sie Websites und Markierungen über einen einfachen Site-Manager und Marker-Manager.</li>
-    <li>Teilen Sie Ihre Markierungskonfigurationen über tragbare JSON-Dateien auf verschiedenen Geräten.</li>
-    <li>Funktioniert mit Chrome, Edge, Firefox, Brave und WebKit-basierten Browsern.</li>
-    <li>Unterstützt Single‑Page‑Anwendungen (SPA) mit automatischer Inhaltserkennung.</li>
-    <li>Flexible Übereinstimmung mit Text-, exakten oder regulären Ausdrucksmustern.</li>
-</ul>
-<br>
 
-<!-- 3. Vorteile -->
-<h2>Vorteile</h2>
-<ul>
-    <li><strong>Zeitsparen</strong> – vermeiden Sie wiederholtes Scrollen und Navigieren mit den Pfeiltasten.</li>
-    <li><strong>Reduzieren Sie die Tastaturbelastung</strong> – schnelle Sprünge mit einer Taste schonen Ihre Hände.</li>
-    <li><strong>Steigern Sie die Produktivität</strong> – erstellen Sie personalisierte Verknüpfungen für Ihre häufigsten Aufgaben.</li>
-    <li><strong>Behalten Sie die Orientierung</strong> – Sprachausgabe bei jedem Sprung gibt Rückmeldung über Ihre Position.</li>
-</ul>
-<br>
-
-<!-- 4. Warum es verwenden -->
-<h2>Warum es verwenden</h2>
+<div class="feature-item">
+<h3>Website-Manager</h3>
 <p>
-    Jeden Tag besuchen Sie dieselben Websites – lesen, füllen Formulare aus, prüfen Dashboards.
-    Die Navigation zwischen wichtigen Abschnitten kann mühsam und ermüdend sein.
-    SiteMarker löst dieses Problem, indem Sie Markierungen genau an den Stellen platzieren können, die Sie benötigen.
-    Kein Suchen mehr; einfach markieren, springen und sich auf das Wesentliche konzentrieren.
+Jede Website, auf der Sie Markierungen wünschen, muss zunächst als „Website“ hinzugefügt werden. Eine Website wird definiert durch:
 </p>
 <br>
-
-<!-- 5. Marketing / Abschluss -->
-<h2>Jetzt loslegen</h2>
 <p>
-    SiteMarker verwandelt jede Website in einen personalisierten Navigationsspielplatz.
-    Laden Sie es jetzt herunter und erleben Sie die Freiheit des sofortigen Zugriffs auf die Teile des Internets, die Ihnen am wichtigsten sind.
-</p>
-
-<br>
-<hr>
-<br>
-
-<!-- 6. Erste Schritte – Schritt für Schritt -->
-<h2>Erste Schritte – Schritt für Schritt</h2>
-<br>
-
-<h3>1. Fügen Sie Ihre erste Website hinzu</h3>
-<p>
-    Wenn Sie eine Website öffnen, auf der Sie Markierungen verwenden möchten, tippen Sie doppelt auf <kbd>Windows+F12</kbd>.
-    Der Dialog <strong>Website hinzufügen</strong> wird angezeigt.
-</p>
-<ul>
-    <li>
-        <strong>Anzeigename:</strong> Geben Sie Ihrer Website einen aussagekräftigen Namen (z.B. "Gmail-Posteingang" oder "Tägliche Nachrichten").
-    </li>
-    <br>
-    <li>
-        <strong>URL-Muster:</strong> Geben Sie die Webadresse (oder einen Teil davon) ein, die diese Website identifiziert.
-    </li>
-    <br>
-    <li>
-        <strong>Übereinstimmungstyp:</strong> Wählen Sie, wie SiteMarker die aktuelle URL mit Ihrem Muster abgleichen soll.
-        <br><br>
-        <strong>Nur Domain</strong> – Gleicht nur die Hauptdomain ab (z.B. Muster <code>google.com</code> funktioniert für <code>www.google.com</code> und <code>mail.google.com</code>, aber nicht für <code>google.co.uk</code>).
-        <br><br>
-        <strong>Subdomains einschließen</strong> – Die URL muss mit Ihrem Muster enden. Beispiel: Muster <code>example.com</code> gleicht <code>sub.example.com</code> und <code>news.example.com</code> ab, aber nicht <code>example.org</code>.
-        <br><br>
-        <strong>Teilstring enthalten</strong> – Gleicht ab, wenn Ihr Muster irgendwo in der vollständigen URL (einschließlich Pfad und Abfrage) vorkommt. Beispiel: Muster <code>/search</code> gleicht <code>https://www.google.com/search?q=test</code> ab.
-        <br><br>
-        <strong>Exakte Übereinstimmung</strong> – Die gesamte URL muss genau Ihrem Muster entsprechen (Groß-/Kleinschreibung wird ignoriert). Verwenden Sie dies, wenn Sie Markierungen nur für eine bestimmte Seite wünschen, wie <code>https://example.com/dashboard</code>.
-        <br><br>
-        <strong>Regulärer Ausdruck</strong> – Für fortgeschrittene Benutzer. Schreiben Sie ein Regex-Muster (z.B. <code>https://.*\.example\.com/.*</code>), um jede Seite unter jeder Subdomain von <code>example.com</code> abzugleichen.
-    </li>
-</ul>
-<p>Klicken Sie auf <strong>Website speichern</strong>. Ihre Website ist nun registriert und Sie können mit dem Platzieren von Markierungen beginnen.</p>
-<br>
-
-<h3>2. Platzieren Sie Ihre erste Markierung</h3>
-<p>
-    Navigieren Sie zum genauen Absatz, zur Zeile oder Schaltfläche, die Sie sich merken möchten. Tippen Sie dann <strong>einmal</strong> auf <kbd>Windows+F12</kbd>. Der Dialog <strong>Markierung hinzufügen</strong> wird geöffnet.
-</p>
-<ul>
-    <li>
-        <strong>Muster</strong> – SiteMarker füllt dieses Feld automatisch mit dem Text, der sich gerade im Fokus befindet. Sie können es bei Bedarf bearbeiten. Dieser Text wird von SiteMarker durchsucht.
-    </li>
-    <br>
-    <li>
-        <strong>Musterabgleich</strong> – Wählen Sie, wie das Muster verglichen werden soll:
-        <br><br>
-        <strong>Enthält Text</strong> – Findet das Muster irgendwo innerhalb des Absatzes (teilweise Übereinstimmung).
-        <br><br>
-        <strong>Exakter Absatz</strong> – Der Absatz muss exakt mit dem Muster übereinstimmen (vollständige Textübereinstimmung).
-        <br><br>
-        <strong>Regex-Abgleich</strong> – Verwenden Sie einen regulären Ausdruck für fortgeschrittene Abgleiche.
-    </li>
-    <br>
-    <li>
-        <strong>Modus</strong> – Legen Sie fest, was diese Markierung tut:
-        <br><br>
-        <strong>Springen</strong> – Wenn Sie die zugewiesene Sprungtaste drücken, bewegt sich der Cursor zu dieser Markierung. Sie können eine von vier Sprungtasten zuweisen: <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> oder <kbd>Z</kbd>.
-        Drücken Sie die Taste allein, um <strong>vorwärts</strong> zur nächsten Markierung mit dieser Taste zu springen. Drücken Sie <kbd>Umschalt</kbd>+Taste, um <strong>rückwärts</strong> zu springen.
-        <br><br>
-        <strong>Auto-Klick</strong> – Anstatt nur den Fokus zu verschieben, führt SiteMarker automatisch einen <strong>Klick</strong> auf dem Element aus, wenn Sie die zugewiesene Klicktaste drücken. Die verfügbaren Klicktasten sind <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> und <kbd>Alt+Z</kbd>.
-    </li>
-    <br>
-    <li>
-        <strong>Anzeigename</strong> – Geben Sie Ihrer Markierung einen aussagekräftigen Namen (z.B. "Senden-Button" oder "Zusammenfassungsbereich").
-    </li>
-    <br>
-    <li>
-        <strong>Versatz</strong> – Dies verschiebt die endgültige Cursorposition relativ zur gefundenen Markierung. Geben Sie eine ganze Zahl (positiv oder negativ) ein, um die Landeposition zu verschieben.
-        <br><br>
-        <strong>Positive Zahl</strong> (z.B. <code>2</code>) bewegt den Cursor <em>vorwärts</em> um diese Anzahl von Absätzen nach der Markierung.
-        <br><br>
-        <strong>Negative Zahl</strong> (z.B. <code>-1</code>) bewegt den Cursor <em>rückwärts</em> um diese Anzahl von Absätzen vor der Markierung.
-        <br><br>
-        <strong>0</strong> (Standard) landet genau auf der Markierung selbst.
-    </li>
-</ul>
-<p>Klicken Sie auf <strong>OK</strong> – Ihre Markierung wird gespeichert und ist einsatzbereit.</p>
-<br>
-<hr>
-<br>
-
-<!-- 7. Springen und Klicken wie ein Profi -->
-<h2>Springen und Klicken wie ein Profi</h2>
-<p>
-    Sobald Sie Markierungen eingerichtet haben, können Sie mühelos auf Ihrer Website navigieren:
-</p>
-<ul>
-    <li>Drücken Sie <kbd>J</kbd>, <kbd>F</kbd>, <kbd>D</kbd> oder <kbd>Z</kbd> (allein), um <strong>vorwärts</strong> zur nächsten Markierung zu springen, die dieser Taste zugewiesen ist.</li>
-    <li>Drücken Sie <kbd>Umschalt+J</kbd>, <kbd>Umschalt+F</kbd>, <kbd>Umschalt+D</kbd> oder <kbd>Umschalt+Z</kbd>, um <strong>rückwärts</strong> zur vorherigen Markierung zu springen.</li>
-    <li>Für Auto‑Klick-Markierungen drücken Sie <kbd>Alt+J</kbd>, <kbd>Alt+C</kbd>, <kbd>Alt+X</kbd> oder <kbd>Alt+Z</kbd> – der Cursor findet die nächste passende Markierung und klickt automatisch auf das Zielelement.</li>
-</ul>
-<p>
-    Jeder Sprung spricht den Zielabsatz vor und bewegt den Bildschirmüberprüfungs-Cursor an diese Position, sodass Sie immer wissen, wo Sie sich befinden.
+<b>Anzeigename</b> &mdash; ein benutzerfreundlicher Name, der in der Liste des Website-Managers angezeigt wird.<br>
+<b>URL-Muster</b> &mdash; die Adresse oder der Domain-Text, der mit der Seite abgeglichen wird, auf der Sie sich gerade befinden.<br>
+<b>Übereinstimmungstyp</b> &mdash; wie das Muster mit der tatsächlichen URL der Seite verglichen wird:
 </p>
 <br>
-
-<!-- 8. Alles verwalten -->
-<h2>Alles verwalten</h2>
-<p>
-    Sie können jederzeit doppelt auf <kbd>Windows+F12</kbd> tippen, um den <strong>Site-Manager</strong> zu öffnen. Dort können Sie:
-</p>
-<ul>
-    <li>Den Anzeigenamen, das URL-Muster oder den Übereinstimmungstyp einer Website bearbeiten.</li>
-    <li>Markierungen für jede Website hinzufügen, bearbeiten oder löschen.</li>
-    <li>Alle Markierungen auf einmal löschen.</li>
-    <li>Zwischen der Website-Liste und der Markierungsliste hin- und hernavigieren.</li>
-</ul>
-<p>
-    Der <strong>Marker-Manager</strong> (vom Site-Manager aus zugänglich) bietet Ihnen einen vollständigen Überblick über alle Markierungen für die aktuelle Website mit schnellen Optionen zum Bearbeiten oder Löschen jeder einzelnen.
+<p style="padding-left:20px;">
+&bull; Nur Domain &mdash; die Domain der Seite muss genau dem Muster entsprechen.<br>
+&bull; Unterdomains einschließen &mdash; die Domain muss dem Muster entsprechen oder darauf enden (sodass ein Muster wie „example.com“ auch auf „mail.example.com“ passt).<br>
+&bull; Teilzeichenfolge enthalten &mdash; das Muster muss lediglich irgendwo in der URL vorkommen.<br>
+&bull; Exakte Übereinstimmung &mdash; die gesamte URL muss genau dem Muster entsprechen.<br>
+&bull; Regulärer Ausdruck &mdash; das Muster wird als regulärer Ausdruck behandelt und in der URL gesucht.
 </p>
 <br>
-
-<!-- 9. Markierungen teilen -->
-<h2>Markierungen teilen</h2>
 <p>
-    Alle Ihre Website- und Markierungskonfigurationen werden in einer einfachen <strong>JSON-Datei</strong> für jede Website gespeichert. Diese Dateien befinden sich in:
-</p>
-<pre>%APPDATA%\nvda\ChaiChaimee\SiteMarker\site\</pre>
-<p>
-    Sie können diese <code>.json</code>-Dateien auf einen anderen Computer kopieren oder mit Kollegen teilen. Legen Sie sie einfach in denselben Ordner auf dem anderen Gerät, und SiteMarker erkennt sofort die Websites und Markierungen – keine zusätzliche Einrichtung erforderlich. Dies erleichtert das Teilen intelligenter Navigationssetups zwischen Teams oder Geräten.
+<b>Fokus-Modus</b> &mdash; steuert, wie das normale Fokus-/Formularmodus-Verhalten von NVDA auf dieser Website geändert wird:
 </p>
 <br>
-<hr>
-<br>
-
-<!-- 10. Screenshots -->
-<h2>Screenshots</h2>
-<p>
-    SiteMarker ist zwar vollständig für die Nutzung mit Screenreadern optimiert, die folgenden Screenshots werden jedoch
-    für sehende Lehrer, Trainer oder Kollegen bereitgestellt, die die Oberfläche sehen möchten.
+<p style="padding-left:20px;">
+&bull; Normal &mdash; NVDA verhält sich wie gewohnt.<br>
+&bull; Nicht in den Formularmodus wechseln &mdash; wenn ein Steuerelement auf dieser Website den echten Windows-Fokus erhält, wird NVDA daran gehindert, für dieses Fokusereignis automatisch in den Formularmodus zu wechseln (der Stöber-Modus bleibt aktiv).<br>
+&bull; Fokus deaktivieren &mdash; das durch echte Fokusänderungen gesteuerte Umschalten zwischen Stöber- und Fokus-Modus wird auf dieser Website vollständig unterdrückt.
 </p>
-<div>
-    <img src="placeholder1.png" alt="SiteMarker Site Manager-Dialog mit einer Liste registrierter Websites und Schaltflächen zum Hinzufügen, Bearbeiten oder Löschen von Websites." style="max-width:100%; margin-bottom:10px;">
-    <br>
-    <img src="placeholder2.png" alt="Marker Manager-Dialog mit einer Liste von Markierungen für die aktuelle Website, mit Optionen zum Hinzufügen, Bearbeiten oder Löschen jeder Markierung." style="max-width:100%; margin-bottom:10px;">
-    <br>
-    <img src="placeholder3.png" alt="Marker-Eigenschaften-Dialog, in dem Benutzer Muster, Abgleichsmodus, Aktion (Springen oder Auto-Klick), Tastenkombination, Anzeigenamen und Versatz festlegen können." style="max-width:100%;">
+<br>
+<p>
+Im Website-Manager können Sie eine Website hinzufügen, bearbeiten oder löschen und direkt in den Markierungsmanager dieser Website wechseln. Das Drücken von
+Entf auf einer ausgewählten Website (oder F2 zum Bearbeiten) funktioniert direkt in der Liste, und ein Rechtsklick-Kontextmenü bietet dieselben Aktionen.
+</p>
 </div>
-<br>
-<hr>
-<br>
 
-<!-- Donation & Footer -->
+<div class="feature-item">
+<h3>Markierungsmanager und Markierungseigenschaften</h3>
+<p>
+Jede Website verwaltet ihre eigene Liste von Markierungen. Eine Markierung ist eine Regel, die SiteMarker sagt: „Wenn der Text auf dieser Seite
+dieses Muster erfüllt, ist dies ein Orientierungspunkt.“ Jede Markierung besitzt:
+</p>
+<br>
+<p>
+<b>Muster</b> &mdash; der zu suchende Text (oder reguläre Ausdruck). Wenn Sie den Markierungseditor direkt von der Seite aus öffnen
+(über das Einfachtippen von NVDA+Windows+F12), wird dieses Feld automatisch mit Ihrer aktuellen Auswahl, dem aktuellen Absatz unter dem Cursor
+oder dem Namen/Wert des fokussierten Steuerelements vorausgefüllt, je nachdem, was zuerst verfügbar ist.<br>
+<b>Musterübereinstimmung</b> &mdash; wie das Muster mit jedem Absatz auf der Seite verglichen wird:
+</p>
+<br>
+<p style="padding-left:20px;">
+&bull; Text enthalten &mdash; stimmt überein, wenn das Muster irgendwo im Absatz vorkommt.<br>
+&bull; Exakter Absatz &mdash; stimmt nur überein, wenn der gesamte Absatz genau dem Muster entspricht.<br>
+&bull; Regex-Übereinstimmung &mdash; das Muster wird als regulärer Ausdruck behandelt und innerhalb des Absatzes gesucht.
+</p>
+<br>
+<p>
+<b>Modus</b> &mdash; ob diese Markierung ein <b>Sprungmarker</b> (verschiebt Ihren Cursor/Einfügemarke dorthin) oder ein <b>Auto-Klick</b>-Marker
+(aktiviert das Element automatisch) ist.<br>
+<b>Taste</b> &mdash; welche Tastenkombination diesen Marker auslöst: J, F, D oder Z für Sprungmarker; Alt+J, Alt+C, Alt+X oder Alt+Z für Auto-Klick-Marker.<br>
+<b>Suchbereich</b> &mdash; Gesamtes Dokument durchsucht die gesamte Seite (und lädt bei Bedarf weiteren Inhalt nach);
+Nur Ansichtsfenster schränkt die Suche grob auf den aktuell sichtbaren Bereich der Seite ein (ca. 50 Absätze über und unter Ihrem Cursor).<br>
+<b>Anzeigename</b> &mdash; ein benutzerfreundliches Etikett, das in der Liste des Markierungsmanagers angezeigt wird.<br>
+<b>Versatz</b> &mdash; wie viele Zeilen (entsprechend einem einmaligen Drücken der Pfeiltaste Nach-oben/Nach-unten) vom übereinstimmenden Absatz entfernt
+landen soll, von -50 bis +50. Dies ist nützlich, wenn der Text, den Sie zuverlässig abgleichen können, nicht genau die Zeile ist, auf der Sie landen möchten
+(z. B. wenn Sie den Namen des Autors eines Beitrags abgleichen, aber zwei Zeilen tiefer auf dem Antworten-Button des Beitrags landen möchten).
+</p>
+<br>
+<p>
+In der Liste des Markierungsmanagers können Sie eine einzelne Markierung hinzufügen, bearbeiten oder löschen oder alle Markierungen für diese Website auf einmal löschen.
+Entf und F2 zum Bearbeiten funktionieren ebenfalls direkt auf dem ausgewählten Listenelement, und ein Kontextmenü per Rechtsklick dupliziert diese Aktionen.
+Wenn Sie die Mehrfachtipp-Tastenkombination auf einem Absatz öffnen, der bereits mit einer der vorhandenen Markierungen der Website übereinstimmt, öffnet SiteMarker
+diese Markierung direkt zur Bearbeitung, anstatt anzubieten, eine neue hinzuzufügen.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Zu Markierungen springen (J / F / D / Z)</h3>
+<p>
+Das Drücken einer Sprungtaste durchsucht Absatz für Absatz, vorwärts oder rückwärts von Ihrer aktuellen Position aus, nach Markierungen, die dieser Taste
+zugewiesen sind. Sobald eine Übereinstimmung gefunden wird:
+</p>
+<br>
+<p style="padding-left:20px;">
+1. Wenn die Markierung einen Versatz hat, bewegt SiteMarker sich entsprechend viele Zeilen von dem übereinstimmenden Absatz weg (oder sucht, falls ein Versatzmuster
+festgelegt ist, nach nahegelegenen Zeilen, die diesem Muster entsprechen, anstatt eine feste Zeilenanzahl zu verwenden), bevor sie landet.<br>
+2. Wenn der Versatz Sie auf einem leeren Absatz landen lassen würde, geht SiteMarker so lange weiter vorwärts, bis er auf nicht-leeren Text stößt.<br>
+3. Ihr Cursor wird dorthin bewegt und NVDA spricht den Zieltext aus.
+</p>
+<br>
+<p>
+Wenn der sichtbare Teil der Seite erschöpft ist, bevor eine Übereinstimmung gefunden wird (z. B. bei einer endlosen „Feed“-ähnlichen Seite), sendet SiteMarker
+automatisch Bild-Ab, um weiteren Inhalt zu laden, und setzt die Suche bis zu 100 Mal fort. Wenn danach oder nach 5 aufeinanderfolgenden Versuchen ohne neue Inhalte
+immer noch nichts gefunden wurde, hören Sie „Kein nächster Marker“ oder „Kein vorheriger Marker“.
+</p>
+<br>
+<p>
+SiteMarker vermeidet es, genau denselben Punkt zweimal hintereinander anzukündigen (einige Seiten wiederholen identischen Text an mehreren Stellen im zugrundeliegenden
+Barrierefreiheitsbaum) und überspringt Übereinstimmungen, die in einem editierbaren Feld oder Kombinationsfeld landen, indem es darüber hinwegspringt.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Auto-Klick (Alt+J / Alt+C / Alt+X / Alt+Z)</h3>
+<p>
+Das Drücken einer Auto-Klick-Taste durchsucht die Seite von Anfang an nach einer diesem Schlüssel zugewiesenen Markierung, wendet den Versatz auf dieselbe Weise
+wie Sprungmarkierungen an und klickt dann mithilfe eines dreistufigen Fallbacks auf das übereinstimmende Element, sodass selbst hartnäckige Schaltflächen
+(wie die „Werbung überspringen“-Schaltfläche einer Videoseite) zuverlässig aktiviert werden:
+</p>
+<br>
+<p style="padding-left:20px;">
+1. Versuchen Sie den barrierefreien „Aktion ausführen“-Befehl des Elements.<br>
+2. Wenn dieser nicht verfügbar ist, versuchen Sie ihn über das UI Automation Invoke-Muster aufzurufen.<br>
+3. Wenn beides fehlschlägt, bewegen Sie den Mauszeiger über das Element und simulieren Sie einen physischen Linksklick.
+</p>
+<br>
+<p>
+Nach einem erfolgreichen Klick spricht NVDA den angeklickten Text aus und verkündet „Angeklickt“. Insbesondere auf YouTube versucht SiteMarker den Klick
+automatisch bis zu 2 weitere Male, falls sich die Seiten-URL und der Text unter dem Cursor kurz nach dem Klick nicht geändert haben (ein Zeichen dafür, dass der Klick
+nicht registriert wurde, was bei einer noch nicht voll interaktiven Überspringen-Schaltfläche passieren kann). Auf anderen Websites wird dieser automatische
+Erneute-Klick übersprungen, da ein Steuerelement im Umschaltstil beim ersten Klick erfolgreich sein kann, während es unverändert aussieht, und ein erneutes Klicken
+es einfach wieder ausschalten würde.
+</p>
+<br>
+<p>
+Wenn bis zum Ende der Seite kein übereinstimmendes, anklickbares Ziel gefunden wird, wiederholt SiteMarker die gesamte Suche automatisch bis zu 5 Mal mit einer kurzen,
+ansteigenden Verzögerung zwischen den Versuchen (um Elemente wie die Überspringen-Schaltfläche einer Anzeige abzufangen, die erst ein oder zwei Sekunden nach dem Laden
+der Seite erscheinen), bevor schließlich „Kein Auto-Klick-Ziel gefunden“ angesagt wird.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Automatische Wiederherstellung bei Fokus-Diebstahl</h3>
+<p>
+Auf einigen Seiten kann das automatische „Mehr laden“-Scrollen, das SiteMarker während eines Suchlaufs durchführt, versehentlich den echten Tastaturfokus auf ein
+unabhängiges editierbares Feld oder Suchfeld lenken, anstatt nur die Seite zu scrollen. Wenn dies während eines aktiven Suchlaufs passiert, stellt SiteMarker den Fokus
+automatisch wieder auf das Dokument her, damit Ihre Suche nicht unterbrochen wird. Wenn dieselbe Seite den Fokus ungeachtet der Korrekturen immer wieder auf dasselbe
+Feld zieht, bricht SiteMarker den Scrollvorgang für diesen Suchlauf ab und beendet die Suche einfach mit den bereits geladenen Inhalten.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Hintergrunderkennung von Seitenänderungen</h3>
+<p>
+SiteMarker überprüft aktive Markierungen automatisch bei jedem Fokuswechsel, bei Aktualisierungen des Seiteninhalts und in einem periodischen Timer
+(ca. alle 2 Sekunden), während Sie sich auf einer Browserseite befinden. Dadurch bleiben Ihre Markierungen auf Single-Page-Apps und dynamisch aktualisierten Websites
+aktuell, ohne dass Sie etwas manuell tun müssen.
+</p>
+</div>
+
+<div class="feature-item">
+<h3>Website-spezifische Datenspeicherung</h3>
+<p>
+Alle Ihre Websites und deren Markierungen werden automatisch in Ihrem NVDA-Benutzerkonfigurationsordner (unter einem SiteMarker-Ordner) als eine Datei pro Website
+gespeichert, sodass Ihre Einrichtung zwischen NVDA-Sitzungen erhalten bleibt und für die Funktion keine Internetverbindung erforderlich ist.
+</p>
+</div>
+
+</div>
+
+<br><br>
 <h2>Unterstützen Sie mich</h2>
-<p>Wenn dieses Tool Ihr Leben erleichtert hat, denken Sie darüber nach, das nächste Update mit einer kleinen Spende zu unterstützen.</p>
+    <p>Wenn dieses Tool Ihr Leben erleichtert hat, erwägen Sie bitte, das nächste Update mit einer kleinen Spende zu unterstützen.</p>
 <br>
 <p>
-    <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
-        <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Unterstützen Sie mich">
-    </a>
+  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Unterstützen Sie mich">
+  </a>
 </p>
 <br>
-<p>Ihre Unterstützung bedeutet mir viel. Lassen Sie uns gemeinsam etwas Großartiges aufbauen.</p>
+<p>Ihre Unterstützung bedeutet mir alles. Lassen Sie uns gemeinsam etwas Großartiges erschaffen</p>
 <br>
-<div class="footer-note">
-    <p>&copy; 2026 Chai Chaimee NVDA-Add-on Veröffentlicht unter der GNU General Public License.</p>
+  <div class="footer-note">
+<p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GNU GPL</p>
 </div>
 
-</div>
+</div> <!-- End container -->
+</body>
+</html>

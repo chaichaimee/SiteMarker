@@ -24,3 +24,5 @@ def registerGestures(plugin):
 	# gesture handling. It has been removed; this function is now an intentional
 	# no-op kept only so existing callers/imports keep working.
 	return
+
+

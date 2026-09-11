@@ -20,6 +20,16 @@ class MarkerEngine:
 		self._ensureDirectoryStructure()
 		self._siteFileNames = self._scanSiteFiles()
 		self.siteCache = {}
+		self._preloadAllSiteConfigs()
+
+	def _preloadAllSiteConfigs(self):
+		# Done once here, at plugin construction (i.e. at NVDA/add-on startup, never
+		# from inside an event hook), so that every getSiteConfig() call made later
+		# from refreshActiveLayout() -- which does run from event hooks on every focus
+		# change -- hits this in-memory cache instead of opening and parsing a JSON
+		# file on the main thread.
+		for siteName in self.getAllSiteNames():
+			self.getSiteConfig(siteName)
 
 	def _ensureDirectoryStructure(self):
 		try:
@@ -76,8 +86,10 @@ class MarkerEngine:
 				json.dump(siteConfig, f, ensure_ascii=False, indent=4)
 			if siteName not in [name[:-5] for name in self._siteFileNames]:
 				self._siteFileNames.append(f"{siteName}.json")
+			return True
 		except Exception as e:
 			log.error(f"Failed to save site {siteName}: {e}")
+			return False
 
 	def deleteSiteConfiguration(self, siteName):
 		if siteName in self.siteCache:
@@ -205,3 +217,5 @@ class MarkerEngine:
 	def cleanUp(self):
 		self.siteCache.clear()
 		self._build_composite_regex.cache_clear()
+
+

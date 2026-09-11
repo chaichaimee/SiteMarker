@@ -7,6 +7,7 @@ import re
 import api
 import textInfos
 import tones
+import logHandler
 
 addonHandler.initTranslation()
 
@@ -81,11 +82,21 @@ class SiteManagerDialog(wx.Dialog):
 		return self.siteNames[index]
 
 	def onAddSite(self, event):
-		dialogObj = AddSiteDialog(self, self.engine, self.currentUrl)
-		dialogObj.Raise()
-		if dialogObj.ShowModal() == wx.ID_OK:
-			self.loadSiteList()
-		dialogObj.Destroy()
+		dialogObj = None
+		try:
+			dialogObj = AddSiteDialog(self, self.engine, self.currentUrl)
+			dialogObj.Raise()
+			if dialogObj.ShowModal() == wx.ID_OK:
+				self.loadSiteList()
+		except Exception as e:
+			logHandler.log.error(f"SiteMarker: Add Site dialog error: {e}")
+			wx.MessageBox(_("Could not open the Add Site dialog."), _("Error"), wx.OK | wx.ICON_ERROR)
+		finally:
+			if dialogObj:
+				try:
+					dialogObj.Destroy()
+				except RuntimeError:
+					pass
 
 	def onEditSite(self, event):
 		siteName = self.getSelectedSiteName()
@@ -93,11 +104,21 @@ class SiteManagerDialog(wx.Dialog):
 			wx.MessageBox(_("Please select a site first."), _("Information"), wx.OK | wx.ICON_INFORMATION)
 			return
 		siteConfig = self.engine.getSiteConfig(siteName)
-		dialogObj = EditSiteDialog(self, self.engine, siteName, siteConfig)
-		dialogObj.Raise()
-		if dialogObj.ShowModal() == wx.ID_OK:
-			self.loadSiteList()
-		dialogObj.Destroy()
+		dialogObj = None
+		try:
+			dialogObj = EditSiteDialog(self, self.engine, siteName, siteConfig)
+			dialogObj.Raise()
+			if dialogObj.ShowModal() == wx.ID_OK:
+				self.loadSiteList()
+		except Exception as e:
+			logHandler.log.error(f"SiteMarker: Edit Site dialog error: {e}")
+			wx.MessageBox(_("Could not open the Edit Site dialog."), _("Error"), wx.OK | wx.ICON_ERROR)
+		finally:
+			if dialogObj:
+				try:
+					dialogObj.Destroy()
+				except RuntimeError:
+					pass
 
 	def onDeleteSite(self, event):
 		siteName = self.getSelectedSiteName()
@@ -117,11 +138,21 @@ class SiteManagerDialog(wx.Dialog):
 			wx.MessageBox(_("Please select a site first."), _("Information"), wx.OK | wx.ICON_INFORMATION)
 			return
 		siteConfig = self.engine.getSiteConfig(siteName)
-		dialogObj = MarkerManagerDialog(self, self.engine, siteName, siteConfig, None, self)
-		dialogObj.Raise()
-		if dialogObj.ShowModal() == wx.ID_OK:
-			self.loadSiteList()
-		dialogObj.Destroy()
+		dialogObj = None
+		try:
+			dialogObj = MarkerManagerDialog(self, self.engine, siteName, siteConfig, None, self)
+			dialogObj.Raise()
+			if dialogObj.ShowModal() == wx.ID_OK:
+				self.loadSiteList()
+		except Exception as e:
+			logHandler.log.error(f"SiteMarker: Marker Manager dialog error: {e}")
+			wx.MessageBox(_("Could not open the Marker Manager dialog."), _("Error"), wx.OK | wx.ICON_ERROR)
+		finally:
+			if dialogObj:
+				try:
+					dialogObj.Destroy()
+				except RuntimeError:
+					pass
 
 	def onClose(self, event):
 		self.Destroy()
@@ -211,7 +242,12 @@ class AddSiteDialog(wx.Dialog):
 			"focusMode": self.cmbFocusMode.GetSelection(),  # Save focusMode value
 			"markers": []
 		}
-		self.engine.saveSiteConfiguration(cleanName, siteConfigData)
+		if not self.engine.saveSiteConfiguration(cleanName, siteConfigData):
+			wx.MessageBox(
+				_("Failed to save the site configuration to disk. Check that the configuration folder is writable."),
+				_("Error"), wx.OK | wx.ICON_ERROR
+			)
+			return
 		ui.message(_("Site created successfully."))
 		self.EndModal(wx.ID_OK)
 
@@ -277,7 +313,12 @@ class EditSiteDialog(wx.Dialog):
 		}
 		if newSiteName != self.siteName:
 			self.engine.deleteSiteConfiguration(self.siteName)
-		self.engine.saveSiteConfiguration(newSiteName, updatedConfig)
+		if not self.engine.saveSiteConfiguration(newSiteName, updatedConfig):
+			wx.MessageBox(
+				_("Failed to save the site configuration to disk. Check that the configuration folder is writable."),
+				_("Error"), wx.OK | wx.ICON_ERROR
+			)
+			return
 		ui.message(_("Site updated successfully."))
 		self.EndModal(wx.ID_OK)
 
@@ -366,7 +407,13 @@ class MarkerManagerDialog(wx.Dialog):
 
 	def saveMarkersToConfig(self):
 		self.siteConfig["markers"] = self.markersData
-		self.engine.saveSiteConfiguration(self.siteName, self.siteConfig)
+		if self.engine.saveSiteConfiguration(self.siteName, self.siteConfig):
+			return True
+		wx.MessageBox(
+			_("Failed to save marker changes to disk. Check that the configuration folder is writable."),
+			_("Error"), wx.OK | wx.ICON_ERROR
+		)
+		return False
 
 	def getSelectedMarkerIndex(self):
 		selection = self.markersListCtrl.GetSelection()
@@ -375,15 +422,25 @@ class MarkerManagerDialog(wx.Dialog):
 		return selection
 
 	def onAddMarker(self, event):
-		dialogObj = MarkerEditDialog(self, None, self.webFocusObj, self.siteConfig)
-		dialogObj.Raise()
-		if dialogObj.ShowModal() == wx.ID_OK:
-			self.markersData.append(dialogObj.getMarkerData())
-			self.saveMarkersToConfig()
-			self.loadMarkersList()
-			self.markersListCtrl.SetSelection(len(self.markersData) - 1)
-			self.markersListCtrl.SetFocus()
-		dialogObj.Destroy()
+		dialogObj = None
+		try:
+			dialogObj = MarkerEditDialog(self, None, self.webFocusObj, self.siteConfig)
+			dialogObj.Raise()
+			if dialogObj.ShowModal() == wx.ID_OK:
+				self.markersData.append(dialogObj.getMarkerData())
+				if self.saveMarkersToConfig():
+					self.loadMarkersList()
+					self.markersListCtrl.SetSelection(len(self.markersData) - 1)
+					self.markersListCtrl.SetFocus()
+		except Exception as e:
+			logHandler.log.error(f"SiteMarker: Add Marker dialog error: {e}")
+			wx.MessageBox(_("Could not open the marker editor."), _("Error"), wx.OK | wx.ICON_ERROR)
+		finally:
+			if dialogObj:
+				try:
+					dialogObj.Destroy()
+				except RuntimeError:
+					pass
 
 	def onEditMarker(self, event):
 		selectedIndex = self.getSelectedMarkerIndex()
@@ -391,15 +448,25 @@ class MarkerManagerDialog(wx.Dialog):
 			wx.MessageBox(_("Please select a marker first."), _("Information"), wx.OK | wx.ICON_INFORMATION)
 			return
 		markerData = self.markersData[selectedIndex]
-		dialogObj = MarkerEditDialog(self, markerData, self.webFocusObj, self.siteConfig)
-		dialogObj.Raise()
-		if dialogObj.ShowModal() == wx.ID_OK:
-			self.markersData[selectedIndex] = dialogObj.getMarkerData()
-			self.saveMarkersToConfig()
-			self.loadMarkersList()
-			self.markersListCtrl.SetSelection(selectedIndex)
-			self.markersListCtrl.SetFocus()
-		dialogObj.Destroy()
+		dialogObj = None
+		try:
+			dialogObj = MarkerEditDialog(self, markerData, self.webFocusObj, self.siteConfig)
+			dialogObj.Raise()
+			if dialogObj.ShowModal() == wx.ID_OK:
+				self.markersData[selectedIndex] = dialogObj.getMarkerData()
+				if self.saveMarkersToConfig():
+					self.loadMarkersList()
+					self.markersListCtrl.SetSelection(selectedIndex)
+					self.markersListCtrl.SetFocus()
+		except Exception as e:
+			logHandler.log.error(f"SiteMarker: Edit Marker dialog error: {e}")
+			wx.MessageBox(_("Could not open the marker editor."), _("Error"), wx.OK | wx.ICON_ERROR)
+		finally:
+			if dialogObj:
+				try:
+					dialogObj.Destroy()
+				except RuntimeError:
+					pass
 
 	def onDeleteMarker(self, event):
 		selectedIndex = self.getSelectedMarkerIndex()
@@ -407,34 +474,50 @@ class MarkerManagerDialog(wx.Dialog):
 			wx.MessageBox(_("Please select a marker first."), _("Information"), wx.OK | wx.ICON_INFORMATION)
 			return
 		if wx.MessageBox(_("Are you sure you want to delete this marker?"), _("Confirm"), wx.YES_NO | wx.ICON_QUESTION) == wx.YES:
-			self.markersData.pop(selectedIndex)
-			self.saveMarkersToConfig()
-			self.loadMarkersList()
-			if selectedIndex < len(self.markersData):
-				self.markersListCtrl.SetSelection(selectedIndex)
-			elif len(self.markersData) > 0:
-				self.markersListCtrl.SetSelection(0)
+			removedMarker = self.markersData.pop(selectedIndex)
+			if self.saveMarkersToConfig():
+				self.loadMarkersList()
+				if selectedIndex < len(self.markersData):
+					self.markersListCtrl.SetSelection(selectedIndex)
+				elif len(self.markersData) > 0:
+					self.markersListCtrl.SetSelection(0)
+			else:
+				self.markersData.insert(selectedIndex, removedMarker)
 
 	def onClearAllMarkers(self, event):
 		if len(self.markersData) == 0:
 			wx.MessageBox(_("No markers to clear."), _("Information"), wx.OK | wx.ICON_INFORMATION)
 			return
 		if wx.MessageBox(_("Are you sure you want to delete ALL markers?"), _("Confirm Delete All"), wx.YES_NO | wx.ICON_WARNING) == wx.YES:
-			self.markersData.clear()
-			self.saveMarkersToConfig()
-			self.loadMarkersList()
-			ui.message(_("All markers have been cleared."))
+			previousMarkers = self.markersData
+			self.markersData = []
+			if self.saveMarkersToConfig():
+				self.loadMarkersList()
+				ui.message(_("All markers have been cleared."))
+			else:
+				self.markersData = previousMarkers
 
 	def onBackToSites(self, event):
 		self.Destroy()
 		if self.parentDialog:
 			self.parentDialog.Show()
 			self.parentDialog.Raise()
-		else:
-			dlg = SiteManagerDialog(wx.GetApp().GetTopWindow(), self.engine, self.currentUrl)
+			return
+		app = wx.GetApp()
+		topWindow = app.GetTopWindow() if app else None
+		dlg = None
+		try:
+			dlg = SiteManagerDialog(topWindow, self.engine, self.currentUrl)
 			dlg.Raise()
 			dlg.ShowModal()
-			dlg.Destroy()
+		except Exception as e:
+			logHandler.log.error(f"SiteMarker: failed to reopen Site Manager: {e}")
+		finally:
+			if dlg:
+				try:
+					dlg.Destroy()
+				except RuntimeError:
+					pass
 
 	def onClose(self, event):
 		self.Destroy()
@@ -547,7 +630,7 @@ class MarkerEditDialog(wx.Dialog):
 		self.txtDisplayName = wx.TextCtrl(self, value=self.markerData.get("displayName", selectedText))
 		mainSizer.Add(self.txtDisplayName, 0, wx.EXPAND | wx.ALL, 5)
 
-		mainSizer.Add(wx.StaticText(self, label=_("Offset (lines/paragraphs to move after match):")), 0, wx.ALL, 5)
+		mainSizer.Add(wx.StaticText(self, label=_("Offset (lines to move after match, same as arrow up/down):")), 0, wx.ALL, 5)
 		self.spinOffset = wx.SpinCtrl(self, min=-50, max=50, initial=self.markerData.get("offset", 0))
 		mainSizer.Add(self.spinOffset, 0, wx.EXPAND | wx.ALL, 5)
 
@@ -612,5 +695,9 @@ class MarkerEditDialog(wx.Dialog):
 			"offset": self.spinOffset.GetValue(),
 			"scope": scope
 		}
+
+
+
+
 
 
