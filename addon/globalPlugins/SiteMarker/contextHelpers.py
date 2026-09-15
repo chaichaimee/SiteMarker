@@ -13,6 +13,7 @@ import UIAHandler
 from .constants import (
 	FOCUS_RECOVERY_WINDOW_SEC,
 	VIEWPORT_SCAN_RANGE,
+	TREE_INTERCEPTOR_POLL_INTERVAL_MS,
 )
 
 
@@ -33,6 +34,19 @@ class ContextHelpersMixin:
 				"brave.exe", "opera.exe", "vivaldi.exe", "thorium.exe"
 			):
 				self._isTargetActive = True
+				# Belt-and-suspenders trigger point for buffer priming and
+				# auto-trigger-on-page-load: event_treeInterceptor_gainFocus
+				# (below) was assumed to be the reliable source for "a
+				# document just became active" but logging added to confirm
+				# that assumption showed it never firing at all in a real
+				# session, across repeated tests, on this browser -- while
+				# event_foreground (this method) is confirmed firing every
+				# time (this is exactly how _isTargetActive itself gets set).
+				# Routing through the same shared, dedup-guarded helper as
+				# event_treeInterceptor_gainFocus means whichever event
+				# actually fires first wins and the other becomes a safe
+				# no-op, rather than picking one and hoping.
+				self._primeAndCheckAutoTrigger(source="event_foreground")
 			else:
 				self._isTargetActive = False
 		except (RuntimeError, COMError, AttributeError) as error:
@@ -589,6 +603,7 @@ class ContextHelpersMixin:
 		self._getLastDispatchedTargetTexts().clear()
 		self._getLastDispatchedTargetPositions().clear()
 		self._getLastDispatchedAnchorPositions().clear()
+		self._syncCustomMarkerGestureBindings()
 		focusObj = api.getFocusObject()
 		treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
 		if treeInt:
@@ -615,7 +630,87 @@ class ContextHelpersMixin:
 		except Exception as e:
 			logHandler.log.debug(f"SiteMarker: focus-theft recovery check failed: {e}")
 
+	def _primeAndCheckAutoTrigger(self, source=""):
+		# Shared by event_foreground, event_treeInterceptor_gainFocus, and
+		# _pollForTreeInterceptorChange (see the comment in event_foreground
+		# for why more than one call site exists).
+		# Resolves the current document's treeInterceptor independently
+		# rather than requiring the caller to already have one in hand, since
+		# event_foreground's foregroundObj is the window, not necessarily the
+		# focused document.
+		try:
+			focusObj = api.getFocusObject()
+			treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
+		except (RuntimeError, COMError, AttributeError) as e:
+			logHandler.log.debug(f"SiteMarker: _primeAndCheckAutoTrigger ({source}) could not resolve treeInterceptor: {e}")
+			return
+		if treeInt is None:
+			return
+		if treeInt in self._primedTreeInterceptors:
+			return
+		self._addPrimedTreeInterceptor(treeInt)
+		treeIntId = id(treeInt)  # for log messages only -- see _addPrimedTreeInterceptor
+		primeToken = object()
+		self._primeToken = primeToken
+		logHandler.log.debug(
+			f"SiteMarker: starting buffer priming pass 1 for treeInt {treeIntId} (via {source})"
+		)
+		core.callLater(300, self._primeDocumentBuffer, treeInt, primeToken, 0, 1)
+		# Auto-jump/auto-click-on-page-load (Marker Properties): checked at
+		# most once per fresh treeInterceptor, piggybacking on the same
+		# "first time seeing this page" guard as buffer priming above,
+		# rather than a separate dedup flag.
+		logHandler.log.debug(
+			f"SiteMarker: scheduling auto-trigger check for treeInt {treeIntId} (via {source})"
+		)
+		core.callLater(300, self._checkAutoTriggerMarker, treeInt, 0)
+
+	def startTreeInterceptorPoll(self):
+		# Fallback for buffer priming / auto-trigger detection when neither
+		# event_foreground nor event_treeInterceptor_gainFocus can be relied
+		# on to reach this add-on (log-confirmed: in-page navigation that
+		# doesn't change the foreground window, e.g. following a bookmark
+		# while already in the browser, fires neither reliably in some
+		# environments -- most likely another loaded global plugin breaking
+		# the shared event chain before it reaches here). Polling for a
+		# treeInterceptor change is slower to react than a real event but
+		# doesn't depend on any other add-on's event handler behaving
+		# correctly. Started once from GlobalPlugin.__init__.
+		self._treeInterceptorPollActive = True
+		self._lastPolledTreeInterceptor = None
+		self._pollForTreeInterceptorChange()
+
+	def stopTreeInterceptorPoll(self):
+		# The liveness flag, not just cancelling the next scheduled call, is
+		# what actually stops this: _pollForTreeInterceptorChange reschedules
+		# itself, so a cancelled single callLater wouldn't be enough to stop
+		# the chain once another one is already pending (5.14).
+		self._treeInterceptorPollActive = False
+
+	def _pollForTreeInterceptorChange(self):
+		if not self._treeInterceptorPollActive:
+			return
+		try:
+			if self._isTargetActive:
+				focusObj = api.getFocusObject()
+				treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
+				if treeInt is not None and treeInt is not self._lastPolledTreeInterceptor:
+					self._lastPolledTreeInterceptor = treeInt
+					self._primeAndCheckAutoTrigger(source="poll")
+		except (RuntimeError, COMError, AttributeError) as e:
+			logHandler.log.debug(f"SiteMarker: treeInterceptor poll error: {e}")
+		core.callLater(TREE_INTERCEPTOR_POLL_INTERVAL_MS, self._pollForTreeInterceptorChange)
+
 	def event_treeInterceptor_gainFocus(self, treeInterceptorObj, nextHandler):
+		# Unconditional diagnostic: confirms whether NVDA is actually firing
+		# this event at all for this browser/session. Kept even though
+		# event_foreground is now the confirmed-reliable trigger (see above),
+		# since this may still fire correctly on other browsers/setups and
+		# the diagnostic costs nothing to leave in place.
+		logHandler.log.debug(
+			f"SiteMarker: event_treeInterceptor_gainFocus fired for treeInt "
+			f"{id(treeInterceptorObj)}, _isTargetActive={self._isTargetActive}"
+		)
 		if not self._isTargetActive:
 			return nextHandler()
 
@@ -630,13 +725,7 @@ class ContextHelpersMixin:
 			self._sortScanToken = None
 			self._pendingReveals.clear()
 			self.refreshActiveLayout(force=False)
-			treeIntId = id(treeInterceptorObj)
-			if treeIntId not in self._primedTreeInterceptors:
-				self._addPrimedTreeInterceptor(treeIntId)
-				primeToken = object()
-				self._primeToken = primeToken
-				logHandler.log.debug(f"SiteMarker: starting buffer priming pass 1 for treeInt {treeIntId}")
-				core.callLater(300, self._primeDocumentBuffer, treeInterceptorObj, primeToken, 0, 1)
+			self._primeAndCheckAutoTrigger(source="event_treeInterceptor_gainFocus")
 		except Exception as e:
 			logHandler.log.error(f"SiteMarker: event_treeInterceptor_gainFocus failed: {e}", exc_info=True)
 		finally:

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.9.9\n"
+"Project-Id-Version: SiteMarker 2026.9.12\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-11 12:45+0700\n"
+"POT-Creation-Date: 2026-09-15 17:07+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Korean\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:371
+#: gui.py:387
 msgid "&Add Marker"
 msgstr "&마커 추가"
 
@@ -20,48 +20,48 @@ msgstr "&마커 추가"
 msgid "&Add New Site"
 msgstr "&새 사이트 추가"
 
-#: gui.py:375
+#: gui.py:391
 msgid "&Back to Site Manager"
 msgstr "사이트 관리자로 &돌아가기"
 
-#: gui.py:373
+#: gui.py:389
 msgid "&Delete"
 msgstr "&삭제"
 
-#: gui.py:539
-msgid "&Delete Marker\tDel"
-msgstr "&마커 삭제\tDel"
+#: gui.py:555
+msgid "&Delete Marker	Del"
+msgstr "마커 삭제(&D)\\tDel"
 
 #: gui.py:35
 msgid "&Delete Site"
 msgstr "사이트 &삭제"
 
 #: gui.py:174
-msgid "&Delete Site\tDel"
-msgstr "사이트 삭제\tDel"
+msgid "&Delete Site	Del"
+msgstr "사이트 삭제(&D)\\tDel"
 
-#: gui.py:372
+#: gui.py:388
 msgid "&Edit"
 msgstr "&편집"
 
-#: gui.py:537
-msgid "&Edit Marker\tF2"
-msgstr "&마커 편집\tF2"
+#: gui.py:553
+msgid "&Edit Marker	F2"
+msgstr "마커 편집(&E)\\tF2"
 
 #: gui.py:34
 msgid "&Edit Site"
 msgstr "사이트 편집"
 
 #: gui.py:172
-msgid "&Edit Site\tF2"
-msgstr "사이트 편집\tF2"
+msgid "&Edit Site	F2"
+msgstr "사이트 편집(&E)\\tF2"
 
 #: gui.py:36
 #: gui.py:177
 msgid "&Manage Markers"
 msgstr "마커 관리(&M)"
 
-#: gui.py:366
+#: gui.py:382
 msgid "&Markers List:"
 msgstr "마커 목록(&M):"
 
@@ -69,19 +69,23 @@ msgstr "마커 목록(&M):"
 msgid "&Registered Sites:"
 msgstr "등록된 사이트(&R):"
 
+#: gui.py:646
+msgid "&Use Standard Key"
+msgstr "표준 키 사용(&U)"
+
 #: gui.py:188
 msgid "Add Site Configuration"
 msgstr "사이트 구성 추가"
 
-#: gui.py:496
+#: gui.py:512
 msgid "All markers have been cleared."
 msgstr "모든 마커가 지워졌습니다."
 
-#: gui.py:491
+#: gui.py:507
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "모든 마커를 삭제하시겠습니까?"
 
-#: gui.py:476
+#: gui.py:492
 msgid "Are you sure you want to delete this marker?"
 msgstr "이 마커를 삭제하시겠습니까?"
 
@@ -89,48 +93,56 @@ msgstr "이 마커를 삭제하시겠습니까?"
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "이 사이트와 모든 마커를 삭제하시겠습니까?"
 
-#: gui.py:608
+#: gui.py:629
 msgid "Auto Click"
 msgstr "자동 클릭"
 
-#: gui.py:218
-#: gui.py:287
-#: gui.py:639
+#: gui.py:703
+msgid "Auto-click on page load"
+msgstr "페이지 로드 시 자동 클릭"
+
+#: gui.py:699
+msgid "Auto-jump on page load"
+msgstr "페이지 로드 시 자동 이동"
+
+#: gui.py:225
+#: gui.py:302
+#: gui.py:673
 msgid "Cancel"
 msgstr "취소"
 
-#: gui.py:374
+#: gui.py:390
 msgid "Clear &All"
 msgstr "모두 지우기(&A)"
 
-#: gui.py:542
+#: gui.py:558
 msgid "Clear &All Markers"
 msgstr "모든 마커 지우기(&A)"
 
-#: gui.py:661
+#: gui.py:701
 msgid "Click Key:"
 msgstr "클릭 키:"
 
 #: gui.py:37
-#: gui.py:376
+#: gui.py:392
 msgid "Close"
 msgstr "닫기"
 
 #: gui.py:128
-#: gui.py:476
+#: gui.py:492
 msgid "Confirm"
 msgstr "확인"
 
-#: gui.py:491
+#: gui.py:507
 msgid "Confirm Delete All"
 msgstr "모두 삭제 확인"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Contain Substring"
 msgstr "하위 문자열 포함"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Contains Text (find partial match)"
 msgstr "텍스트 포함 (부분 일치 찾기)"
 
@@ -146,42 +158,51 @@ msgstr "사이트 편집 대화 상자를 열 수 없습니다."
 msgid "Could not open the Marker Manager dialog."
 msgstr "마커 관리자 대화 상자를 열 수 없습니다."
 
-#: gui.py:437
-#: gui.py:463
+#: gui.py:453
+#: gui.py:479
 msgid "Could not open the marker editor."
 msgstr "마커 편집기를 열 수 없습니다."
 
+#: gui.py:643
+#: gui.py:737
+msgid "Custom &Shortcut..."
+msgstr "사용자 정의 단축키(&S)..."
+
+#: gui.py:734
+msgid "Custom &Shortcut: {key}..."
+msgstr "사용자 정의 단축키(&S): {key}..."
+
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Disable focus"
 msgstr "포커스 비활성화"
 
-#: gui.py:232
-#: gui.py:301
+#: gui.py:239
+#: gui.py:316
 msgid "Display Name cannot be empty."
 msgstr "표시 이름은 비워둘 수 없습니다."
 
 #: gui.py:197
-#: gui.py:266
-#: gui.py:629
+#: gui.py:274
+#: gui.py:663
 msgid "Display Name:"
 msgstr "표시 이름:"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Domain Only"
 msgstr "도메인만"
 
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Don't enter form mode"
 msgstr "양식 모드 진입 안 함"
 
-#: gui.py:256
+#: gui.py:264
 msgid "Edit Site Configuration"
 msgstr "사이트 구성 편집"
 
-#: gui.py:623
+#: gui.py:657
 msgid "Entire Document"
 msgstr "전체 문서"
 
@@ -189,25 +210,25 @@ msgstr "전체 문서"
 #: gui.py:115
 #: gui.py:133
 #: gui.py:149
-#: gui.py:232
-#: gui.py:235
-#: gui.py:248
-#: gui.py:301
-#: gui.py:304
+#: gui.py:239
+#: gui.py:242
+#: gui.py:256
+#: gui.py:316
 #: gui.py:319
-#: gui.py:414
-#: gui.py:437
-#: gui.py:463
-#: gui.py:675
+#: gui.py:335
+#: gui.py:430
+#: gui.py:453
+#: gui.py:479
+#: gui.py:797
 msgid "Error"
 msgstr "오류"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Exact Matching"
 msgstr "정확히 일치"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "정확한 단락 (전체 단락 일치)"
 
@@ -215,99 +236,99 @@ msgstr "정확한 단락 (전체 단락 일치)"
 msgid "Failed to delete site."
 msgstr "사이트 삭제 실패."
 
-#: gui.py:413
+#: gui.py:429
 msgid "Failed to save marker changes to disk. Check that the configuration folder is writable."
 msgstr "마커 변경 사항을 디스크에 저장하지 못했습니다. 구성 폴더에 쓰기 권한이 있는지 확인하세요."
 
-#: gui.py:247
-#: gui.py:318
+#: gui.py:255
+#: gui.py:334
 msgid "Failed to save the site configuration to disk. Check that the configuration folder is writable."
 msgstr "사이트 구성을 디스크에 저장하지 못했습니다. 구성 폴더에 쓰기 권한이 있는지 확인하세요."
 
 #: gui.py:210
-#: gui.py:278
+#: gui.py:286
 msgid "Focus Mode:"
 msgstr "포커스 모드:"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Include Subdomains"
 msgstr "하위 도메인 포함"
 
 #: gui.py:104
 #: gui.py:126
 #: gui.py:138
-#: gui.py:448
-#: gui.py:474
-#: gui.py:489
+#: gui.py:464
+#: gui.py:490
+#: gui.py:505
 msgid "Information"
 msgstr "정보"
 
-#: gui.py:608
+#: gui.py:629
 msgid "Jump"
 msgstr "이동"
 
-#: gui.py:658
+#: gui.py:697
 msgid "Jump Key:"
 msgstr "이동 키:"
 
-#: gui.py:329
+#: gui.py:345
 msgid "Marker Manager - "
 msgstr "마커 관리자 - "
 
-#: gui.py:552
+#: gui.py:568
 msgid "Marker Properties"
 msgstr "마커 속성"
 
-#: gui.py:361
+#: gui.py:377
 msgid "Marker found: {}"
 msgstr "마커 찾음: {}"
 
 #: gui.py:204
-#: gui.py:272
+#: gui.py:280
 msgid "Match Type:"
 msgstr "일치 유형:"
 
-#: gui.py:607
+#: gui.py:628
 msgid "Mode:"
 msgstr "모드:"
 
-#: gui.py:489
+#: gui.py:505
 msgid "No markers to clear."
 msgstr "지울 마커가 없습니다."
 
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Normal"
 msgstr "일반"
 
-#: gui.py:638
+#: gui.py:672
 msgid "OK"
 msgstr "확인"
 
-#: gui.py:633
+#: gui.py:667
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "오프셋 (일치 후 이동할 줄 수, 위/아래 화살표와 동일):"
 
-#: scanEngine.py:91
-#: scanEngine.py:456
+#: scanEngine.py:215
+#: scanEngine.py:579
 msgid "Page not fully loaded, try again."
 msgstr "페이지가 완전히 로드되지 않았습니다. 다시 시도하세요."
 
-#: gui.py:601
+#: gui.py:622
 msgid "Pattern Match:"
 msgstr "패턴 일치:"
 
-#: gui.py:675
+#: gui.py:797
 msgid "Pattern cannot be empty."
 msgstr "패턴은 비워둘 수 없습니다."
 
-#: gui.py:597
+#: gui.py:618
 msgid "Pattern:"
 msgstr "패턴:"
 
-#: gui.py:448
-#: gui.py:474
+#: gui.py:464
+#: gui.py:490
 msgid "Please select a marker first."
 msgstr "먼저 마커를 선택하세요."
 
@@ -317,32 +338,40 @@ msgstr "먼저 마커를 선택하세요."
 msgid "Please select a site first."
 msgstr "먼저 사이트를 선택하세요."
 
-#: gui.py:602
+#: gui.py:623
 msgid "Regex Match (use regular expression)"
 msgstr "정규식 일치 (정규 표현식 사용)"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Regular Expression"
 msgstr "정규 표현식"
 
-#: gui.py:286
+#: gui.py:301
 msgid "Save Changes"
 msgstr "변경 사항 저장"
 
-#: gui.py:217
+#: gui.py:224
 msgid "Save Site"
 msgstr "사이트 저장"
 
-#: gui.py:622
+#: gui.py:656
 msgid "Search Scope:"
 msgstr "검색 범위:"
+
+#: gui.py:773
+msgid "Shortcut changed from {old} to {new}"
+msgstr "단축키가 {old}에서 {new}(으)로 변경되었습니다."
+
+#: gui.py:780
+msgid "Shortcut reset to {key}"
+msgstr "단축키가 {key}(으)로 재설정되었습니다."
 
 #: gui.py:16
 msgid "Site Manager"
 msgstr "사이트 관리자"
 
-#: gui.py:251
+#: gui.py:259
 msgid "Site created successfully."
 msgstr "사이트가 성공적으로 생성되었습니다."
 
@@ -350,24 +379,37 @@ msgstr "사이트가 성공적으로 생성되었습니다."
 msgid "Site deleted successfully."
 msgstr "사이트가 성공적으로 삭제되었습니다."
 
-#: gui.py:322
+#: gui.py:338
 msgid "Site updated successfully."
 msgstr "사이트가 성공적으로 업데이트되었습니다."
 
-#: gui.py:235
-#: gui.py:304
+#: gui.py:218
+#: gui.py:295
+msgid "Skip blank lines when navigating with Up/Down and Ctrl+Up/Down"
+msgstr "위/아래 및 Ctrl+위/아래로 탐색할 때 빈 줄 건너뛰기"
+
+#: gui.py:242
+#: gui.py:319
 msgid "URL Pattern cannot be empty."
 msgstr "URL 패턴은 비워둘 수 없습니다."
 
 #: gui.py:200
-#: gui.py:269
+#: gui.py:277
 msgid "URL Pattern:"
 msgstr "URL 패턴:"
 
-#: gui.py:405
+#: gui.py:421
 msgid "Unnamed"
 msgstr "이름 없음"
 
-#: gui.py:623
+#: gui.py:657
 msgid "Viewport Only"
 msgstr "뷰포트만"
+
+#: gui.py:753
+msgid "this marker's auto-click shortcut"
+msgstr "이 마커의 자동 클릭 단축키"
+
+#: gui.py:751
+msgid "this marker's jump shortcut"
+msgstr "이 마커의 이동 단축키"

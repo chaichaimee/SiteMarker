@@ -28,6 +28,9 @@ from .constants import (
 	MAX_FULL_SCAN_RETRIES,
 	PRIME_DOCUMENT_MAX_PARAGRAPHS,
 	PRIME_DOCUMENT_STEP_DELAY_MS,
+	BUFFER_READY_MIN_LENGTH,
+	AUTO_TRIGGER_RETRY_DELAY_MS,
+	AUTO_TRIGGER_MAX_RETRIES,
 )
 
 # Per-attempt delay before re-scanning the document for an auto-click target that
@@ -61,11 +64,100 @@ class ScanEngineMixin:
 	def _isBufferReady(self, treeInt):
 		try:
 			info = treeInt.makeTextInfo(textInfos.POSITION_ALL)
-			if info and len(info.text) > 500:
-				return True
+			currentLength = len(info.text) if info and info.text else 0
 		except Exception:
-			pass
+			return False
+		if currentLength == 0:
+			return False
+		if currentLength > BUFFER_READY_MIN_LENGTH:
+			# Comfortably past the length a still-rendering document would show
+			# this early; no need to wait for a second poll.
+			self._bufferReadySamples.pop(id(treeInt), None)
+			return True
+		# The document never reached BUFFER_READY_MIN_LENGTH at all -- this is
+		# normal for a short, genuinely sparse page (a minimal search-engine
+		# homepage, for example), which the old fixed-length-only check treated
+		# as permanently "not ready" and reported as a load failure even once
+		# fully rendered. Fall back to a two-poll stability check instead: once
+		# the rendered text length stops changing between polls (each call here
+		# is already spaced LOAD_MORE_TIMEOUT_MS/the retry delay apart by the
+		# caller), the page has settled even though it's short.
+		treeIntId = id(treeInt)
+		previousLength = self._bufferReadySamples.get(treeIntId)
+		self._bufferReadySamples[treeIntId] = currentLength
+		if previousLength is not None and previousLength == currentLength:
+			self._bufferReadySamples.pop(treeIntId, None)
+			return True
 		return False
+
+	# ------------------------------------------------------------------
+	# Auto-trigger on page load (Marker Properties' "Auto-jump/Auto-click on
+	# page load" checkbox)
+	# ------------------------------------------------------------------
+	def _findAutoTriggerMarker(self):
+		for baseKey, markersForKey in self.activeSiteMarkers.items():
+			for marker in markersForKey:
+				if marker.get("autoTrigger"):
+					return marker, baseKey
+		return None, None
+
+	def _checkAutoTriggerMarker(self, treeInt, retryCount=0):
+		# Scheduled exactly once per fresh treeInterceptor by
+		# event_treeInterceptor_gainFocus (guarded there by
+		# _primedTreeInterceptors, the same one-per-page-load guard used for
+		# buffer priming), so no separate dedup state is needed here -- this
+		# retry chain is the single attempt for this page load, not a new
+		# one each call.
+		if not self._isTreeInterceptorStillFocused(treeInt):
+			logHandler.log.debug(
+				f"SiteMarker: auto-trigger check for treeInt {id(treeInt)} aborted "
+				f"at retry {retryCount} -- no longer the focused document."
+			)
+			return
+		bufferReady = self._isBufferReady(treeInt)
+		if not bufferReady and retryCount < AUTO_TRIGGER_MAX_RETRIES:
+			core.callLater(
+				AUTO_TRIGGER_RETRY_DELAY_MS, self._checkAutoTriggerMarker, treeInt, retryCount + 1
+			)
+			return
+		if not bufferReady:
+			# Retry budget exhausted without a confirmed-ready buffer. Rather
+			# than give up silently -- which, from the user's side, is
+			# indistinguishable from the feature having done nothing at all
+			# -- still attempt the trigger on a best-effort basis: a site
+			# with a configured auto-trigger marker is exactly the case the
+			# user opted into, and an attempt against a not-yet-fully-loaded
+			# page fails safely (the marker scan just won't find its target
+			# yet) rather than dangerously, so trying is strictly better than
+			# guaranteed silence.
+			logHandler.log.debug(
+				f"SiteMarker: auto-trigger buffer-ready wait exhausted after "
+				f"{retryCount} retries for treeInt {id(treeInt)}; attempting anyway."
+			)
+			self._bufferReadySamples.pop(id(treeInt), None)
+		self.refreshActiveLayout(force=False)
+		marker, baseKey = self._findAutoTriggerMarker()
+		if marker is None:
+			logHandler.log.debug(
+				f"SiteMarker: auto-trigger check for treeInt {id(treeInt)} found no marker "
+				f"with autoTrigger set among {len(self.activeSiteMarkers)} active key(s)."
+			)
+			return
+		logHandler.log.debug(
+			f"SiteMarker: auto-trigger firing for baseKey='{baseKey}' "
+			f"actionMode='{marker.get('actionMode')}' after {retryCount} retries "
+			f"(bufferReady={bufferReady})."
+		)
+		# No gesture object exists for an automatic trigger -- passing None is
+		# safe here since _handleGlobalJump/_handleAutoClick only ever call
+		# gesture.send() behind an "if gesture:" guard, and a match is already
+		# confirmed to exist for this exact baseKey above, so none of the
+		# no-markers-configured fallback paths that would need a real gesture
+		# can be reached.
+		if marker.get("actionMode") == "autoClick":
+			self._handleAutoClick(None, baseKey)
+		else:
+			self._handleGlobalJump(None, baseKey, 1)
 
 	# ------------------------------------------------------------------
 	# Jump scanning
@@ -81,17 +173,18 @@ class ScanEngineMixin:
 			if gesture: gesture.send()
 			return
 
-		if not self._isBufferReady(treeInterceptor):
-			if _retryCount < 5:
-				logHandler.log.debug(
-					f"SiteMarker: jump buffer not ready for key '{baseKey}', retry {_retryCount+1}/5"
-				)
-				core.callLater(400, self._handleGlobalJump, gesture, baseKey, direction, _retryCount + 1)
-			else:
-				ui.message(_("Page not fully loaded, try again."))
-			return
-
-		self._recentScanActivity[id(treeInterceptor)] = time.time()
+		# Resolve whether this site has any marker configured for this key
+		# before anything that depends on the document buffer being fully
+		# loaded. F/Shift+F, D/Shift+D and Z/Shift+Z double as NVDA's own
+		# browse-mode single-letter navigation keys (form field, ARIA landmark,
+		# and this add-on's own third binding); a site the user hasn't
+		# configured any marker for on this key must never have its native
+		# NVDA behaviour swallowed. Checking this first also means a site with
+		# no SiteMarker configuration at all never has to wait through the
+		# buffer-readiness retry loop below -- previously every press on such
+		# a site paid that cost, and a short, genuinely sparse page could pay
+		# it every time (see _isBufferReady) and end by wrongly reporting the
+		# page as not fully loaded when it simply had no markers to find.
 		self.refreshActiveLayout(force=False)
 		if not self.activeSiteMarkers or baseKey not in self.activeSiteMarkers:
 			# The cached marker set for this URL may simply be stale (e.g. the user
@@ -103,12 +196,26 @@ class ScanEngineMixin:
 			# forced a refresh).
 			self.refreshActiveLayout(force=True)
 		if not self.activeSiteMarkers or baseKey not in self.activeSiteMarkers:
-			if direction == 1:
+			if gesture:
+				gesture.send()
+			elif direction == 1:
 				ui.message(_translate("No next marker."))
 			else:
 				ui.message(_translate("No previous marker."))
 			return
 
+		if not self._isBufferReady(treeInterceptor):
+			if _retryCount < 5:
+				logHandler.log.debug(
+					f"SiteMarker: jump buffer not ready for key '{baseKey}', retry {_retryCount+1}/5"
+				)
+				core.callLater(400, self._handleGlobalJump, gesture, baseKey, direction, _retryCount + 1)
+			else:
+				self._bufferReadySamples.pop(id(treeInterceptor), None)
+				ui.message(_("Page not fully loaded, try again."))
+			return
+
+		self._recentScanActivity[id(treeInterceptor)] = time.time()
 		markersForThisKey = self.activeSiteMarkers[baseKey]
 		treeInt = treeInterceptor
 		oldSelection = treeInt.selection.copy() if hasattr(treeInt, "selection") else treeInt.makeTextInfo(textInfos.POSITION_CARET)
@@ -446,16 +553,11 @@ class ScanEngineMixin:
 			if gesture: gesture.send()
 			return
 
-		if not self._isBufferReady(treeInterceptor):
-			if _retryCount < 5:
-				logHandler.log.debug(
-					f"SiteMarker: auto‑click buffer not ready for key '{keystroke}', retry {_retryCount+1}/5"
-				)
-				core.callLater(400, self._handleAutoClick, gesture, keystroke, _retryCount + 1)
-			else:
-				ui.message(_("Page not fully loaded, try again."))
-			return
-
+		# Resolve marker configuration before the buffer-readiness wait, same
+		# reasoning and ordering as _handleGlobalJump: a site with nothing
+		# configured for this auto-click key should report that immediately
+		# rather than first paying the retry-loop cost (and, on a short page,
+		# risk of a false "not fully loaded" -- see _isBufferReady).
 		self.refreshActiveLayout(force=False)
 		if not self.activeSiteMarkers or keystroke not in self.activeSiteMarkers:
 			# See _handleGlobalJump for why this second, forced refresh is needed:
@@ -464,6 +566,17 @@ class ScanEngineMixin:
 			self.refreshActiveLayout(force=True)
 		if not self.activeSiteMarkers or keystroke not in self.activeSiteMarkers:
 			ui.message(_translate("No auto click marker for this key."))
+			return
+
+		if not self._isBufferReady(treeInterceptor):
+			if _retryCount < 5:
+				logHandler.log.debug(
+					f"SiteMarker: auto‑click buffer not ready for key '{keystroke}', retry {_retryCount+1}/5"
+				)
+				core.callLater(400, self._handleAutoClick, gesture, keystroke, _retryCount + 1)
+			else:
+				self._bufferReadySamples.pop(id(treeInterceptor), None)
+				ui.message(_("Page not fully loaded, try again."))
 			return
 
 		clickMarkers = [m for m in self.activeSiteMarkers[keystroke] if m.get("actionMode") == "autoClick"]

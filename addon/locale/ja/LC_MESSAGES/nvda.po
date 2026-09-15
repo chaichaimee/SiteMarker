@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.9.9\n"
+"Project-Id-Version: SiteMarker 2026.9.12\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-11 12:45+0700\n"
+"POT-Creation-Date: 2026-09-15 17:07+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Japanese\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:371
+#: gui.py:387
 msgid "&Add Marker"
 msgstr "マーカーを追加(&A)"
 
@@ -20,48 +20,48 @@ msgstr "マーカーを追加(&A)"
 msgid "&Add New Site"
 msgstr "新しいサイトを追加(&A)"
 
-#: gui.py:375
+#: gui.py:391
 msgid "&Back to Site Manager"
 msgstr "サイト管理に戻る(&B)"
 
-#: gui.py:373
+#: gui.py:389
 msgid "&Delete"
 msgstr "削除(&D)"
 
-#: gui.py:539
-msgid "&Delete Marker\tDel"
-msgstr "マーカーを削除(&D)\tDel"
+#: gui.py:555
+msgid "&Delete Marker	Del"
+msgstr "マーカーを削除(&D)\\tDel"
 
 #: gui.py:35
 msgid "&Delete Site"
 msgstr "サイトを削除(&D)"
 
 #: gui.py:174
-msgid "&Delete Site\tDel"
-msgstr "サイトを削除(&D)\tDel"
+msgid "&Delete Site	Del"
+msgstr "サイトを削除(&D)\\tDel"
 
-#: gui.py:372
+#: gui.py:388
 msgid "&Edit"
 msgstr "編集(&E)"
 
-#: gui.py:537
-msgid "&Edit Marker\tF2"
-msgstr "マーカーを編集(&E)\tF2"
+#: gui.py:553
+msgid "&Edit Marker	F2"
+msgstr "マーカーを編集(&E)\\tF2"
 
 #: gui.py:34
 msgid "&Edit Site"
 msgstr "サイトを編集(&E)"
 
 #: gui.py:172
-msgid "&Edit Site\tF2"
-msgstr "サイトを編集(&E)\tF2"
+msgid "&Edit Site	F2"
+msgstr "サイトを編集(&E)\\tF2"
 
 #: gui.py:36
 #: gui.py:177
 msgid "&Manage Markers"
 msgstr "マーカーの管理(&M)"
 
-#: gui.py:366
+#: gui.py:382
 msgid "&Markers List:"
 msgstr "マーカー一覧(&M):"
 
@@ -69,19 +69,23 @@ msgstr "マーカー一覧(&M):"
 msgid "&Registered Sites:"
 msgstr "登録済みサイト(&R):"
 
+#: gui.py:646
+msgid "&Use Standard Key"
+msgstr "標準キーを使用(&U)"
+
 #: gui.py:188
 msgid "Add Site Configuration"
 msgstr "サイト設定の追加"
 
-#: gui.py:496
+#: gui.py:512
 msgid "All markers have been cleared."
 msgstr "すべてのマーカーがクリアされました。"
 
-#: gui.py:491
+#: gui.py:507
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "すべてのマーカーを削除してもよろしいですか？"
 
-#: gui.py:476
+#: gui.py:492
 msgid "Are you sure you want to delete this marker?"
 msgstr "このマーカーを削除してもよろしいですか？"
 
@@ -89,48 +93,56 @@ msgstr "このマーカーを削除してもよろしいですか？"
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "このサイトおよび関連するすべてのマーカーを削除してもよろしいですか？"
 
-#: gui.py:608
+#: gui.py:629
 msgid "Auto Click"
 msgstr "自動クリック"
 
-#: gui.py:218
-#: gui.py:287
-#: gui.py:639
+#: gui.py:703
+msgid "Auto-click on page load"
+msgstr "ページ読み込み時に自動クリック"
+
+#: gui.py:699
+msgid "Auto-jump on page load"
+msgstr "ページ読み込み時に自動ジャンプ"
+
+#: gui.py:225
+#: gui.py:302
+#: gui.py:673
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: gui.py:374
+#: gui.py:390
 msgid "Clear &All"
 msgstr "すべてクリア(&A)"
 
-#: gui.py:542
+#: gui.py:558
 msgid "Clear &All Markers"
 msgstr "すべてのマーカーをクリア(&A)"
 
-#: gui.py:661
+#: gui.py:701
 msgid "Click Key:"
 msgstr "クリックキー:"
 
 #: gui.py:37
-#: gui.py:376
+#: gui.py:392
 msgid "Close"
 msgstr "閉じる"
 
 #: gui.py:128
-#: gui.py:476
+#: gui.py:492
 msgid "Confirm"
 msgstr "確認"
 
-#: gui.py:491
+#: gui.py:507
 msgid "Confirm Delete All"
 msgstr "すべて削除の確認"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Contain Substring"
 msgstr "部分文字列を含む"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Contains Text (find partial match)"
 msgstr "テキストを含む (部分一致を検索)"
 
@@ -146,42 +158,51 @@ msgstr "サイト編集ダイアログを開けませんでした。"
 msgid "Could not open the Marker Manager dialog."
 msgstr "マーカーマネージャーダイアログを開けませんでした。"
 
-#: gui.py:437
-#: gui.py:463
+#: gui.py:453
+#: gui.py:479
 msgid "Could not open the marker editor."
 msgstr "マーカーエディターを開けませんでした。"
 
+#: gui.py:643
+#: gui.py:737
+msgid "Custom &Shortcut..."
+msgstr "カスタムショートカット(&S)..."
+
+#: gui.py:734
+msgid "Custom &Shortcut: {key}..."
+msgstr "カスタムショートカット(&S): {key}..."
+
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Disable focus"
 msgstr "フォーカスを無効にする"
 
-#: gui.py:232
-#: gui.py:301
+#: gui.py:239
+#: gui.py:316
 msgid "Display Name cannot be empty."
 msgstr "表示名を空にすることはできません。"
 
 #: gui.py:197
-#: gui.py:266
-#: gui.py:629
+#: gui.py:274
+#: gui.py:663
 msgid "Display Name:"
 msgstr "表示名:"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Domain Only"
 msgstr "ドメインのみ"
 
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Don't enter form mode"
 msgstr "フォームモードに入らない"
 
-#: gui.py:256
+#: gui.py:264
 msgid "Edit Site Configuration"
 msgstr "サイト設定の編集"
 
-#: gui.py:623
+#: gui.py:657
 msgid "Entire Document"
 msgstr "ドキュメント全体"
 
@@ -189,25 +210,25 @@ msgstr "ドキュメント全体"
 #: gui.py:115
 #: gui.py:133
 #: gui.py:149
-#: gui.py:232
-#: gui.py:235
-#: gui.py:248
-#: gui.py:301
-#: gui.py:304
+#: gui.py:239
+#: gui.py:242
+#: gui.py:256
+#: gui.py:316
 #: gui.py:319
-#: gui.py:414
-#: gui.py:437
-#: gui.py:463
-#: gui.py:675
+#: gui.py:335
+#: gui.py:430
+#: gui.py:453
+#: gui.py:479
+#: gui.py:797
 msgid "Error"
 msgstr "エラー"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Exact Matching"
 msgstr "完全一致"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "完全な段落 (段落全体に一致)"
 
@@ -215,99 +236,99 @@ msgstr "完全な段落 (段落全体に一致)"
 msgid "Failed to delete site."
 msgstr "サイトの削除に失敗しました。"
 
-#: gui.py:413
+#: gui.py:429
 msgid "Failed to save marker changes to disk. Check that the configuration folder is writable."
 msgstr "マーカーの変更をディスクに保存できませんでした。設定フォルダーに書き込み権限があるか確認してください。"
 
-#: gui.py:247
-#: gui.py:318
+#: gui.py:255
+#: gui.py:334
 msgid "Failed to save the site configuration to disk. Check that the configuration folder is writable."
 msgstr "サイト設定をディスクに保存できませんでした。設定フォルダーに書き込み権限があるか確認してください。"
 
 #: gui.py:210
-#: gui.py:278
+#: gui.py:286
 msgid "Focus Mode:"
 msgstr "フォーカスモード:"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Include Subdomains"
 msgstr "サブドメインを含む"
 
 #: gui.py:104
 #: gui.py:126
 #: gui.py:138
-#: gui.py:448
-#: gui.py:474
-#: gui.py:489
+#: gui.py:464
+#: gui.py:490
+#: gui.py:505
 msgid "Information"
 msgstr "情報"
 
-#: gui.py:608
+#: gui.py:629
 msgid "Jump"
 msgstr "ジャンプ"
 
-#: gui.py:658
+#: gui.py:697
 msgid "Jump Key:"
 msgstr "ジャンプキー:"
 
-#: gui.py:329
+#: gui.py:345
 msgid "Marker Manager - "
 msgstr "マーカーマネージャー - "
 
-#: gui.py:552
+#: gui.py:568
 msgid "Marker Properties"
 msgstr "マーカーのプロパティ"
 
-#: gui.py:361
+#: gui.py:377
 msgid "Marker found: {}"
 msgstr "マーカーが見つかりました: {}"
 
 #: gui.py:204
-#: gui.py:272
+#: gui.py:280
 msgid "Match Type:"
 msgstr "一致タイプ:"
 
-#: gui.py:607
+#: gui.py:628
 msgid "Mode:"
 msgstr "モード:"
 
-#: gui.py:489
+#: gui.py:505
 msgid "No markers to clear."
 msgstr "クリアするマーカーはありません。"
 
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Normal"
 msgstr "標準"
 
-#: gui.py:638
+#: gui.py:672
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:633
+#: gui.py:667
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "オフセット (一致後に移動する行数、上下矢印キーと同じ):"
 
-#: scanEngine.py:91
-#: scanEngine.py:456
+#: scanEngine.py:215
+#: scanEngine.py:579
 msgid "Page not fully loaded, try again."
 msgstr "ページが完全に読み込まれていません。もう一度お試しください。"
 
-#: gui.py:601
+#: gui.py:622
 msgid "Pattern Match:"
 msgstr "パターンマッチ:"
 
-#: gui.py:675
+#: gui.py:797
 msgid "Pattern cannot be empty."
 msgstr "パターンを空にすることはできません。"
 
-#: gui.py:597
+#: gui.py:618
 msgid "Pattern:"
 msgstr "パターン:"
 
-#: gui.py:448
-#: gui.py:474
+#: gui.py:464
+#: gui.py:490
 msgid "Please select a marker first."
 msgstr "最初にマーカーを選択してください。"
 
@@ -317,32 +338,40 @@ msgstr "最初にマーカーを選択してください。"
 msgid "Please select a site first."
 msgstr "最初にサイトを選択してください。"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Regex Match (use regular expression)"
 msgstr "正規表現一致 (正規表現を使用)"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Regular Expression"
 msgstr "正規表現"
 
-#: gui.py:286
+#: gui.py:301
 msgid "Save Changes"
 msgstr "変更を保存"
 
-#: gui.py:217
+#: gui.py:224
 msgid "Save Site"
 msgstr "サイトを保存"
 
-#: gui.py:622
+#: gui.py:656
 msgid "Search Scope:"
 msgstr "検索範囲:"
+
+#: gui.py:773
+msgid "Shortcut changed from {old} to {new}"
+msgstr "ショートカットを {old} から {new} に変更しました"
+
+#: gui.py:780
+msgid "Shortcut reset to {key}"
+msgstr "ショートカットを {key} にリセットしました"
 
 #: gui.py:16
 msgid "Site Manager"
 msgstr "サイトマネージャー"
 
-#: gui.py:251
+#: gui.py:259
 msgid "Site created successfully."
 msgstr "サイトが正常に作成されました。"
 
@@ -350,24 +379,37 @@ msgstr "サイトが正常に作成されました。"
 msgid "Site deleted successfully."
 msgstr "サイトが正常に削除されました。"
 
-#: gui.py:322
+#: gui.py:338
 msgid "Site updated successfully."
 msgstr "サイトが正常に更新されました。"
 
-#: gui.py:235
-#: gui.py:304
+#: gui.py:218
+#: gui.py:295
+msgid "Skip blank lines when navigating with Up/Down and Ctrl+Up/Down"
+msgstr "上/下およびCtrl+上/下での移動時に空行をスキップする"
+
+#: gui.py:242
+#: gui.py:319
 msgid "URL Pattern cannot be empty."
 msgstr "URLパターンを空にすることはできません。"
 
 #: gui.py:200
-#: gui.py:269
+#: gui.py:277
 msgid "URL Pattern:"
 msgstr "URLパターン:"
 
-#: gui.py:405
+#: gui.py:421
 msgid "Unnamed"
 msgstr "名前なし"
 
-#: gui.py:623
+#: gui.py:657
 msgid "Viewport Only"
 msgstr "ビューポートのみ"
+
+#: gui.py:753
+msgid "this marker's auto-click shortcut"
+msgstr "このマーカーの自動クリックショートカット"
+
+#: gui.py:751
+msgid "this marker's jump shortcut"
+msgstr "このマーカーのジャンプショートカット"

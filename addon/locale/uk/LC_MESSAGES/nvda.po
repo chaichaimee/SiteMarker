@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.9.9\n"
+"Project-Id-Version: SiteMarker 2026.9.12\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-11 12:45+0700\n"
+"POT-Creation-Date: 2026-09-15 17:07+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Ukrainian\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:371
+#: gui.py:387
 msgid "&Add Marker"
 msgstr "&Додати маркер"
 
@@ -20,48 +20,48 @@ msgstr "&Додати маркер"
 msgid "&Add New Site"
 msgstr "&Додати новий сайт"
 
-#: gui.py:375
+#: gui.py:391
 msgid "&Back to Site Manager"
 msgstr "&Назад до диспетчера сайтів"
 
-#: gui.py:373
+#: gui.py:389
 msgid "&Delete"
 msgstr "&Видалити"
 
-#: gui.py:539
-msgid "&Delete Marker\tDel"
-msgstr "Видалити маркер\tDel"
+#: gui.py:555
+msgid "&Delete Marker	Del"
+msgstr "&Видалити маркер\\tDel"
 
 #: gui.py:35
 msgid "&Delete Site"
 msgstr "&Видалити сайт"
 
 #: gui.py:174
-msgid "&Delete Site\tDel"
-msgstr "Видалити сайт\tDel"
+msgid "&Delete Site	Del"
+msgstr "&Видалити сайт\\tDel"
 
-#: gui.py:372
+#: gui.py:388
 msgid "&Edit"
 msgstr "&Змінити"
 
-#: gui.py:537
-msgid "&Edit Marker\tF2"
-msgstr "Змінити маркер\tF2"
+#: gui.py:553
+msgid "&Edit Marker	F2"
+msgstr "&Редагувати маркер\\tF2"
 
 #: gui.py:34
 msgid "&Edit Site"
 msgstr "&Змінити сайт"
 
 #: gui.py:172
-msgid "&Edit Site\tF2"
-msgstr "Змінити сайт\tF2"
+msgid "&Edit Site	F2"
+msgstr "&Редагувати сайт\\tF2"
 
 #: gui.py:36
 #: gui.py:177
 msgid "&Manage Markers"
 msgstr "&Керування маркерами"
 
-#: gui.py:366
+#: gui.py:382
 msgid "&Markers List:"
 msgstr "Список &маркерів:"
 
@@ -69,19 +69,23 @@ msgstr "Список &маркерів:"
 msgid "&Registered Sites:"
 msgstr "&Зареєстровані сайти:"
 
+#: gui.py:646
+msgid "&Use Standard Key"
+msgstr "&Використовувати стандартну клавішу"
+
 #: gui.py:188
 msgid "Add Site Configuration"
 msgstr "Додати конфігурацію сайту"
 
-#: gui.py:496
+#: gui.py:512
 msgid "All markers have been cleared."
 msgstr "Усі маркери очищено."
 
-#: gui.py:491
+#: gui.py:507
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "Ви дійсно хочете видалити ВСІ маркери?"
 
-#: gui.py:476
+#: gui.py:492
 msgid "Are you sure you want to delete this marker?"
 msgstr "Ви дійсно хочете видалити цей маркер?"
 
@@ -89,48 +93,56 @@ msgstr "Ви дійсно хочете видалити цей маркер?"
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "Ви дійсно хочете видалити цей сайт та всі його маркери?"
 
-#: gui.py:608
+#: gui.py:629
 msgid "Auto Click"
 msgstr "Автоматичний клік"
 
-#: gui.py:218
-#: gui.py:287
-#: gui.py:639
+#: gui.py:703
+msgid "Auto-click on page load"
+msgstr "Автоматично клікати при завантаженні сторінки"
+
+#: gui.py:699
+msgid "Auto-jump on page load"
+msgstr "Автоматично переходити при завантаженні сторінки"
+
+#: gui.py:225
+#: gui.py:302
+#: gui.py:673
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: gui.py:374
+#: gui.py:390
 msgid "Clear &All"
 msgstr "Очистити &все"
 
-#: gui.py:542
+#: gui.py:558
 msgid "Clear &All Markers"
 msgstr "Очистити &всі маркери"
 
-#: gui.py:661
+#: gui.py:701
 msgid "Click Key:"
 msgstr "Клавіша кліку:"
 
 #: gui.py:37
-#: gui.py:376
+#: gui.py:392
 msgid "Close"
 msgstr "Закрити"
 
 #: gui.py:128
-#: gui.py:476
+#: gui.py:492
 msgid "Confirm"
 msgstr "Підтвердження"
 
-#: gui.py:491
+#: gui.py:507
 msgid "Confirm Delete All"
 msgstr "Підтвердження видалення всіх"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Contain Substring"
 msgstr "Містить підрядок"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Contains Text (find partial match)"
 msgstr "Містить текст (частковий збіг)"
 
@@ -146,42 +158,51 @@ msgstr "Не вдалося відкрити діалогове вікно ре�
 msgid "Could not open the Marker Manager dialog."
 msgstr "Не вдалося відкрити діалогове вікно диспетчера маркерів."
 
-#: gui.py:437
-#: gui.py:463
+#: gui.py:453
+#: gui.py:479
 msgid "Could not open the marker editor."
 msgstr "Не вдалося відкрити редактор маркерів."
 
+#: gui.py:643
+#: gui.py:737
+msgid "Custom &Shortcut..."
+msgstr "Власний &скорочений шлях..."
+
+#: gui.py:734
+msgid "Custom &Shortcut: {key}..."
+msgstr "Власний &скорочений шлях: {key}..."
+
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Disable focus"
 msgstr "Вимкнути фокус"
 
-#: gui.py:232
-#: gui.py:301
+#: gui.py:239
+#: gui.py:316
 msgid "Display Name cannot be empty."
 msgstr "Відображуване ім'я не може бути порожнім."
 
 #: gui.py:197
-#: gui.py:266
-#: gui.py:629
+#: gui.py:274
+#: gui.py:663
 msgid "Display Name:"
 msgstr "Відображуване ім'я:"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Domain Only"
 msgstr "Тільки домен"
 
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Don't enter form mode"
 msgstr "Не переходити в режим форм"
 
-#: gui.py:256
+#: gui.py:264
 msgid "Edit Site Configuration"
 msgstr "Змінити конфігурацію сайту"
 
-#: gui.py:623
+#: gui.py:657
 msgid "Entire Document"
 msgstr "Весь документ"
 
@@ -189,25 +210,25 @@ msgstr "Весь документ"
 #: gui.py:115
 #: gui.py:133
 #: gui.py:149
-#: gui.py:232
-#: gui.py:235
-#: gui.py:248
-#: gui.py:301
-#: gui.py:304
+#: gui.py:239
+#: gui.py:242
+#: gui.py:256
+#: gui.py:316
 #: gui.py:319
-#: gui.py:414
-#: gui.py:437
-#: gui.py:463
-#: gui.py:675
+#: gui.py:335
+#: gui.py:430
+#: gui.py:453
+#: gui.py:479
+#: gui.py:797
 msgid "Error"
 msgstr "Помилка"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Exact Matching"
 msgstr "Точний збіг"
 
-#: gui.py:602
+#: gui.py:623
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "Точний абзац (збіг усього абзацу)"
 
@@ -215,99 +236,99 @@ msgstr "Точний абзац (збіг усього абзацу)"
 msgid "Failed to delete site."
 msgstr "Не вдалося видалити сайт."
 
-#: gui.py:413
+#: gui.py:429
 msgid "Failed to save marker changes to disk. Check that the configuration folder is writable."
 msgstr "Не вдалося зберегти зміни маркера на диск. Переконайтеся, що папка конфігурації доступна для запису."
 
-#: gui.py:247
-#: gui.py:318
+#: gui.py:255
+#: gui.py:334
 msgid "Failed to save the site configuration to disk. Check that the configuration folder is writable."
 msgstr "Не вдалося зберегти конфігурацію сайту на диск. Переконайтеся, що папка конфігурації доступна для запису."
 
 #: gui.py:210
-#: gui.py:278
+#: gui.py:286
 msgid "Focus Mode:"
 msgstr "Режим фокуса:"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Include Subdomains"
 msgstr "Включаючи піддомени"
 
 #: gui.py:104
 #: gui.py:126
 #: gui.py:138
-#: gui.py:448
-#: gui.py:474
-#: gui.py:489
+#: gui.py:464
+#: gui.py:490
+#: gui.py:505
 msgid "Information"
 msgstr "Інформація"
 
-#: gui.py:608
+#: gui.py:629
 msgid "Jump"
 msgstr "Перехід"
 
-#: gui.py:658
+#: gui.py:697
 msgid "Jump Key:"
 msgstr "Клавіша переходу:"
 
-#: gui.py:329
+#: gui.py:345
 msgid "Marker Manager - "
 msgstr "Диспетчер маркерів - "
 
-#: gui.py:552
+#: gui.py:568
 msgid "Marker Properties"
 msgstr "Властивості маркера"
 
-#: gui.py:361
+#: gui.py:377
 msgid "Marker found: {}"
 msgstr "Знайдено маркер: {}"
 
 #: gui.py:204
-#: gui.py:272
+#: gui.py:280
 msgid "Match Type:"
 msgstr "Тип збігу:"
 
-#: gui.py:607
+#: gui.py:628
 msgid "Mode:"
 msgstr "Режим:"
 
-#: gui.py:489
+#: gui.py:505
 msgid "No markers to clear."
 msgstr "Немає маркерів для очищення."
 
 #: gui.py:211
-#: gui.py:279
+#: gui.py:287
 msgid "Normal"
 msgstr "Звичайний"
 
-#: gui.py:638
+#: gui.py:672
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:633
+#: gui.py:667
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "Зміщення (рядки для переміщення після збігу, як стрілка вгору/вниз):"
 
-#: scanEngine.py:91
-#: scanEngine.py:456
+#: scanEngine.py:215
+#: scanEngine.py:579
 msgid "Page not fully loaded, try again."
 msgstr "Сторінка завантажена не повністю, спробуйте знову."
 
-#: gui.py:601
+#: gui.py:622
 msgid "Pattern Match:"
 msgstr "Збіг за шаблоном:"
 
-#: gui.py:675
+#: gui.py:797
 msgid "Pattern cannot be empty."
 msgstr "Шаблон не може бути порожнім."
 
-#: gui.py:597
+#: gui.py:618
 msgid "Pattern:"
 msgstr "Шаблон:"
 
-#: gui.py:448
-#: gui.py:474
+#: gui.py:464
+#: gui.py:490
 msgid "Please select a marker first."
 msgstr "Будь ласка, спочатку виберіть маркер."
 
@@ -317,32 +338,40 @@ msgstr "Будь ласка, спочатку виберіть маркер."
 msgid "Please select a site first."
 msgstr "Будь ласка, спочатку виберіть сайт."
 
-#: gui.py:602
+#: gui.py:623
 msgid "Regex Match (use regular expression)"
 msgstr "Регулярний вираз (використовувати регулярний вираз)"
 
 #: gui.py:205
-#: gui.py:273
+#: gui.py:281
 msgid "Regular Expression"
 msgstr "Регулярний вираз"
 
-#: gui.py:286
+#: gui.py:301
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: gui.py:217
+#: gui.py:224
 msgid "Save Site"
 msgstr "Зберегти сайт"
 
-#: gui.py:622
+#: gui.py:656
 msgid "Search Scope:"
 msgstr "Область пошуку:"
+
+#: gui.py:773
+msgid "Shortcut changed from {old} to {new}"
+msgstr "Скорочення змінено з {old} на {new}"
+
+#: gui.py:780
+msgid "Shortcut reset to {key}"
+msgstr "Скорочення скинуто на {key}"
 
 #: gui.py:16
 msgid "Site Manager"
 msgstr "Диспетчер сайтів"
 
-#: gui.py:251
+#: gui.py:259
 msgid "Site created successfully."
 msgstr "Сайт успішно створено."
 
@@ -350,24 +379,37 @@ msgstr "Сайт успішно створено."
 msgid "Site deleted successfully."
 msgstr "Сайт успішно видалено."
 
-#: gui.py:322
+#: gui.py:338
 msgid "Site updated successfully."
 msgstr "Сайт успішно оновлено."
 
-#: gui.py:235
-#: gui.py:304
+#: gui.py:218
+#: gui.py:295
+msgid "Skip blank lines when navigating with Up/Down and Ctrl+Up/Down"
+msgstr "Пропускати порожні рядки під час навігації за допомогою стрілок Вгору/Вниз та Ctrl+Вгору/Вниз"
+
+#: gui.py:242
+#: gui.py:319
 msgid "URL Pattern cannot be empty."
 msgstr "Шаблон URL не може бути порожнім."
 
 #: gui.py:200
-#: gui.py:269
+#: gui.py:277
 msgid "URL Pattern:"
 msgstr "Шаблон URL:"
 
-#: gui.py:405
+#: gui.py:421
 msgid "Unnamed"
 msgstr "Без назви"
 
-#: gui.py:623
+#: gui.py:657
 msgid "Viewport Only"
 msgstr "Тільки область перегляду"
+
+#: gui.py:753
+msgid "this marker's auto-click shortcut"
+msgstr "швидка клавіша для автоматичного кліку на цьому маркері"
+
+#: gui.py:751
+msgid "this marker's jump shortcut"
+msgstr "швидка клавіша для переходу на цей маркер"

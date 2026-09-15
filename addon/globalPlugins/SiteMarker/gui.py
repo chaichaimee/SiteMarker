@@ -213,6 +213,13 @@ class AddSiteDialog(wx.Dialog):
 		self.cmbFocusMode.SetSelection(0)  # Default Normal
 		mainSizer.Add(self.cmbFocusMode, 0, wx.EXPAND | wx.ALL, 5)
 		# --- End Focus Mode ---
+		# --- Add Skip Blank Lines checkbox ---
+		self.chkSkipBlankLines = wx.CheckBox(
+			self, label=_("Skip blank lines when navigating with Up/Down and Ctrl+Up/Down")
+		)
+		self.chkSkipBlankLines.SetValue(False)
+		mainSizer.Add(self.chkSkipBlankLines, 0, wx.ALL, 5)
+		# --- End Skip Blank Lines ---
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 		self.btnSave = wx.Button(self, wx.ID_OK, label=_("Save Site"))
 		self.btnCancel = wx.Button(self, id=wx.ID_CANCEL, label=_("Cancel"))
@@ -240,6 +247,7 @@ class AddSiteDialog(wx.Dialog):
 			"pattern": patternValue,
 			"matchType": self.cmbMatchType.GetSelection(),
 			"focusMode": self.cmbFocusMode.GetSelection(),  # Save focusMode value
+			"skipBlankLines": self.chkSkipBlankLines.GetValue(),
 			"markers": []
 		}
 		if not self.engine.saveSiteConfiguration(cleanName, siteConfigData):
@@ -282,6 +290,13 @@ class EditSiteDialog(wx.Dialog):
 		self.cmbFocusMode.SetSelection(currentFocusMode if 0 <= currentFocusMode <= 2 else 0)
 		mainSizer.Add(self.cmbFocusMode, 0, wx.EXPAND | wx.ALL, 5)
 		# --- End Focus Mode ---
+		# --- Add Skip Blank Lines checkbox ---
+		self.chkSkipBlankLines = wx.CheckBox(
+			self, label=_("Skip blank lines when navigating with Up/Down and Ctrl+Up/Down")
+		)
+		self.chkSkipBlankLines.SetValue(bool(self.siteConfig.get("skipBlankLines", False)))
+		mainSizer.Add(self.chkSkipBlankLines, 0, wx.ALL, 5)
+		# --- End Skip Blank Lines ---
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 		self.btnSave = wx.Button(self, wx.ID_OK, label=_("Save Changes"))
 		self.btnCancel = wx.Button(self, id=wx.ID_CANCEL, label=_("Cancel"))
@@ -309,6 +324,7 @@ class EditSiteDialog(wx.Dialog):
 			"pattern": patternValue,
 			"matchType": self.cmbMatchType.GetSelection(),
 			"focusMode": self.cmbFocusMode.GetSelection(),  # Save focusMode value
+			"skipBlankLines": self.chkSkipBlankLines.GetValue(),
 			"markers": self.siteConfig.get("markers", [])
 		}
 		if newSiteName != self.siteName:
@@ -593,6 +609,11 @@ class MarkerEditDialog(wx.Dialog):
 	def _initUI(self, initialText=None):
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		selectedText = self._getSelectedText(initialText)
+		# Set (rather than left implicit) by _updateKeyChoices() below, once the
+		# combo choices for the marker's current actionMode are known -- see
+		# that method for how an existing marker's non-standard keystroke value
+		# is recognised as a custom shortcut here.
+		self._customKeystroke = None
 
 		mainSizer.Add(wx.StaticText(self, label=_("Pattern:")), 0, wx.ALL, 5)
 		self.txtPattern = wx.TextCtrl(self, value=self.markerData.get("pattern", selectedText))
@@ -617,7 +638,20 @@ class MarkerEditDialog(wx.Dialog):
 		self.cmbKey = wx.ComboBox(self, style=wx.CB_READONLY)
 		self.keySizer.Add(self.lblKey, 0, wx.ALL, 5)
 		self.keySizer.Add(self.cmbKey, 0, wx.EXPAND | wx.ALL, 5)
+		self.cmbKey.Bind(wx.EVT_COMBOBOX, self.onStandardKeyChanged)
+		customKeyBtnSizer = wx.BoxSizer(wx.HORIZONTAL)
+		self.btnCustomShortcut = wx.Button(self, label=_("Custom &Shortcut..."))
+		self.btnCustomShortcut.Bind(wx.EVT_BUTTON, self.onCustomShortcut)
+		customKeyBtnSizer.Add(self.btnCustomShortcut, 0, wx.ALL, 5)
+		self.btnClearCustomShortcut = wx.Button(self, label=_("&Use Standard Key"))
+		self.btnClearCustomShortcut.Bind(wx.EVT_BUTTON, self.onClearCustomShortcut)
+		customKeyBtnSizer.Add(self.btnClearCustomShortcut, 0, wx.ALL, 5)
+		self.keySizer.Add(customKeyBtnSizer, 0, wx.ALL, 0)
 		mainSizer.Add(self.keySizer, 0, wx.EXPAND | wx.ALL, 5)
+
+		self.chkAutoTrigger = wx.CheckBox(self, label="")
+		self.chkAutoTrigger.SetValue(bool(self.markerData.get("autoTrigger", False)))
+		mainSizer.Add(self.chkAutoTrigger, 0, wx.ALL, 5)
 
 		mainSizer.Add(wx.StaticText(self, label=_("Search Scope:")), 0, wx.ALL, 5)
 		scopeChoices = [_("Entire Document"), _("Viewport Only")]
@@ -650,23 +684,111 @@ class MarkerEditDialog(wx.Dialog):
 		self._updateKeyChoices()
 
 	def onActionModeChange(self, event):
+		# A custom shortcut captured for one action mode (jump vs auto-click)
+		# doesn't carry a meaningful interpretation in the other, so switching
+		# modes clears it rather than silently keeping a key that made sense
+		# only in the mode the user is leaving.
+		self._customKeystroke = None
 		self._updateKeyChoices()
 
 	def _updateKeyChoices(self):
 		actionMode = "jump" if self.cmbActionMode.GetSelection() == 0 else "autoClick"
 		if actionMode == "jump":
 			self.lblKey.SetLabel(_("Jump Key:"))
-			keys = ["j", "f", "d", "z"]
+			keys = ["j"]
+			self.chkAutoTrigger.SetLabel(_("Auto-jump on page load"))
 		else:
 			self.lblKey.SetLabel(_("Click Key:"))
-			keys = ["alt+j", "alt+c", "alt+x", "alt+z"]
+			keys = ["alt+j"]
+			self.chkAutoTrigger.SetLabel(_("Auto-click on page load"))
 		self.cmbKey.SetItems(keys)
 		currentKeystroke = self.markerData.get("keystroke", keys[0]).lower()
 		if currentKeystroke in keys:
 			self.cmbKey.SetSelection(keys.index(currentKeystroke))
 		else:
 			self.cmbKey.SetSelection(0)
+			# An existing marker whose saved keystroke doesn't match any of
+			# the standard choices for this action mode already has its own
+			# custom shortcut (set via the button below in an earlier edit) --
+			# keep it rather than silently reverting to the first standard key.
+			if self.markerData.get("keystroke"):
+				self._customKeystroke = currentKeystroke
+		self._updateCustomKeyLabel()
 		self.keySizer.Layout()
+
+	def _currentDisplayedKey(self):
+		# What the user would currently hear as "the key" for this marker,
+		# used both to render the button label and to announce a
+		# from-to confirmation when it changes -- covers all three states:
+		# a custom shortcut, a standard key picked from the combo, or (should
+		# the combo ever be genuinely empty) a safe fallback.
+		if self._customKeystroke:
+			return self._customKeystroke
+		selected = self.cmbKey.GetStringSelection()
+		return selected if selected else self.cmbKey.GetItems()[0]
+
+	def _updateCustomKeyLabel(self):
+		hasCustom = bool(self._customKeystroke)
+		if hasCustom:
+			self.btnCustomShortcut.SetLabel(
+				_("Custom &Shortcut: {key}...").format(key=self._customKeystroke)
+			)
+		else:
+			self.btnCustomShortcut.SetLabel(_("Custom &Shortcut..."))
+		# The combo box is deliberately never disabled: a disabled control
+		# drops out of the Tab order entirely, which was the root cause of
+		# the standard key silently "disappearing" from the dialog once a
+		# custom shortcut was set -- a screen reader user tabbing through had
+		# no way to even find it again, let alone confirm what it still said.
+		# Picking a standard key from the (always reachable) combo box
+		# implicitly clears any custom shortcut -- see onStandardKeyChanged.
+		self.btnClearCustomShortcut.Enable(hasCustom)
+		self.keySizer.Layout()
+
+	def onCustomShortcut(self, event):
+		from .customShortcuts import GestureCaptureDialog
+		actionLabel = (
+			_("this marker's jump shortcut")
+			if self.cmbActionMode.GetSelection() == 0
+			else _("this marker's auto-click shortcut")
+		)
+		previousKey = self._currentDisplayedKey()
+		captureDlg = GestureCaptureDialog(self, actionLabel)
+		try:
+			result = captureDlg.ShowModal()
+			captured = captureDlg.capturedGesture
+		finally:
+			captureDlg.Destroy()
+		if result != wx.ID_OK or not captured:
+			return
+		# Marker keystrokes are stored without the "kb:" prefix, consistent
+		# with the existing j/f/d/z / alt+j/c/x/z convention already used
+		# throughout this add-on.
+		self._customKeystroke = captured[3:] if captured.startswith("kb:") else captured
+		self._updateCustomKeyLabel()
+		# A wx.StaticText label update alone is silent to a screen reader
+		# user tabbing through the dialog (plain static text isn't part of
+		# the Tab order at all), so the change is also spoken directly --
+		# this is the explicit from-to confirmation asked for.
+		ui.message(_("Shortcut changed from {old} to {new}").format(
+			old=previousKey, new=self._customKeystroke
+		))
+
+	def onClearCustomShortcut(self, event):
+		self._customKeystroke = None
+		self._updateCustomKeyLabel()
+		ui.message(_("Shortcut reset to {key}").format(key=self._currentDisplayedKey()))
+
+	def onStandardKeyChanged(self, event):
+		# Picking a value from the combo box is the other way to set the key
+		# (alongside the Custom Shortcut button); doing so should supersede
+		# any custom shortcut currently set, the same way pressing "Use
+		# Standard Key" does, rather than leaving a stale custom value that
+		# silently wins over the user's new combo selection.
+		if self._customKeystroke:
+			self._customKeystroke = None
+			self._updateCustomKeyLabel()
+		event.Skip()
 
 	def onSave(self, event):
 		displayNameValue = self.txtDisplayName.GetValue().strip()
@@ -685,16 +807,20 @@ class MarkerEditDialog(wx.Dialog):
 		if not displayName:
 			displayName = pattern
 		scope = "document" if self.cmbScope.GetSelection() == 0 else "viewport"
+		keystroke = self._customKeystroke if self._customKeystroke else self.cmbKey.GetStringSelection().lower()
 		return {
 			"name": displayName,
 			"displayName": displayName,
 			"pattern": pattern,
 			"matchMode": self.cmbMatchMode.GetSelection(),
-			"keystroke": self.cmbKey.GetStringSelection().lower(),
+			"keystroke": keystroke,
 			"actionMode": actionMode,
 			"offset": self.spinOffset.GetValue(),
-			"scope": scope
+			"scope": scope,
+			"autoTrigger": self.chkAutoTrigger.GetValue()
 		}
+
+
 
 
 
