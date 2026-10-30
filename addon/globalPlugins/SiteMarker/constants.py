@@ -1,5 +1,8 @@
 # constants.py
 
+import re
+
+
 TAP_THRESHOLD = 0.4
 VIEWPORT_SCAN_RANGE = 50
 AUTO_CLICK_RETRY_DELAY = 500
@@ -42,6 +45,16 @@ FOCUS_RECOVERY_WINDOW_SEC = 1.5
 
 # New: Full-scan retry for auto-click when target not yet present (e.g. YouTube skip ad)
 MAX_FULL_SCAN_RETRIES = 5
+# An automatic trigger (auto-click-on-page-load, gesture is None) uses a much
+# longer retry budget than an interactive keypress: a real keypress should
+# stay snappy and give up within a few seconds if the target genuinely isn't
+# there, but a silent background watch for something like a YouTube skip-ad
+# button needs to keep checking through an entire ad break -- log-confirmed
+# that back-to-back/stacked ads can easily run well past the interactive
+# budget, and giving up early there just means the click silently never
+# happens at all rather than merely feeling slow. At the retry schedule's
+# capped 1500ms step, 40 retries is roughly a minute of background watching.
+MAX_FULL_SCAN_RETRIES_SILENT = 40
 FULL_SCAN_RETRY_DELAY_MS = 1500
 
 # _isBufferReady fast path: a document whose rendered text already comfortably
@@ -117,7 +130,14 @@ TREE_INTERCEPTOR_POLL_INTERVAL_MS = 1000
 STANDARD_JUMP_KEYS = frozenset({"j"})
 STANDARD_AUTOCLICK_KEYS = frozenset({"alt+j"})
 
+_NESTED_QUANTIFIER_SHAPE = re.compile(
+	r"\((?:[^()\\]|\\.)*(?:[+*]|\{\d+,\d*\})(?:[^()\\]|\\.)*\)(?:[+*]|\{\d+,\d*\})"
+)
 
 
-
-
+def isRegexPatternSafe(pattern):
+	# A group that contains an unbounded quantifier and is itself repeated
+	# without bound is the classic shape behind catastrophic backtracking.
+	if not pattern:
+		return True
+	return _NESTED_QUANTIFIER_SHAPE.search(pattern) is None

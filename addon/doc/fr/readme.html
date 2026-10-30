@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Extension SiteMarker pour NVDA</title>
+<title>Extension NVDA SiteMarker</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -67,94 +67,57 @@ b {
     <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
     <h1>SiteMarker</h1>
     <br>
-    <p style="text-align: center;">Marquez n'importe quel endroit sur n'importe quel site Web, puis revenez-y directement d'une simple pression sur une touche.</p>
+    <p style="text-align: center;">Marquez n'importe quel endroit sur une page web et revenez-y directement à chaque visite — plus besoin de parcourir de longues pages ligne par ligne.</p>
 </div>
 <br>
 <div class="section">
-    <p style="text-align: center;"><b>auteur :</b> chai chaimee</p>
-    <p style="text-align: center;"><b>url :</b> https://github.com/chaichaimee/SiteMarker</p>
+    <p style="text-align: center;"><b>Auteur :</b> chai chaimee</p>
+    <p style="text-align: center;"><b>URL :</b> <a href="https://github.com/chaichaimee/SiteMarker">https://github.com/chaichaimee/SiteMarker</a></p>
 </div>
 <br>
-
-<div class="note">
-<b>Remarque :</b> Le slogan ci-dessus et l'URL GitHub ne sont pas présents dans le code source et doivent être vérifiés/confirmés avant la publication.
-</div>
-
 <div class="section">
 <h2>Introduction</h2>
-<p>
-SiteMarker vous permet de placer des « marqueurs » invisibles sur des morceaux de texte spécifiques de n'importe quelle page Web, puis d'y accéder directement plus tard,
-ou de demander à NVDA de cliquer dessus automatiquement. Au lieu de parcourir une longue page avec les flèches ou la touche Tab à chaque visite,
-vous appuyez sur un raccourci clavier et atterrissez exactement là où vous devez être &mdash; une boîte de discussion, un bouton « Charger plus », un titre spécifique,
-un bouton « Ignorer l'annonce », ou tout autre élément qui se répète ou est difficile à trouver.
-</p>
+<p>Visitez-vous souvent les mêmes sites web en devant toujours faire défiler la page ou rechercher le même bouton, titre ou champ ? SiteMarker vous permet de « marquer » n'importe quel endroit d'une page — grâce au texte situé à proximité — puis d'y revenir directement d'une seule pression sur une touche, ou même de laisser NVDA cliquer dessus automatiquement.</p>
 <br>
-<p>
-Les marqueurs sont organisés par site Web. Chaque site Web que vous configurez possède son propre ensemble de marqueurs, sa propre règle de correspondance d'URL
-et son propre comportement de « mode saisie / focalisation ». Tout est enregistré automatiquement, de sorte qu'une fois qu'un site est configuré, les sauts et les clics fonctionnent
-à chaque fois que vous revenez sur cette page.
-</p>
+<p>Voyez cela comme des marque-pages personnels pour le Web, mais en plus intelligent : au lieu de retenir la position d'une barre de défilement, SiteMarker retient un morceau de texte (comme « Ignorer l'annonce », « Répondre » ou le nom d'un ami dans une liste de discussion) et le retrouve pour vous, même si la page a changé de disposition depuis votre dernière visite.</p>
+<br>
+<p>SiteMarker fonctionne par site web : vous configurez vos marqueurs une fois pour un site (ex. YouTube, Facebook, boîte de réception webmail), et dès lors vos raccourcis fonctionnent automatiquement lorsque vous naviguez sur ce site. Il s'exécute en arrière-plan lorsque vous utilisez Chrome, Edge, Firefox, Brave, Opera, Vivaldi ou Thorium, et reste discret partout ailleurs.</p>
 </div>
 
 <div class="section">
-<h2>Raccourcis Clavier</h2>
+<h3>Touches de raccourci</h3>
 
 <div class="hotkey">
 <b>NVDA+Windows+F12</b><br>
-Appui simple : Ajouter/modifier un marqueur sur la ligne actuelle (ouvre l'éditeur de marqueurs si aucun marqueur ne correspond encore ici, ou le Gestionnaire de marqueurs avec un nouveau marqueur prêt à être ajouté si ce site n'a aucune configuration)<br>
-Double appui : Ouvrir le Gestionnaire de sites (ou la boîte de dialogue Ajouter un site si le site actuel n'a pas encore été configuré)<br>
-Triple appui (ou plus) : Ouvrir le Gestionnaire de marqueurs pour le site actuel
+Simple pression : Ajouter ou modifier un marqueur pour le paragraphe actuel<br>
+Double pression : Ouvrir le Gestionnaire de sites (ou Ajouter un site, si ce site n'est pas encore configuré)<br>
+Triple pression : Ouvrir le Gestionnaire de marqueurs pour le site actuel
 </div>
 
 <div class="tap-explanation">
-Les appuis sont comptés dans une fenêtre de 0,4 seconde les uns des autres. Appuyer sur le raccourci une fois et attendre brièvement déclenche
-l'action d'appui simple ; l'appuyer à nouveau rapidement dans cette fenêtre passe à l'action de double appui, et ainsi de suite.
+Cette combinaison de touches effectue trois actions différentes selon le nombre de pressions rapides (dans un intervalle d'environ quatre dixièmes de seconde) :<br><br>
+<b>Simple pression</b> — Si votre curseur se trouve actuellement sur un texte correspondant déjà à l'un de vos marqueurs, cela ouvre directement la boîte de dialogue Propriétés de ce marqueur pour le modifier. Sinon, cela ouvre le Gestionnaire de marqueurs et commence immédiatement à ajouter un tout nouveau marqueur basé sur le texte où se trouve votre curseur ou le focus.<br><br>
+<b>Double pression</b> — Ouvre le Gestionnaire de sites pour le site sur lequel vous vous trouvez actuellement, afin de revoir, ajouter, modifier ou supprimer des sites et d'accéder à leurs listes de marqueurs. Si le site actuel n'a pas encore été configuré, cela ouvre la boîte de dialogue Ajouter un site, préremplie avec le domaine de la page actuelle.<br><br>
+<b>Triple pression</b> (ou plus) — Accède directement au Gestionnaire de marqueurs pour le site actuel, en ignorant le Gestionnaire de sites. Si aucun site n'est encore configuré pour la page actuelle, il vous sera demandé d'ajouter d'abord un site.
 </div>
 
 <div class="hotkey">
-<b>J</b> / <b>Shift+J</b><br>
-Aller au marqueur suivant / précédent assigné à la touche J
+<b>J</b><br>
+Aller au marqueur suivant assigné à cette touche
 </div>
 
 <div class="hotkey">
-<b>F</b> / <b>Shift+F</b><br>
-Aller au marqueur suivant / précédent assigné à la touche F
-</div>
-
-<div class="hotkey">
-<b>D</b> / <b>Shift+D</b><br>
-Aller au marqueur suivant / précédent assigné à la touche D
-</div>
-
-<div class="hotkey">
-<b>Z</b> / <b>Shift+Z</b><br>
-Aller au marqueur suivant / précédent assigné à la touche Z
+<b>Shift+J</b><br>
+Aller au marqueur précédent assigné à cette touche
 </div>
 
 <div class="hotkey">
 <b>Alt+J</b><br>
-Appui simple : Cliquer automatiquement sur l'élément correspondant au marqueur assigné à Alt+J
+Cliquer automatiquement sur l'élément correspondant au marqueur assigné à cette touche
 </div>
 
-<div class="hotkey">
-<b>Alt+C</b><br>
-Appui simple : Cliquer automatiquement sur l'élément correspondant au marqueur assigné à Alt+C
-</div>
-
-<div class="hotkey">
-<b>Alt+X</b><br>
-Appui simple : Cliquer automatiquement sur l'élément correspondant au marqueur assigné à Alt+X
-</div>
-
-<div class="hotkey">
-<b>Alt+Z</b><br>
-Appui simple : Cliquer automatiquement sur l'élément correspondant au marqueur assigné à Alt+Z
-</div>
-
-<div class="note">
-Les touches de saut (J, F, D, Z) et les touches de clic automatique (Alt+J, Alt+C, Alt+X, Alt+Z) ne sont actives que lorsque vous êtes en mode navigation
-sur un navigateur pris en charge (Chrome, Edge, Firefox, Brave, Opera, Vivaldi ou Thorium). Dans toute autre fenêtre, ou lorsqu'un site n'a
-aucun marqueur assigné à cette touche, la touche est transmise directement pour qu'elle tape ou se comporte normalement.
+<div class="tap-explanation">
+<b>J</b>, <b>Shift+J</b> et <b>Alt+J</b> sont les seules touches de saut/clic automatique réservées par SiteMarker par défaut. C'est un choix délibéré : toutes les autres touches alphabétiques (comme F, D ou Z) restent entièrement libres pour la navigation en mode navigation de NVDA, à moins que vous ne choisissiez spécifiquement de les utiliser. Si vous souhaitez plus de raccourcis, vous attribuez un <b>Raccourci personnalisé</b> à un marqueur (voir Fonctionnalités ci-dessous) — cette touche ne devient alors active que sur les sites où vous l'avez réellement utilisée, et uniquement pendant que vous êtes sur ces sites.
 </div>
 </div>
 
@@ -162,178 +125,94 @@ aucun marqueur assigné à cette touche, la touche est transmise directement pou
 <h2>Fonctionnalités</h2>
 
 <div class="feature-item">
-<h3>Gestionnaire de sites</h3>
-<p>
-Chaque site Web pour lequel vous souhaitez des marqueurs doit d'abord être ajouté en tant que « site ». Un site est défini par :
-</p>
-<br>
-<p>
-<b>Nom d'affichage</b> &mdash; un nom convivial affiché dans la liste du Gestionnaire de sites.<br>
-<b>Modèle d'URL</b> &mdash; l'adresse ou le texte de domaine qui est vérifié par rapport à la page sur laquelle vous vous trouvez actuellement.<br>
-<b>Type de correspondance</b> &mdash; la manière dont le modèle est comparé à l'URL réelle de la page :
-</p>
-<br>
-<p style="padding-left:20px;">
-&bull; Domaine uniquement &mdash; le domaine de la page doit correspondre exactement au modèle.<br>
-&bull; Inclure les sous-domaines &mdash; le domaine doit correspondre au modèle ou se terminer par celui-ci (ainsi un modèle « example.com » correspond également à « mail.example.com »).<br>
-&bull; Contenir une sous-chaîne &mdash; le modèle doit simplement apparaître n'importe où dans l'URL.<br>
-&bull; Correspondance exacte &mdash; l'URL entière doit correspondre exactement au modèle.<br>
-&bull; Expression régulière &mdash; le modèle est traité comme une expression régulière et cherché dans l'URL.
-</p>
-<br>
-<p>
-<b>Mode Saisie (Focus)</b> &mdash; contrôle la façon dont le comportement normal de NVDA (mode navigation/formulaires) est modifié sur ce site :
-</p>
-<br>
-<p style="padding-left:20px;">
-&bull; Normal &mdash; NVDA se comporte comme d'habitude.<br>
-&bull; Ne pas entrer en mode formulaire &mdash; lorsqu'un contrôle de ce site reçoit le focus Windows réel, NVDA est empêché de basculer automatiquement en mode formulaire pour cet événement de focus (le mode navigation reste actif).<br>
-&bull; Désactiver le focus &mdash; la commutation entre le mode navigation et le mode saisie pilotée par les changements de focus réels est entièrement supprimée sur ce site.
-</p>
-<br>
-<p>
-Depuis le Gestionnaire de sites, vous pouvez ajouter, modifier ou supprimer un site, et accéder directement au Gestionnaire de marqueurs de ce site. Appuyer sur
-Suppr sur un site sélectionné (ou F2 pour modifier) fonctionne directement depuis la liste, et un menu contextuel (clic droit) offre les mêmes actions.
-</p>
+<h3>1. Marquer du texte sur une page</h3>
+<p>Un « marqueur » indique à SiteMarker de surveiller un texte spécifique sur un site web particulier. Lorsque vous appuyez sur la touche assignée, SiteMarker recherche ce texte dans la page et vous y amène (ou clique dessus, s'il est réglé sur Clic automatique).</p>
+<p>Chaque marqueur possède ces paramètres, situés dans la boîte de dialogue <b>Propriétés du marqueur</b> (ouverte depuis les boutons Ajouter/Modifier du Gestionnaire de marqueurs, ou automatiquement via le raccourci à simple pression NVDA+Windows+F12) :</p>
+<ul>
+<li><b>Motif</b> — le texte recherché par SiteMarker. Prérempli automatiquement à partir de votre sélection actuelle ou de la position du curseur lorsque vous ouvrez cette boîte de dialogue.</li>
+<li><b>Correspondance du motif</b> — la manière dont le motif est comparé à chaque paragraphe de la page :
+  <br>• <i>Contient le texte</i> — correspond si le paragraphe contient votre motif n'importe où.
+  <br>• <i>Paragraphe exact</i> — correspond uniquement si tout le paragraphe est exactement identique à votre motif.
+  <br>• <i>Correspondance Regex</i> — traite votre motif comme une expression régulière pour une correspondance avancée.</li>
+<li><b>Mode</b> — <i>Saut</i> (déplacer le curseur à cet endroit et le lire à haute voix) ou <i>Clic automatique</i> (l'activer/cliquer dessus automatiquement).</li>
+<li><b>Touche</b> — J pour un marqueur de saut ou Alt+J pour un marqueur de clic automatique par défaut, ou votre propre <b>Raccourci personnalisé</b> (voir ci-dessous).</li>
+<li><b>Saut automatique / Clic automatique au chargement de la page</b> — lorsqu'il est activé, ce marqueur se déclenche d'lui-même dès que la page a fini de se charger, sans qu'aucune pression sur une touche ne soit nécessaire.</li>
+<li><b>Portée de la recherche</b> — <i>Document entier</i> recherche dans toute la page (en chargeant automatiquement plus de contenu sur les pages longues ou à défilement infini si nécessaire), tandis que <i>Zone d'affichage uniquement</i> restreint la recherche à ce qui est proche de votre position actuelle, ce qui est plus rapide sur les pages très longues.</li>
+<li><b>Nom d'affichage</b> — l'étiquette affichée pour ce marqueur dans la liste du Gestionnaire de marqueurs. Utilise le motif par défaut si laissé vide.</li>
+<li><b>Décalage</b> — le nombre de lignes à déplacer, vers le haut ou vers le bas, après avoir trouvé la correspondance avant de vous arrêter — exactement comme si vous appuyiez sur la touche Flèche Haut ou Bas ce nombre de fois. Un nombre négatif déplace vers le haut, un nombre positif déplace vers le bas. Utile lorsque vous souhaitez atteindre la ligne située juste au-dessus ou en dessous du texte correspondant, et non la correspondance elle-même.</li>
+</ul>
 </div>
 
 <div class="feature-item">
-<h3>Gestionnaire de marqueurs et Propriétés des marqueurs</h3>
-<p>
-Chaque site conserve sa propre liste de marqueurs. Un marqueur est une règle qui indique à SiteMarker « lorsque le texte de cette page correspond
-à ce modèle, c'est un point de repère ». Chaque marqueur possède :
-</p>
-<br>
-<p>
-<b>Modèle</b> &mdash; le texte (ou l'expression régulière) à rechercher. Lorsque vous ouvrez l'éditeur de marqueurs depuis la page elle-même
-(via l'appui simple NVDA+Windows+F12), ce champ est pré-rempli avec votre sélection actuelle, le paragraphe actuel sous le curseur
-ou le nom/valeur du contrôle focalisé, selon ce qui est disponible en premier.<br>
-<b>Correspondance de modèle</b> &mdash; la manière dont le modèle est comparé à chaque paragraphe de la page :
-</p>
-<br>
-<p style="padding-left:20px;">
-&bull; Contient du texte &mdash; correspond si le modèle apparaît n'importe où dans le paragraphe.<br>
-&bull; Paragraphe exact &mdash; correspond uniquement si le paragraphe entier est exactement égal au modèle.<br>
-&bull; Correspondance Regex &mdash; le modèle est traité comme une expression régulière et recherché dans le paragraphe.
-</p>
-<br>
-<p>
-<b>Mode</b> &mdash; indique si ce marqueur est un marqueur de <b>Saut</b> (déplace votre curseur/position là-bas) ou un marqueur de <b>Clic automatique</b>
-(active l'élément automatiquement).<br>
-<b>Touche</b> &mdash; quel raccourci déclenche ce marqueur : J, F, D ou Z pour les marqueurs de saut ; Alt+J, Alt+C, Alt+X ou Alt+Z pour les marqueurs de clic automatique.<br>
-<b>Portée de recherche</b> &mdash; Document entier recherche sur toute la page (en chargeant plus de contenu plus bas si nécessaire) ;
-Zone visible restreint la recherche approximativement à la zone actuellement visible de la page (environ 50 paragraphes au-dessus et en dessous de votre curseur).<br>
-<b>Nom d'affichage</b> &mdash; une étiquette conviviale affichée dans la liste du Gestionnaire de marqueurs.<br>
-<b>Décalage (Offset)</b> &mdash; de combien de lignes (correspondant à ce que déplacerait un seul appui sur la flèche Haut/Bas) s'éloigner du paragraphe
-correspondant avant d'atterrir, de -50 à +50. Ceci est utile lorsque le texte que vous pouvez faire correspondre de manière fiable n'est pas exactement la ligne
-sur laquelle vous souhaitez terminer (par exemple, faire correspondre le nom d'auteur d'un message mais vouloir atterrir deux lignes plus bas, sur le bouton de réponse du message).
-</p>
-<br>
-<p>
-La liste du Gestionnaire de marqueurs vous permet d'ajouter, de modifier ou de supprimer un seul marqueur, ou de effacer tous les marqueurs du site en une seule fois.
-Suppr et F2 pour modifier fonctionnent également directement sur l'élément de liste sélectionné, et un menu contextuel de clic droit duplique ces actions.
-Si vous ouvrez le raccourci d'appuis multiples sur un paragraphe qui correspond déjà à l'un des marqueurs existants du site, SiteMarker
-ouvre directement ce marqueur pour modification au lieu de proposer d'en ajouter un nouveau.
-</p>
+<h3>2. Raccourcis personnalisés par marqueur</h3>
+<p>Au lieu d'utiliser les touches partagées J ou Alt+J, n'importe quel marqueur peut se voir attribuer son propre raccourci clavier dédié via le bouton <b>Raccourci personnalisé...</b> dans les Propriétés du marqueur. Appuyez sur le bouton, puis appuyez simplement sur la combinaison de touches que vous souhaitez utiliser — SiteMarker la capture et vous l'affiche.</p>
+<p>Pour un marqueur en mode Saut, l'attribution d'une touche personnalisée associe automatiquement Maj+cette touche pour sauter en arrière vers la correspondance précédente, reflétant le fonctionnement de Maj+J avec J. Choisir <b>Utiliser la touche standard</b> réinitialise le marqueur sur la touche partagée J ou Alt+J. Les raccourcis personnalisés ne deviennent actifs que lorsque vous êtes sur un site qui les utilise réellement, afin de ne jamais interférer avec vos autres extensions ou avec NVDA ailleurs.</p>
 </div>
 
 <div class="feature-item">
-<h3>Sauter vers les marqueurs (J / F / D / Z)</h3>
-<p>
-Appuyer sur une touche de saut analyse paragraphe par paragraphe, en avant ou en arrière à partir de votre position actuelle, à la recherche de tout marqueur
-assigné à cette touche. Dès qu'une correspondance est trouvée :
-</p>
-<br>
-<p style="padding-left:20px;">
-1. Si le marqueur a un décalage, SiteMarker se déplace de ce nombre de lignes par rapport au paragraphe correspondant (ou, si un modèle de décalage
-est défini, continue à rechercher dans les lignes voisines une ligne correspondant à ce modèle au lieu d'un nombre de lignes fixe) avant d'atterrir.<br>
-2. Si le décalage vous faisait atterrir sur un paragraphe vide, SiteMarker continue d'avancer jusqu'à ce qu'il atteigne du texte non vide.<br>
-3. Votre curseur y est déplacé et NVDA énonce le texte de destination.
-</p>
-<br>
-<p>
-Si la partie visible de la page s'épuise avant qu'une correspondance ne soit trouvée (par exemple, une page de style « flux » sans fin), SiteMarker
-envoie automatiquement Page Suivante pour charger plus de contenu et continue la recherche, jusqu'à 100 tentatives de chargement. Si rien n'est trouvé
-après tout cela, ou après 5 tentatives consécutives qui n'ont ajouté aucun nouveau contenu, vous entendreez « Pas de marqueur suivant » ou « Pas de marqueur précédent ».
-</p>
-<br>
-<p>
-SiteMarker évite d'annoncer à nouveau exactement le même endroit deux fois de suite (certaines pages répètent un texte identique à plusieurs endroits dans l'arbre
-d'accessibilité sous-jacent) et ignore les correspondances qui se trouvent à l'intérieur d'un champ modifiable ou d'une zone combinée, en réessayant au-delà.
-</p>
+<h3>3. Gestionnaire de sites</h3>
+<p>Ouvert via NVDA+Windows+F12 (double pression), le Gestionnaire de sites liste chaque site web pour lequel vous avez configuré des marqueurs. À partir d'ici, vous pouvez :</p>
+<ul>
+<li><b>Ajouter un nouveau site</b> — configurer un nouveau site web, en préremplissant l'URL depuis votre emplacement actuel.</li>
+<li><b>Modifier le site</b> — modifier les paramètres d'un site (voir ci-dessous).</li>
+<li><b>Supprimer le site</b> — supprimer un site et tous ses marqueurs (avec une demande de confirmation).</li>
+<li><b>Gérer les marqueurs</b> — accéder au Gestionnaire de marqueurs de ce site.</li>
+</ul>
+<p>Appuyer sur Suppr ou F2 lorsqu'un site est sélectionné dans la liste le supprime ou le modifie également, et un menu contextuel accessible par clic droit offre les mêmes actions.</p>
+<p>Chaque site possède ces paramètres dans la boîte de dialogue Ajouter/Modifier le site :</p>
+<ul>
+<li><b>Nom d'affichage</b> — le nom affiché pour ce site dans la liste.</li>
+<li><b>Motif d'URL</b> — l'adresse ou le domaine auquel s'applique cette configuration.</li>
+<li><b>Type de correspondance</b> — la manière dont le motif d'URL est comparé à la page que vous consultez :
+  <br>• <i>Domaine uniquement</i> — correspond uniquement à ce domaine exact.
+  <br>• <i>Inclure les sous-domaines</i> — correspond également aux sous-domaines de ce domaine.
+  <br>• <i>Contient la sous-chaîne</i> — correspond si l'adresse de la page contient ce texte n'importe où.
+  <br>• <i>Correspondance exacte</i> — correspond uniquement à cette adresse exacte et complète.
+  <br>• <i>Expression régulière</i> — correspond à l'aide d'une expression régulière pour des motifs avancés.</li>
+<li><b>Mode focus</b> — contrôle le comportement du mode focus/formulaire propre à NVDA sur ce site :
+  <br>• <i>Normal</i> — NVDA se comporte comme à son habitude.
+  <br>• <i>Ne pas passer en mode formulaire</i> — empêche NVDA de basculer automatiquement en mode formulaire lorsque le focus se déplace, ce qui est utile sur les sites où ce basculement est plus perturbateur qu'utile.
+  <br>• <i>Désactiver le focus</i> — maintient le mode navigation actif, peu importe ce qui reçoit le focus sur la page.</li>
+<li><b>Ignorer les lignes vides lors de la navigation avec Flèche Haut/Bas et Ctrl+Flèche Haut/Bas</b> — lorsque cette option est cochée, appuyer sur ces touches fléchées sur ce site ignore automatiquement les lignes/paragraphes vides au lieu de s'y arrêter, vous permettant d'arriver directement sur la ligne ou le paragraphe suivant contenant du texte.</li>
+</ul>
 </div>
 
 <div class="feature-item">
-<h3>Clic automatique (Alt+J / Alt+C / Alt+X / Alt+Z)</h3>
-<p>
-Appuyer sur une touche de clic automatique analyse la page depuis le tout début à la recherche d'un marqueur assigné à cette touche, applique son décalage de la même manière
-que les marqueurs de saut, puis clique sur l'élément correspondant à l'aide d'un système de secours en trois étapes pour que même les boutons récalcitrants
-(comme le bouton « Ignorer l'annonce » d'un site vidéo) soient activés de manière fiable :
-</p>
-<br>
-<p style="padding-left:20px;">
-1. Essayer la propre commande d'accessibilité « exécuter l'action » de l'élément.<br>
-2. Si elle n'est pas disponible, essayer de l'invoquer via son modèle UI Automation Invoke.<br>
-3. Si les deux échouent, déplacer le curseur de la souris sur l'élément et simuler un clic gauche physique.
-</p>
-<br>
-<p>
-Après un clic réussi, NVDA énonce le texte cliqué et annonce « Cliqué ». Sur YouTube spécifiquement, si l'URL de la page et le texte sous le curseur n'ont pas changé
-peu de temps après le clic (signe que le clic n'a pas été enregistré, ce qui peut se produire avec un bouton d'ignorage pas encore totalement interactif), SiteMarker
-réessaye automatiquement le clic jusqu'à 2 fois de plus. Sur d'autres sites, ce re-clic automatique est ignoré, car un contrôle de type bascule peut réussir au premier clic
-tout en paraissant inchangé, et un nouveau clic le désactiverait simplement à nouveau.
-</p>
-<br>
-<p>
-Si aucune cible cliquable correspondante n'est trouvée à la fin de la page, SiteMarker réessaye automatiquement toute la recherche jusqu'à 5 fois avec un court délai
-croissant entre les tentatives (pour attraper des éléments, comme le bouton d'ignorage d'une publicité, qui n'apparaissent qu'une seconde ou deux après le chargement de la page),
-avant d'annoncer finalement « Aucune cible de clic automatique trouvée ».
-</p>
+<h3>4. Gestionnaire de marqueurs</h3>
+<p>Liste chaque marqueur configuré pour un site particulier. À partir d'ici, vous pouvez Ajouter, Modifier ou Supprimer un seul marqueur, ou utiliser <b>Tout effacer</b> pour supprimer tous les marqueurs de ce site en une seule fois (chacun avec une demande de confirmation). Appuyer sur Suppr ou F2 sur un marqueur sélectionné, ou faire un clic droit dessus, vous offre les mêmes options. Un bouton <b>Retour au Gestionnaire de sites</b> vous ramène à la liste des sites.</p>
 </div>
 
 <div class="feature-item">
-<h3>Récupération automatique du vol de focus</h3>
-<p>
-Sur certaines pages, le défilement automatique « charger plus » effectué par SiteMarker lors d'une analyse peut accidentellement placer le focus clavier réel
-sur un champ modifiable ou une zone de recherche sans rapport au lieu de faire simplement défiler la page. Lorsque cela se produit lors d'une analyse active, SiteMarker
-restaure automatiquement le focus sur le document afin que votre recherche ne soit pas interrompue. Si la même page continue de voler le focus sur le même champ
-peu importe le nombre de fois que cela est corrigé, SiteMarker arrête d'essayer de faire défiler davantage pour cette analyse et termine simplement la recherche avec le contenu déjà chargé.
-</p>
+<h3>5. Chargement automatique de contenu supplémentaire</h3>
+<p>Sur les pages qui chargent plus de contenu au fur et à mesure du défilement (fichiers d'actualités des réseaux sociaux, fils de discussion et pages similaires à « défilement infini »), un marqueur de Saut configuré pour rechercher dans le <i>Document entier</i> fera automatiquement défiler la page plus bas si le bas du contenu actuellement chargé est atteint sans trouver de correspondance. Il continuera ensuite sa recherche — jusqu'à un nombre généreux de tentatives — avant de vous informer qu'aucune correspondance n'a été trouvée.</p>
 </div>
 
 <div class="feature-item">
-<h3>Détection des modifications de page en arrière-plan</h3>
-<p>
-SiteMarker revérifie automatiquement les marqueurs actifs chaque fois que vous changez de focus, chaque fois que le contenu de la page se met à jour,
-et sur une minuterie périodique (toutes les 2 secondes environ) lorsque vous êtes sur une page de navigateur. Cela maintient vos marqueurs à jour sur les applications
-à page unique et les sites à mise à jour dynamique sans que vous ayez à faire quoi que ce soit manuellement.
-</p>
+<h3>6. Clic fiable, y compris sur les boutons récalcitrants</h3>
+<p>Lorsque le Mode d'un marqueur est réglé sur Clic automatique, SiteMarker essaie plusieurs méthodes différentes pour activer l'élément correspondant (action NVDA standard, puis interface d'accessibilité plus moderne, et enfin un vrai clic de souris simulé en dernier recours). Il peut ainsi cliquer avec succès sur des boutons qui ne répondent pas toujours à la méthode la plus simple — comme le bouton « Ignorer l'annonce » sur les sites de vidéos. Sur YouTube en particulier, si un clic ne semble pas avoir eu d'effet, SiteMarker réessaie automatiquement à deux reprises.</p>
 </div>
 
 <div class="feature-item">
-<h3>Stockage des données par site</h3>
-<p>
-Tous vos sites et leurs marqueurs sont enregistrés automatiquement dans votre dossier de configuration utilisateur NVDA (sous un dossier SiteMarker) sous forme d'un fichier par site,
-de sorte que votre configuration est préservée entre les sessions NVDA et ne nécessite aucune connexion Internet pour fonctionner.
-</p>
+<h3>7. Protection du focus pendant une analyse</h3>
+<p>Pendant que SiteMarker fait défiler une page pour charger plus de contenu pour une analyse, il est possible (sur certains sites) que ce défilement place accidentellement votre véritable focus clavier dans une zone de recherche ou un autre champ modifiable au lieu de rester sur la page. SiteMarker détecte automatiquement cette situation et restaure votre focus sur le document, afin qu'un saut ou un clic automatique en cours ne soit nicht interrompu.</p>
 </div>
 
 </div>
 
 <br><br>
-<h2>Soutenez-moi</h2>
-    <p>Si cet outil vous a simplifié la vie, envisagez de propulser la prochaine mise à jour avec un petit don.</p>
+<h2>Me soutenir</h2>
+    <p>Si cet outil vous a facilité la vie, envisagez de soutenir la prochaine mise à jour par un petit don.</p>
 <br>
 <p>
   <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
-    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Soutenez-moi">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Support me">
   </a>
 </p>
 <br>
-<p>Votre soutien signifie énormément. Construisons quelque chose de grand ensemble</p>
+<p>Votre soutien compte énormément. Construisons de grandes choses ensemble.</p>
 <br>
   <div class="footer-note">
-<p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GNU GPL</p>
+<p>&copy; 2026 Chai Chaimee Extension NVDA publiée sous licence GNU GPL</p>
 </div>
 
 </div> <!-- End container -->

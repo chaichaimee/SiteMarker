@@ -14,6 +14,7 @@ from comtypes import COMError
 _translate = _
 import ctypes
 from .constants import (
+	isRegexPatternSafe,
 	AUTO_CLICK_RETRY_DELAY,
 	LOAD_MORE_TIMEOUT_MS,
 	MAX_CLICK_RETRIES,
@@ -26,6 +27,7 @@ from .constants import (
 	SCAN_PARAGRAPHS_PER_CHUNK,
 	SORT_PARAGRAPHS_PER_CHUNK,
 	MAX_FULL_SCAN_RETRIES,
+	MAX_FULL_SCAN_RETRIES_SILENT,
 	PRIME_DOCUMENT_MAX_PARAGRAPHS,
 	PRIME_DOCUMENT_STEP_DELAY_MS,
 	BUFFER_READY_MIN_LENGTH,
@@ -108,6 +110,8 @@ class ScanEngineMixin:
 		# buffer priming), so no separate dedup state is needed here -- this
 		# retry chain is the single attempt for this page load, not a new
 		# one each call.
+		if not self._isTargetActive:
+			return
 		if not self._isTreeInterceptorStillFocused(treeInt):
 			logHandler.log.debug(
 				f"SiteMarker: auto-trigger check for treeInt {id(treeInt)} aborted "
@@ -200,8 +204,13 @@ class ScanEngineMixin:
 				gesture.send()
 			elif direction == 1:
 				ui.message(_translate("No next marker."))
-			else:
-				ui.message(_translate("No previous marker."))
+			# else: an automatic trigger (gesture is None, e.g. auto-jump-on-
+			# page-load) finding nothing here is expected and not an error --
+			# most pages simply won't have the configured marker's target
+			# (e.g. a YouTube skip-ad marker on a page with no ad playing),
+			# and announcing that on every such page would be exactly the
+			# noise auto-trigger is supposed to stay quiet about. A real
+			# keypress (gesture is not None) still gets the announcement.
 			return
 
 		if not self._isBufferReady(treeInterceptor):
@@ -212,7 +221,8 @@ class ScanEngineMixin:
 				core.callLater(400, self._handleGlobalJump, gesture, baseKey, direction, _retryCount + 1)
 			else:
 				self._bufferReadySamples.pop(id(treeInterceptor), None)
-				ui.message(_("Page not fully loaded, try again."))
+				if gesture:
+					ui.message(_("Page not fully loaded, try again."))
 			return
 
 		self._recentScanActivity[id(treeInterceptor)] = time.time()
@@ -235,13 +245,27 @@ class ScanEngineMixin:
 		scanToken = object()
 		self._jumpScanToken[baseKey] = scanToken
 		self._jumpComboboxResumeCount[baseKey] = 0
+		# An automatic trigger (gesture is None, e.g. auto-jump-on-page-load)
+		# finding nothing for this baseKey on this particular page is
+		# expected -- most pages won't have every configured marker's target
+		# (e.g. a forum-specific "first post" marker auto-triggered on a
+		# page that isn't that forum's thread view) -- so the "No next
+		# marker." announcement in _finishJumpNotFound is suppressed for the
+		# duration of this dispatch. A real keypress (gesture is not None)
+		# is unaffected. Membership is set fresh on every dispatch (including
+		# retries of the same press) rather than toggled, so it can't leak
+		# stale silence onto an unrelated later press of the same key.
+		if gesture is None:
+			self._silentJumpBaseKeys.add(baseKey)
+		else:
+			self._silentJumpBaseKeys.discard(baseKey)
 		try:
 			textInfo = treeInt.makeTextInfo(textInfos.POSITION_CARET)
 			textInfo.collapse()
 			textInfo.expand(textInfos.UNIT_PARAGRAPH)
 		except Exception as e:
 			logHandler.log.debug(f"Jump scan init failed: {e}")
-			self._finishJumpNotFound(direction, treeInt)
+			self._finishJumpNotFound(direction, treeInt, baseKey)
 			return
 
 		self._processJumpChunk(
@@ -282,6 +306,8 @@ class ScanEngineMixin:
 			direction = 1 if offsetVal >= 0 else -1
 			maxSearch = abs(offsetVal) if offsetVal != 0 else DEFAULT_OFFSET_PATTERN_SEARCH_LINES
 			try:
+				if not isRegexPatternSafe(offsetPattern):
+					raise re.error("nested unbounded quantifiers")
 				compiledPattern = re.compile(offsetPattern)
 			except re.error as e:
 				logHandler.log.debug(f"SiteMarker: invalid offsetPattern '{offsetPattern}': {e}")
@@ -482,7 +508,7 @@ class ScanEngineMixin:
 					logHandler.log.debug(
 						f"Jump scan aborted, buffer likely changed under us (page re-rendered): {e}"
 					)
-					self._finishJumpNotFound(direction, treeInt)
+					self._finishJumpNotFound(direction, treeInt, baseKey)
 					return
 				try:
 					if textInfo.move(textInfos.UNIT_PARAGRAPH, direction) == 0:
@@ -491,7 +517,7 @@ class ScanEngineMixin:
 					textInfo.expand(textInfos.UNIT_PARAGRAPH)
 					comErrorStreak = 0
 				except Exception:
-					self._finishJumpNotFound(direction, treeInt)
+					self._finishJumpNotFound(direction, treeInt, baseKey)
 					return
 				continue
 			except Exception as e:
@@ -508,7 +534,7 @@ class ScanEngineMixin:
 				f"SiteMarker: no next marker for key '{baseKey}' after {loadMoreAttempts} load-more "
 				f"attempts ({noGrowthCount} without growth); giving up."
 			)
-			self._finishJumpNotFound(direction, treeInt)
+			self._finishJumpNotFound(direction, treeInt, baseKey)
 			return
 		if not useViewport:
 			logHandler.log.debug(
@@ -524,9 +550,9 @@ class ScanEngineMixin:
 				)
 			self._scrollAndWaitForUpdate(treeInt, afterScroll, scanToken, baseKey)
 		else:
-			self._finishJumpNotFound(direction, treeInt)
+			self._finishJumpNotFound(direction, treeInt, baseKey)
 
-	def _finishJumpNotFound(self, direction, treeInt):
+	def _finishJumpNotFound(self, direction, treeInt, baseKey=None):
 		self._clearScanActivity(treeInt)
 		if direction < 0 and self._isTreeInterceptorStillFocused(treeInt):
 			try:
@@ -535,6 +561,13 @@ class ScanEngineMixin:
 				restoreCaret.select()
 			except Exception:
 				pass
+		# An automatic trigger (auto-jump-on-page-load) finding nothing on
+		# this particular page load is expected, not an error -- see the
+		# note where _silentJumpBaseKeys is populated in _handleGlobalJump.
+		wasSilentTrigger = baseKey is not None and baseKey in self._silentJumpBaseKeys
+		self._silentJumpBaseKeys.discard(baseKey)
+		if wasSilentTrigger:
+			return
 		if direction == 1:
 			ui.message(_translate("No next marker."))
 		else:
@@ -546,10 +579,24 @@ class ScanEngineMixin:
 	def _handleAutoClick(self, gesture, keystroke, _retryCount=0):
 		focusObj = api.getFocusObject()
 		treeInterceptor = getattr(focusObj, "treeInterceptor", None) if focusObj else None
-		if not treeInterceptor or not isinstance(treeInterceptor, browseMode.BrowseModeTreeInterceptor) or treeInterceptor.passThrough:
+		if not treeInterceptor or not isinstance(treeInterceptor, browseMode.BrowseModeTreeInterceptor):
+			logHandler.log.debug(f"SiteMarker: auto-click key '{keystroke}' passed through, no browse-mode document at focus.")
 			if gesture: gesture.send()
 			return
+		if treeInterceptor.passThrough:
+			# Focus mode on a non-editable control (e.g. the video player) must
+			# still honour the shortcut; only real text entry keeps the key.
+			try:
+				typingTarget = self._objectLooksEditableOrCombobox(focusObj)
+			except (COMError, RuntimeError, OSError):
+				typingTarget = True
+			if typingTarget:
+				logHandler.log.debug(f"SiteMarker: auto-click key '{keystroke}' passed through, focus mode on an editable control.")
+				if gesture: gesture.send()
+				return
+			logHandler.log.debug(f"SiteMarker: auto-click key '{keystroke}' handled in focus mode, focus is not editable.")
 		if not self.getBrowserUrl():
+			logHandler.log.debug(f"SiteMarker: auto-click key '{keystroke}' passed through, no browser URL resolved.")
 			if gesture: gesture.send()
 			return
 
@@ -565,7 +612,8 @@ class ScanEngineMixin:
 			# stay invisible until some other action happens to force a refresh.
 			self.refreshActiveLayout(force=True)
 		if not self.activeSiteMarkers or keystroke not in self.activeSiteMarkers:
-			ui.message(_translate("No auto click marker for this key."))
+			if gesture:
+				ui.message(_translate("No auto click marker for this key."))
 			return
 
 		if not self._isBufferReady(treeInterceptor):
@@ -576,12 +624,14 @@ class ScanEngineMixin:
 				core.callLater(400, self._handleAutoClick, gesture, keystroke, _retryCount + 1)
 			else:
 				self._bufferReadySamples.pop(id(treeInterceptor), None)
-				ui.message(_("Page not fully loaded, try again."))
+				if gesture:
+					ui.message(_("Page not fully loaded, try again."))
 			return
 
 		clickMarkers = [m for m in self.activeSiteMarkers[keystroke] if m.get("actionMode") == "autoClick"]
 		if not clickMarkers:
-			ui.message(_translate("No auto click marker for this key."))
+			if gesture:
+				ui.message(_translate("No auto click marker for this key."))
 			return
 
 		self._startAutoClickSearch(treeInterceptor, clickMarkers, gesture, keystroke, fullScanAttempt=0)
@@ -656,7 +706,8 @@ class ScanEngineMixin:
 								)
 								self._autoClickComboboxResumeCount[keystroke] = 0
 								self._clearScanActivity(treeInt)
-								ui.message(_translate("No auto click target found."))
+								if gesture:
+									ui.message(_translate("No auto click target found."))
 								return
 							logHandler.log.debug(
 								f"SiteMarker: resuming auto click scan past combobox-like match for "
@@ -702,8 +753,14 @@ class ScanEngineMixin:
 			core.callLater(0, self._processAutoClickChunk, treeInt, clickMarkers, gesture, keystroke,
 						   textInfo, scanToken, loadMoreAttempts, noGrowthCount, expectedUrl, swapAttempts, fullScanAttempt)
 			return
-		# End of document reached without finding marker
-		if fullScanAttempt < MAX_FULL_SCAN_RETRIES:
+		# End of document reached without finding marker. An automatic
+		# trigger (gesture is None) gets a much longer retry budget than an
+		# interactive keypress -- see MAX_FULL_SCAN_RETRIES_SILENT in
+		# constants.py for why (log-confirmed: a YouTube skip-ad button can
+		# take far longer to appear than a keypress should ever make a user
+		# wait, especially across stacked/back-to-back ads).
+		effectiveMaxRetries = MAX_FULL_SCAN_RETRIES if gesture else MAX_FULL_SCAN_RETRIES_SILENT
+		if fullScanAttempt < effectiveMaxRetries:
 			# A target that isn't there yet (e.g. a YouTube skip-ad button that only
 			# renders a second or two into the ad) used to wait a flat 1500ms before the
 			# first retry, which was often longer than the user was willing to wait, so
@@ -720,7 +777,13 @@ class ScanEngineMixin:
 			return
 		# All retries exhausted
 		self._clearScanActivity(treeInt)
-		ui.message(_translate("No auto click target found."))
+		# An automatic trigger (gesture is None, e.g. auto-click-on-page-load)
+		# finding nothing here is expected, not an error -- see the note in
+		# _handleAutoClick/_handleGlobalJump about why these announcements
+		# are suppressed for an automatic trigger. A real keypress still
+		# gets the announcement.
+		if gesture:
+			ui.message(_translate("No auto click target found."))
 
 	def _getFullScanRetryDelayMs(self, fullScanAttempt):
 		schedule = FULL_SCAN_RETRY_DELAY_SCHEDULE_MS
@@ -730,10 +793,14 @@ class ScanEngineMixin:
 	def _retryFullAutoClickScan(self, treeInt, clickMarkers, gesture, keystroke, expectedUrl, fullScanAttempt, originalScanToken):
 		if self._autoClickScanToken.get(keystroke) is not originalScanToken:
 			return
+		if not self._isTargetActive:
+			logHandler.log.debug("SiteMarker: auto click retry aborted, browser is no longer the foreground window.")
+			return
 		if not self._isTreeInterceptorStillFocused(treeInt):
 			logHandler.log.debug(f"SiteMarker: auto click retry aborted, tab/document changed.")
 			return
-		logHandler.log.debug(f"SiteMarker: retrying full auto click scan for '{keystroke}', attempt {fullScanAttempt + 1}/{MAX_FULL_SCAN_RETRIES}")
+		effectiveMaxRetries = MAX_FULL_SCAN_RETRIES if gesture else MAX_FULL_SCAN_RETRIES_SILENT
+		logHandler.log.debug(f"SiteMarker: retrying full auto click scan for '{keystroke}', attempt {fullScanAttempt + 1}/{effectiveMaxRetries}")
 		self._startAutoClickSearch(treeInt, clickMarkers, gesture, keystroke, expectedUrl, swapAttempts=0, fullScanAttempt=fullScanAttempt)
 
 	# ------------------------------------------------------------------
@@ -892,7 +959,7 @@ class ScanEngineMixin:
 					f"combobox-like matches; stopping instead of resuming silently."
 				)
 				self._jumpComboboxResumeCount[baseKey] = 0
-				self._finishJumpNotFound(dirVal, treeInt)
+				self._finishJumpNotFound(dirVal, treeInt, baseKey)
 				return
 			logHandler.log.debug(
 				f"SiteMarker: resuming scan past combobox-like match for baseKey='{baseKey}' (attempt {resumeCount})"
@@ -933,6 +1000,7 @@ class ScanEngineMixin:
 				treeInt.selection = infoToSelect
 			if dispatchTargetText:
 				self._setLastDispatchedTargetText(baseKey, dispatchTargetText, infoToSelect, anchorInfo)
+				self._silentJumpBaseKeys.discard(baseKey)
 		except Exception as e:
 			logHandler.log.error(f"Failed to finalize selection: {e}")
 		finally:
@@ -1048,6 +1116,18 @@ class ScanEngineMixin:
 				"SiteMarker: skipping load-more scroll, document is no longer the real focus."
 			)
 			return
+		currentHost = self._getCurrentHost()
+		if currentHost and currentHost in self._loadMoreUnsafeHosts:
+			logHandler.log.debug(f"SiteMarker: load-more scroll skipped, Page Down is known to steal focus on '{currentHost}'.")
+			callback()
+			return
+		if baseKey in self._silentJumpBaseKeys:
+			# An unattended auto-trigger must never inject keystrokes: the user
+			# may be typing or switching tabs, and the synthetic Page Down was
+			# the confirmed cause of focus landing in the page's search box.
+			logHandler.log.debug(f"SiteMarker: load-more scroll skipped for automatic trigger on key '{baseKey}'.")
+			callback()
+			return
 		theftCount = self._getEditableTheftStreak()
 		if theftCount >= EDITABLE_THEFT_ABORT_THRESHOLD:
 			# The synthetic Page Down keeps landing real focus on the same editable
@@ -1113,6 +1193,9 @@ class ScanEngineMixin:
 
 	def _primeDocumentBuffer(self, treeInt, primeToken, count, passNum):
 		if self._primeToken is not primeToken:
+			return
+		if not self._isTargetActive:
+			self._primeTextInfo = None
 			return
 		if count >= PRIME_DOCUMENT_MAX_PARAGRAPHS:
 			logHandler.log.debug(f"SiteMarker: buffer priming finished ({count} paragraphs)")

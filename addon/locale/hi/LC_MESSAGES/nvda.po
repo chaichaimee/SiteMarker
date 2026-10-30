@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.9.12\n"
+"Project-Id-Version: SiteMarker 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-15 17:07+0700\n"
+"POT-Creation-Date: 2026-10-30 14:55+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hindi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:387
 msgid "&Add Marker"
@@ -28,7 +28,7 @@ msgstr "साइट मैनेजर पर &वापस जाएं"
 msgid "&Delete"
 msgstr "&हटाएं"
 
-#: gui.py:555
+#: gui.py:572
 msgid "&Delete Marker	Del"
 msgstr "&मार्कर हटाएं\\tDel"
 
@@ -44,7 +44,7 @@ msgstr "&साइट हटाएं\\tDel"
 msgid "&Edit"
 msgstr "&संपादित करें"
 
-#: gui.py:553
+#: gui.py:570
 msgid "&Edit Marker	F2"
 msgstr "&मार्कर संपादित करें\\tF2"
 
@@ -69,23 +69,27 @@ msgstr "मार्कर सूची:"
 msgid "&Registered Sites:"
 msgstr "पंजीकृत साइटें:"
 
-#: gui.py:646
+#: gui.py:663
 msgid "&Use Standard Key"
 msgstr "मानक कुंजी का उपयोग करें (&U)"
+
+#: gui.py:756
+msgid "(not in use - custom shortcut active)"
+msgstr "(उपयोग में नहीं - कस्टम शॉर्टकट सक्रिय है)"
 
 #: gui.py:188
 msgid "Add Site Configuration"
 msgstr "साइट कॉन्फ़िगरेशन जोड़ें"
 
-#: gui.py:512
+#: gui.py:529
 msgid "All markers have been cleared."
 msgstr "सभी मार्कर साफ़ कर दिए गए हैं।"
 
-#: gui.py:507
+#: gui.py:524
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "क्या आप वाकई सभी मार्कर हटाना चाहते हैं?"
 
-#: gui.py:492
+#: gui.py:509
 msgid "Are you sure you want to delete this marker?"
 msgstr "क्या आप वाकई इस मार्कर को हटाना चाहते हैं?"
 
@@ -93,21 +97,21 @@ msgstr "क्या आप वाकई इस मार्कर को हट
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "क्या आप वाकई इस साइट और इसके सभी मार्करों को हटाना चाहते हैं?"
 
-#: gui.py:629
+#: gui.py:646
 msgid "Auto Click"
 msgstr "ऑटो क्लिक"
 
-#: gui.py:703
+#: gui.py:720
 msgid "Auto-click on page load"
 msgstr "पेज लोड होने पर ऑटो-क्लिक करें"
 
-#: gui.py:699
+#: gui.py:716
 msgid "Auto-jump on page load"
 msgstr "पेज लोड होने पर ऑटो-जंप करें"
 
 #: gui.py:225
 #: gui.py:302
-#: gui.py:673
+#: gui.py:690
 msgid "Cancel"
 msgstr "रद्द करें"
 
@@ -115,11 +119,11 @@ msgstr "रद्द करें"
 msgid "Clear &All"
 msgstr "सभी साफ़ करें"
 
-#: gui.py:558
+#: gui.py:575
 msgid "Clear &All Markers"
 msgstr "सभी मार्कर साफ़ करें"
 
-#: gui.py:701
+#: gui.py:718
 msgid "Click Key:"
 msgstr "क्लिक कुंजी:"
 
@@ -129,11 +133,11 @@ msgid "Close"
 msgstr "बंद करें"
 
 #: gui.py:128
-#: gui.py:492
+#: gui.py:509
 msgid "Confirm"
 msgstr "पुष्टि करें"
 
-#: gui.py:507
+#: gui.py:524
 msgid "Confirm Delete All"
 msgstr "सभी हटाने की पुष्टि करें"
 
@@ -142,7 +146,7 @@ msgstr "सभी हटाने की पुष्टि करें"
 msgid "Contain Substring"
 msgstr "सबस्ट्रिंग शामिल है"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Contains Text (find partial match)"
 msgstr "पाठ शामिल है (आंशिक मिलान खोजें)"
 
@@ -158,17 +162,17 @@ msgstr "साइट संपादित करें संवाद नह�
 msgid "Could not open the Marker Manager dialog."
 msgstr "मार्कर मैनेजर संवाद नहीं खोल सका।"
 
-#: gui.py:453
-#: gui.py:479
+#: gui.py:470
+#: gui.py:496
 msgid "Could not open the marker editor."
 msgstr "मार्कर संपादक नहीं खोल सका।"
 
-#: gui.py:643
-#: gui.py:737
+#: gui.py:660
+#: gui.py:770
 msgid "Custom &Shortcut..."
 msgstr "कस्टम शॉर्टकट... (&S)"
 
-#: gui.py:734
+#: gui.py:759
 msgid "Custom &Shortcut: {key}..."
 msgstr "कस्टम शॉर्टकट: {key}... (&S)"
 
@@ -184,7 +188,7 @@ msgstr "प्रदर्शन नाम खाली नहीं हो स�
 
 #: gui.py:197
 #: gui.py:274
-#: gui.py:663
+#: gui.py:680
 msgid "Display Name:"
 msgstr "प्रदर्शन नाम:"
 
@@ -202,7 +206,7 @@ msgstr "फ़ॉर्म मोड में प्रवेश न करे�
 msgid "Edit Site Configuration"
 msgstr "साइट कॉन्फ़िगरेशन संपादित करें"
 
-#: gui.py:657
+#: gui.py:674
 msgid "Entire Document"
 msgstr "संपूर्ण दस्तावेज़"
 
@@ -216,10 +220,10 @@ msgstr "संपूर्ण दस्तावेज़"
 #: gui.py:316
 #: gui.py:319
 #: gui.py:335
-#: gui.py:430
-#: gui.py:453
-#: gui.py:479
-#: gui.py:797
+#: gui.py:429
+#: gui.py:470
+#: gui.py:496
+#: gui.py:840
 msgid "Error"
 msgstr "त्रুটি (एरर)"
 
@@ -228,7 +232,7 @@ msgstr "त्रুটি (एरर)"
 msgid "Exact Matching"
 msgstr "सटीक मिलान"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "सटीक अनुच्छेद (पूरा अनुच्छेद मिलान करें)"
 
@@ -236,7 +240,7 @@ msgstr "सटीक अनुच्छेद (पूरा अनुच्छ�
 msgid "Failed to delete site."
 msgstr "साइट हटाने में विफल।"
 
-#: gui.py:429
+#: gui.py:428
 msgid "Failed to save marker changes to disk. Check that the configuration folder is writable."
 msgstr "डिस्क पर मार्कर परिवर्तन सहेजने में विफल। जाँच करें कि कॉन्फ़िगरेशन फ़ोल्डर लिखने योग्य है या नहीं।"
 
@@ -258,17 +262,17 @@ msgstr "सबडोमेन शामिल करें"
 #: gui.py:104
 #: gui.py:126
 #: gui.py:138
-#: gui.py:464
-#: gui.py:490
-#: gui.py:505
+#: gui.py:481
+#: gui.py:507
+#: gui.py:522
 msgid "Information"
 msgstr "जानकारी"
 
-#: gui.py:629
+#: gui.py:646
 msgid "Jump"
 msgstr "छलांग (Jump)"
 
-#: gui.py:697
+#: gui.py:714
 msgid "Jump Key:"
 msgstr "जंप कुंजी:"
 
@@ -276,7 +280,7 @@ msgstr "जंप कुंजी:"
 msgid "Marker Manager - "
 msgstr "मार्कर मैनेजर - "
 
-#: gui.py:568
+#: gui.py:585
 msgid "Marker Properties"
 msgstr "मार्कर गुण"
 
@@ -289,11 +293,11 @@ msgstr "मार्कर मिला: {}"
 msgid "Match Type:"
 msgstr "मिलान प्रकार:"
 
-#: gui.py:628
+#: gui.py:645
 msgid "Mode:"
 msgstr "मोड:"
 
-#: gui.py:505
+#: gui.py:522
 msgid "No markers to clear."
 msgstr "साफ़ करने के लिए कोई मार्कर नहीं है।"
 
@@ -302,33 +306,33 @@ msgstr "साफ़ करने के लिए कोई मार्कर 
 msgid "Normal"
 msgstr "सामान्य"
 
-#: gui.py:672
+#: gui.py:689
 msgid "OK"
 msgstr "ठीक है (OK)"
 
-#: gui.py:667
+#: gui.py:684
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "ऑफ़सेट (मिलान के बाद ले जाने के लिए पंक्तियाँ, ऊपर/नीचे तीर के समान):"
 
-#: scanEngine.py:215
-#: scanEngine.py:579
+#: scanEngine.py:225
+#: scanEngine.py:628
 msgid "Page not fully loaded, try again."
 msgstr "पृष्ठ पूरी तरह से लोड नहीं हुआ, पुनः प्रयास करें।"
 
-#: gui.py:622
+#: gui.py:639
 msgid "Pattern Match:"
 msgstr "पैटर्न मिलान:"
 
-#: gui.py:797
+#: gui.py:840
 msgid "Pattern cannot be empty."
 msgstr "पैटर्न खाली नहीं हो सकता।"
 
-#: gui.py:618
+#: gui.py:635
 msgid "Pattern:"
 msgstr "पैटर्न:"
 
-#: gui.py:464
-#: gui.py:490
+#: gui.py:481
+#: gui.py:507
 msgid "Please select a marker first."
 msgstr "कृपया पहले एक मार्कर चुनें।"
 
@@ -338,7 +342,7 @@ msgstr "कृपया पहले एक मार्कर चुनें�
 msgid "Please select a site first."
 msgstr "कृपया पहले एक साइट चुनें।"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Regex Match (use regular expression)"
 msgstr "रेगेक्स मिलान (नियमित अभिव्यक्ति का उपयोग करें)"
 
@@ -355,15 +359,15 @@ msgstr "परिवर्तन सहेजें"
 msgid "Save Site"
 msgstr "साइट सहेजें"
 
-#: gui.py:656
+#: gui.py:673
 msgid "Search Scope:"
 msgstr "खोज दायरा:"
 
-#: gui.py:773
+#: gui.py:816
 msgid "Shortcut changed from {old} to {new}"
 msgstr "शॉर्टकट {old} से बदलकर {new} हो गया है"
 
-#: gui.py:780
+#: gui.py:823
 msgid "Shortcut reset to {key}"
 msgstr "शॉर्टकट रीसेट होकर {key} हो गया है"
 
@@ -402,14 +406,14 @@ msgstr "URL पैटर्न:"
 msgid "Unnamed"
 msgstr "अनामित (Unnamed)"
 
-#: gui.py:657
+#: gui.py:674
 msgid "Viewport Only"
 msgstr "केवल व्यూपोर्ट"
 
-#: gui.py:753
+#: gui.py:796
 msgid "this marker's auto-click shortcut"
 msgstr "इस मार्कर का ऑटो-क्लिक शॉर्टकट"
 
-#: gui.py:751
+#: gui.py:794
 msgid "this marker's jump shortcut"
 msgstr "इस मार्कर का जंप शॉर्टकट"

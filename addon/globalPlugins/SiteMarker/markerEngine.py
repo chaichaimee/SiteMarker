@@ -10,6 +10,7 @@ import config
 from logHandler import log
 import api
 import textInfos
+from .constants import isRegexPatternSafe
 
 addonHandler.initTranslation()
 
@@ -122,6 +123,8 @@ class MarkerEngine:
 		elif matchType == 3:  # Exact Matching
 			return normalizedUrl == normalizedPattern
 		elif matchType == 4:  # Regular Expression
+			if not isRegexPatternSafe(pattern):
+				return False
 			try:
 				return re.search(pattern, normalizedUrl, re.IGNORECASE | re.UNICODE) is not None
 			except Exception:
@@ -203,7 +206,7 @@ class MarkerEngine:
 
 		for idx, marker in regex_markers:
 			pattern = marker.get("pattern", "")
-			if not pattern:
+			if not pattern or not isRegexPatternSafe(pattern):
 				continue
 			try:
 				m = re.search(pattern, raw_text, re.IGNORECASE | re.UNICODE)

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.9.12\n"
+"Project-Id-Version: SiteMarker 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-15 17:07+0700\n"
+"POT-Creation-Date: 2026-10-30 14:55+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Thai\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:387
 msgid "&Add Marker"
@@ -28,7 +28,7 @@ msgstr "&กลับไปยังตัวจัดการเว็บไ�
 msgid "&Delete"
 msgstr "&ลบ"
 
-#: gui.py:555
+#: gui.py:572
 msgid "&Delete Marker	Del"
 msgstr "&ลบเครื่องหมาย\\tDel"
 
@@ -44,7 +44,7 @@ msgstr "&ลบไซต์\\tDel"
 msgid "&Edit"
 msgstr "แก้ไ&ข"
 
-#: gui.py:553
+#: gui.py:570
 msgid "&Edit Marker	F2"
 msgstr "&แก้ไขเครื่องหมาย\\tF2"
 
@@ -69,23 +69,27 @@ msgstr "รายการหมุด(&M):"
 msgid "&Registered Sites:"
 msgstr "เว็บไซต์ที่ลงทะเบียน(&R):"
 
-#: gui.py:646
+#: gui.py:663
 msgid "&Use Standard Key"
 msgstr "&ใช้คีย์มาตรฐาน"
+
+#: gui.py:756
+msgid "(not in use - custom shortcut active)"
+msgstr "(ไม่ได้ใช้งาน - ใช้ทางลัดกำหนดเองอยู่)"
 
 #: gui.py:188
 msgid "Add Site Configuration"
 msgstr "เพิ่มการกำหนดค่าเว็บไซต์"
 
-#: gui.py:512
+#: gui.py:529
 msgid "All markers have been cleared."
 msgstr "ล้างหมุดทั้งหมดแล้ว"
 
-#: gui.py:507
+#: gui.py:524
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบหมุดทั้งหมด?"
 
-#: gui.py:492
+#: gui.py:509
 msgid "Are you sure you want to delete this marker?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบหมุดนี้?"
 
@@ -93,21 +97,21 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบเว็บไซต์นี้และหมุดทั้งหมดในเว็บไซต์?"
 
-#: gui.py:629
+#: gui.py:646
 msgid "Auto Click"
 msgstr "คลิกอัตโนมัติ"
 
-#: gui.py:703
+#: gui.py:720
 msgid "Auto-click on page load"
 msgstr "คลิกอัตโนมัติเมื่อโหลดหน้าเว็บ"
 
-#: gui.py:699
+#: gui.py:716
 msgid "Auto-jump on page load"
 msgstr "ข้ามไปอัตโนมัติเมื่อโหลดหน้าเว็บ"
 
 #: gui.py:225
 #: gui.py:302
-#: gui.py:673
+#: gui.py:690
 msgid "Cancel"
 msgstr "ยกเลิก"
 
@@ -115,11 +119,11 @@ msgstr "ยกเลิก"
 msgid "Clear &All"
 msgstr "ล้าง&ทั้งหมด"
 
-#: gui.py:558
+#: gui.py:575
 msgid "Clear &All Markers"
 msgstr "ล้างหมุดทั้ง&หมด"
 
-#: gui.py:701
+#: gui.py:718
 msgid "Click Key:"
 msgstr "ปุ่มคลิก:"
 
@@ -129,11 +133,11 @@ msgid "Close"
 msgstr "ปิด"
 
 #: gui.py:128
-#: gui.py:492
+#: gui.py:509
 msgid "Confirm"
 msgstr "ยืนยัน"
 
-#: gui.py:507
+#: gui.py:524
 msgid "Confirm Delete All"
 msgstr "ยืนยันการลบทั้งหมด"
 
@@ -142,7 +146,7 @@ msgstr "ยืนยันการลบทั้งหมด"
 msgid "Contain Substring"
 msgstr "มีข้อความย่อย"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Contains Text (find partial match)"
 msgstr "มีข้อความ (ค้นหาแบบตรงกันบางส่วน)"
 
@@ -158,17 +162,17 @@ msgstr "ไม่สามารถเปิดกล่องโต้ตอบ
 msgid "Could not open the Marker Manager dialog."
 msgstr "ไม่สามารถเปิดกล่องโต้ตอบตัวจัดการหมุดได้"
 
-#: gui.py:453
-#: gui.py:479
+#: gui.py:470
+#: gui.py:496
 msgid "Could not open the marker editor."
 msgstr "ไม่สามารถเปิดตัวแก้ไขหมุดได้"
 
-#: gui.py:643
-#: gui.py:737
+#: gui.py:660
+#: gui.py:770
 msgid "Custom &Shortcut..."
 msgstr "ทางลัดกำหนดเ&อง..."
 
-#: gui.py:734
+#: gui.py:759
 msgid "Custom &Shortcut: {key}..."
 msgstr "ทางลัดกำหนดเ&อง: {key}..."
 
@@ -184,7 +188,7 @@ msgstr "ชื่อที่แสดงต้องไม่ว่างเป
 
 #: gui.py:197
 #: gui.py:274
-#: gui.py:663
+#: gui.py:680
 msgid "Display Name:"
 msgstr "ชื่อที่แสดง:"
 
@@ -202,7 +206,7 @@ msgstr "ไม่เข้าสู่โหมดแบบฟอร์ม"
 msgid "Edit Site Configuration"
 msgstr "แก้ไขการกำหนดค่าเว็บไซต์"
 
-#: gui.py:657
+#: gui.py:674
 msgid "Entire Document"
 msgstr "เอกสารทั้งหมด"
 
@@ -216,10 +220,10 @@ msgstr "เอกสารทั้งหมด"
 #: gui.py:316
 #: gui.py:319
 #: gui.py:335
-#: gui.py:430
-#: gui.py:453
-#: gui.py:479
-#: gui.py:797
+#: gui.py:429
+#: gui.py:470
+#: gui.py:496
+#: gui.py:840
 msgid "Error"
 msgstr "ข้อผิดพลาด"
 
@@ -228,7 +232,7 @@ msgstr "ข้อผิดพลาด"
 msgid "Exact Matching"
 msgstr "ตรงกันทุกประการ"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "ย่อหน้าที่ตรงกัน (ตรงกันทั้งย่อหน้า)"
 
@@ -236,7 +240,7 @@ msgstr "ย่อหน้าที่ตรงกัน (ตรงกันท�
 msgid "Failed to delete site."
 msgstr "ลบเว็บไซต์ไม่สำเร็จ"
 
-#: gui.py:429
+#: gui.py:428
 msgid "Failed to save marker changes to disk. Check that the configuration folder is writable."
 msgstr "บันทึกการเปลี่ยนแปลงหมุดลงดิสก์ไม่สำเร็จ ตรวจสอบว่าโฟลเดอร์การกำหนดค่าสามารถเขียนได้"
 
@@ -258,17 +262,17 @@ msgstr "รวมโดเมนย่อย"
 #: gui.py:104
 #: gui.py:126
 #: gui.py:138
-#: gui.py:464
-#: gui.py:490
-#: gui.py:505
+#: gui.py:481
+#: gui.py:507
+#: gui.py:522
 msgid "Information"
 msgstr "ข้อมูล"
 
-#: gui.py:629
+#: gui.py:646
 msgid "Jump"
 msgstr "ข้าม"
 
-#: gui.py:697
+#: gui.py:714
 msgid "Jump Key:"
 msgstr "ปุ่มข้าม:"
 
@@ -276,7 +280,7 @@ msgstr "ปุ่มข้าม:"
 msgid "Marker Manager - "
 msgstr "ตัวจัดการหมุด - "
 
-#: gui.py:568
+#: gui.py:585
 msgid "Marker Properties"
 msgstr "คุณสมบัติของหมุด"
 
@@ -289,11 +293,11 @@ msgstr "พบหมุด: {}"
 msgid "Match Type:"
 msgstr "ประเภทการจับคู่:"
 
-#: gui.py:628
+#: gui.py:645
 msgid "Mode:"
 msgstr "โหมด:"
 
-#: gui.py:505
+#: gui.py:522
 msgid "No markers to clear."
 msgstr "ไม่มีหมุดให้ล้าง"
 
@@ -302,33 +306,33 @@ msgstr "ไม่มีหมุดให้ล้าง"
 msgid "Normal"
 msgstr "ปกติ"
 
-#: gui.py:672
+#: gui.py:689
 msgid "OK"
 msgstr "ตกลง"
 
-#: gui.py:667
+#: gui.py:684
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "ออฟเซ็ต (จำนวนบรรทัดที่จะย้ายหลังจับคู่, เช่นเดียวกับลูกศรขึ้น/ลง):"
 
-#: scanEngine.py:215
-#: scanEngine.py:579
+#: scanEngine.py:225
+#: scanEngine.py:628
 msgid "Page not fully loaded, try again."
 msgstr "หน้าเว็บยังโหลดไม่เสร็จ โปรดลองอีกครั้ง"
 
-#: gui.py:622
+#: gui.py:639
 msgid "Pattern Match:"
 msgstr "จับคู่แพทเทิร์น:"
 
-#: gui.py:797
+#: gui.py:840
 msgid "Pattern cannot be empty."
 msgstr "แพทเทิร์นต้องไม่ว่างเปล่า"
 
-#: gui.py:618
+#: gui.py:635
 msgid "Pattern:"
 msgstr "แพทเทิร์น:"
 
-#: gui.py:464
-#: gui.py:490
+#: gui.py:481
+#: gui.py:507
 msgid "Please select a marker first."
 msgstr "โปรดเลือกหมุดก่อน"
 
@@ -338,7 +342,7 @@ msgstr "โปรดเลือกหมุดก่อน"
 msgid "Please select a site first."
 msgstr "โปรดเลือกเว็บไซต์ก่อน"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Regex Match (use regular expression)"
 msgstr "จับคู่ด้วย Regex (ใช้นิพจน์ regular expression)"
 
@@ -355,15 +359,15 @@ msgstr "บันทึกการเปลี่ยนแปลง"
 msgid "Save Site"
 msgstr "บันทึกเว็บไซต์"
 
-#: gui.py:656
+#: gui.py:673
 msgid "Search Scope:"
 msgstr "ขอบเขตการค้นหา:"
 
-#: gui.py:773
+#: gui.py:816
 msgid "Shortcut changed from {old} to {new}"
 msgstr "เปลี่ยนทางลัดจาก {old} เป็น {new}"
 
-#: gui.py:780
+#: gui.py:823
 msgid "Shortcut reset to {key}"
 msgstr "รีเซ็ตทางลัดเป็น {key}"
 
@@ -402,14 +406,14 @@ msgstr "แพทเทิร์น URL:"
 msgid "Unnamed"
 msgstr "ไม่มีชื่อ"
 
-#: gui.py:657
+#: gui.py:674
 msgid "Viewport Only"
 msgstr "เฉพาะพื้นที่มองเห็น"
 
-#: gui.py:753
+#: gui.py:796
 msgid "this marker's auto-click shortcut"
 msgstr "ทางลัดคลิกอัตโนมัติสำหรับเครื่องหมายนี้"
 
-#: gui.py:751
+#: gui.py:794
 msgid "this marker's jump shortcut"
 msgstr "ทางลัดกระโดดไปที่เครื่องหมายนี้"

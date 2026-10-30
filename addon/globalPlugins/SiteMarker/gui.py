@@ -423,13 +423,30 @@ class MarkerManagerDialog(wx.Dialog):
 
 	def saveMarkersToConfig(self):
 		self.siteConfig["markers"] = self.markersData
-		if self.engine.saveSiteConfiguration(self.siteName, self.siteConfig):
-			return True
-		wx.MessageBox(
-			_("Failed to save marker changes to disk. Check that the configuration folder is writable."),
-			_("Error"), wx.OK | wx.ICON_ERROR
-		)
-		return False
+		if not self.engine.saveSiteConfiguration(self.siteName, self.siteConfig):
+			wx.MessageBox(
+				_("Failed to save marker changes to disk. Check that the configuration folder is writable."),
+				_("Error"), wx.OK | wx.ICON_ERROR
+			)
+			return False
+		# A newly-added or newly-edited custom shortcut (Marker Properties'
+		# "Custom Shortcut..." button) only becomes an active gesture binding
+		# as a side effect of refreshActiveLayout() running -- which
+		# otherwise wouldn't happen again until the next navigation, auto-
+		# trigger check, or press of an already-bound key. Without this, a
+		# custom key saved while already on the target page silently doesn't
+		# work until the user does one of those things, which looks
+		# indistinguishable from the key just not working at all. Refreshing
+		# right after a successful save closes that gap for the common case
+		# of editing markers while already on the site they apply to.
+		try:
+			from .addonCore import _getGlobalPluginInstance
+			gp = _getGlobalPluginInstance()
+			if gp is not None:
+				gp.refreshActiveLayout(force=True)
+		except Exception as e:
+			logHandler.log.debug(f"SiteMarker: could not refresh gesture bindings after marker save: {e}")
+		return True
 
 	def getSelectedMarkerIndex(self):
 		selection = self.markersListCtrl.GetSelection()
@@ -701,6 +718,7 @@ class MarkerEditDialog(wx.Dialog):
 			self.lblKey.SetLabel(_("Click Key:"))
 			keys = ["alt+j"]
 			self.chkAutoTrigger.SetLabel(_("Auto-click on page load"))
+		self._standardKeys = keys
 		self.cmbKey.SetItems(keys)
 		currentKeystroke = self.markerData.get("keystroke", keys[0]).lower()
 		if currentKeystroke in keys:
@@ -721,20 +739,45 @@ class MarkerEditDialog(wx.Dialog):
 		# used both to render the button label and to announce a
 		# from-to confirmation when it changes -- covers all three states:
 		# a custom shortcut, a standard key picked from the combo, or (should
-		# the combo ever be genuinely empty) a safe fallback.
+		# the combo ever be genuinely empty) a safe fallback. Checked against
+		# _standardKeys rather than reading the combo's current item list
+		# directly, since that list temporarily includes a placeholder entry
+		# while a custom shortcut is active (see _updateCustomKeyLabel).
 		if self._customKeystroke:
 			return self._customKeystroke
 		selected = self.cmbKey.GetStringSelection()
-		return selected if selected else self.cmbKey.GetItems()[0]
+		return selected if selected in self._standardKeys else self._standardKeys[0]
 
 	def _updateCustomKeyLabel(self):
 		hasCustom = bool(self._customKeystroke)
+		# Translators: shown as a combo box choice in place of the standard
+		# key while a custom shortcut is active for this marker, so it's
+		# never ambiguous which one is actually in effect.
+		placeholderLabel = _("(not in use - custom shortcut active)")
 		if hasCustom:
 			self.btnCustomShortcut.SetLabel(
 				_("Custom &Shortcut: {key}...").format(key=self._customKeystroke)
 			)
+			# Previously the combo just kept showing the standard key (e.g.
+			# "alt+j") unchanged even while a custom shortcut was active,
+			# which looked like the standard key was still in effect -- a
+			# confirmed source of confusion. A placeholder entry makes the
+			# combo's own displayed value agree with the button label
+			# instead of contradicting it.
+			self.cmbKey.SetItems([placeholderLabel] + self._standardKeys)
+			self.cmbKey.SetSelection(0)
 		else:
 			self.btnCustomShortcut.SetLabel(_("Custom &Shortcut..."))
+			if self.cmbKey.GetCount() != len(self._standardKeys):
+				# The combo was showing the placeholder -- i.e. this is the
+				# transition away from a custom shortcut (via "Use Standard
+				# Key" or a fresh capture being cleared) -- drop it and land
+				# on the first standard key as the new default. If the combo
+				# was already showing only standard keys, the user just
+				# picked one directly (onStandardKeyChanged): leave that
+				# selection exactly as they made it.
+				self.cmbKey.SetItems(self._standardKeys)
+				self.cmbKey.SetSelection(0)
 		# The combo box is deliberately never disabled: a disabled control
 		# drops out of the Tab order entirely, which was the root cause of
 		# the standard key silently "disappearing" from the dialog once a

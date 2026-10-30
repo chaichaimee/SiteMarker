@@ -11,6 +11,7 @@ addonHandler.initTranslation()
 _translate = _
 
 import globalPluginHandler
+import gui as nvdaMainGui
 import controlTypes
 import browseMode
 import cursorManager
@@ -21,6 +22,7 @@ import core
 import speech
 import textInfos
 import keyboardHandler
+import inputCore
 from comtypes import COMError
 
 from .markerEngine import MarkerEngine
@@ -31,11 +33,19 @@ from .scanEngine import ScanEngineMixin
 from .contextHelpers import ContextHelpersMixin
 from .markerAction import MarkerActionMixin
 from .constants import (
+	isRegexPatternSafe,
 	MAX_PRIMED_TREE_INTERCEPTORS,
 	MAX_BLANK_LINE_SKIP_STEPS,
 	STANDARD_JUMP_KEYS,
 	STANDARD_AUTOCLICK_KEYS,
 )
+
+def _showModalGuarded(dlg):
+	nvdaMainGui.mainFrame.prePopup()
+	try:
+		return dlg.ShowModal()
+	finally:
+		nvdaMainGui.mainFrame.postPopup()
 
 # ------------------------- Focus Mode Enum -------------------------
 class FocusMode(Enum):
@@ -91,12 +101,8 @@ def removeFocusModePatch():
 # Targets cursorManager.CursorManager._caretMovementScriptHelper -- the single
 # shared choke point behind script_moveByLine_forward/_back and
 # script_moveByParagraph_forward/_back (i.e. Up/Down and Ctrl+Up/Down), rather
-# than patching those four script methods individually. This is the same
-# NVDA-core integration point third-party browse-mode navigation add-ons use
-# for this class of feature; independently confirmed via its real call
-# signature `(self, gesture, unit, direction, posConstant, *args, **kwargs)`
-# appearing in NVDA's own public issue tracker tracebacks, not copied from
-# any third-party add-on's implementation.
+# than patching those four script methods individually. The wrapper keeps the
+# real call signature `(self, gesture, unit, direction, posConstant, *args, **kwargs)`.
 _originalCaretMovementScriptHelper = None
 
 def _isBlankLineFilterActive(treeInt):
@@ -232,6 +238,13 @@ class GlobalPlugin(
 		# Rebuilt by _syncCustomMarkerGestureBindings() whenever
 		# refreshActiveLayout() runs.
 		self._boundCustomJumpKeys = set()
+		# baseKeys for which the currently in-flight jump scan was started by
+		# an automatic trigger (gesture is None) rather than a real keypress
+		# -- see _handleGlobalJump/_finishJumpNotFound. Auto-click doesn't
+		# need an equivalent set: gesture is already threaded directly
+		# through its scan chain (_processAutoClickChunk and friends), so
+		# those call sites just check "if gesture:" in place.
+		self._silentJumpBaseKeys = set()
 		self._boundCustomAutoClickKeys = set()
 		self._customJumpKeystrokeLookup = {}
 		self._customJumpKeystrokeBackLookup = {}
@@ -248,6 +261,16 @@ class GlobalPlugin(
 		self._pendingReveals = {}
 
 		self._editableTheftStreak = 0
+
+		# Timestamp of the most recent physical keystroke, used so a delayed
+		# focus recovery never overrides something the user did after the
+		# recovery was scheduled (e.g. switching tabs with ctrl+tab).
+		self._lastUserGestureTime = 0.0
+
+		# Hosts where a synthetic Page Down was seen landing focus in an editable
+		# control; load-more scrolling is skipped there for the rest of the session.
+		self._loadMoreUnsafeHosts = set()
+		inputCore.decide_executeGesture.register(self._onDecideExecuteGesture)
 
 		self._domTimerRunning = False
 		self._domCheckInterval = 2000
@@ -286,7 +309,16 @@ class GlobalPlugin(
 
 	def reapplyCustomGestureBindings(self):
 		self.clearGestureBindings()
-		fullMap = {"kb:windows+f12": "handleSiteMarkerAction"}
+		# Start from every statically-declared gesture in __gestures (not just
+		# windows+f12 by name) so any future fixed binding added there
+		# automatically survives a rebind too. A hardcoded subset here was a
+		# confirmed, serious bug in an earlier revision: clearGestureBindings()
+		# wipes everything __gestures set up at construction time, and this
+		# method runs again the moment markers first load for a site -- so a
+		# fixed gesture left out of the hardcoded subset was silently unbound
+		# within moments of NVDA starting and never actually ran, despite
+		# looking correctly configured.
+		fullMap = dict(self.__gestures)
 		fullMap.update(customShortcuts.buildEffectiveGestureMap())
 		for keystroke in self._boundCustomJumpKeys:
 			fullMap["kb:" + keystroke] = "siteMarker_jump_customKey"
@@ -333,6 +365,10 @@ class GlobalPlugin(
 			return
 		self._boundCustomJumpKeys = newCustomJumpKeys
 		self._boundCustomAutoClickKeys = newCustomAutoClickKeys
+		logHandler.log.debug(
+			f"SiteMarker: custom key bindings updated, jump={sorted(newCustomJumpKeys)} "
+			f"autoClick={sorted(newCustomAutoClickKeys)}"
+		)
 		self._customJumpKeystrokeLookup = self._buildCustomKeystrokeLookup(newCustomJumpKeys)
 		backKeystrokes = {
 			self._backKeystrokeFor(k) for k in newCustomJumpKeys if self._backKeystrokeFor(k)
@@ -377,9 +413,14 @@ class GlobalPlugin(
 				return lookup[normId]
 		return None
 
+	def _onDecideExecuteGesture(self, gesture, **kwargs):
+		self._lastUserGestureTime = time.time()
+		return True
+
 	def terminate(self):
 		global _activePluginInstance
 		_activePluginInstance = None
+		inputCore.decide_executeGesture.unregister(self._onDecideExecuteGesture)
 		removeFocusModePatch()
 		removeBlankLineFilterPatch()
 		self.stopTreeInterceptorPoll()
@@ -401,8 +442,10 @@ class GlobalPlugin(
 		self._primeTextInfo = None
 		self._primeToken = None
 		self._editableTheftStreak = 0
+		self._loadMoreUnsafeHosts.clear()
 		self._bufferReadySamples.clear()
 		self._boundCustomJumpKeys.clear()
+		self._silentJumpBaseKeys.clear()
 		self._boundCustomAutoClickKeys.clear()
 		self._customJumpKeystrokeLookup.clear()
 		self._customJumpKeystrokeBackLookup.clear()
@@ -530,7 +573,7 @@ class GlobalPlugin(
 							try:
 								dlg = MarkerEditDialog(nvdaGui.mainFrame, existingMarker, initialText=paraText)
 								dlg.Raise()
-								if dlg.ShowModal() == wx.ID_OK:
+								if _showModalGuarded(dlg) == wx.ID_OK:
 									updatedMarker = dlg.getMarkerData()
 									siteConfig["markers"][existingIndex] = updatedMarker
 									self.engine.saveSiteConfiguration(siteName, siteConfig)
@@ -552,7 +595,7 @@ class GlobalPlugin(
 								dlg = MarkerManagerDialog(nvdaGui.mainFrame, self.engine, siteName, siteConfig,
 														  webFocusObj, autoAddMarker=True, currentUrl=currentUrl)
 								dlg.Raise()
-								dlg.ShowModal()
+								_showModalGuarded(dlg)
 							except Exception as e:
 								logHandler.log.error(f"Marker manager error: {e}")
 							finally:
@@ -580,7 +623,7 @@ class GlobalPlugin(
 						else:
 							dlg = AddSiteDialog(nvdaGui.mainFrame, self.engine, currentUrl)
 						dlg.Raise()
-						dlg.ShowModal()
+						_showModalGuarded(dlg)
 					except Exception as e:
 						logHandler.log.error(f"Site dialog error: {e}")
 					finally:
@@ -606,7 +649,7 @@ class GlobalPlugin(
 						dlg = MarkerManagerDialog(nvdaGui.mainFrame, self.engine, siteName, siteConfig, None,
 												  currentUrl=currentUrl)
 						dlg.Raise()
-						dlg.ShowModal()
+						_showModalGuarded(dlg)
 					except Exception as e:
 						logHandler.log.error(f"Triple-tap marker manager error: {e}")
 					finally:
@@ -638,7 +681,7 @@ class GlobalPlugin(
 					return marker, idx, paragraphText
 			elif matchMode == 2:
 				try:
-					if re.search(markerPattern, paragraphText, re.IGNORECASE):
+					if isRegexPatternSafe(markerPattern) and re.search(markerPattern, paragraphText, re.IGNORECASE):
 						return marker, idx, paragraphText
 				except Exception:
 					pass
@@ -678,6 +721,9 @@ class GlobalPlugin(
 		if not self._domTimerRunning:
 			return
 		try:
+			if not self._isTargetActive:
+				core.callLater(self._domCheckInterval, self._doDomCheck)
+				return
 			focusObj = api.getFocusObject()
 			treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
 			if treeInt and isinstance(treeInt, browseMode.BrowseModeTreeInterceptor):

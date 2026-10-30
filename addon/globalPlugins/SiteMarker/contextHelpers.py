@@ -23,6 +23,9 @@ class ContextHelpersMixin:
 		Watchdog Trigger: Evaluates if the newly focused foreground window belongs to a supported web browser.
 		If true, it wakes up the plugin; otherwise, it puts it to sleep to prevent high-frequency UIA freezing.
 		"""
+		# Core handling runs first so nothing in this add-on can delay the
+		# foreground chain during an Alt+Tab transition.
+		nextHandler()
 		try:
 			targetAppModule = getattr(foregroundObj, "appModule", None)
 			targetAppName = getattr(targetAppModule, "appModuleName", "").lower() if targetAppModule else ""
@@ -34,27 +37,17 @@ class ContextHelpersMixin:
 				"brave.exe", "opera.exe", "vivaldi.exe", "thorium.exe"
 			):
 				self._isTargetActive = True
-				# Belt-and-suspenders trigger point for buffer priming and
-				# auto-trigger-on-page-load: event_treeInterceptor_gainFocus
-				# (below) was assumed to be the reliable source for "a
-				# document just became active" but logging added to confirm
-				# that assumption showed it never firing at all in a real
-				# session, across repeated tests, on this browser -- while
-				# event_foreground (this method) is confirmed firing every
-				# time (this is exactly how _isTargetActive itself gets set).
-				# Routing through the same shared, dedup-guarded helper as
-				# event_treeInterceptor_gainFocus means whichever event
-				# actually fires first wins and the other becomes a safe
-				# no-op, rather than picking one and hoping.
-				self._primeAndCheckAutoTrigger(source="event_foreground")
+				# Buffer priming and auto-trigger-on-page-load are also reachable
+				# from event_treeInterceptor_gainFocus and the poll, which share
+				# the same dedup-guarded helper, so whichever fires first wins.
+				# Resolving the treeInterceptor is a live COM read, so it is
+				# deferred off this event handler rather than run inline.
+				core.callLater(0, self._primeAndCheckAutoTrigger, "event_foreground")
 			else:
 				self._isTargetActive = False
 		except (RuntimeError, COMError, AttributeError) as error:
 			logHandler.log.debug(f"SiteMarker: Error evaluating foreground watchdog: {error}")
 			self._isTargetActive = False
-		finally:
-			# Guarantee execution of downstream addons regardless of failure
-			nextHandler()
 
 	def _isInBrowser(self):
 		return self.getBrowserUrl() is not None
@@ -300,6 +293,10 @@ class ContextHelpersMixin:
 			"restoring focus to the document automatically."
 		)
 		self._recentScanActivity[id(treeInt)] = time.time()
+		currentHost = self._getCurrentHost()
+		if currentHost and currentHost not in self._loadMoreUnsafeHosts:
+			self._loadMoreUnsafeHosts.add(currentHost)
+			logHandler.log.debug(f"SiteMarker: load-more scrolling disabled for '{currentHost}' after focus theft.")
 		# Counted here rather than at each individual caller (the global
 		# event_gainFocus hook and scanEngine's own post-scroll check both call this
 		# same function) because this is the one point guaranteed to run exactly once
@@ -322,7 +319,7 @@ class ContextHelpersMixin:
 		# references directly for anything other than an `is` identity check --
 		# all live state is re-acquired fresh from api.getFocusObject() inside it,
 		# which is what avoids operating on a stale COM reference.
-		core.callLater(200, self._verifyAndRecoverFocus, treeInt, focusedObj)
+		core.callLater(200, self._verifyAndRecoverFocus, treeInt, focusedObj, time.time())
 
 	def _getEditableTheftStreak(self):
 		return getattr(self, '_editableTheftStreak', 0)
@@ -478,7 +475,7 @@ class ContextHelpersMixin:
 			self._getLastDispatchedTargetPositions().pop(baseKey, None)
 			self._getLastDispatchedAnchorPositions().pop(baseKey, None)
 
-	def _verifyAndRecoverFocus(self, expectedTreeInt, unwantedObj):
+	def _verifyAndRecoverFocus(self, expectedTreeInt, unwantedObj, detectedAt=0.0):
 		"""
 		Re-checks, from scratch, whether the object that stole real OS focus during a
 		scan is still focused before doing anything about it. Runs once, 200ms after
@@ -486,6 +483,12 @@ class ContextHelpersMixin:
 		the OS resolve window/control z-order on its own is what avoids the ghost-focus
 		and double-speak races that repeated escape injection used to cause.
 		"""
+		# NVDA's focus object lags the real focus, so a keystroke the user pressed
+		# after the theft was noticed (e.g. ctrl+tab) may not be reflected yet.
+		# Forcing focus back to this document would then fight that keystroke.
+		if self._lastUserGestureTime > detectedAt:
+			logHandler.log.debug("SiteMarker: focus recovery skipped, user input arrived after the theft.")
+			return
 		try:
 			currentFocus = api.getFocusObject()
 		except Exception:
@@ -543,6 +546,12 @@ class ContextHelpersMixin:
 			pass
 			
 		return focusObj
+
+	def _getCurrentHost(self):
+		urlStr = self.getBrowserUrl()
+		if not urlStr or "://" not in urlStr:
+			return ""
+		return urlStr.split("://", 1)[1].split("/", 1)[0].lower()
 
 	def getBrowserUrl(self):
 		focusObj = api.getFocusObject()
@@ -638,6 +647,8 @@ class ContextHelpersMixin:
 		# rather than requiring the caller to already have one in hand, since
 		# event_foreground's foregroundObj is the window, not necessarily the
 		# focused document.
+		if not self._isTargetActive:
+			return
 		try:
 			focusObj = api.getFocusObject()
 			treeInt = getattr(focusObj, "treeInterceptor", None) if focusObj else None
@@ -649,6 +660,16 @@ class ContextHelpersMixin:
 		if treeInt in self._primedTreeInterceptors:
 			return
 		self._addPrimedTreeInterceptor(treeInt)
+		# A popup dialog inside the page (e.g. a chat panel opened by a click)
+		# gets its own treeInterceptor, but it is not a page load; running the
+		# auto-trigger there made the scan walk into the dialog's own search box.
+		try:
+			rootRole = treeInt.rootNVDAObject.role
+		except (RuntimeError, COMError, AttributeError):
+			rootRole = None
+		if rootRole == controlTypes.Role.DIALOG:
+			logHandler.log.debug(f"SiteMarker: auto-trigger skipped for dialog treeInterceptor (via {source})")
+			return
 		treeIntId = id(treeInt)  # for log messages only -- see _addPrimedTreeInterceptor
 		primeToken = object()
 		self._primeToken = primeToken

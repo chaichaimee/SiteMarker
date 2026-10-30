@@ -1,128 +1,124 @@
-![NVDA Logo](https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico)
+<p align="center">
+  <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" width="120">
+</p>
 
-# SiteMarker
+<h1 align="center">SiteMarker</h1>
 
-Bookmark any spot on any website, then jump straight back to it with a single keypress.
+<p align="center">Bookmark any spot on a webpage and jump straight back to it, every time you visit — no more hunting through long pages line by line.</p>
 
-**author:** chai chaimee  
-**url:** https://github.com/chaichaimee/SiteMarker
+<p align="center">
+  <b>author:</b> chai chaimee<br>
+  <b>url:</b> <a href="https://github.com/chaichaimee/SiteMarker">https://github.com/chaichaimee/SiteMarker</a>
+</p>
 
-> **Note:** The slogan above and the GitHub URL are not present in the source code and should be reviewed/confirmed before publishing.
+---
 
 ## Introduction
 
-SiteMarker lets you place invisible "markers" on specific pieces of text on any webpage, then jump directly to them later, or have NVDA click them for you automatically. Instead of arrowing or Tab-bing through a long page every time you visit it, you press one hotkey and land exactly where you need to be — a chat box, a "Load more" button, a specific headline, a "Skip ad" button, or anything else that repeats or is hard to find.
+Do you visit the same websites over and over, and keep having to scroll or search for the same button, headline, or field every single time? SiteMarker lets you "mark" any spot on a page — by the text near it — and then jump straight back to that spot with a single keypress, or even have NVDA click it for you automatically.
 
-Markers are organized per website. Each website you configure gets its own set of markers, its own URL matching rule, and its own "focus mode" behaviour. Everything is saved automatically, so once a site is set up, jumping and clicking just work every time you return to that page.
+Think of it as personal bookmarks for the web, but smarter: instead of remembering a scrollbar position, SiteMarker remembers a piece of text (like "Skip Ad", "Reply", or a friend's name in a chat list) and finds it again for you, even if the page has changed shape since your last visit.
+
+SiteMarker works per‑website: you set up your markers once for a site (e.g. YouTube, Facebook, a webmail inbox), and from then on your shortcuts work automatically whenever you're browsing that site. It runs in the background while you use Chrome, Edge, Firefox, Brave, Opera, Vivaldi, or Thorium, and stays out of the way everywhere else.
+
+---
 
 ### Hot Keys
 
 > **NVDA+Windows+F12**  
-> Single Tap : Add/Edit Marker at the current line (opens the marker editor if no marker matches here yet, or the Marker Manager with a new marker ready to be added if this site has no configuration at all)  
-> Double Tap : Open Site Manager (or Add Site dialog if the current site has not been configured yet)  
-> Triple Tap (or more) : Open Marker Manager for the current site
+> **Single Tap :** Add or Edit Marker for the current paragraph  
+> **Double Tap :** Open Site Manager (or Add Site, if this site isn't set up yet)  
+> **Triple Tap :** Open Marker Manager for the current site  
 
-> Taps are counted within a 0.4 second window of each other. Pressing the hotkey once and waiting briefly triggers the single-tap action; pressing it again quickly within that window advances to the double-tap action, and so on.
+This one key combination does three different things depending on how many times you tap it quickly (within about four‑tenths of a second of each other):
 
-> **J** / **Shift+J**  
-> Jump to the next / previous marker assigned to the J key
+* **Single Tap** — If your cursor is currently sitting on text that already matches one of your markers, this opens that marker's Properties dialog directly so you can edit it. Otherwise, it opens the Marker Manager and immediately starts adding a brand‑new marker based on whatever text your cursor or focus is on.
+* **Double Tap** — Opens the Site Manager for the site you're currently on, so you can review, add, edit, or delete sites and jump into their marker lists. If the current site hasn't been configured at all yet, this opens the Add Site dialog instead, pre‑filled with the current page's domain.
+* **Triple Tap** (or more) — Jumps straight to the Marker Manager for the current site, skipping the Site Manager. If no site is configured yet for the current page, you'll be told to add a site first.
 
-> **F** / **Shift+F**  
-> Jump to the next / previous marker assigned to the F key
+> **J**  
+> Jump to the next marker assigned to this key  
 
-> **D** / **Shift+D**  
-> Jump to the next / previous marker assigned to the D key
-
-> **Z** / **Shift+Z**  
-> Jump to the next / previous marker assigned to the Z key
+> **Shift+J**  
+> Jump to the previous marker assigned to this key  
 
 > **Alt+J**  
-> Single Tap : Auto-click the element matching the marker assigned to Alt+J
+> Automatically click the element matched by the marker assigned to this key  
 
-> **Alt+C**  
-> Single Tap : Auto-click the element matching the marker assigned to Alt+C
+**J**, **Shift+J**, and **Alt+J** are the only jump/auto‑click keys reserved by SiteMarker out of the box. This is deliberate: every other letter key (like F, D, or Z) is left completely free for NVDA's own browse‑mode navigation unless you specifically choose to use it. If you want more shortcuts, you assign a **Custom Shortcut** to a marker instead (see Features below) — that key then becomes active only on sites where you've actually used it, and only while you're on those sites.
 
-> **Alt+X**  
-> Single Tap : Auto-click the element matching the marker assigned to Alt+X
-
-> **Alt+Z**  
-> Single Tap : Auto-click the element matching the marker assigned to Alt+Z
-
-> **Note:** The Jump keys (J, F, D, Z) and Auto-Click keys (Alt+J, Alt+C, Alt+X, Alt+Z) are only active while you are in browse mode on a supported browser (Chrome, Edge, Firefox, Brave, Opera, Vivaldi, or Thorium). On any other window, or when a site has no marker assigned to that key, the key is passed straight through so it types or behaves normally.
+---
 
 ## Features
 
-### Site Manager
+### 1. Marking Text on a Page
 
-Every website you want markers on must first be added as a "site." A site is defined by:
+A "marker" tells SiteMarker to watch for a specific piece of text on a specific website. When you press its assigned key, SiteMarker searches the page for that text and takes you there (or clicks it, if it's set to Auto Click).
 
-* **Display Name** — a friendly name shown in the Site Manager list.
-* **URL Pattern** — the address or domain text that is checked against the page you are currently on.
-* **Match Type** — how the pattern is compared to the page's actual URL:
-  * Domain Only — the page's domain must equal the pattern exactly.
-  * Include Subdomains — the domain must equal the pattern, or end with it (so a pattern of "example.com" also matches "mail.example.com").
-  * Contain Substring — the pattern just needs to appear anywhere in the URL.
-  * Exact Matching — the whole URL must match the pattern exactly.
-  * Regular Expression — the pattern is treated as a regex and searched against the URL.
-* **Focus Mode** — controls how NVDA's normal focus/forms-mode behaviour is altered on this site:
-  * Normal — NVDA behaves as usual.
-  * Don't enter form mode — when a control on this site receives real Windows focus, NVDA is prevented from automatically switching into forms mode for that focus event (browse mode stays active).
-  * Disable focus — browse/focus mode switching driven by real focus changes is suppressed entirely on this site.
+Each marker has these settings, found in the **Marker Properties** dialog (opened from Marker Manager's Add/Edit buttons, or automatically via the NVDA+Windows+F12 single‑tap shortcut):
 
-From the Site Manager you can add, edit, or delete a site, and jump straight into that site's Marker Manager. Pressing Delete on a selected site (or F2 to edit) works directly from the list, and a right-click/context menu offers the same actions.
+* **Pattern** — the text SiteMarker looks for. Pre‑filled automatically from your current selection or cursor position when you open this dialog.
+* **Pattern Match** — how the Pattern is compared against each paragraph on the page:
+  * *Contains Text* — matches if the paragraph contains your pattern anywhere within it.
+  * *Exact Paragraph* — matches only if the whole paragraph is exactly your pattern.
+  * *Regex Match* — treats your pattern as a regular expression for advanced matching.
+* **Mode** — *Jump* (move your cursor there and read it aloud) or *Auto Click* (activate/click it automatically).
+* **Key** — J for a Jump marker or Alt+J for an Auto Click marker by default, or your own **Custom Shortcut** (see below).
+* **Auto‑jump / Auto‑click on page load** — when turned on, this marker fires by itself as soon as the page finishes loading, with no keypress needed at all.
+* **Search Scope** — *Entire Document* searches the whole page (loading more content automatically on long or infinite‑scroll pages if needed), while *Viewport Only* restricts the search to roughly what's near your current position, which is faster on very long pages.
+* **Display Name** — the label shown for this marker in the Marker Manager list. Defaults to the Pattern if left blank.
+* **Offset** — how many lines to move, up or down, after the match is found, before landing — exactly like pressing the Up or Down arrow key that many times. A negative number moves up, a positive number moves down. Useful when you actually want the line just above or below your matched text, not the match itself.
 
-### Marker Manager and Marker Properties
+### 2. Custom Shortcuts per Marker
 
-Each site holds its own list of markers. A marker is a rule that tells SiteMarker "when the text on this page matches this pattern, this is a landmark." Every marker has:
+Instead of using the shared J or Alt+J keys, any marker can be given its own dedicated keyboard shortcut via the **Custom Shortcut...** button in Marker Properties. Press the button, then simply press the key combination you want to use — SiteMarker captures it and shows it back to you.
 
-* **Pattern** — the text (or regular expression) to search for. When you open the marker editor from the page itself (via the NVDA+Windows+F12 single tap), this is pre-filled with your current selection, the current paragraph under the caret, or the focused control's name/value, whichever is available first.
-* **Pattern Match** — how the pattern is compared against each paragraph on the page:
-  * Contains Text — matches if the pattern appears anywhere inside the paragraph.
-  * Exact Paragraph — matches only if the whole paragraph equals the pattern exactly.
-  * Regex Match — the pattern is treated as a regular expression and searched within the paragraph.
-* **Mode** — whether this marker is a **Jump** marker (moves your cursor/caret there) or an **Auto Click** marker (activates the element automatically).
-* **Key** — which hotkey triggers this marker: J, F, D, or Z for Jump markers; Alt+J, Alt+C, Alt+X, or Alt+Z for Auto Click markers.
-* **Search Scope** — Entire Document searches the whole page (loading more content further down if needed); Viewport Only restricts the search to roughly the currently visible area of the page (about 50 paragraphs above and below your caret).
-* **Display Name** — a friendly label shown in the Marker Manager list.
-* **Offset** — how many lines (matching what a single Up/Down arrow-key press would move) to shift away from the matched paragraph before landing, from -50 to +50. This is useful when the text you can reliably match isn't exactly the line you want to end up on (e.g. matching a post's author name but wanting to land two lines below, on the post's reply button).
+For a Jump‑mode marker, assigning a custom key automatically also binds Shift+that key to jump backward to the previous match, mirroring how Shift+J pairs with J. Choosing **Use Standard Key** reverts the marker back to the shared J or Alt+J key. Custom shortcuts only become active while you're on a site that actually uses them, so they never interfere with your other add-ons or with NVDA elsewhere.
 
-The Marker Manager list lets you Add, Edit, or Delete a single marker, or Clear All markers for the site at once. Delete and F2-to-edit also work directly on the selected list item, and a right-click context menu duplicates these actions. If you open the multi-tap hotkey on a paragraph that already matches one of the site's existing markers, SiteMarker opens that marker directly for editing instead of offering to add a new one.
+### 3. Site Manager
 
-### Jumping to markers (J / F / D / Z)
+Opened via NVDA+Windows+F12 (double tap), the Site Manager lists every website you've configured markers for. From here you can:
 
-Pressing a jump key scans paragraph by paragraph, forward or backward from your current position, looking for any marker assigned to that key. As soon as a match is found:
+* **Add New Site** — set up a new website, pre‑filling the URL from wherever you currently are.
+* **Edit Site** — change a site's settings (see below).
+* **Delete Site** — remove a site and all of its markers (with a confirmation prompt).
+* **Manage Markers** — jump into that site's Marker Manager.
 
-1. If the marker has an offset, SiteMarker moves that many lines away from the matched paragraph (or, if an offset pattern is set, keeps scanning nearby lines for one matching that pattern instead of a fixed line count) before landing.
-2. If the offset would land you on an empty paragraph, SiteMarker keeps stepping forward until it reaches non-empty text.
-3. Your caret is moved there and NVDA speaks the destination text.
+Pressing Delete or F2 while a site is selected in the list also deletes or edits it, and a right‑click context menu offers the same actions.
 
-If the visible part of the page runs out before a match is found (for example, an endless "feed" style page), SiteMarker automatically sends Page Down to load more content and keeps searching, up to 100 load-more attempts. If nothing is found after all of that, or after 5 attempts in a row that added no new content, you'll hear "No next marker" or "No previous marker."
+Each site has these settings, in the Add/Edit Site dialog:
 
-SiteMarker avoids re-announcing the exact same spot twice in a row (some pages repeat identical text in several places in the underlying accessibility tree) and skips over matches that land inside an editable field or combo box, retrying past them instead.
+* **Display Name** — the name shown for this site in the list.
+* **URL Pattern** — the address or domain this configuration applies to.
+* **Match Type** — how the URL Pattern is compared to the page you're browsing:
+  * *Domain Only* — matches this exact domain only.
+  * *Include Subdomains* — also matches subdomains of this domain.
+  * *Contain Substring* — matches if the page's address contains this text anywhere.
+  * *Exact Matching* — matches only this exact, full address.
+  * *Regular Expression* — matches using a regular expression for advanced patterns.
+* **Focus Mode** — controls how NVDA's own focus/forms mode behaves on this site:
+  * *Normal* — NVDA behaves as it normally would.
+  * *Don't enter form mode* — prevents NVDA from automatically switching to forms mode when focus moves, useful on sites where that switch is more disruptive than helpful.
+  * *Disable focus* — keeps browse mode active regardless of what receives focus on the page.
+* **Skip blank lines when navigating with Up/Down and Ctrl+Up/Down** — when checked, pressing these arrow keys on this site automatically skips over empty lines/paragraphs instead of stopping on them, so you land on the next line or paragraph that actually has content.
 
-### Auto-Click (Alt+J / Alt+C / Alt+X / Alt+Z)
+### 4. Marker Manager
 
-Pressing an auto-click key scans the page from the very beginning for a marker assigned to that key, applies its offset the same way jump markers do, and then clicks the matching element for you using a three-step fallback so that even stubborn buttons (such as a video site's "Skip Ad" button) get activated reliably:
+Lists every marker set up for one particular site. From here you can Add, Edit, or Delete a single marker, or use **Clear All** to remove every marker for this site at once (each with a confirmation prompt). Pressing Delete or F2 on a selected marker, or right‑clicking it, gives you the same options. A **Back to Site Manager** button returns you to the site list.
 
-1. Try the element's own accessibility "do action" command.
-2. If that isn't available, try invoking it via its UI Automation Invoke pattern.
-3. If both of those fail, move the mouse cursor over the element and simulate a physical left-click.
+### 5. Automatic Loading of More Content
 
-After a successful click, NVDA speaks the clicked text and announces "Clicked." On YouTube specifically, if the page's URL and the text under the caret haven't changed shortly after clicking (a sign the click didn't register, which can happen with a not-yet-fully-interactive skip button), SiteMarker automatically retries the click up to 2 more times. On other sites this automatic re-click is skipped, since a toggle-style control can succeed on the very first click while still looking unchanged, and re-clicking would just toggle it back off.
+On pages that load more content as you scroll (social‑media feeds, chat threads, and similar "infinite scroll" pages), a Jump marker set to search the *Entire Document* will automatically scroll the page further down for you if it reaches the end of what's currently loaded without finding a match, then keep searching — up to a generous number of attempts — before telling you no match was found.
 
-If no matching, clickable target is found by the end of the page, SiteMarker automatically retries the whole search up to 5 times with a short, increasing delay between attempts (to catch elements, like an ad's skip button, that only appear a second or two after the page loads), before finally announcing "No auto click target found."
+### 6. Reliable Clicking, Including Stubborn Buttons
 
-### Automatic focus-theft recovery
+When a marker's Mode is set to Auto Click, SiteMarker tries several different ways to activate the matched element (NVDA's standard action, then a more modern accessibility interface, then finally a real simulated mouse click as a last resort), so it can successfully click buttons that don't always respond to the simplest method — such as a video site's "Skip Ad" button. On YouTube specifically, if a click doesn't seem to have taken effect yet, SiteMarker automatically retries it a couple more times.
 
-On some pages, the automatic "load more" scrolling SiteMarker performs during a scan can accidentally land real keyboard focus on an unrelated editable field or search box instead of just scrolling the page. When this happens during an active scan, SiteMarker automatically restores focus back to the document so your search isn't interrupted. If the exact same page keeps stealing focus back onto the same field no matter how many times this is corrected, SiteMarker stops trying to scroll further for that scan and simply finishes the search with whatever content has already loaded.
+### 7. Focus Protection During a Scan
 
-### Background page-change detection
+While SiteMarker is scrolling a page to load more content for a scan, it's possible (on some sites) for that scrolling to accidentally land your real keyboard focus on a search box or other editable field instead of staying on the page. SiteMarker automatically detects this and restores your focus back to the document, so a jump or auto‑click in progress isn't derailed.
 
-SiteMarker automatically re-checks the active markers whenever you switch focus, whenever the page's content updates, and on a periodic timer (about every 2 seconds) while you're on a browser page. This keeps your markers up to date on single-page apps and dynamically updating sites without you having to do anything manually.
-
-### Per-site data storage
-
-All of your sites and their markers are saved automatically to your NVDA user configuration folder (under a SiteMarker folder) as one file per site, so your setup is preserved between NVDA sessions and does not require any internet connection to work.
+---
 
 ## Support Me
 
@@ -130,6 +126,10 @@ If this tool has made your life easier, consider fueling the next update with a 
 
 [![Support me](https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe)](https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01)
 
-Your support means the world. Let's build something great together
+Your support means the world. Let's build something great together.
 
-© 2026 Chai Chaimee NVDA Add-on Released under GNU GPL
+***
+
+<p align="center">
+  © 2026 Chai Chaimee NVDA Add-on Released under GNU GPL
+</p>

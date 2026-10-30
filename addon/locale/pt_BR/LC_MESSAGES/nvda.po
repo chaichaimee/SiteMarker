@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.9.12\n"
+"Project-Id-Version: SiteMarker 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-15 17:07+0700\n"
+"POT-Creation-Date: 2026-10-30 14:55+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Portuguese (Brazil)\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:387
 msgid "&Add Marker"
@@ -28,7 +28,7 @@ msgstr "&Voltar para o Gerenciador de Sites"
 msgid "&Delete"
 msgstr "&Excluir"
 
-#: gui.py:555
+#: gui.py:572
 msgid "&Delete Marker	Del"
 msgstr "&Excluir Marcador\\tDel"
 
@@ -44,7 +44,7 @@ msgstr "&Excluir Site\\tDel"
 msgid "&Edit"
 msgstr "&Editar"
 
-#: gui.py:553
+#: gui.py:570
 msgid "&Edit Marker	F2"
 msgstr "&Editar Marcador\\tF2"
 
@@ -69,23 +69,27 @@ msgstr "Lista de &Marcadores:"
 msgid "&Registered Sites:"
 msgstr "Sites &Registrados:"
 
-#: gui.py:646
+#: gui.py:663
 msgid "&Use Standard Key"
 msgstr "&Usar tecla padrão"
+
+#: gui.py:756
+msgid "(not in use - custom shortcut active)"
+msgstr "(não está em uso - atalho personalizado ativo)"
 
 #: gui.py:188
 msgid "Add Site Configuration"
 msgstr "Adicionar Configuração do Site"
 
-#: gui.py:512
+#: gui.py:529
 msgid "All markers have been cleared."
 msgstr "Todos os marcadores foram limpos."
 
-#: gui.py:507
+#: gui.py:524
 msgid "Are you sure you want to delete ALL markers?"
 msgstr "Tem certeza de que deseja excluir TODOS os marcadores?"
 
-#: gui.py:492
+#: gui.py:509
 msgid "Are you sure you want to delete this marker?"
 msgstr "Tem certeza de que deseja excluir este marcador?"
 
@@ -93,21 +97,21 @@ msgstr "Tem certeza de que deseja excluir este marcador?"
 msgid "Are you sure you want to delete this site and all its markers?"
 msgstr "Tem certeza de que deseja excluir este site e todos os seus marcadores?"
 
-#: gui.py:629
+#: gui.py:646
 msgid "Auto Click"
 msgstr "Clique Automático"
 
-#: gui.py:703
+#: gui.py:720
 msgid "Auto-click on page load"
 msgstr "Autoclique ao carregar a página"
 
-#: gui.py:699
+#: gui.py:716
 msgid "Auto-jump on page load"
 msgstr "Autopulo ao carregar a página"
 
 #: gui.py:225
 #: gui.py:302
-#: gui.py:673
+#: gui.py:690
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -115,11 +119,11 @@ msgstr "Cancelar"
 msgid "Clear &All"
 msgstr "Limpar &Tudo"
 
-#: gui.py:558
+#: gui.py:575
 msgid "Clear &All Markers"
 msgstr "Limpar &Todos os Marcadores"
 
-#: gui.py:701
+#: gui.py:718
 msgid "Click Key:"
 msgstr "Tecla de Clique:"
 
@@ -129,11 +133,11 @@ msgid "Close"
 msgstr "Fechar"
 
 #: gui.py:128
-#: gui.py:492
+#: gui.py:509
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: gui.py:507
+#: gui.py:524
 msgid "Confirm Delete All"
 msgstr "Confirmar Exclusão de Tudo"
 
@@ -142,7 +146,7 @@ msgstr "Confirmar Exclusão de Tudo"
 msgid "Contain Substring"
 msgstr "Contém Substring"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Contains Text (find partial match)"
 msgstr "Contém Texto (encontrar correspondência parcial)"
 
@@ -158,17 +162,17 @@ msgstr "Não foi possível abrir a caixa de diálogo Editar Site."
 msgid "Could not open the Marker Manager dialog."
 msgstr "Não foi possível abrir a caixa de diálogo Gerenciador de Marcadores."
 
-#: gui.py:453
-#: gui.py:479
+#: gui.py:470
+#: gui.py:496
 msgid "Could not open the marker editor."
 msgstr "Não foi possível abrir o editor de marcadores."
 
-#: gui.py:643
-#: gui.py:737
+#: gui.py:660
+#: gui.py:770
 msgid "Custom &Shortcut..."
 msgstr "&Atalho personalizado..."
 
-#: gui.py:734
+#: gui.py:759
 msgid "Custom &Shortcut: {key}..."
 msgstr "&Atalho personalizado: {key}..."
 
@@ -184,7 +188,7 @@ msgstr "O Nome de Exibição não pode estar vazio."
 
 #: gui.py:197
 #: gui.py:274
-#: gui.py:663
+#: gui.py:680
 msgid "Display Name:"
 msgstr "Nome de Exibição:"
 
@@ -202,7 +206,7 @@ msgstr "Não entrar no modo de formulário"
 msgid "Edit Site Configuration"
 msgstr "Editar Configuração do Site"
 
-#: gui.py:657
+#: gui.py:674
 msgid "Entire Document"
 msgstr "Documento Inteiro"
 
@@ -216,10 +220,10 @@ msgstr "Documento Inteiro"
 #: gui.py:316
 #: gui.py:319
 #: gui.py:335
-#: gui.py:430
-#: gui.py:453
-#: gui.py:479
-#: gui.py:797
+#: gui.py:429
+#: gui.py:470
+#: gui.py:496
+#: gui.py:840
 msgid "Error"
 msgstr "Erro"
 
@@ -228,7 +232,7 @@ msgstr "Erro"
 msgid "Exact Matching"
 msgstr "Correspondência Exata"
 
-#: gui.py:623
+#: gui.py:640
 msgid "Exact Paragraph (match whole paragraph)"
 msgstr "Parágrafo Exato (corresponder ao parágrafo inteiro)"
 
@@ -236,7 +240,7 @@ msgstr "Parágrafo Exato (corresponder ao parágrafo inteiro)"
 msgid "Failed to delete site."
 msgstr "Falha ao excluir o site."
 
-#: gui.py:429
+#: gui.py:428
 msgid "Failed to save marker changes to disk. Check that the configuration folder is writable."
 msgstr "Falha ao salvar as alterações do marcador no disco. Verifique se a pasta de configuração tem permissão de gravação."
 
@@ -258,17 +262,17 @@ msgstr "Incluir Subdomínios"
 #: gui.py:104
 #: gui.py:126
 #: gui.py:138
-#: gui.py:464
-#: gui.py:490
-#: gui.py:505
+#: gui.py:481
+#: gui.py:507
+#: gui.py:522
 msgid "Information"
 msgstr "Informação"
 
-#: gui.py:629
+#: gui.py:646
 msgid "Jump"
 msgstr "Pular"
 
-#: gui.py:697
+#: gui.py:714
 msgid "Jump Key:"
 msgstr "Tecla de Salto:"
 
@@ -276,7 +280,7 @@ msgstr "Tecla de Salto:"
 msgid "Marker Manager - "
 msgstr "Gerenciador de Marcadores - "
 
-#: gui.py:568
+#: gui.py:585
 msgid "Marker Properties"
 msgstr "Propriedades do Marcador"
 
@@ -289,46 +293,47 @@ msgstr "Marcador encontrado: {}"
 msgid "Match Type:"
 msgstr "Tipo de Correspondência:"
 
-#: gui.py:628
+#: gui.py:645
 msgid "Mode:"
 msgstr "Modo:"
 
-#: gui.py:505
+#: gui.py:522
 msgid "No markers to clear."
 msgstr "Nenhum marcador para limpar."
 
 #: gui.py:211
 #: gui.py:287
+# keep-identical
 msgid "Normal"
 msgstr "Normal"
 
-#: gui.py:672
+#: gui.py:689
 msgid "OK"
 msgstr "OK"
 
-#: gui.py:667
+#: gui.py:684
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "Deslocamento (linhas para mover após a correspondência, o mesmo que seta para cima/baixo):"
 
-#: scanEngine.py:215
-#: scanEngine.py:579
+#: scanEngine.py:225
+#: scanEngine.py:628
 msgid "Page not fully loaded, try again."
 msgstr "Página não totalmente carregada, tente novamente."
 
-#: gui.py:622
+#: gui.py:639
 msgid "Pattern Match:"
 msgstr "Correspondência de Padrão:"
 
-#: gui.py:797
+#: gui.py:840
 msgid "Pattern cannot be empty."
 msgstr "O padrão não pode estar vazio."
 
-#: gui.py:618
+#: gui.py:635
 msgid "Pattern:"
 msgstr "Padrão:"
 
-#: gui.py:464
-#: gui.py:490
+#: gui.py:481
+#: gui.py:507
 msgid "Please select a marker first."
 msgstr "Por favor, selecione um marcador primeiro."
 
@@ -338,7 +343,7 @@ msgstr "Por favor, selecione um marcador primeiro."
 msgid "Please select a site first."
 msgstr "Por favor, selecione um site primeiro."
 
-#: gui.py:623
+#: gui.py:640
 msgid "Regex Match (use regular expression)"
 msgstr "Correspondência Regex (usar expressão regular)"
 
@@ -355,15 +360,15 @@ msgstr "Salvar Alterações"
 msgid "Save Site"
 msgstr "Salvar Site"
 
-#: gui.py:656
+#: gui.py:673
 msgid "Search Scope:"
 msgstr "Escopo de Pesquisa:"
 
-#: gui.py:773
+#: gui.py:816
 msgid "Shortcut changed from {old} to {new}"
 msgstr "Atalho alterado de {old} para {new}"
 
-#: gui.py:780
+#: gui.py:823
 msgid "Shortcut reset to {key}"
 msgstr "Atalho redefinido para {key}"
 
@@ -402,14 +407,14 @@ msgstr "Padrão de URL:"
 msgid "Unnamed"
 msgstr "Sem nome"
 
-#: gui.py:657
+#: gui.py:674
 msgid "Viewport Only"
 msgstr "Apenas Janela de Visualização"
 
-#: gui.py:753
+#: gui.py:796
 msgid "this marker's auto-click shortcut"
 msgstr "atalho de autoclique deste marcador"
 
-#: gui.py:751
+#: gui.py:794
 msgid "this marker's jump shortcut"
 msgstr "atalho de pulo deste marcador"
