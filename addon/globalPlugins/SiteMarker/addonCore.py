@@ -23,6 +23,7 @@ import speech
 import textInfos
 import keyboardHandler
 import inputCore
+from speech.extensions import filter_speechSequence
 from comtypes import COMError
 
 from .markerEngine import MarkerEngine
@@ -270,7 +271,14 @@ class GlobalPlugin(
 		# Hosts where a synthetic Page Down was seen landing focus in an editable
 		# control; load-more scrolling is skipped there for the rest of the session.
 		self._loadMoreUnsafeHosts = set()
+		self._autoJumpSpeechGuardActive = False
+		self._autoJumpSpeechGuardDeadline = 0.0
+		self._autoJumpSpeechSuppressedCount = 0
+		self._autoClickSpeechGuardActive = False
+		self._autoClickSpeechPassUntil = 0.0
+		self._autoClickSpeechSuppressedCount = 0
 		inputCore.decide_executeGesture.register(self._onDecideExecuteGesture)
+		filter_speechSequence.register(self._onFilterSpeechForAutoJump)
 
 		self._domTimerRunning = False
 		self._domCheckInterval = 2000
@@ -415,12 +423,16 @@ class GlobalPlugin(
 
 	def _onDecideExecuteGesture(self, gesture, **kwargs):
 		self._lastUserGestureTime = time.time()
+		self._releaseAutoJumpSpeechGuard("user keypress")
 		return True
 
 	def terminate(self):
 		global _activePluginInstance
 		_activePluginInstance = None
 		inputCore.decide_executeGesture.unregister(self._onDecideExecuteGesture)
+		filter_speechSequence.unregister(self._onFilterSpeechForAutoJump)
+		self._autoJumpSpeechGuardActive = False
+		self._autoClickSpeechGuardActive = False
 		removeFocusModePatch()
 		removeBlankLineFilterPatch()
 		self.stopTreeInterceptorPoll()

@@ -676,6 +676,7 @@ class ContextHelpersMixin:
 		logHandler.log.debug(
 			f"SiteMarker: starting buffer priming pass 1 for treeInt {treeIntId} (via {source})"
 		)
+		self._armSpeechGuardIfAutoJumpConfigured()
 		core.callLater(300, self._primeDocumentBuffer, treeInt, primeToken, 0, 1)
 		# Auto-jump/auto-click-on-page-load (Marker Properties): checked at
 		# most once per fresh treeInterceptor, piggybacking on the same

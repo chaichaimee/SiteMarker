@@ -105,6 +105,29 @@ MAX_BLANK_LINE_SKIP_STEPS = 500
 AUTO_TRIGGER_RETRY_DELAY_MS = 500
 AUTO_TRIGGER_MAX_RETRIES = 15
 
+# An automatic jump that reaches the end of the loaded content without a match
+# does not give up at once: pages that rewrite their text after first render
+# (client-side translation, hydration) can gain the marker text a moment after
+# the scan began. It rescans from the caret every AUTO_TRIGGER_RESCAN_DELAY_MS,
+# up to AUTO_TRIGGER_MAX_RESCANS times, with no keystrokes sent.
+AUTO_TRIGGER_RESCAN_DELAY_MS = 1000
+AUTO_TRIGGER_MAX_RESCANS = 10
+
+# While a page with an auto-jump marker is loading, every other announcement
+# is held back so the first thing heard is the marker the jump lands on. The
+# hold ends when the jump lands, the scan gives up, the user presses any key,
+# or after this many seconds, whichever comes first.
+AUTO_JUMP_SPEECH_GUARD_MAX_SEC = 30
+
+# On a YouTube page whose auto-click marker is set to run on page load, every
+# announcement the user did not ask for (ad countdowns, player status, live
+# regions) is held back for as long as the page stays on YouTube. Speech that
+# answers a keypress still passes: anything spoken within
+# AUTO_CLICK_SPEECH_GESTURE_WINDOW_SEC of the last key, and the add-on's own
+# click feedback for AUTO_CLICK_FEEDBACK_PASS_SEC after each click.
+AUTO_CLICK_SPEECH_GESTURE_WINDOW_SEC = 2.0
+AUTO_CLICK_FEEDBACK_PASS_SEC = 1.5
+
 # Fallback treeInterceptor-change poll (see
 # ContextHelpersMixin._pollForTreeInterceptorChange): confirmed via log
 # evidence that event_treeInterceptor_gainFocus never reaches this add-on in

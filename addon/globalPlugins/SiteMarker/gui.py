@@ -682,7 +682,7 @@ class MarkerEditDialog(wx.Dialog):
 		mainSizer.Add(self.txtDisplayName, 0, wx.EXPAND | wx.ALL, 5)
 
 		mainSizer.Add(wx.StaticText(self, label=_("Offset (lines to move after match, same as arrow up/down):")), 0, wx.ALL, 5)
-		self.spinOffset = wx.SpinCtrl(self, min=-50, max=50, initial=self.markerData.get("offset", 0))
+		self.spinOffset = wx.SpinCtrl(self, min=-200, max=200, initial=self.markerData.get("offset", 0))
 		mainSizer.Add(self.spinOffset, 0, wx.EXPAND | wx.ALL, 5)
 
 		btnSizer = wx.BoxSizer(wx.HORIZONTAL)

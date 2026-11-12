@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: SiteMarker 2026.11.0\n"
+"Project-Id-Version: SiteMarker 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 14:55+0700\n"
+"POT-Creation-Date: 2026-11-11 15:36+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Simplified)\n"
@@ -314,8 +314,8 @@ msgstr "确定"
 msgid "Offset (lines to move after match, same as arrow up/down):"
 msgstr "偏移量 (匹配后移动的行数，与向上/向下箭头相同):"
 
-#: scanEngine.py:225
-#: scanEngine.py:628
+#: scanEngine.py:324
+#: scanEngine.py:811
 msgid "Page not fully loaded, try again."
 msgstr "页面未完全加载，请重试。"
 

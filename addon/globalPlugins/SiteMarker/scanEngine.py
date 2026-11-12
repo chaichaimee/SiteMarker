@@ -2,6 +2,8 @@
 
 import time
 import re
+import contextlib
+import config
 import api
 import ui
 import core
@@ -10,6 +12,7 @@ import logHandler
 import controlTypes
 import textInfos
 import browseMode
+import versionInfo
 from comtypes import COMError
 _translate = _
 import ctypes
@@ -33,6 +36,11 @@ from .constants import (
 	BUFFER_READY_MIN_LENGTH,
 	AUTO_TRIGGER_RETRY_DELAY_MS,
 	AUTO_TRIGGER_MAX_RETRIES,
+	AUTO_TRIGGER_RESCAN_DELAY_MS,
+	AUTO_TRIGGER_MAX_RESCANS,
+	AUTO_JUMP_SPEECH_GUARD_MAX_SEC,
+	AUTO_CLICK_SPEECH_GESTURE_WINDOW_SEC,
+	AUTO_CLICK_FEEDBACK_PASS_SEC,
 )
 
 # Per-attempt delay before re-scanning the document for an auto-click target that
@@ -56,6 +64,11 @@ EDITABLE_THEFT_ABORT_THRESHOLD = 1
 # pattern-anchored offset when the marker's offset value is 0 (no explicit
 # window given).
 DEFAULT_OFFSET_PATTERN_SEARCH_LINES = 30
+
+# A plain line offset is traced in the log every this many line steps, so two
+# NVDA versions that count lines differently on the same page can be compared
+# from their logs alone.
+OFFSET_TRACE_INTERVAL = 25
 
 
 class ScanEngineMixin:
@@ -103,6 +116,83 @@ class ScanEngineMixin:
 					return marker, baseKey
 		return None, None
 
+	def _armSpeechGuardIfAutoJumpConfigured(self):
+		try:
+			self.refreshActiveLayout(force=False)
+			autoMarker, _ = self._findAutoTriggerMarker()
+		except Exception as e:
+			logHandler.log.debug(f"SiteMarker: auto-jump speech guard check failed: {e}")
+			autoMarker = None
+		if autoMarker is not None and autoMarker.get("actionMode") == "autoClick":
+			self._releaseAutoJumpSpeechGuard("auto-click marker for this page")
+			if self._isYouTubeUrl(self.getBrowserUrl()):
+				self._armAutoClickSpeechGuard()
+			else:
+				self._releaseAutoClickSpeechGuard("auto-click marker is not on YouTube")
+			return
+		self._releaseAutoClickSpeechGuard("no auto-click marker for this page")
+		if autoMarker is None:
+			self._releaseAutoJumpSpeechGuard("no auto-jump marker for this page")
+			return
+		self._autoJumpSpeechGuardActive = True
+		self._autoJumpSpeechGuardDeadline = time.monotonic() + AUTO_JUMP_SPEECH_GUARD_MAX_SEC
+		self._autoJumpSpeechSuppressedCount = 0
+		logHandler.log.debug("SiteMarker: auto-jump speech guard armed, other announcements held until the jump lands.")
+
+	def _releaseAutoJumpSpeechGuard(self, reason):
+		if not self._autoJumpSpeechGuardActive:
+			return
+		self._autoJumpSpeechGuardActive = False
+		logHandler.log.debug(
+			f"SiteMarker: auto-jump speech guard released ({reason}); "
+			f"held back {self._autoJumpSpeechSuppressedCount} announcement(s)."
+		)
+
+	def _isYouTubeUrl(self, url):
+		return bool(url and "youtube.com" in url.lower())
+
+	def _armAutoClickSpeechGuard(self):
+		self._autoClickSpeechGuardActive = True
+		self._autoClickSpeechPassUntil = 0.0
+		self._autoClickSpeechSuppressedCount = 0
+		logHandler.log.debug("SiteMarker: auto-click speech guard armed for YouTube, unsolicited announcements held back.")
+
+	def _releaseAutoClickSpeechGuard(self, reason):
+		if not self._autoClickSpeechGuardActive:
+			return
+		self._autoClickSpeechGuardActive = False
+		logHandler.log.debug(
+			f"SiteMarker: auto-click speech guard released ({reason}); "
+			f"held back {self._autoClickSpeechSuppressedCount} announcement(s)."
+		)
+
+	def _filterAutoClickSpeech(self, speechSequence):
+		if not self._isTargetActive:
+			return speechSequence
+		if time.monotonic() <= self._autoClickSpeechPassUntil:
+			return speechSequence
+		if time.time() - self._lastUserGestureTime <= AUTO_CLICK_SPEECH_GESTURE_WINDOW_SEC:
+			return speechSequence
+		if not self._isYouTubeUrl(self.getBrowserUrl()):
+			self._releaseAutoClickSpeechGuard("page is no longer on YouTube")
+			return speechSequence
+		self._autoClickSpeechSuppressedCount += 1
+		return []
+
+	def _onFilterSpeechForAutoJump(self, speechSequence):
+		if not self._autoJumpSpeechGuardActive:
+			if self._autoClickSpeechGuardActive:
+				return self._filterAutoClickSpeech(speechSequence)
+			return speechSequence
+		if not self._isTargetActive:
+			self._releaseAutoJumpSpeechGuard("browser no longer in front")
+			return speechSequence
+		if time.monotonic() > self._autoJumpSpeechGuardDeadline:
+			self._releaseAutoJumpSpeechGuard("time limit reached")
+			return speechSequence
+		self._autoJumpSpeechSuppressedCount += 1
+		return []
+
 	def _checkAutoTriggerMarker(self, treeInt, retryCount=0):
 		# Scheduled exactly once per fresh treeInterceptor by
 		# event_treeInterceptor_gainFocus (guarded there by
@@ -111,8 +201,10 @@ class ScanEngineMixin:
 		# retry chain is the single attempt for this page load, not a new
 		# one each call.
 		if not self._isTargetActive:
+			self._releaseAutoJumpSpeechGuard("browser no longer in front")
 			return
 		if not self._isTreeInterceptorStillFocused(treeInt):
+			self._releaseAutoJumpSpeechGuard("document no longer focused")
 			logHandler.log.debug(
 				f"SiteMarker: auto-trigger check for treeInt {id(treeInt)} aborted "
 				f"at retry {retryCount} -- no longer the focused document."
@@ -142,6 +234,8 @@ class ScanEngineMixin:
 		self.refreshActiveLayout(force=False)
 		marker, baseKey = self._findAutoTriggerMarker()
 		if marker is None:
+			self._releaseAutoJumpSpeechGuard("no marker with auto-trigger")
+			self._releaseAutoClickSpeechGuard("no marker with auto-trigger")
 			logHandler.log.debug(
 				f"SiteMarker: auto-trigger check for treeInt {id(treeInt)} found no marker "
 				f"with autoTrigger set among {len(self.activeSiteMarkers)} active key(s)."
@@ -159,21 +253,24 @@ class ScanEngineMixin:
 		# no-markers-configured fallback paths that would need a real gesture
 		# can be reached.
 		if marker.get("actionMode") == "autoClick":
+			self._releaseAutoJumpSpeechGuard("auto-click marker")
 			self._handleAutoClick(None, baseKey)
 		else:
-			self._handleGlobalJump(None, baseKey, 1)
+			self._handleGlobalJump(None, baseKey, 1, autoMarker=marker)
 
 	# ------------------------------------------------------------------
 	# Jump scanning
 	# ------------------------------------------------------------------
-	def _handleGlobalJump(self, gesture, baseKey, direction, _retryCount=0):
+	def _handleGlobalJump(self, gesture, baseKey, direction, _retryCount=0, autoMarker=None):
 		focusObj = api.getFocusObject()
 		treeInterceptor = getattr(focusObj, "treeInterceptor", None) if focusObj else None
 		if not treeInterceptor or not isinstance(treeInterceptor, browseMode.BrowseModeTreeInterceptor) or treeInterceptor.passThrough:
+			self._releaseAutoJumpSpeechGuard("no browse-mode document")
 			if gesture: gesture.send()
 			return
 		expectedUrl = self.getBrowserUrl()
 		if not expectedUrl:
+			self._releaseAutoJumpSpeechGuard("page address unavailable")
 			if gesture: gesture.send()
 			return
 
@@ -200,6 +297,7 @@ class ScanEngineMixin:
 			# forced a refresh).
 			self.refreshActiveLayout(force=True)
 		if not self.activeSiteMarkers or baseKey not in self.activeSiteMarkers:
+			self._releaseAutoJumpSpeechGuard("no marker for this key")
 			if gesture:
 				gesture.send()
 			elif direction == 1:
@@ -218,15 +316,20 @@ class ScanEngineMixin:
 				logHandler.log.debug(
 					f"SiteMarker: jump buffer not ready for key '{baseKey}', retry {_retryCount+1}/5"
 				)
-				core.callLater(400, self._handleGlobalJump, gesture, baseKey, direction, _retryCount + 1)
+				core.callLater(400, self._handleGlobalJump, gesture, baseKey, direction, _retryCount + 1, autoMarker)
 			else:
 				self._bufferReadySamples.pop(id(treeInterceptor), None)
+				self._releaseAutoJumpSpeechGuard("page never became ready")
 				if gesture:
 					ui.message(_("Page not fully loaded, try again."))
 			return
 
 		self._recentScanActivity[id(treeInterceptor)] = time.time()
-		markersForThisKey = self.activeSiteMarkers[baseKey]
+		# An automatic trigger scans only for the marker that has auto-jump
+		# enabled. Other markers sharing the same key stay reserved for the user's
+		# own keypresses; otherwise whichever of them is already rendered when the
+		# page is still loading wins, and the jump lands on the wrong marker.
+		markersForThisKey = [autoMarker] if autoMarker is not None else self.activeSiteMarkers[baseKey]
 		treeInt = treeInterceptor
 		oldSelection = treeInt.selection.copy() if hasattr(treeInt, "selection") else treeInt.makeTextInfo(textInfos.POSITION_CARET)
 		# This is a brand new key press, not a continuation chunk of an
@@ -274,7 +377,31 @@ class ScanEngineMixin:
 			scanToken, 0, 0, expectedUrl, 0
 		)
 
+	@contextlib.contextmanager
+	def _screenLayoutDisabled(self):
+		# Line boundaries in a virtual buffer are computed on every call from the
+		# "Use screen layout" setting (NVDA+V). With it on, a list bullet and its
+		# text share one line; with it off they are separate lines, so the same
+		# line offset lands on different content. Counting is therefore always done
+		# with it off, the layout the offsets were calibrated against.
+		bufferConfig = config.conf["virtualBuffers"]
+		originalValue = bufferConfig["useScreenLayout"]
+		if not originalValue:
+			yield False
+			return
+		bufferConfig["useScreenLayout"] = False
+		try:
+			yield True
+		finally:
+			bufferConfig["useScreenLayout"] = originalValue
+
 	def _applyOffset(self, textInfo, offsetVal, offsetPattern=""):
+		with self._screenLayoutDisabled() as screenLayoutWasOn:
+			if screenLayoutWasOn:
+				logHandler.log.debug("SiteMarker: counting offset lines with screen layout temporarily off.")
+			return self._applyOffsetCounted(textInfo, offsetVal, offsetPattern)
+
+	def _applyOffsetCounted(self, textInfo, offsetVal, offsetPattern=""):
 		"""
 		Apply a line-based offset to the given textInfo and return the resulting info,
 		expanded to the full paragraph it lands in. Ensures the final paragraph is
@@ -336,11 +463,16 @@ class ScanEngineMixin:
 		offsetInfo = textInfo.copy()
 		direction = 1 if offsetVal > 0 else -1
 		remaining = abs(offsetVal)
+		stepsTaken = 0
 		while remaining > 0:
 			moved = offsetInfo.move(textInfos.UNIT_LINE, direction)
 			if moved == 0:
 				break
 			remaining -= 1
+			stepsTaken += 1
+			if stepsTaken % OFFSET_TRACE_INTERVAL == 0:
+				self._logOffsetTrace(offsetInfo, stepsTaken)
+		stoppedEarly = remaining > 0
 		offsetInfo.expand(textInfos.UNIT_PARAGRAPH)
 		# After reaching target offset, if paragraph is empty, step further to next non-empty
 		safety = 0
@@ -355,7 +487,22 @@ class ScanEngineMixin:
 				break
 			offsetInfo.expand(textInfos.UNIT_PARAGRAPH)
 			safety += 1
+		logHandler.log.debug(
+			f"SiteMarker: offset {offsetVal} requested, {stepsTaken} line step(s) taken"
+			f"{' (stopped early at the document edge)' if stoppedEarly else ''}, "
+			f"{safety} empty paragraph(s) skipped, NVDA {versionInfo.version}."
+		)
+		self._logOffsetTrace(offsetInfo, stepsTaken, label="landing")
 		return offsetInfo.copy()
+
+	def _logOffsetTrace(self, offsetInfo, stepsTaken, label="step"):
+		try:
+			traceInfo = offsetInfo.copy()
+			traceInfo.expand(textInfos.UNIT_LINE)
+			traceText = (traceInfo.text or "").strip()[:40]
+		except Exception as e:
+			traceText = f"<unreadable: {e}>"
+		logHandler.log.debug(f"SiteMarker: offset trace {label} {stepsTaken}: '{traceText}'")
 
 	def _restartJumpScanOnFreshTreeInterceptor(self, treeInt, markersForThisKey, baseKey, direction,
 												oldSelection, useViewport, expectedUrl=None, swapAttempts=0):
@@ -399,6 +546,7 @@ class ScanEngineMixin:
 					)
 					return
 			logHandler.log.debug(f"SiteMarker: aborting jump scan for key '{baseKey}', tab/document changed.")
+			self._releaseAutoJumpSpeechGuard("document changed during scan")
 			return
 		self._recentScanActivity[id(treeInt)] = time.time()
 		if loadMoreAttempts == 0:
@@ -522,6 +670,7 @@ class ScanEngineMixin:
 				continue
 			except Exception as e:
 				logHandler.log.debug(f"Jump scan error: {e}")
+				self._releaseAutoJumpSpeechGuard("scan error")
 				return
 		if not reachedEnd:
 			core.callLater(5, self._processJumpChunk,
@@ -529,12 +678,25 @@ class ScanEngineMixin:
 						   textInfo, oldSelection, vpStart, vpEnd, useViewport,
 						   scanToken, loadMoreAttempts, noGrowthCount, expectedUrl, swapAttempts)
 			return
-		if loadMoreAttempts >= MAX_LOAD_MORE_ATTEMPTS or noGrowthCount >= MAX_NO_GROWTH_ATTEMPTS:
+		isSilentRescan = not useViewport and baseKey in self._silentJumpBaseKeys
+		noGrowthLimit = AUTO_TRIGGER_MAX_RESCANS if isSilentRescan else MAX_NO_GROWTH_ATTEMPTS
+		if loadMoreAttempts >= MAX_LOAD_MORE_ATTEMPTS or noGrowthCount >= noGrowthLimit:
 			logHandler.log.debug(
 				f"SiteMarker: no next marker for key '{baseKey}' after {loadMoreAttempts} load-more "
 				f"attempts ({noGrowthCount} without growth); giving up."
 			)
 			self._finishJumpNotFound(direction, treeInt, baseKey)
+			return
+		if isSilentRescan:
+			logHandler.log.debug(
+				f"SiteMarker: automatic trigger for key '{baseKey}' found no marker in the loaded content, "
+				f"rescanning in {AUTO_TRIGGER_RESCAN_DELAY_MS} ms (rescan {noGrowthCount + 1}/{AUTO_TRIGGER_MAX_RESCANS})."
+			)
+			core.callLater(
+				AUTO_TRIGGER_RESCAN_DELAY_MS, self._rescanSilentJump,
+				treeInt, markersForThisKey, baseKey, direction, oldSelection,
+				useViewport, scanToken, loadMoreAttempts + 1, noGrowthCount + 1, expectedUrl, swapAttempts
+			)
 			return
 		if not useViewport:
 			logHandler.log.debug(
@@ -552,7 +714,28 @@ class ScanEngineMixin:
 		else:
 			self._finishJumpNotFound(direction, treeInt, baseKey)
 
+	def _rescanSilentJump(self, treeInt, markersForThisKey, baseKey, direction, oldSelection,
+						  useViewport, scanToken, loadMoreAttempts, noGrowthCount, expectedUrl, swapAttempts):
+		if self._jumpScanToken.get(baseKey) is not scanToken:
+			return
+		textInfo = oldSelection.copy()
+		if self._isTreeInterceptorStillFocused(treeInt):
+			try:
+				textInfo = treeInt.makeTextInfo(textInfos.POSITION_CARET)
+				textInfo.collapse()
+				textInfo.expand(textInfos.UNIT_PARAGRAPH)
+			except Exception as e:
+				logHandler.log.debug(f"SiteMarker: automatic rescan init failed: {e}")
+				self._finishJumpNotFound(direction, treeInt, baseKey)
+				return
+		self._processJumpChunk(
+			treeInt, markersForThisKey, baseKey, direction,
+			textInfo, oldSelection, None, None, useViewport,
+			scanToken, loadMoreAttempts, noGrowthCount, expectedUrl, swapAttempts
+		)
+
 	def _finishJumpNotFound(self, direction, treeInt, baseKey=None):
+		self._releaseAutoJumpSpeechGuard("no marker found")
 		self._clearScanActivity(treeInt)
 		if direction < 0 and self._isTreeInterceptorStillFocused(treeInt):
 			try:
@@ -807,6 +990,9 @@ class ScanEngineMixin:
 	# Click execution
 	# ------------------------------------------------------------------
 	def _executeAutoClick(self, marker, targetInfo, treeInt, gesture, keystroke, retryCount=0, skipSpeak=False):
+		# The target's own text and the "Clicked" confirmation are the one thing
+		# the auto-click speech guard must let through.
+		self._autoClickSpeechPassUntil = time.monotonic() + AUTO_CLICK_FEEDBACK_PASS_SEC
 		if not self._isTreeInterceptorStillFocused(treeInt):
 			logHandler.log.debug(f"SiteMarker: aborting auto click execution for key '{keystroke}', tab/document changed.")
 			return
@@ -942,6 +1128,7 @@ class ScanEngineMixin:
 							   anchorInfo=None):
 		if not self._isTreeInterceptorStillFocused(treeInt):
 			logHandler.log.debug(f"SiteMarker: aborting jump dispatch for key '{baseKey}', tab/document changed.")
+			self._releaseAutoJumpSpeechGuard("document changed before landing")
 			return
 		try:
 			dispatchTargetText = infoToSelect.text.strip() if infoToSelect.text else ""
@@ -983,6 +1170,7 @@ class ScanEngineMixin:
 		except Exception:
 			infoToSelect = originalInfo
 
+		self._releaseAutoJumpSpeechGuard("jump landed")
 		try:
 			infoToSelect.updateCaret()
 			speech.speakTextInfo(infoToSelect, reason=controlTypes.OutputReason.CARET)
