@@ -39,6 +39,7 @@ from .constants import (
 	MAX_BLANK_LINE_SKIP_STEPS,
 	STANDARD_JUMP_KEYS,
 	STANDARD_AUTOCLICK_KEYS,
+	KNOWN_LOAD_MORE_UNSAFE_HOSTS,
 )
 
 def _showModalGuarded(dlg):
@@ -270,7 +271,13 @@ class GlobalPlugin(
 
 		# Hosts where a synthetic Page Down was seen landing focus in an editable
 		# control; load-more scrolling is skipped there for the rest of the session.
-		self._loadMoreUnsafeHosts = set()
+		self._loadMoreUnsafeHosts = set(KNOWN_LOAD_MORE_UNSAFE_HOSTS)
+
+		# Where the caret sat when each jump key's current scan began, so a scan that
+		# ends without a match can put the caret back if a page-side focus change
+		# (e.g. a single page app moving focus to its search box) dragged it away.
+		self._jumpOriginSelections = {}
+		self._passiveLoadWaitToken = None
 		self._autoJumpSpeechGuardActive = False
 		self._autoJumpSpeechGuardDeadline = 0.0
 		self._autoJumpSpeechSuppressedCount = 0
@@ -454,7 +461,9 @@ class GlobalPlugin(
 		self._primeTextInfo = None
 		self._primeToken = None
 		self._editableTheftStreak = 0
-		self._loadMoreUnsafeHosts.clear()
+		self._loadMoreUnsafeHosts = set(KNOWN_LOAD_MORE_UNSAFE_HOSTS)
+		self._jumpOriginSelections.clear()
+		self._passiveLoadWaitToken = None
 		self._bufferReadySamples.clear()
 		self._boundCustomJumpKeys.clear()
 		self._silentJumpBaseKeys.clear()

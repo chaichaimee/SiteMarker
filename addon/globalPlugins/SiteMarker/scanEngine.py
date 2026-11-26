@@ -332,6 +332,7 @@ class ScanEngineMixin:
 		markersForThisKey = [autoMarker] if autoMarker is not None else self.activeSiteMarkers[baseKey]
 		treeInt = treeInterceptor
 		oldSelection = treeInt.selection.copy() if hasattr(treeInt, "selection") else treeInt.makeTextInfo(textInfos.POSITION_CARET)
+		self._jumpOriginSelections[baseKey] = (treeInt, oldSelection.copy(), time.time())
 		# This is a brand new key press, not a continuation chunk of an
 		# already-in-progress scan, so check whether the caret has moved away
 		# from where the last dispatch for this key left it (e.g. the user
@@ -734,9 +735,37 @@ class ScanEngineMixin:
 			scanToken, loadMoreAttempts, noGrowthCount, expectedUrl, swapAttempts
 		)
 
+	def _restoreCaretAfterDisplacedScan(self, treeInt, baseKey):
+		if baseKey is None:
+			return
+		origin = self._jumpOriginSelections.pop(baseKey, None)
+		if origin is None:
+			return
+		originTreeInt, originSelection, startedAt = origin
+		if originTreeInt is not treeInt:
+			return
+		# A keystroke after the scan began means the caret may have moved on purpose.
+		if self._lastUserGestureTime > startedAt:
+			return
+		if not self._isTreeInterceptorStillFocused(treeInt):
+			return
+		try:
+			currentCaret = treeInt.makeTextInfo(textInfos.POSITION_CARET)
+			if currentCaret.compareEndPoints(originSelection, "startToStart") == 0:
+				return
+			originSelection.select()
+		except Exception as e:
+			logHandler.log.debug(f"SiteMarker: could not restore the caret after an unsuccessful scan for key '{baseKey}': {e}")
+			return
+		logHandler.log.debug(
+			f"SiteMarker: caret was displaced during an unsuccessful scan for key '{baseKey}'; "
+			"restored it to where it was before the scan."
+		)
+
 	def _finishJumpNotFound(self, direction, treeInt, baseKey=None):
 		self._releaseAutoJumpSpeechGuard("no marker found")
 		self._clearScanActivity(treeInt)
+		self._restoreCaretAfterDisplacedScan(treeInt, baseKey)
 		if direction < 0 and self._isTreeInterceptorStillFocused(treeInt):
 			try:
 				restoreCaret = treeInt.makeTextInfo(textInfos.POSITION_CARET)
@@ -1009,7 +1038,7 @@ class ScanEngineMixin:
 				if self._performRobustClick(focusable):
 					if not skipSpeak:
 						speech.speakTextInfo(targetInfo, reason=controlTypes.OutputReason.CARET)
-					ui.message(_translate("Clicked"))
+						ui.message(_translate("Clicked"))
 				else:
 					raise RuntimeError("All click methods failed")
 			else:
@@ -1017,7 +1046,7 @@ class ScanEngineMixin:
 					treeInt.activatePosition(targetInfo)
 					if not skipSpeak:
 						speech.speakTextInfo(targetInfo, reason=controlTypes.OutputReason.CARET)
-					ui.message(_translate("Clicked"))
+						ui.message(_translate("Clicked"))
 				else:
 					raise RuntimeError("No focusable object and no activatePosition")
 			currentUrl = self.getBrowserUrl()
@@ -1307,7 +1336,7 @@ class ScanEngineMixin:
 		currentHost = self._getCurrentHost()
 		if currentHost and currentHost in self._loadMoreUnsafeHosts:
 			logHandler.log.debug(f"SiteMarker: load-more scroll skipped, Page Down is known to steal focus on '{currentHost}'.")
-			callback()
+			self._waitForPassiveLoad(callback, scanToken)
 			return
 		if baseKey in self._silentJumpBaseKeys:
 			# An unattended auto-trigger must never inject keystrokes: the user
@@ -1329,11 +1358,25 @@ class ScanEngineMixin:
 				"SiteMarker: skipping further load-more scrolling, the last "
 				f"{theftCount} attempts each landed focus on an editable control."
 			)
-			callback()
+			self._waitForPassiveLoad(callback, scanToken)
 			return
 		self._sendPageDownKeystroke(PAGE_DOWN_BATCH_SIZE)
 		self._pendingReveals[scanToken] = (callback, treeInt, baseKey)
 		core.callLater(LOAD_MORE_TIMEOUT_MS, self._revealTimeout, scanToken)
+
+	def _waitForPassiveLoad(self, callback, scanToken):
+		# With scrolling unavailable, a page that loads more content by itself (a
+		# single page app still rendering) gets one pause per scan instead of the
+		# scan giving up within milliseconds. Later attempts of the same scan go
+		# straight through so a page with nothing more to load ends promptly.
+		if self._passiveLoadWaitToken is scanToken:
+			callback()
+			return
+		self._passiveLoadWaitToken = scanToken
+		logHandler.log.debug(
+			"SiteMarker: waiting for the page to finish loading before scanning the end of the document again."
+		)
+		core.callLater(LOAD_MORE_TIMEOUT_MS, callback)
 
 	def _revealTimeout(self, scanToken):
 		entry = self._pendingReveals.pop(scanToken, None)

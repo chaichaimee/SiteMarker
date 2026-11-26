@@ -63,6 +63,15 @@ FULL_SCAN_RETRY_DELAY_MS = 1500
 # (see _bufferReadySamples), since some real pages -- a minimal search-engine
 # homepage, for instance -- never reach this length at all even fully loaded.
 BUFFER_READY_MIN_LENGTH = 500
+# Hosts where a synthetic Page Down is known to land real focus in the page's
+# search box (confirmed from a log), so load-more scrolling is skipped there from
+# the first keypress of a session instead of only after the first theft.
+KNOWN_LOAD_MORE_UNSAFE_HOSTS = (
+	"www.facebook.com",
+	"facebook.com",
+	"m.facebook.com",
+	"web.facebook.com",
+)
 
 # ------------------------------------------------------------------
 # Customizable jump/auto-click shortcuts (see customShortcuts.py)
